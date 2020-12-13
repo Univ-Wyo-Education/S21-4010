@@ -1,0 +1,1383 @@
+<style>
+@font-face {
+	font-family: octicons-link;
+	src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	line-height: 1.5;
+	color: #24292e;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 16px;
+	line-height: 1.5;
+	word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+	color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+	color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+	color: #6f42c1;
+}
+
+.markdown-body .pl-smi,
+.markdown-body .pl-s .pl-s1 {
+	color: #24292e;
+}
+
+.markdown-body .pl-ent {
+	color: #22863a;
+}
+
+.markdown-body .pl-k {
+	color: #d73a49;
+}
+
+.markdown-body .pl-s,
+.markdown-body .pl-pds,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sre,
+.markdown-body .pl-sr .pl-sra {
+	color: #032f62;
+}
+
+.markdown-body .pl-v,
+.markdown-body .pl-smw {
+	color: #e36209;
+}
+
+.markdown-body .pl-bu {
+	color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+	color: #fafbfc;
+	background-color: #b31d28;
+}
+
+.markdown-body .pl-c2 {
+	color: #fafbfc;
+	background-color: #d73a49;
+}
+
+.markdown-body .pl-c2::before {
+	content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+	font-weight: bold;
+	color: #22863a;
+}
+
+.markdown-body .pl-ml {
+	color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+	font-weight: bold;
+	color: #005cc5;
+}
+
+.markdown-body .pl-mi {
+	font-style: italic;
+	color: #24292e;
+}
+
+.markdown-body .pl-mb {
+	font-weight: bold;
+	color: #24292e;
+}
+
+.markdown-body .pl-md {
+	color: #b31d28;
+	background-color: #ffeef0;
+}
+
+.markdown-body .pl-mi1 {
+	color: #22863a;
+	background-color: #f0fff4;
+}
+
+.markdown-body .pl-mc {
+	color: #e36209;
+	background-color: #ffebda;
+}
+
+.markdown-body .pl-mi2 {
+	color: #f6f8fa;
+	background-color: #005cc5;
+}
+
+.markdown-body .pl-mdr {
+	font-weight: bold;
+	color: #6f42c1;
+}
+
+.markdown-body .pl-ba {
+	color: #586069;
+}
+
+.markdown-body .pl-sg {
+	color: #959da5;
+}
+
+.markdown-body .pl-corl {
+	text-decoration: underline;
+	color: #032f62;
+}
+
+.markdown-body .octicon {
+	display: inline-block;
+	vertical-align: text-top;
+	fill: currentColor;
+}
+
+.markdown-body a {
+	background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+	outline-width: 0;
+}
+
+.markdown-body strong {
+	font-weight: inherit;
+}
+
+.markdown-body strong {
+	font-weight: bolder;
+}
+
+.markdown-body h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+.markdown-body img {
+	border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+.markdown-body hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+}
+
+.markdown-body input {
+	font: inherit;
+	margin: 0;
+}
+
+.markdown-body input {
+	overflow: visible;
+}
+
+.markdown-body [type="checkbox"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+.markdown-body * {
+	box-sizing: border-box;
+}
+
+.markdown-body input {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+.markdown-body a {
+	color: #0366d6;
+	text-decoration: none;
+}
+
+.markdown-body a:hover {
+	text-decoration: underline;
+}
+
+.markdown-body strong {
+	font-weight: 600;
+}
+
+.markdown-body hr {
+	height: 0;
+	margin: 15px 0;
+	overflow: hidden;
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid #dfe2e5;
+}
+
+.markdown-body hr::before {
+	display: table;
+	content: "";
+}
+
+.markdown-body hr::after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+.markdown-body table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+	padding: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body h1 {
+	font-size: 32px;
+	font-weight: 600;
+}
+
+.markdown-body h2 {
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.markdown-body h3 {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.markdown-body h4 {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.markdown-body h5 {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.markdown-body h6 {
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.markdown-body p {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+	margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+	x-list-style-type: lower-roman;
+	  list-style-type: decimal;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+	list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+	margin-left: 0;
+}
+
+.markdown-body code {
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-size: 12px;
+}
+
+.markdown-body pre {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-size: 12px;
+}
+
+.markdown-body .octicon {
+	vertical-align: text-bottom;
+}
+
+.markdown-body .pl-0 {
+	padding-left: 0 !important;
+}
+
+.markdown-body .pl-1 {
+	padding-left: 4px !important;
+}
+
+.markdown-body .pl-2 {
+	padding-left: 8px !important;
+}
+
+.markdown-body .pl-3 {
+	padding-left: 16px !important;
+}
+
+.markdown-body .pl-4 {
+	padding-left: 24px !important;
+}
+
+.markdown-body .pl-5 {
+	padding-left: 32px !important;
+}
+
+.markdown-body .pl-6 {
+	padding-left: 40px !important;
+}
+
+.markdown-body::before {
+	display: table;
+	content: "";
+}
+
+.markdown-body::after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+.markdown-body>*:first-child {
+	margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+	margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+	color: inherit;
+	text-decoration: none;
+}
+
+.markdown-body .anchor {
+	float: left;
+	padding-right: 4px;
+	margin-left: -20px;
+	line-height: 1;
+}
+
+.markdown-body .anchor:focus {
+	outline: none;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+.markdown-body hr {
+	height: 0.25em;
+	padding: 0;
+	margin: 24px 0;
+	background-color: #e1e4e8;
+	border: 0;
+}
+
+.markdown-body blockquote {
+	padding: 0 1em;
+	color: #6a737d;
+	border-left: 0.25em solid #dfe2e5;
+}
+
+.markdown-body blockquote>:first-child {
+	margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+	margin-bottom: 0;
+}
+
+.markdown-body kbd {
+	display: inline-block;
+	padding: 3px 5px;
+	font-size: 11px;
+	line-height: 10px;
+	color: #444d56;
+	vertical-align: middle;
+	background-color: #fafbfc;
+	border: solid 1px #c6cbd1;
+	border-bottom-color: #959da5;
+	border-radius: 3px;
+	box-shadow: inset 0 -1px 0 #959da5;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+	margin-top: 24px;
+	margin-bottom: 16px;
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+	color: #1b1f23;
+	vertical-align: middle;
+	visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+	text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+	visibility: visible;
+}
+
+.markdown-body h1 {
+	padding-bottom: 0.3em;
+	font-size: 2em;
+	border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h2 {
+	padding-bottom: 0.3em;
+	font-size: 1.5em;
+	border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h3 {
+	font-size: 1.25em;
+}
+
+.markdown-body h4 {
+	font-size: 1em;
+}
+
+.markdown-body h5 {
+	font-size: 0.875em;
+}
+
+.markdown-body h6 {
+	font-size: 0.85em;
+	color: #6a737d;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+	padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body li {
+	word-wrap: break-all;
+}
+
+.markdown-body li>p {
+	margin-top: 16px;
+}
+
+.markdown-body li+li {
+	margin-top: 0.25em;
+}
+
+.markdown-body dl {
+	padding: 0;
+}
+
+.markdown-body dl dt {
+	padding: 0;
+	margin-top: 16px;
+	font-size: 1em;
+	font-style: italic;
+	font-weight: 600;
+}
+
+.markdown-body dl dd {
+	padding: 0 16px;
+	margin-bottom: 16px;
+}
+
+.markdown-body table {
+	display: block;
+	width: 100%;
+	overflow: auto;
+}
+
+.markdown-body table th {
+	font-weight: 600;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+	padding: 6px 13px;
+	border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+	background-color: #fff;
+	border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+	background-color: #f6f8fa;
+}
+
+.markdown-body img {
+	max-width: 100%;
+	box-sizing: content-box;
+	background-color: #fff;
+}
+
+.markdown-body img[align=right] {
+	padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+	padding-right: 20px;
+}
+
+.markdown-body code {
+	padding: 0.2em 0.4em;
+	margin: 0;
+	font-size: 85%;
+	background-color: rgba(27,31,35,0.05);
+	border-radius: 3px;
+}
+
+.markdown-body pre {
+	word-wrap: normal;
+}
+
+.markdown-body pre>code {
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	word-break: normal;
+	white-space: pre;
+	background: transparent;
+	border: 0;
+}
+
+.markdown-body .highlight {
+	margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+	margin-bottom: 0;
+	word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+	padding: 16px;
+	overflow: auto;
+	font-size: 85%;
+	line-height: 1.45;
+	background-color: #f6f8fa;
+	border-radius: 3px;
+}
+
+.markdown-body pre code {
+	display: inline;
+	max-width: auto;
+	padding: 0;
+	margin: 0;
+	overflow: visible;
+	line-height: inherit;
+	word-wrap: normal;
+	background-color: transparent;
+	border: 0;
+}
+
+.markdown-body .full-commit .btn-outline:not(:disabled):hover {
+	color: #005cc5;
+	border-color: #005cc5;
+}
+
+.markdown-body kbd {
+	display: inline-block;
+	padding: 3px 5px;
+	font: 11px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	line-height: 10px;
+	color: #444d56;
+	vertical-align: middle;
+	background-color: #fafbfc;
+	border: solid 1px #d1d5da;
+	border-bottom-color: #c6cbd1;
+	border-radius: 3px;
+	box-shadow: inset 0 -1px 0 #c6cbd1;
+}
+
+.markdown-body :checked+.radio-label {
+	position: relative;
+	z-index: 1;
+	border-color: #0366d6;
+}
+
+.markdown-body .task-list-item {
+	list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+	margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+	margin: 0 0.2em 0.25em -1.6em;
+	vertical-align: middle;
+}
+
+.markdown-body hr {
+	border-bottom-color: #eee;
+}
+
+</style>
+<style>
+ol {
+    display: block;
+    list-style-type: decimal;
+}
+.pagebreak { page-break-before: always; }
+.half { height: 200px; }
+</style>
+
+<div class="markdown-body">
+
+<h2>COSC Spring 2020 - 4010 or 5010 Special Topics - Blockchian</h2>
+
+<p><center><div style="font-size:20pt;font-weight:bold"></p>
+
+<p><em>UNIVERSITY OF WYOMING</em></p>
+
+<p><em>COSC 4010 or 5010</em></p>
+
+<p><em>Blockchain Design and Programing</em></p>
+
+<p><em>Online with scheduled discussion groups</em></p>
+
+<p><em>Spring 2021</em></p>
+
+<p></div></center></p>
+
+<h2>Instructor contact information:</h2>
+
+<p>Email: pschlump@uwyo.edu</p>
+
+<h2>Office hours:</h2>
+
+<p>I will hold office hours from 8:00AM to 9:00AM on Monday, Wednesday and Friday or by appointment.
+Office hours are on zoom - I will send out a link via email.</p>
+
+<h2>Required texts</h2>
+
+<p>Textbook: We have a textbook for the 2nd <sup>1</sup>&frasl;<sub>2</sub> of teh class on  Ethereum/Solidity. Solidity has moved from version 5.12 to 5.17 in the past 3 months.
+The text book for Go is a free online PDF: <a href="https://www.golang-book.com/books/intro">https://www.golang-book.com/books/intro</a> We will also be using IOHK’s BlockChian. It
+is programmed in Haskell.</p>
+
+<h2>General requirements and expectations for the course</h2>
+
+<p>You must demonstrate working homework to the instructor or to the class grader to pass the class (no matter how many
+points you get). For code developed in Go, test cases will be supplied.  The Go homework are cumulative.
+Homework 3 depends on getting a working version of 2 etc.</p>
+
+<h2>Required examinations and assignments</h2>
+
+<p>There will be 9 or 10 programming assignments over the course of the semester, as well as one midterm and a final exam. Tests
+will be 800 points. 400 for the midterm, 400 for the final. 1,400 points are from the homework and paper, 100 to 200
+points per assignment.</p>
+
+<h2>Final / Midterm Examination</h2>
+
+<p>Midterm will be a short answer and multiple choice online from a test bank.</p>
+
+<p>Final will be online - probably a writing assignment.</p>
+
+<h2>Grading Scale:</h2>
+
+<table>
+<thead>
+<tr>
+<th align="center">Letter Grade</th>
+<th>Points</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">A</td>
+<td>1,800 points or above</td>
+</tr>
+
+<tr>
+<td align="center">B</td>
+<td>1,600-1,799 points</td>
+</tr>
+
+<tr>
+<td align="center">C</td>
+<td>1,400-1,599 points</td>
+</tr>
+
+<tr>
+<td align="center">D</td>
+<td>1,200-1,399 points</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Extra credit</h2>
+
+<p>None planned at this time.</p>
+
+<h2>Late work.</h2>
+
+<p>Work turned in late will loose 10% per calendar day, down to 40% of the original grade.  Nothing may be turned in after the last day of class.</p>
+
+<h2>Class Overview</h2>
+
+<ol>
+<li>What is Blockchain / Bitcoin and Why it is Important.
+In 2009 a person or group of people named Satoshi Nakamoto published “Bitcoin: A Peer-to-Peer Electronic Cash
+System”.  The Bitcoin design was revolutionary — it elegantly tied cryptography, game theory, and economics
+into a trustless solution to the double-spend problem, and introduced the world to the first “chain of blocks,” a
+censorship-resistant public ledger protected by proof-of-work.
+This is a big deal. Unlike traditional payments, Bitcoin transactions don’t rely on a trusted third-party. Anyone can
+connect to the network and transact, without fear of censorship. Satoshi’s work solved these problems, and founded the
+field of cryptoeconomics.
+In 2013, Vitalik Buterin proposed a new cryptocurrency — Ethereum. Ethereum was Vitalik’s answer to Bitcoin’s
+poor scripting capabilities. Instead of focusing on financial transactions and their outputs, Ethereum transactions are
+about state: agreeing on a computed state, and transitioning from one state to the next.
+Each transaction in Ethereum includes a sender, recipient, funds, and data, similar enough to Bitcoin. Unlike Bitcoin, however, a recipient can be a user or a smart contract.</li>
+<li>Gartner group projects that 3% of the world economy will be BlockChain based in 10 years. This is a compounded annual
+growth rate of 62.2%.</li>
+<li>The Plan - Do lectures in advance of when assignments are due on the material and give students time to do homework.
+Mark what is going to be tested on.</li>
+<li>This class is not a “heavy” programming class. Yes, you will program but not a huge amount. Unlike a lot of
+computer science classes this class has a paper and will have test questions involving definitions. We are going to
+cover some finance, accounting, economics and other topics and not just “how to build a better program.” If you have
+a limited programming background I will work with you.</li>
+</ol>
+
+<p>This is an approximate schedule.  Updates will be noted in class.</p>
+
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th align="center">No</th>
+<th align="left">Topics</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Mon&nbsp;Jan&nbsp;27,&nbsp;2020</td>
+<td align="center">01</td>
+<td align="left">Introduction to class</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left">Cover Syllabus - Syllabus revisions  - Office Hours - Class Policy</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left">My background, an introduction to Go, Solidity and Contracts.</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left">What makes BlockChain special and useful?</td>
+</tr>
+
+<tr>
+<td>Wed&nbsp;Jan&nbsp;29,&nbsp;2020</td>
+<td align="center">02</td>
+<td align="left">Why Go, Overview of the BlockChain.</td>
+</tr>
+
+<tr>
+<td>Fri&nbsp;Jan&nbsp;31,&nbsp;2020</td>
+<td align="center">03</td>
+<td align="left">What is a hash, What are hashes used for, Types of hashes.</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td>Mon&nbsp;Feb&nbsp;03,&nbsp;2020</td>
+<td align="center">04</td>
+<td align="left">Mining walk through.</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left">Homework 1 Due - Go Hello World and 9 other chunks.  100pts.</td>
+</tr>
+
+<tr>
+<td>Wed&nbsp;Feb&nbsp;05,&nbsp;2020</td>
+<td align="center">05</td>
+<td align="left">Merkle Trees, Proof of work, Proof of stake.</td>
+</tr>
+
+<tr>
+<td>Fri&nbsp;Feb&nbsp;07,&nbsp;2020</td>
+<td align="center">06</td>
+<td align="left">Economics of BlockChain.  Cheat Grass, Co2, Land Titles.</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td>Mon&nbsp;Feb&nbsp;10,&nbsp;2020</td>
+<td align="center">07</td>
+<td align="left">More on Go complicated stuff; Map synchronization, Go core/panic.</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left">Go interfaces, Go weaknesses.</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left">Homework 2 Due - Mining(hashes) / Merkle Trees (very simple Merkle)</td>
+</tr>
+
+<tr>
+<td>Wed&nbsp;Feb&nbsp;12,&nbsp;2020</td>
+<td align="center">08</td>
+<td align="left">Finance: Creating personal wealth, Purposes of a business, Terms and</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left">definitions.</td>
+</tr>
+
+<tr>
+<td>Fri&nbsp;Feb&nbsp;14,&nbsp;2020</td>
+<td align="center">09</td>
+<td align="left">Transactions / Data Storage</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td>Mon&nbsp;Feb&nbsp;17,&nbsp;2020</td>
+<td align="center">10</td>
+<td align="left">Public Private Keys</td>
+</tr>
+
+<tr>
+<td>Wed&nbsp;Feb&nbsp;19,&nbsp;2020</td>
+<td align="center">11</td>
+<td align="left">ECDSA &amp; RSA encryption, Quantum Computers and NTRU.</td>
+</tr>
+
+<tr>
+<td>Fri&nbsp;Feb&nbsp;21,&nbsp;2020</td>
+<td align="center">12</td>
+<td align="left">Digital Security.</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td>Mon&nbsp;Feb&nbsp;24,&nbsp;2020</td>
+<td align="center">13</td>
+<td align="left">Blockchain Economics; Blockchain in non-profs, Proof of trust,</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left">Tracking of donations, Software economics; Normal technology cycles, SQL</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left">crash, .com crash.</td>
+</tr>
+
+<tr>
+<td>Wed&nbsp;Feb&nbsp;26,&nbsp;2020</td>
+<td align="center">14</td>
+<td align="left">Smart Contracts, Solidity(Ethereum), Haskell(IOHK)</td>
+</tr>
+
+<tr>
+<td>Fri&nbsp;Feb&nbsp;28,&nbsp;2020</td>
+<td align="center">15</td>
+<td align="left">Standard Contracts, Simple tokens, Standard tokens, ERC-20, ERC-721,</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left">ERC-1203.</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left">Homework 3 Due - Client Server and Transactions.</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left">Homework 4 Due - Wallet.</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left">Homework 5 Due - Signed Data - with client server.</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td>Mon&nbsp;Mar&nbsp;02,&nbsp;2020</td>
+<td align="center">16</td>
+<td align="left">Finance and Terms, Accounting(history)- Double Entry Book keeping,</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left">Cooking the books.</td>
+</tr>
+
+<tr>
+<td>Wed&nbsp;Mar&nbsp;04,&nbsp;2020</td>
+<td align="center">17</td>
+<td align="left">Wallets, Analogy for what BlockChain is, Client-Server how to implement</td>
+</tr>
+
+<tr>
+<td>Fri&nbsp;Mar&nbsp;06,&nbsp;2020</td>
+<td align="center">18</td>
+<td align="left">Standard contracts, Go and Ethereum, ERC-20, Events, interoperability.</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td>Mon&nbsp;Mar&nbsp;09,&nbsp;2020</td>
+<td align="center">19</td>
+<td align="left">Midterm Exam (This date may have to change)</td>
+</tr>
+
+<tr>
+<td>Wed&nbsp;Mar&nbsp;11,&nbsp;2020</td>
+<td align="center">20</td>
+<td align="left">Client/Servers</td>
+</tr>
+
+<tr>
+<td>Fri&nbsp;Mar&nbsp;13,&nbsp;2020</td>
+<td align="center">21</td>
+<td align="left">Client/Servers part 2.</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td>Mon&nbsp;Mar&nbsp;16,&nbsp;2020</td>
+<td align="center"></td>
+<td align="left"><em>spring break - no class</em></td>
+</tr>
+
+<tr>
+<td>Wed&nbsp;Mar&nbsp;18,&nbsp;2020</td>
+<td align="center"></td>
+<td align="left"><em>spring break - no class</em></td>
+</tr>
+
+<tr>
+<td>Fri&nbsp;Mar&nbsp;20,&nbsp;2020</td>
+<td align="center"></td>
+<td align="left"><em>spring break - no class</em></td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td>Mon&nbsp;Mar&nbsp;23,&nbsp;2020</td>
+<td align="center">22</td>
+<td align="left">Installing NPM and Node, Why use Ethereum, Eth and Gas, Truffle</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left">development system.</td>
+</tr>
+
+<tr>
+<td>Wed&nbsp;Mar&nbsp;25,&nbsp;2020</td>
+<td align="center">23</td>
+<td align="left">Smart Contracts in detail.</td>
+</tr>
+
+<tr>
+<td>Fri&nbsp;Mar&nbsp;27,&nbsp;2020</td>
+<td align="center">24</td>
+<td align="left">What are dApp and web3, Interoperability between chains.</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td>Mon&nbsp;Mar&nbsp;30,&nbsp;2020</td>
+<td align="center">25</td>
+<td align="left">Patterns and How to Learn New Languages: Solidity.</td>
+</tr>
+
+<tr>
+<td>Wed&nbsp;Apr&nbsp;01,&nbsp;2020</td>
+<td align="center">26</td>
+<td align="left">More on ERC-20 and ERC-721 and ERC-1203</td>
+</tr>
+
+<tr>
+<td>Fri&nbsp;Apr&nbsp;03,&nbsp;2020</td>
+<td align="center">27</td>
+<td align="left">Creating wealth, Jobs in BlockChain, Blockchain economics.</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left">Homework 6 Due - Metadata contract - signed documents.</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td>Mon&nbsp;Apr&nbsp;06,&nbsp;2020</td>
+<td align="center">28</td>
+<td align="left">Concurrency in Go, Go routines, Locks, Channels</td>
+</tr>
+
+<tr>
+<td>Wed&nbsp;Apr&nbsp;08,&nbsp;2020</td>
+<td align="center">29</td>
+<td align="left">How ECDSA works, the Basics of public key security.</td>
+</tr>
+
+<tr>
+<td>Fri&nbsp;Apr&nbsp;10,&nbsp;2020</td>
+<td align="center">30</td>
+<td align="left">Functional programming and contracts (Begining of IOHK stuff)</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left">Homework 7 Due - Test-Net ERC-20/ERC-721 based contract.</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td>Mon&nbsp;Apr&nbsp;13,&nbsp;2020</td>
+<td align="center">31</td>
+<td align="left">Insurance companies and Non fungible Tokens</td>
+</tr>
+
+<tr>
+<td>Wed&nbsp;Apr&nbsp;15,&nbsp;2020</td>
+<td align="center">32</td>
+<td align="left">Testing and Test Output</td>
+</tr>
+
+<tr>
+<td>Fri&nbsp;Apr&nbsp;17,&nbsp;2020</td>
+<td align="center">33</td>
+<td align="left">Automatic Verification of Code and Contracts</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left">Homework 8 Due - Familiarize with IOHK/Marlow.</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td>Mon&nbsp;Apr&nbsp;20,&nbsp;2020</td>
+<td align="center">34</td>
+<td align="left">Tokens; Simple and Standard</td>
+</tr>
+
+<tr>
+<td>Wed&nbsp;Apr&nbsp;22,&nbsp;2020</td>
+<td align="center">35</td>
+<td align="left">Zero Knowledge Proofs, Digital Security, zk-SNAKRS, Byzantine Generals</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left">problem and the Honey-Badger solution.</td>
+</tr>
+
+<tr>
+<td>Fri&nbsp;Apr&nbsp;24,&nbsp;2020</td>
+<td align="center">36</td>
+<td align="left">IOHK’s system.  Nix-OS and Contracts.</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left">Homework 9 Due - IOHK/Marlow based state machine contract.</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td>Mon&nbsp;Apr&nbsp;27,&nbsp;2020</td>
+<td align="center">37</td>
+<td align="left">Legal Ramifications of BlockChain, ICOs 506(d), Subpart (s)</td>
+</tr>
+
+<tr>
+<td>Wed&nbsp;Apr&nbsp;29,&nbsp;2020</td>
+<td align="center">38</td>
+<td align="left">Personal Security Friction vs Access.</td>
+</tr>
+
+<tr>
+<td>Fri&nbsp;May&nbsp;01,&nbsp;2020</td>
+<td align="center">39</td>
+<td align="left">More on Security and Encryption</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td>Mon&nbsp;May&nbsp;04,&nbsp;2020</td>
+<td align="center">40</td>
+<td align="left">Extra Class - In case we have to miss a lecture.</td>
+</tr>
+
+<tr>
+<td>Wed&nbsp;May&nbsp;06,&nbsp;2020</td>
+<td align="center">41</td>
+<td align="left">Extra Class - In case we have to miss a lecture.</td>
+</tr>
+
+<tr>
+<td>Fri&nbsp;May&nbsp;08,&nbsp;2020</td>
+<td align="center">42</td>
+<td align="left">Final Review</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Title IX – Duty to Report</h2>
+
+<p>The University of Wyoming faculty are committed to helping create a safe learning environment for all students and for
+the university as a whole. If you have experienced any form of gender or sex-based discrimination or harassment,
+including sexual assault, sexual harassment, relationship violence, or stalking, know that help and support are
+available. The University has staff members trained to support survivors in navigating campus life, accessing health and
+counseling services, providing academic and housing accommodations, and more. The University strongly encourages all
+students to report any such incidents to the University. Please be aware that all University of Wyoming employees,
+including student staff, are required to report all Title IX related concerns to the Title IX Coordinator or their
+supervisor. This means that if you tell a faculty member about a situation of sexual harassment or sexual violence, or
+other related misconduct, the faculty member must share that information with the University’s Title IX Coordinator.
+UW’s Title IX Coordinator is Jim Osborn (Manager of Investigations, Equal Opportunity Report and Response). He is
+located in Room 320 of the Bureau of Mines Building, and can be reached via email at report-it@uwyo.edu or via phone at
+766-5200 or 766-5228. For more information, go to:
+<a href="http://www.uwyo.edu/reportit/learn-more/faqs.html">http://www.uwyo.edu/reportit/learn-more/faqs.html</a> .</p>
+
+<h2>Attendance and Absence policies</h2>
+
+<p>Attendance is critical. There is no text book for ALL of the material. The only way to know what you need to know is by
+attending class. If you have an excused absence that is fine, try to get notes from the day you missed from one of your
+classmates. Just don&rsquo;t skip!</p>
+
+<h2>Classroom Behavior Policy</h2>
+
+<p>At all times, treat your presence in the classroom and your enrollment in this course as you would a job. Act
+professionally, arrive on time, pay attention, complete your work in a timely and professional manner. You will be
+respectful towards your classmates and instructor. Spirited debate and disagreement are to be expected in any classroom
+and all views will be heard fully, but at all times we will behave civilly and with respect towards one another.
+Personal attacks, offensive language, name-calling, and dismissive gestures are not warranted in a learning atmosphere.
+As the instructor, I have the right to dismiss you from the classroom.</p>
+
+<h2>Classroom Statement on Diversity</h2>
+
+<p>The University of Wyoming values an educational environment that is diverse, equitable, and inclusive. The diversity
+that students and faculty bring to class, including age, country of origin, culture, disability, economic class,
+ethnicity, gender identity, immigration status, linguistic, political affiliation, race, religion, sexual orientation,
+veteran status, worldview, and other social and cultural diversity is valued, respected, and considered a resource for
+learning.</p>
+
+<h2>Disability Support</h2>
+
+<p>If you have a physical, learning, sensory or psychological disability and require accommodations, please register as
+soon as possible and provide documentation of your disability to Disability Support Services (DSS), Room 109 Knight
+Hall. You may also contact DSS at (307) 766-3073 or udss@uwyo.edu. Visit their website for more
+information: www.uwyo.edu/udss</p>
+
+<h2>Academic Dishonesty Policies</h2>
+
+<p>Don&rsquo;t cheat on the exams. I expect you to take full advantage of all the online resources you can get your hands on.
+That includes Stack Overflow, Github etc. If you do use someone else&rsquo;s code, put in a link to where you found it.
+Don&rsquo;t cheat on the projects - do you own work.  Most of the learning in the class is from <em>doing</em> the projects.</p>
+
+<h2>Substantive changes to syllabus</h2>
+
+<p>All deadlines, requirements, and course structure are subject to change if deemed necessary by the instructor. Students
+will be notified verbally in class, on our WyoCourses page announcement, and via email of these changes. I do travel
+during the semester. Class could be canceled or assignments due dates changed.</p>
+
+<h1>Copyright</h1>
+
+<p>Copyright &copy; University of Wyoming, 2019-2021.</p>
+
+</div>
+
