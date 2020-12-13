@@ -19,6 +19,9 @@
 
 Email: pschlump@uwyo.edu
 
+Phone: (for emergencies) 720-209-7888 - before you call you need to SMS me with who you are and what class you are in so that I add
+you to my address book.  I get far too many robo-calls to answer unknown phone numbers.  Generally I am avalible from 7AM to 10PM.
+
 ## Office hours:
 
 I will hold office hours from 8:00AM to 9:00AM on Monday, Wednesday and Friday or by appointment.
@@ -30,12 +33,18 @@ Textbook: We have a textbook for the 2nd 1/2 of teh class on  Ethereum/Solidity.
 The text book for Go is a free online PDF: https://www.golang-book.com/books/intro We will also be using IOHK’s BlockChian. It
 is programmed in Haskell.
 
-
 ## General requirements and expectations for the course
 
 You must demonstrate working homework to the instructor or to the class grader to pass the class (no matter how many
 points you get). For code developed in Go, test cases will be supplied.  The Go homework are cumulative.
 Homework 3 depends on getting a working version of 2 etc.
+
+The class will have lectures - pre-record, discussion groups that have attendance taken - you are required to attend
+10 of the 12 discussion topics - there will be multiple times for each topic, and homework.  Some of the homework
+is done using an interactive tool at 
+[https://www.excellent-answers.com/learn-go.com](https://www.excellent-answers.com/learn-go.com).  I will supply
+you with your login to the site.  I am the author of the site so if you have problems please email me.
+
 
 ## Required examinations and assignments
 
