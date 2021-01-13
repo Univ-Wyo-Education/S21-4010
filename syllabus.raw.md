@@ -1,18 +1,5 @@
 
-
-
-
-<style>
-.pagebreak { page-break-before: always; }
-.half { height: 200px; }
-</style>
-
-
-
-
-
-
-
+m4_include(setup.m4)
 
 ## COSC Spring 2021 - 4010 or 5010 Special Topics - Blockchian
 
@@ -139,9 +126,58 @@ know and I will find a time.  These will be about 45 minutes long.
 
 
 
+m4_define([[[m4_comment]]],[[[]]])
 
+m4_comment([[[
 
+    January 2021      
+Su Mo Tu We Th Fr Sa  
+17 18 19 20 21 22 23  
+             ^----------- 1st day of class
+24 25 26 27 28 29 30  
+31                    
 
+   February 2021      
+Su Mo Tu We Th Fr Sa  
+    1  2  3  4  5  6  
+ 7  8  9 10 11 12 13  
+14 15 16 17 18 19 20  
+21 22 23 24 25 26 27  
+28                    
+                      
+     March 2021       
+Su Mo Tu We Th Fr Sa  
+    1  2  3  4  5  6  
+ 7  8  9 10 11 12 13  
+14 15 16 17 18 19 20  
+21 22 23 24 25 26 27  
+28 29 30 31           
+                      
+     April 2021       
+Su Mo Tu We Th Fr Sa  
+             1  2  3  
+ 4  5  6  7  8  9 10  
+11 12 13 14 15 16 17  
+18 19 20 21 22 23 24  
+25 26 27 28 29 30     
+                      
+      May 2021        
+Su Mo Tu We Th Fr Sa  
+                   1  
+ 2  3  4  5  6  7  8  
+          ^-----------------  Last day of class
+ 9 10 11 12 13 14 15  
+16 17 18 19 20 21 22  
+23 24 25 26 27 28 29  
+30 31                 
+
+1. Solidity stuff - revise
+2. Revise dates/weeks to end of semester
+3. URL for lecture list
+4. The days for interctive
+5. Table of Assinment
+
+]]])
 
 
 
