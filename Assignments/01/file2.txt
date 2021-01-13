@@ -1,0 +1,15 @@
+# Introduction to Programming in Go
+
+1. Install Go
+2. Verify that you can compile and run (Hello-World.go) (5pts)
+3. Echo command line arguments (echo1.go) (5pts)
+4. Parse command line arguments (echo2.go) (5pts)
+5. Read and write JSON file (read-json1.go) (10pts)
+6. Test a simple library package (15pts)
+7. Printing (print1.go) (10pts)
+8. Copy a File (copy1.go, copy2.go) (20pts)
+9. Hash and a simple test in Go (test1.go) (30pts)
+10. Summary
+
+100 Points total.
+

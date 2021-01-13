@@ -1,0 +1,928 @@
+<style>
+@font-face {
+	font-family: octicons-link;
+	src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	line-height: 1.5;
+	color: #24292e;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 16px;
+	line-height: 1.5;
+	word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+	color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+	color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+	color: #6f42c1;
+}
+
+.markdown-body .pl-smi,
+.markdown-body .pl-s .pl-s1 {
+	color: #24292e;
+}
+
+.markdown-body .pl-ent {
+	color: #22863a;
+}
+
+.markdown-body .pl-k {
+	color: #d73a49;
+}
+
+.markdown-body .pl-s,
+.markdown-body .pl-pds,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sre,
+.markdown-body .pl-sr .pl-sra {
+	color: #032f62;
+}
+
+.markdown-body .pl-v,
+.markdown-body .pl-smw {
+	color: #e36209;
+}
+
+.markdown-body .pl-bu {
+	color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+	color: #fafbfc;
+	background-color: #b31d28;
+}
+
+.markdown-body .pl-c2 {
+	color: #fafbfc;
+	background-color: #d73a49;
+}
+
+.markdown-body .pl-c2::before {
+	content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+	font-weight: bold;
+	color: #22863a;
+}
+
+.markdown-body .pl-ml {
+	color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+	font-weight: bold;
+	color: #005cc5;
+}
+
+.markdown-body .pl-mi {
+	font-style: italic;
+	color: #24292e;
+}
+
+.markdown-body .pl-mb {
+	font-weight: bold;
+	color: #24292e;
+}
+
+.markdown-body .pl-md {
+	color: #b31d28;
+	background-color: #ffeef0;
+}
+
+.markdown-body .pl-mi1 {
+	color: #22863a;
+	background-color: #f0fff4;
+}
+
+.markdown-body .pl-mc {
+	color: #e36209;
+	background-color: #ffebda;
+}
+
+.markdown-body .pl-mi2 {
+	color: #f6f8fa;
+	background-color: #005cc5;
+}
+
+.markdown-body .pl-mdr {
+	font-weight: bold;
+	color: #6f42c1;
+}
+
+.markdown-body .pl-ba {
+	color: #586069;
+}
+
+.markdown-body .pl-sg {
+	color: #959da5;
+}
+
+.markdown-body .pl-corl {
+	text-decoration: underline;
+	color: #032f62;
+}
+
+.markdown-body .octicon {
+	display: inline-block;
+	vertical-align: text-top;
+	fill: currentColor;
+}
+
+.markdown-body a {
+	background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+	outline-width: 0;
+}
+
+.markdown-body strong {
+	font-weight: inherit;
+}
+
+.markdown-body strong {
+	font-weight: bolder;
+}
+
+.markdown-body h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+.markdown-body img {
+	border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+.markdown-body hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+}
+
+.markdown-body input {
+	font: inherit;
+	margin: 0;
+}
+
+.markdown-body input {
+	overflow: visible;
+}
+
+.markdown-body [type="checkbox"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+.markdown-body * {
+	box-sizing: border-box;
+}
+
+.markdown-body input {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+.markdown-body a {
+	color: #0366d6;
+	text-decoration: none;
+}
+
+.markdown-body a:hover {
+	text-decoration: underline;
+}
+
+.markdown-body strong {
+	font-weight: 600;
+}
+
+.markdown-body hr {
+	height: 0;
+	margin: 15px 0;
+	overflow: hidden;
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid #dfe2e5;
+}
+
+.markdown-body hr::before {
+	display: table;
+	content: "";
+}
+
+.markdown-body hr::after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+.markdown-body table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+	padding: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body h1 {
+	font-size: 32px;
+	font-weight: 600;
+}
+
+.markdown-body h2 {
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.markdown-body h3 {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.markdown-body h4 {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.markdown-body h5 {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.markdown-body h6 {
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.markdown-body p {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+	margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+	x-list-style-type: lower-roman;
+	  list-style-type: decimal;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+	list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+	margin-left: 0;
+}
+
+.markdown-body code {
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-size: 12px;
+}
+
+.markdown-body pre {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-size: 12px;
+}
+
+.markdown-body .octicon {
+	vertical-align: text-bottom;
+}
+
+.markdown-body .pl-0 {
+	padding-left: 0 !important;
+}
+
+.markdown-body .pl-1 {
+	padding-left: 4px !important;
+}
+
+.markdown-body .pl-2 {
+	padding-left: 8px !important;
+}
+
+.markdown-body .pl-3 {
+	padding-left: 16px !important;
+}
+
+.markdown-body .pl-4 {
+	padding-left: 24px !important;
+}
+
+.markdown-body .pl-5 {
+	padding-left: 32px !important;
+}
+
+.markdown-body .pl-6 {
+	padding-left: 40px !important;
+}
+
+.markdown-body::before {
+	display: table;
+	content: "";
+}
+
+.markdown-body::after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+.markdown-body>*:first-child {
+	margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+	margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+	color: inherit;
+	text-decoration: none;
+}
+
+.markdown-body .anchor {
+	float: left;
+	padding-right: 4px;
+	margin-left: -20px;
+	line-height: 1;
+}
+
+.markdown-body .anchor:focus {
+	outline: none;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+.markdown-body hr {
+	height: 0.25em;
+	padding: 0;
+	margin: 24px 0;
+	background-color: #e1e4e8;
+	border: 0;
+}
+
+.markdown-body blockquote {
+	padding: 0 1em;
+	color: #6a737d;
+	border-left: 0.25em solid #dfe2e5;
+}
+
+.markdown-body blockquote>:first-child {
+	margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+	margin-bottom: 0;
+}
+
+.markdown-body kbd {
+	display: inline-block;
+	padding: 3px 5px;
+	font-size: 11px;
+	line-height: 10px;
+	color: #444d56;
+	vertical-align: middle;
+	background-color: #fafbfc;
+	border: solid 1px #c6cbd1;
+	border-bottom-color: #959da5;
+	border-radius: 3px;
+	box-shadow: inset 0 -1px 0 #959da5;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+	margin-top: 24px;
+	margin-bottom: 16px;
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+	color: #1b1f23;
+	vertical-align: middle;
+	visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+	text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+	visibility: visible;
+}
+
+.markdown-body h1 {
+	padding-bottom: 0.3em;
+	font-size: 2em;
+	border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h2 {
+	padding-bottom: 0.3em;
+	font-size: 1.5em;
+	border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h3 {
+	font-size: 1.25em;
+}
+
+.markdown-body h4 {
+	font-size: 1em;
+}
+
+.markdown-body h5 {
+	font-size: 0.875em;
+}
+
+.markdown-body h6 {
+	font-size: 0.85em;
+	color: #6a737d;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+	padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body li {
+	word-wrap: break-all;
+}
+
+.markdown-body li>p {
+	margin-top: 16px;
+}
+
+.markdown-body li+li {
+	margin-top: 0.25em;
+}
+
+.markdown-body dl {
+	padding: 0;
+}
+
+.markdown-body dl dt {
+	padding: 0;
+	margin-top: 16px;
+	font-size: 1em;
+	font-style: italic;
+	font-weight: 600;
+}
+
+.markdown-body dl dd {
+	padding: 0 16px;
+	margin-bottom: 16px;
+}
+
+.markdown-body table {
+	display: block;
+	width: 100%;
+	overflow: auto;
+}
+
+.markdown-body table th {
+	font-weight: 600;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+	padding: 6px 13px;
+	border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+	background-color: #fff;
+	border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+	background-color: #f6f8fa;
+}
+
+.markdown-body img {
+	max-width: 100%;
+	box-sizing: content-box;
+	background-color: #fff;
+}
+
+.markdown-body img[align=right] {
+	padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+	padding-right: 20px;
+}
+
+.markdown-body code {
+	padding: 0.2em 0.4em;
+	margin: 0;
+	font-size: 85%;
+	background-color: rgba(27,31,35,0.05);
+	border-radius: 3px;
+}
+
+.markdown-body pre {
+	word-wrap: normal;
+}
+
+.markdown-body pre>code {
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	word-break: normal;
+	white-space: pre;
+	background: transparent;
+	border: 0;
+}
+
+.markdown-body .highlight {
+	margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+	margin-bottom: 0;
+	word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+	padding: 16px;
+	overflow: auto;
+	font-size: 85%;
+	line-height: 1.45;
+	background-color: #f6f8fa;
+	border-radius: 3px;
+}
+
+.markdown-body pre code {
+	display: inline;
+	max-width: auto;
+	padding: 0;
+	margin: 0;
+	overflow: visible;
+	line-height: inherit;
+	word-wrap: normal;
+	background-color: transparent;
+	border: 0;
+}
+
+.markdown-body .full-commit .btn-outline:not(:disabled):hover {
+	color: #005cc5;
+	border-color: #005cc5;
+}
+
+.markdown-body kbd {
+	display: inline-block;
+	padding: 3px 5px;
+	font: 11px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	line-height: 10px;
+	color: #444d56;
+	vertical-align: middle;
+	background-color: #fafbfc;
+	border: solid 1px #d1d5da;
+	border-bottom-color: #c6cbd1;
+	border-radius: 3px;
+	box-shadow: inset 0 -1px 0 #c6cbd1;
+}
+
+.markdown-body :checked+.radio-label {
+	position: relative;
+	z-index: 1;
+	border-color: #0366d6;
+}
+
+.markdown-body .task-list-item {
+	list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+	margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+	margin: 0 0.2em 0.25em -1.6em;
+	vertical-align: middle;
+}
+
+.markdown-body hr {
+	border-bottom-color: #eee;
+}
+
+</style>
+<style>
+ol {
+    display: block;
+    list-style-type: decimal;
+}
+</style>
+
+<div class="markdown-body">
+
+<h1>Lecture 23 - Zero Knowledge Proofs</h1>
+
+<h1>Videos</h1>
+
+<p><a href="https://youtu.be/ATJ0Xizm2OU">https://youtu.be/ATJ0Xizm2OU - Lect-23-4010-5010-zk-SNark-pt1.mp4</a><br>
+<a href="https://youtu.be/KcktZj2BvHo">https://youtu.be/KcktZj2BvHo - Lect-23-4010-5010-pt2.mp4</a><br>
+<a href="https://youtu.be/0b6cZr8woQM">https://youtu.be/0b6cZr8woQM - Lect-23-4010-5010-pt3.mp4</a><br>
+<a href="https://youtu.be/Y8fpxQA4JrY">https://youtu.be/Y8fpxQA4JrY - Lect-23-4010-5010-pt4.mp4</a><br></p>
+
+<p>From Amazon S3 - for download (same as youtube videos)</p>
+
+<p><a href="http://uw-s20-2015.s3.amazonaws.com/Lect-23-4010-5010-zk-SNark-pt1.mp4">http://uw-s20-2015.s3.amazonaws.com/Lect-23-4010-5010-zk-SNark-pt1.mp4</a><br>
+<a href="http://uw-s20-2015.s3.amazonaws.com/Lect-23-4010-5010-pt2.mp4">http://uw-s20-2015.s3.amazonaws.com/Lect-23-4010-5010-pt2.mp4</a><br>
+<a href="http://uw-s20-2015.s3.amazonaws.com/Lect-23-4010-5010-pt3.mp4">http://uw-s20-2015.s3.amazonaws.com/Lect-23-4010-5010-pt3.mp4</a><br>
+<a href="http://uw-s20-2015.s3.amazonaws.com/Lect-23-4010-5010-pt4.mp4">http://uw-s20-2015.s3.amazonaws.com/Lect-23-4010-5010-pt4.mp4</a><br></p>
+
+<h1>News</h1>
+
+<ol>
+<li><p>80% Success in getting past fingerprint readers:
+<a href="https://arstechnica.com/information-technology/2020/04/attackers-can-bypass-fingerprint-authentication-with-an-80-success-rate/">https://arstechnica.com/information-technology/2020/04/attackers-can-bypass-fingerprint-authentication-with-an-80-success-rate/</a></p></li>
+
+<li><p>Fake fingerprints can unlock a smartphone.
+<a href="https://motherboard.vice.com/en_us/article/bjenyd/researchers-created-fake-master-fingerprints-to-unlock-smartphones">https://motherboard.vice.com/en_us/article/bjenyd/researchers-created-fake-master-fingerprints-to-unlock-smartphones</a></p></li>
+
+<li><p>Ethereum Network tokens used for COVID-19 Tracking.  Two different groups are using tokens for setting up &ldquo;contact-tracing&rdquo; on
+smart phones using ETH smart contracts.
+<a href="https://futureloop.com/a/Op3bBypYGQ/">https://futureloop.com/a/Op3bBypYGQ/</a></p></li>
+
+<li><p>The GPUs in the ETH network (6000+ systems) have joint the Fold@Home network -the larges super computing network to find a cure
+for the novel conronavirus.</p></li>
+</ol>
+
+<h1>zk-SNARKs</h1>
+
+<ol>
+<li>The acronym zk-SNARK stands for “Zero-Knowledge Succinct Non-Interactive Argument of Knowledge,” and refers to a
+proof construction where one can prove possession of certain information, e.g. a secret key, without revealing that
+information, and without any interaction between the prover and verifier.</li>
+<li>What is it - cave</li>
+<li>Overview of how it will all work</li>
+</ol>
+
+<p>Steps in a General Purpose zk-SNARK:</p>
+
+<pre><code>1. Computation
+2. Algebraic Circuit
+3. Rank 1 Constraint System (R1CS)
+4. Quadratic Arithmetic Program (QAP)
+5. Linear PCP: provers are restricted to computing linear (or affine) functions of messages over some finite field or ring.
+6. Linear Interactive Proof
+7. zk-SNARK
+</code></pre>
+
+<h2>Reading</h2>
+
+<p>This web article walks through the Suduko example and also has the math-and walk through for authentication using a zk-SNARK:
+<a href="https://blockgeeks.com/guides/what-is-zksnarks/">https://blockgeeks.com/guides/what-is-zksnarks/</a>  The Schnorr Identification
+protocall is at the hart of SRP6a - the system used for proof of identity in SSH.</p>
+
+<p>Note: zk-SNARKs are different thatn zk-STARKs -  Please read all 3 parts:</p>
+
+<ol>
+<li><a href="https://cryptodigestnews.com/digital-identity-privacy-and-zero-knowledge-proofs-zk-snarks-3d092b509990">https://cryptodigestnews.com/digital-identity-privacy-and-zero-knowledge-proofs-zk-snarks-3d092b509990</a></li>
+<li><a href="https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c">https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c</a></li>
+<li><a href="https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d">https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d</a></li>
+</ol>
+
+<h1>What is Zero Knowledge</h1>
+
+<p>From: <a href="https://en.wikipedia.org/wiki/Zero-knowledge_proof">https://en.wikipedia.org/wiki/Zero-knowledge_proof</a> &ndash; this section</p>
+
+<h2>The Ali Baba cave</h2>
+
+<p>There is a well-known story presenting the fundamental ideas of zero-knowledge proofs, first published by Jean-Jacques
+Quisquater and others in their paper &ldquo;How to Explain Zero-Knowledge Protocols to Your Children&rdquo;. It is common
+practice to label the two parties in a zero-knowledge proof as Peggy (the prover of the statement) and Victor (the
+verifier of the statement).</p>
+
+<p>In this story, Peggy has uncovered the secret word used to open a magic door in a cave. The cave is shaped like a ring,
+with the entrance on one side and the magic door blocking the opposite side. Victor wants to know whether Peggy knows
+the secret word; but Peggy, being a very private person, does not want to reveal her knowledge (the secret word) to
+Victor or to reveal the fact of her knowledge to the world in general.</p>
+
+<p><img src="Zkip_alibaba1.png" alt="Zkip_alibaba1.png" /></p>
+
+<p>They label the left and right paths from the entrance A and B. First, Victor waits outside the cave as Peggy goes in.
+Peggy takes either path A or B; Victor is not allowed to see which path she takes. Then, Victor enters the cave and
+shouts the name of the path he wants her to use to return, either A or B, chosen at random. Providing she really does
+know the magic word, this is easy: she opens the door, if necessary, and returns along the desired path.</p>
+
+<p><img src="Zkip_alibaba2.png" alt="Zkip_alibaba2.png" /></p>
+
+<p>However, suppose she did not know the word. Then, she would only be able to return by the named path if Victor were to
+give the name of the same path by which she had entered. Since Victor would choose A or B at random, she would have a
+50% chance of guessing correctly. If they were to repeat this trick many times, say 20 times in a row, her chance of
+successfully anticipating all of Victor&rsquo;s requests would become vanishingly small (about one in a million).</p>
+
+<p>Thus, if Peggy repeatedly appears at the exit Victor names, he can conclude that it is extremely probable that Peggy
+does, in fact, know the secret word.</p>
+
+<p><img src="Zkip_alibaba3.png" alt="Zkip_alibaba3.png" /></p>
+
+<p>One side note with respect to third-party observers: even if Victor is wearing a hidden camera that records the whole
+transaction, the only thing the camera will record is in one case Victor shouting &ldquo;A!&rdquo; and Peggy appearing at A or in
+the other case Victor shouting &ldquo;B!&rdquo; and Peggy appearing at B. A recording of this type would be trivial for any two
+people to fake (requiring only that Peggy and Victor agree beforehand on the sequence of A&rsquo;s and B&rsquo;s that Victor will
+shout). Such a recording will certainly never be convincing to anyone but the original participants. In fact, even a
+person who was present as an observer at the original experiment would be unconvinced, since Victor and Peggy might have
+orchestrated the whole &ldquo;experiment&rdquo; from start to finish.</p>
+
+<p>Further notice that if Victor chooses his A&rsquo;s and B&rsquo;s by flipping a coin on-camera, this protocol loses its
+zero-knowledge property; the on-camera coin flip would probably be convincing to any person watching the recording
+later. Thus, although this does not reveal the secret word to Victor, it does make it possible for Victor to convince
+the world in general that Peggy has that knowledge—counter to Peggy&rsquo;s stated wishes. However, digital cryptography
+generally &ldquo;flips coins&rdquo; by relying on a pseudo-random number generator, which is akin to a coin with a fixed pattern of
+heads and tails known only to the coin&rsquo;s owner. If Victor&rsquo;s coin behaved this way, then again it would be possible for
+Victor and Peggy to have faked the &ldquo;experiment&rdquo;, so using a pseudo-random number generator would not reveal Peggy&rsquo;s
+knowledge to the world in the same way that using a flipped coin would.</p>
+
+<p>Notice that Peggy could prove to Victor that she knows the magic word, without revealing it to him, in a single trial.
+If both Victor and Peggy go together to the mouth of the cave, Victor can watch Peggy go in through A and come out
+through B. This would prove with certainty that Peggy knows the magic word, without revealing the magic word to Victor.
+However, such a proof could be observed by a third party, or recorded by Victor and such a proof would be convincing to
+anybody. In other words, Peggy could not refute such proof by claiming she colluded with Victor, and she is therefore no
+longer in control of who is aware of her knowledge.</p>
+
+<h1>Mini Sudoku Example</h1>
+
+<h2>Sudoku</h2>
+
+<p>Solving a Sudoku puzzle is equivalent to deciding whether there is a valid graph vertex coloring using colors, where k =
+n 2 in your n 2 × n 2 Sudoku instance. The graph coloring problem is known to be NP-complete for values of &gt; 2, so 9x9
+Sudoku is still hard.  For our example we will use a 2x2 Sudoku - because doing this with a 9x9 or larger will take forever!</p>
+
+<p>Also Sudoku have a single unique solution.</p>
+
+<pre><code>
+	[   |   ] [ 2 |   ]
+	[ 1 |   ] [   |   ]
+	-------------------
+	[   |   ] [ 3 |   ]
+	[ 4 |   ] [   |   ]
+
+</code></pre>
+
+<p>Observations - 4x4 size.</p>
+
+<p>1 Number from the set of { 1,2,3,4 } for each block of 4.</p>
+
+<p>The sum of each block must be 1+2+3+4.</p>
+
+<p>Each block must use all of the numbers 1,2,3,4.</p>
+
+<p>Each row must use 1,2,3,4.</p>
+
+<p>Each Column must use 1,2,3,4.</p>
+
+<p>The Sum of rows, Sum of Columns, the Sum of each block is the same.</p>
+
+<h1>Sudoku Solved</h1>
+
+<pre><code>
+	[ 3 | 4 ] [ 2 | 1 ]
+	[ 1 | 2 ] [ 4 | 3 ]
+	-------------------
+	[ 2 | 1 ] [ 3 | 4 ]
+	[ 4 | 3 ] [ 1 | 2 ]
+
+</code></pre>
+
+<p>The zero-knowledge relies on substituting the numbers in a mapping then showing that this is a solved value.</p>
+
+<p>Questions that can be asked:</p>
+
+<pre><code>1. What is the (random substituted) original puzzle?
+2. What is the (r.s.) values for a 4x4 block? (And the block that I would like to see)
+3. What are the (r.s.) values for a column?
+4. What are teh (r.s.) values for a row?
+</code></pre>
+
+<p>Random Substitution:</p>
+
+<pre><code>	1 -&gt; 4
+	4 -&gt; 2
+	2 -&gt; 3
+	3 -&gt; 1
+</code></pre>
+
+<p>For row 2?</p>
+
+<p>My Solution:</p>
+
+<pre><code>	[ 1 | 2 ] [ 4 | 3 ]
+</code></pre>
+
+<p>With substitutions?</p>
+
+<pre><code>	[ 4 | 3 ] [ 2 | 1 ]
+</code></pre>
+
+<p>Was anything given away?</p>
+
+<p>Keep asking until you are satisfied that the solver has a solution.</p>
+
+<p>This is an interactive solution - so it is not a SNARK - but it shows the process of interactive proof with zero knowledge.</p>
+
+<p>To do this proof you have to have a &lsquo;setup&rsquo; phase where you generate a solution to the Sudoku - that is hard and time consuming.
+Once the &ldquo;solution&rdquo; is known then the interactive proof part is fast.</p>
+
+<p>zk-STARKs - address this solution overhead time.</p>
+
+<h2>References</h2>
+
+<ol>
+<li><a href="https://medium.com/@VitalikButerin/zk-snarks-under-the-hood-b33151a013f6">https://medium.com/@VitalikButerin/zk-snarks-under-the-hood-b33151a013f6</a></li>
+</ol>
+
+</div>
+

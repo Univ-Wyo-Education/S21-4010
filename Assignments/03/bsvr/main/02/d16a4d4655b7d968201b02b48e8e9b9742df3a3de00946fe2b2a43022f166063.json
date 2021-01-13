@@ -1,0 +1,331 @@
+{
+	"Index": 0,
+	"Desc": "GenesisBlock Fri Aug 17 23:16:12 MDT 2018",
+	"ThisBlockHash": "d16a4d4655b7d968201b02b48e8e9b9742df3a3de00946fe2b2a43022f166063",
+	"PrevBlockHash": "",
+	"Nonce": 27,
+	"Seal": "0e5caa36f71ef8422495201afb27c4dabea99c357fcb7e46f0dc7d40c40df0ff",
+	"MerkleHash": "a1e9860724f80674ebc32c05c6383db1807caf4bf3a1e0d7d8b7733687434ded",
+	"Tx": [
+		{
+			"TxOffset": 0,
+			"Input": null,
+			"Output": [
+				{
+					"BlockNo": 0,
+					"TxOffset": 0,
+					"TxOutputPos": 0,
+					"Account": "885765a2fcfb72e68d82d656c6411b7d27bacdd7",
+					"Amount": 500000
+				}
+			],
+			"SCOwnerAccount": "",
+			"SCAddress": "",
+			"SCOutputData": "",
+			"Account": "db180da9a8982c7bb75ca40039f959cb959c62e8",
+			"Signature": "",
+			"Message": "",
+			"Comment": "Initial Balance"
+		},
+		{
+			"TxOffset": 1,
+			"Input": null,
+			"Output": [
+				{
+					"BlockNo": 0,
+					"TxOffset": 1,
+					"TxOutputPos": 0,
+					"Account": "6e06bf940bb57ade69cb03153d1c3842411bd3c1",
+					"Amount": 500000
+				}
+			],
+			"SCOwnerAccount": "",
+			"SCAddress": "",
+			"SCOutputData": "",
+			"Account": "db180da9a8982c7bb75ca40039f959cb959c62e8",
+			"Signature": "",
+			"Message": "",
+			"Comment": "Initial Balance"
+		},
+		{
+			"TxOffset": 2,
+			"Input": null,
+			"Output": [
+				{
+					"BlockNo": 0,
+					"TxOffset": 2,
+					"TxOutputPos": 0,
+					"Account": "3b65b88e4256c8926358551072f17460efe5452b",
+					"Amount": 500000
+				}
+			],
+			"SCOwnerAccount": "",
+			"SCAddress": "",
+			"SCOutputData": "",
+			"Account": "db180da9a8982c7bb75ca40039f959cb959c62e8",
+			"Signature": "",
+			"Message": "",
+			"Comment": "Initial Balance"
+		},
+		{
+			"TxOffset": 3,
+			"Input": null,
+			"Output": [
+				{
+					"BlockNo": 0,
+					"TxOffset": 3,
+					"TxOutputPos": 0,
+					"Account": "40681739b0ef568acce20f5575ad4cf24223926f",
+					"Amount": 500000
+				}
+			],
+			"SCOwnerAccount": "",
+			"SCAddress": "",
+			"SCOutputData": "",
+			"Account": "db180da9a8982c7bb75ca40039f959cb959c62e8",
+			"Signature": "",
+			"Message": "",
+			"Comment": "Initial Balance"
+		},
+		{
+			"TxOffset": 4,
+			"Input": null,
+			"Output": [
+				{
+					"BlockNo": 0,
+					"TxOffset": 4,
+					"TxOutputPos": 0,
+					"Account": "4af64cd87a47aab7cffdbada6bfd6aef47036c03",
+					"Amount": 500000
+				}
+			],
+			"SCOwnerAccount": "",
+			"SCAddress": "",
+			"SCOutputData": "",
+			"Account": "db180da9a8982c7bb75ca40039f959cb959c62e8",
+			"Signature": "",
+			"Message": "",
+			"Comment": "Initial Balance"
+		},
+		{
+			"TxOffset": 5,
+			"Input": null,
+			"Output": [
+				{
+					"BlockNo": 0,
+					"TxOffset": 5,
+					"TxOutputPos": 0,
+					"Account": "b0d533a8064ed180967aa4dafa453deab107961c",
+					"Amount": 500000
+				}
+			],
+			"SCOwnerAccount": "",
+			"SCAddress": "",
+			"SCOutputData": "",
+			"Account": "db180da9a8982c7bb75ca40039f959cb959c62e8",
+			"Signature": "",
+			"Message": "",
+			"Comment": "Initial Balance"
+		},
+		{
+			"TxOffset": 6,
+			"Input": null,
+			"Output": [
+				{
+					"BlockNo": 0,
+					"TxOffset": 6,
+					"TxOutputPos": 0,
+					"Account": "31568cc92115a2ebe6eb37e9a7c7f6334b988196",
+					"Amount": 500000
+				}
+			],
+			"SCOwnerAccount": "",
+			"SCAddress": "",
+			"SCOutputData": "",
+			"Account": "db180da9a8982c7bb75ca40039f959cb959c62e8",
+			"Signature": "",
+			"Message": "",
+			"Comment": "Initial Balance"
+		},
+		{
+			"TxOffset": 7,
+			"Input": null,
+			"Output": [
+				{
+					"BlockNo": 0,
+					"TxOffset": 7,
+					"TxOutputPos": 0,
+					"Account": "9d41e5938767466af28865e1c33071f1561d57a8",
+					"Amount": 500000
+				}
+			],
+			"SCOwnerAccount": "",
+			"SCAddress": "",
+			"SCOutputData": "",
+			"Account": "db180da9a8982c7bb75ca40039f959cb959c62e8",
+			"Signature": "",
+			"Message": "",
+			"Comment": "Initial Balance"
+		},
+		{
+			"TxOffset": 8,
+			"Input": null,
+			"Output": [
+				{
+					"BlockNo": 0,
+					"TxOffset": 8,
+					"TxOutputPos": 0,
+					"Account": "e7b8a518bf1b5c4f01b2a7ee39a2800a982e06ee",
+					"Amount": 500000
+				}
+			],
+			"SCOwnerAccount": "",
+			"SCAddress": "",
+			"SCOutputData": "",
+			"Account": "db180da9a8982c7bb75ca40039f959cb959c62e8",
+			"Signature": "",
+			"Message": "",
+			"Comment": "Initial Balance"
+		},
+		{
+			"TxOffset": 9,
+			"Input": null,
+			"Output": [
+				{
+					"BlockNo": 0,
+					"TxOffset": 9,
+					"TxOutputPos": 0,
+					"Account": "4e27d9c8ba3a6904f7a7cb31eae5ccce8bf33300",
+					"Amount": 500000
+				}
+			],
+			"SCOwnerAccount": "",
+			"SCAddress": "",
+			"SCOutputData": "",
+			"Account": "db180da9a8982c7bb75ca40039f959cb959c62e8",
+			"Signature": "",
+			"Message": "",
+			"Comment": "Initial Balance"
+		},
+		{
+			"TxOffset": 10,
+			"Input": null,
+			"Output": [
+				{
+					"BlockNo": 0,
+					"TxOffset": 10,
+					"TxOutputPos": 0,
+					"Account": "5ae7b3cf64adc3d7fef099319a9be4acb8bd73ed",
+					"Amount": 500000
+				}
+			],
+			"SCOwnerAccount": "",
+			"SCAddress": "",
+			"SCOutputData": "",
+			"Account": "db180da9a8982c7bb75ca40039f959cb959c62e8",
+			"Signature": "",
+			"Message": "",
+			"Comment": "Initial Balance"
+		},
+		{
+			"TxOffset": 11,
+			"Input": null,
+			"Output": [
+				{
+					"BlockNo": 0,
+					"TxOffset": 11,
+					"TxOutputPos": 0,
+					"Account": "0c34a1a3c5ae302cb41f9cfd999e7950b8ebf40f",
+					"Amount": 500000
+				}
+			],
+			"SCOwnerAccount": "",
+			"SCAddress": "",
+			"SCOutputData": "",
+			"Account": "db180da9a8982c7bb75ca40039f959cb959c62e8",
+			"Signature": "",
+			"Message": "",
+			"Comment": "Initial Balance"
+		},
+		{
+			"TxOffset": 12,
+			"Input": null,
+			"Output": [
+				{
+					"BlockNo": 0,
+					"TxOffset": 12,
+					"TxOutputPos": 0,
+					"Account": "42f487a6d5c86962310d5ab5afe5cad7bc80805b",
+					"Amount": 500000
+				}
+			],
+			"SCOwnerAccount": "",
+			"SCAddress": "",
+			"SCOutputData": "",
+			"Account": "db180da9a8982c7bb75ca40039f959cb959c62e8",
+			"Signature": "",
+			"Message": "",
+			"Comment": "Initial Balance"
+		},
+		{
+			"TxOffset": 13,
+			"Input": null,
+			"Output": [
+				{
+					"BlockNo": 0,
+					"TxOffset": 13,
+					"TxOutputPos": 0,
+					"Account": "7e3afec048bc7be745d0fa0f5af97d3978c40e9a",
+					"Amount": 500000
+				}
+			],
+			"SCOwnerAccount": "",
+			"SCAddress": "",
+			"SCOutputData": "",
+			"Account": "db180da9a8982c7bb75ca40039f959cb959c62e8",
+			"Signature": "",
+			"Message": "",
+			"Comment": "Initial Balance"
+		},
+		{
+			"TxOffset": 14,
+			"Input": null,
+			"Output": [
+				{
+					"BlockNo": 0,
+					"TxOffset": 14,
+					"TxOutputPos": 0,
+					"Account": "db180da9a8982c7bb75ca40039f959cb959c62e8",
+					"Amount": 500000
+				}
+			],
+			"SCOwnerAccount": "",
+			"SCAddress": "",
+			"SCOutputData": "",
+			"Account": "db180da9a8982c7bb75ca40039f959cb959c62e8",
+			"Signature": "",
+			"Message": "",
+			"Comment": "Initial Balance"
+		},
+		{
+			"TxOffset": 15,
+			"Input": [],
+			"Output": [
+				{
+					"BlockNo": 0,
+					"TxOffset": 15,
+					"TxOutputPos": 0,
+					"Account": "db180da9a8982c7bb75ca40039f959cb959c62e8",
+					"Amount": 100
+				}
+			],
+			"SCOwnerAccount": "",
+			"SCAddress": "",
+			"SCOutputData": "",
+			"Account": "db180da9a8982c7bb75ca40039f959cb959c62e8",
+			"Signature": "",
+			"Message": "",
+			"Comment": "Mining Reward"
+		}
+	]
+}

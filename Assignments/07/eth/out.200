@@ -1,0 +1,78 @@
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/SignedDataVersion01.sol
+> Artifacts written to /Users/pschlump/go/src/github.com/Univ-Wyo-Education/S19-4010/a/07/eth/build/contracts
+> Compiled successfully using:
+   - solc: 0.5.0+commit.1d4f565a.Emscripten.clang
+
+
+Starting migrations...
+======================
+> Network name:    'development'
+> Network id:      5777
+> Block gas limit: 0x6691b7
+
+
+1_initial_migration.js
+======================
+
+   Replacing 'Migrations'
+   ----------------------
+   > transaction hash:    0x59c1f95e4bb0d551dd95f755d48109294f32517d155394efc2f92050c22a11c2
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xc88e20B5C7748559FdA55cdE66C99E94897b69Aa
+   > account:             0xc0c4B94355fD676a29856008e625B51d1acD04eD
+   > balance:             99.948333
+   > gas used:            284844
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00569688 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00569688 ETH
+
+
+2_initial_migration.js
+======================
+
+   Replacing 'SignedDataVersion01'
+   -------------------------------
+   > transaction hash:    0x7a5c2946e2efa212068029dd5acea51ac5c7fa623cc00f63b70c85ca92ebfce9
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xfab8EBE040C91f6d1873072f18B01e77ea2C56fE
+   > account:             0xc0c4B94355fD676a29856008e625B51d1acD04eD
+   > balance:             99.92519828
+   > gas used:            1114702
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.02229404 ETH
+
+
+   Replacing 'SignedData'
+   ----------------------
+   > transaction hash:    0x3f139e84d359ddb7e54778139df25fc3fd41abaf3222fa6a279ce453b7d8a2e7
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x679F84157dC17deE7d35Dbd2849e9E6139e328b0
+   > account:             0xc0c4B94355fD676a29856008e625B51d1acD04eD
+   > balance:             99.90965482
+   > gas used:            777173
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.01554346 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:           0.0378375 ETH
+
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.04353438 ETH
+

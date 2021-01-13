@@ -1,0 +1,1094 @@
+<style>
+@font-face {
+	font-family: octicons-link;
+	src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	line-height: 1.5;
+	color: #24292e;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 16px;
+	line-height: 1.5;
+	word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+	color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+	color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+	color: #6f42c1;
+}
+
+.markdown-body .pl-smi,
+.markdown-body .pl-s .pl-s1 {
+	color: #24292e;
+}
+
+.markdown-body .pl-ent {
+	color: #22863a;
+}
+
+.markdown-body .pl-k {
+	color: #d73a49;
+}
+
+.markdown-body .pl-s,
+.markdown-body .pl-pds,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sre,
+.markdown-body .pl-sr .pl-sra {
+	color: #032f62;
+}
+
+.markdown-body .pl-v,
+.markdown-body .pl-smw {
+	color: #e36209;
+}
+
+.markdown-body .pl-bu {
+	color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+	color: #fafbfc;
+	background-color: #b31d28;
+}
+
+.markdown-body .pl-c2 {
+	color: #fafbfc;
+	background-color: #d73a49;
+}
+
+.markdown-body .pl-c2::before {
+	content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+	font-weight: bold;
+	color: #22863a;
+}
+
+.markdown-body .pl-ml {
+	color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+	font-weight: bold;
+	color: #005cc5;
+}
+
+.markdown-body .pl-mi {
+	font-style: italic;
+	color: #24292e;
+}
+
+.markdown-body .pl-mb {
+	font-weight: bold;
+	color: #24292e;
+}
+
+.markdown-body .pl-md {
+	color: #b31d28;
+	background-color: #ffeef0;
+}
+
+.markdown-body .pl-mi1 {
+	color: #22863a;
+	background-color: #f0fff4;
+}
+
+.markdown-body .pl-mc {
+	color: #e36209;
+	background-color: #ffebda;
+}
+
+.markdown-body .pl-mi2 {
+	color: #f6f8fa;
+	background-color: #005cc5;
+}
+
+.markdown-body .pl-mdr {
+	font-weight: bold;
+	color: #6f42c1;
+}
+
+.markdown-body .pl-ba {
+	color: #586069;
+}
+
+.markdown-body .pl-sg {
+	color: #959da5;
+}
+
+.markdown-body .pl-corl {
+	text-decoration: underline;
+	color: #032f62;
+}
+
+.markdown-body .octicon {
+	display: inline-block;
+	vertical-align: text-top;
+	fill: currentColor;
+}
+
+.markdown-body a {
+	background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+	outline-width: 0;
+}
+
+.markdown-body strong {
+	font-weight: inherit;
+}
+
+.markdown-body strong {
+	font-weight: bolder;
+}
+
+.markdown-body h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+.markdown-body img {
+	border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+.markdown-body hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+}
+
+.markdown-body input {
+	font: inherit;
+	margin: 0;
+}
+
+.markdown-body input {
+	overflow: visible;
+}
+
+.markdown-body [type="checkbox"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+.markdown-body * {
+	box-sizing: border-box;
+}
+
+.markdown-body input {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+.markdown-body a {
+	color: #0366d6;
+	text-decoration: none;
+}
+
+.markdown-body a:hover {
+	text-decoration: underline;
+}
+
+.markdown-body strong {
+	font-weight: 600;
+}
+
+.markdown-body hr {
+	height: 0;
+	margin: 15px 0;
+	overflow: hidden;
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid #dfe2e5;
+}
+
+.markdown-body hr::before {
+	display: table;
+	content: "";
+}
+
+.markdown-body hr::after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+.markdown-body table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+	padding: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body h1 {
+	font-size: 32px;
+	font-weight: 600;
+}
+
+.markdown-body h2 {
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.markdown-body h3 {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.markdown-body h4 {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.markdown-body h5 {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.markdown-body h6 {
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.markdown-body p {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+	margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+	x-list-style-type: lower-roman;
+	  list-style-type: decimal;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+	list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+	margin-left: 0;
+}
+
+.markdown-body code {
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-size: 12px;
+}
+
+.markdown-body pre {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-size: 12px;
+}
+
+.markdown-body .octicon {
+	vertical-align: text-bottom;
+}
+
+.markdown-body .pl-0 {
+	padding-left: 0 !important;
+}
+
+.markdown-body .pl-1 {
+	padding-left: 4px !important;
+}
+
+.markdown-body .pl-2 {
+	padding-left: 8px !important;
+}
+
+.markdown-body .pl-3 {
+	padding-left: 16px !important;
+}
+
+.markdown-body .pl-4 {
+	padding-left: 24px !important;
+}
+
+.markdown-body .pl-5 {
+	padding-left: 32px !important;
+}
+
+.markdown-body .pl-6 {
+	padding-left: 40px !important;
+}
+
+.markdown-body::before {
+	display: table;
+	content: "";
+}
+
+.markdown-body::after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+.markdown-body>*:first-child {
+	margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+	margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+	color: inherit;
+	text-decoration: none;
+}
+
+.markdown-body .anchor {
+	float: left;
+	padding-right: 4px;
+	margin-left: -20px;
+	line-height: 1;
+}
+
+.markdown-body .anchor:focus {
+	outline: none;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+.markdown-body hr {
+	height: 0.25em;
+	padding: 0;
+	margin: 24px 0;
+	background-color: #e1e4e8;
+	border: 0;
+}
+
+.markdown-body blockquote {
+	padding: 0 1em;
+	color: #6a737d;
+	border-left: 0.25em solid #dfe2e5;
+}
+
+.markdown-body blockquote>:first-child {
+	margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+	margin-bottom: 0;
+}
+
+.markdown-body kbd {
+	display: inline-block;
+	padding: 3px 5px;
+	font-size: 11px;
+	line-height: 10px;
+	color: #444d56;
+	vertical-align: middle;
+	background-color: #fafbfc;
+	border: solid 1px #c6cbd1;
+	border-bottom-color: #959da5;
+	border-radius: 3px;
+	box-shadow: inset 0 -1px 0 #959da5;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+	margin-top: 24px;
+	margin-bottom: 16px;
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+	color: #1b1f23;
+	vertical-align: middle;
+	visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+	text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+	visibility: visible;
+}
+
+.markdown-body h1 {
+	padding-bottom: 0.3em;
+	font-size: 2em;
+	border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h2 {
+	padding-bottom: 0.3em;
+	font-size: 1.5em;
+	border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h3 {
+	font-size: 1.25em;
+}
+
+.markdown-body h4 {
+	font-size: 1em;
+}
+
+.markdown-body h5 {
+	font-size: 0.875em;
+}
+
+.markdown-body h6 {
+	font-size: 0.85em;
+	color: #6a737d;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+	padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body li {
+	word-wrap: break-all;
+}
+
+.markdown-body li>p {
+	margin-top: 16px;
+}
+
+.markdown-body li+li {
+	margin-top: 0.25em;
+}
+
+.markdown-body dl {
+	padding: 0;
+}
+
+.markdown-body dl dt {
+	padding: 0;
+	margin-top: 16px;
+	font-size: 1em;
+	font-style: italic;
+	font-weight: 600;
+}
+
+.markdown-body dl dd {
+	padding: 0 16px;
+	margin-bottom: 16px;
+}
+
+.markdown-body table {
+	display: block;
+	width: 100%;
+	overflow: auto;
+}
+
+.markdown-body table th {
+	font-weight: 600;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+	padding: 6px 13px;
+	border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+	background-color: #fff;
+	border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+	background-color: #f6f8fa;
+}
+
+.markdown-body img {
+	max-width: 100%;
+	box-sizing: content-box;
+	background-color: #fff;
+}
+
+.markdown-body img[align=right] {
+	padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+	padding-right: 20px;
+}
+
+.markdown-body code {
+	padding: 0.2em 0.4em;
+	margin: 0;
+	font-size: 85%;
+	background-color: rgba(27,31,35,0.05);
+	border-radius: 3px;
+}
+
+.markdown-body pre {
+	word-wrap: normal;
+}
+
+.markdown-body pre>code {
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	word-break: normal;
+	white-space: pre;
+	background: transparent;
+	border: 0;
+}
+
+.markdown-body .highlight {
+	margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+	margin-bottom: 0;
+	word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+	padding: 16px;
+	overflow: auto;
+	font-size: 85%;
+	line-height: 1.45;
+	background-color: #f6f8fa;
+	border-radius: 3px;
+}
+
+.markdown-body pre code {
+	display: inline;
+	max-width: auto;
+	padding: 0;
+	margin: 0;
+	overflow: visible;
+	line-height: inherit;
+	word-wrap: normal;
+	background-color: transparent;
+	border: 0;
+}
+
+.markdown-body .full-commit .btn-outline:not(:disabled):hover {
+	color: #005cc5;
+	border-color: #005cc5;
+}
+
+.markdown-body kbd {
+	display: inline-block;
+	padding: 3px 5px;
+	font: 11px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	line-height: 10px;
+	color: #444d56;
+	vertical-align: middle;
+	background-color: #fafbfc;
+	border: solid 1px #d1d5da;
+	border-bottom-color: #c6cbd1;
+	border-radius: 3px;
+	box-shadow: inset 0 -1px 0 #c6cbd1;
+}
+
+.markdown-body :checked+.radio-label {
+	position: relative;
+	z-index: 1;
+	border-color: #0366d6;
+}
+
+.markdown-body .task-list-item {
+	list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+	margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+	margin: 0 0.2em 0.25em -1.6em;
+	vertical-align: middle;
+}
+
+.markdown-body hr {
+	border-bottom-color: #eee;
+}
+
+</style>
+<style>
+ol {
+    display: block;
+    list-style-type: decimal;
+}
+</style>
+
+<div class="markdown-body">
+
+<h1>2020  Study Guide For Midterm</h1>
+
+<h2>Terms with explanation</h2>
+
+<p>The mid term test is on Friday, March 13. All You need to bring to class that day are a
+couple of pens or pencils.  Standard Academic rules apply. The test will be 20 multiple
+choice/ fill in the blank. An example follows:</p>
+
+<pre><code>5. [10pt] The purpose of financial markets is to: &lt;br&gt;
+	A. Increase the price of common stocks. &lt;br&gt;
+	B. Control inflation. &lt;br&gt;
+	C. Lower the yield on bonds. &lt;br&gt;
+	D. Allocate savings efficiently. &lt;br&gt;
+</code></pre>
+
+<p>These are the terms you will need to study. The terms come from our in-class
+lectures and discussions,  looking over your notes from class will be useful.</p>
+
+<p>There will be 4 or 5 coding questions after the multiple choice section.</p>
+
+<ol>
+<li><p>Cash: Cash is also known as money, in physical form. Cash, in a corporate
+setting, usually includes bank accounts and marketable securities, such as
+government bonds and banker&rsquo;s acceptances. Although cash typically refers to
+money in hand, the term can also be used to indicate money in banking accounts,
+checks or any other form of currency that is easily accessible and can be
+quickly turned into physical cash.
+<br><br>
+Cash in its physical form is the simplest, most broadly accepted and reliable
+form of payment, which is why many businesses only accept cash. Checks can
+bounce and credit  cards can be declined, but cash in hand requires no extra
+processing. However, it&rsquo;s become less common for people to carry cash with them,
+due to the increasing dependability and convenience of electronic banking and
+payment systems.
+<br><br>
+In finance and banking, cash indicates the company&rsquo;s current assets, or any
+assets that can be turned into cash within one year. A business&rsquo;s cash flow
+shows the net amount of  cash a company has, after factoring in both incoming
+and outgoing cash and assets, and can be a good resource for potential
+investors. A company&rsquo;s cash flow statement shows all  incoming cash, such as net
+income, and outgoing cash used to pay expenses such as equipment and
+investments.</p></li>
+
+<li><p>Stock: You have probably heard a popular definition of what a stock is: “A
+stock is a share in the ownership of a company. Stock represents a claim on the
+company&rsquo;s assets and earnings. As you acquire more stock, your ownership stake
+in the company becomes greater.” Unfortunately, this definition is incorrect
+in some key ways.
+<br><br>
+To start with, stock holders do not own corporations; they own shares issued by
+corporations. But corporations are a special type of organization because the
+law treats them as legal persons. In other words, corporations file taxes, can
+borrow, can own property, can be sued, etc. The idea that a corporation is a
+“person” means that the corporation owns its own assets. A corporate office
+full of chairs and tables belong to the corporation, and not to the
+shareholders.
+<br><br>
+This distinction is important because corporate property is legally separated
+from the property of shareholders, which limits the liability of both the
+corporation and the shareholder. If the corporation goes bankrupt, a judge may
+order all of its assets sold – but your personal assets are not at risk. The
+court cannot even force you to sell your shares, although the value of your
+shares will have fallen drastically. Likewise, if a major shareholder goes
+bankrupt, she cannot sell the company’s assets to pay off her creditors.
+<br><br>
+What shareholders own are shares issued by the corporation; and the corporation
+owns the assets. So if you own 33% of the shares of a company, it is incorrect
+to assert that you own one-third of that company; it is instead correct to state
+that you own 100% of one-third of the company’s shares. Shareholders cannot do
+as they please with a corporation or its assets. A shareholder can’t walk out
+with a chair because the corporation owns that chair, not the shareholder. This
+is known as the “separation of ownership and control.”</p></li>
+
+<li><p>What is a P&amp;L: The profit and loss statement is a financial statement that
+summarizes the revenues, costs and expenses incurred during a specified period,
+usually a fiscal quarter or year. P&amp;L statement is synonymous with the income
+statement. These records provide information about a company&rsquo;s ability or
+inability to generate profit by increasing revenue, reducing costs or both. Some
+refer to the P&amp;L statement as a statement of profit and loss, income statement,
+statement of operations, statement of financial results or income, earnings
+statement and expense statement.
+<br><br>
+P&amp;L statement is synonymous with the income statement. The income statement
+summarizes income and expenses. These records provide information about a
+company&rsquo;s ability or inability to generate profit by increasing revenue,
+reducing costs or both The balance sheet shows assets, liabilities, and
+owner’s equity. The cash flow statement summarizes your incoming and outgoing
+money from operations, investing, and financing.
+<br><br>
+Income statement vs. balance sheet: The income statement answers whether the
+business is profitable whereas the balance sheet shows what a company is owed
+and what it owns.</p></li>
+
+<li><p>Long on Cash, Long in a Stock : this means that you have lots of cash,
+or that you own some of a stock. A long (or long position) is the buying of
+a security such as a stock, commodity or currency with the expectation that the
+asset will rise in value. In the context of options, long is the buying of an
+options contract. An investor that expects an asset’s price to fall will go
+long on a put option, and an investor that hopes to benefit from an upward price
+movement will be long a call option.
+<br><br>
+Very often you will read in a &ldquo;disclosure&rdquo; section that a person is &ldquo;Long on
+&hellip;, &hellip;&ldquo;. This is to disclose that if they are saying good things about a company
+that they have a self-interest in you purchasing shares in the company.  For a
+person writing professionally this is a legal requirement.</p></li>
+
+<li><p>&ldquo;Take a position in&rdquo;&hellip; The state of owning or owing a security or other
+asset. One has a long position when one owns something, while one has a short
+position when something is sold, especially sold short.</p></li>
+
+<li><p>Real Estate: Land and the improvements on it. Real estate is one of the
+primary (and indeed one of the only) assets whose value does not depreciate over
+time. Depending on the particular title, ownership of real estate may include
+mineral rights to any geophysical aspects occurring thereon. Ownership of real
+estate does not automatically include the right to develop it, depending on
+local regulations. However, development of real estate (for example by building
+a house on it) usually increases the value. While supply of real estate does not
+vary, demand may change greatly depending on its particular features, number of
+people in the area, and cultural differences regarding land ownership. It is an
+attractive form of collateral because it cannot be stolen or destroyed.</p></li>
+
+<li><p>What is Inflation? Inflation is the rate at which the general level of prices
+for goods and services is rising and, consequently, the purchasing power of
+currency is falling. Central banks attempt to limit inflation — and avoid
+deflation — in order to keep the economy running smoothly.</p></li>
+
+<li><p>REIT (Real Estate Investment Trust) - legally required to pay out 80% of
+profits to investors. A real estate investment trust, or REIT, is a company that
+owns, operates or finances income-producing real estate. For a company to
+qualify as a REIT, it must meet certain regulatory guidelines. REITs often
+trades on major exchanges like other securities and provide investors with a
+liquid stake in real estate.</p></li>
+
+<li><p>Price to Earnings Radio - In essence, the price-earnings ratio indicates the
+dollar amount an investor can expect to invest in a company in order to receive
+one dollar of that company&rsquo;s earnings. This is why the P/E is sometimes referred
+to as the price multiple because it shows how much investors are willing to pay
+per dollar of earnings.
+<br><br>
+There will be a question on how to calculate a PE ratio on the test.  The formula
+for calculating it will be on the test.</p></li>
+
+<li><p>What is a Derivative? In finance, a derivative is a contract that derives
+its value from the performance of an underlying entity. This underlying entity
+can be an asset, index, or interest rate, and is often simply called the
+&ldquo;underlying.&rdquo;</p></li>
+
+<li><p>High speed trading: High-frequency trading - HFT is a program trading
+platform that uses powerful computers to transact a large number of orders at
+fractions of a second. It uses complex algorithms to analyze multiple markets
+and execute orders based on market conditions. Typically, the traders with the
+fastest execution speeds are more profitable than traders with slower execution
+speeds.</p></li>
+
+<li><p>Dividends: A dividend is a distribution of a portion of a company&rsquo;s
+earnings, decided by the board of directors, paid to a class of its
+shareholders. Dividends can be issued as cash payments, as shares of stock, or
+other property.</p></li>
+
+<li><p>What is the &ldquo;Yield&rdquo;? In finance, the yield on a security is the amount of
+cash (in percentage terms) that returns to the owners of the security, in the
+form of interest or dividends received from it. Normally, it does not include
+the price variations, distinguishing it from the total return.
+<br><br>
+There will be a question on calculating the Yield from the stock price and
+the amount of dividends on the test.</p></li>
+
+<li><p>What is a basis point (BPS)? Example 50 BSP = 0.5%: Basis points, otherwise
+known as bps or &ldquo;bips,&rdquo; are a unit of measure used in finance to describe the
+percentage change in the value or rate of a financial instrument. One basis
+point is equivalent to 0.01% (1/100th of a percent) or 0.0001 in decimal form.
+<br><br>
+There will be a question of converting 75 BSP to a percentage on the test.</p></li>
+
+<li><p>Stock Buy Back: A stock buyback, or repurchase, occurs when a company buys
+its own shares off the market and therefore reduces the amount of stock
+outstanding. It can do this in one of two ways: The company can either buy
+shares at current market prices or tender a fixed-price offer to current
+shareholders.
+<br><br>
+Stock buy backs are a good indication that the company believes that its
+stock is a good investment.  Also this is a way for the company to directly
+influence the price of the stock.  Fewer shares sell for more for each share.
+This also will increase the dividends that are payd out.
+<br><br>
+Stock buy backs are a bad thing when the company has to borrow to pay for
+them.</p></li>
+
+<li><p>Index Fund: An index fund is a type of mutual fund with a portfolio
+constructed to match or track the components of a market index, such as the
+Standard &amp; Poor&rsquo;s 500 Index (S&amp;P 500). An index mutual fund is said to provide
+broad market exposure, low operating expenses and low portfolio turnover.</p></li>
+
+<li><p>Insider Trading: Insider trading is the trading of a public company&rsquo;s stock
+or other securities (such as bonds or stock options) by individuals with access
+to nonpublic information about the company. In various countries, some kinds of
+trading based on insider information is illegal.</p></li>
+
+<li><p>Bonds: A bond is a fixed income investment in which an investor loans money
+to an entity (typically corporate or governmental) which borrows the funds for a
+defined period of time at a variable or fixed interest rate. &hellip; Owners of bonds
+are debtholders, or creditors, of the issuer.</p></li>
+
+<li><p>ICOs (Initial Coin Offering): An initial coin offering or initial currency
+offering is a type of funding using cryptocurrencies. Mostly the process is done
+by crowdfunding but private ICO&rsquo;s are becoming more common.</p></li>
+
+<li><p>&ldquo;Industrial Staker Sale&rdquo; a token sale under a different name that isn&rsquo;t ICO.</p></li>
+
+<li><p>Proof-of-Work describes a system that requires a not-insignificant but
+feasible amount of effort in order to deter frivolous or malicious uses of
+computing power, such as sending spam emails or launching denial of service
+attacks.
+<br><br>
+In blockchain a proof of work is a race that is payed for to get a reward.
+This is how Bitcoin has been distributed.</p></li>
+
+<li><p>Proof-of-Stake concept states that a person can mine or validate block
+transactions according to how many coins he or she holds. This means that the
+more Bitcoin or altcoin owned by a miner, the more mining power he or she has.
+<br><br>
+The &ldquo;stake&rdquo; is at risk when mining occurs.  If the miner lies then it looses
+some or all of its stake.</p></li>
+
+<li><p>&ldquo;Consumer Token Sale&rdquo;: Token sales are, quite simply, a process of
+generating and selling a new cryptocurrency. While the details change from sale
+to sale, this process involves building a smart contract on the blockchain,
+generating, and then selling the resulting coins.</p></li>
+
+<li><p>Junk Bonds refers to high-yield or non-investment-grade bonds. Junk bonds are
+fixed-income instruments that carry a credit rating of BB or lower by Standard &amp;
+Poor&rsquo;s, or Ba or below by Moody&rsquo;s Investors Service. Junk bonds are so called
+because of their higher default risk in relation to investment-grade bonds.</p></li>
+
+<li><p>Mutual Fund is an investment vehicle made up of a pool of money collected
+from many investors for the purpose of investing in securities such as stocks,
+bonds, money market instruments and other assets. &hellip; A mutual fund&rsquo;s portfolio
+is structured and maintained to match the investment objectives stated in its
+prospectus.
+<br><br>
+Mutual funds have both a managed and an index variety.  Usually the costs of
+a managed mutual fund and the tax that you pay on it will make it less
+profitable than an index fund.  Consider the returns on the Vanguard S&amp;P
+500 index fund over the last 25 years.  Only 1% of managed mutual funds have
+out performed the Vanguard S&amp;P 500 Fund.</p></li>
+
+<li><p>Asset allocation refers to the strategy of dividing your investments among
+different asset categories, such as stocks, bonds, real estate, cash, and cash
+alternatives. Asset allocation aims to control risk by diversifying an
+investment portfolio.</p></li>
+
+<li><p>Expense Ratio for a Mutual Fund. The expense ratio, also known as the
+management expense ratio (MER), measures how much of a fund&rsquo;s assets are used
+for administrative and other operating expenses. An expense ratio is determined
+by dividing a fund&rsquo;s operating expenses by the average dollar value of its
+assets under management (AUM).</p></li>
+
+<li><p>Prospectus. A prospectus, in finance, is a disclosure document that
+describes a financial security for potential buyers. &hellip; In the context of an
+individual securities offering, such as an initial public offering, a prospectus
+is distributed by underwriters or brokerages to potential investors.</p></li>
+
+<li><p>Pro Forma: Pro forma is a Latin term that describes a method of calculating
+and presenting financial results to emphasize either current or projected
+figures. Pro forma literally means “for the sake of form” or “as a matter
+of form.” In the world of investing, pro forma refers to a method by which
+firms calculate financial results. This method of calculation emphasizes present
+or projected figures.</p></li>
+
+<li><p>KYI - Know Your Investor (See SEC 506(d)).
+<br><br>
+You can have up to 34 friends and family as an exemption.</p></li>
+
+<li><p>Accredited Investor. An accredited investor is a person or entity that can
+deal with securities not registered with financial authorities by satisfying one
+of the requirements regarding income, net worth, asset size, governance status
+or professional experience. The term is used by the Securities and Exchange
+Commission (SEC) under Regulation D to refer to investors who are financially
+sophisticated and have a reduced need for the protection provided by regulatory
+disclosure filings. Accredited investors include natural individuals, banks,
+insurance companies, brokers and trusts.</p></li>
+
+<li><p>Going Public. Going public refers to a private company&rsquo;s initial public
+offering (IPO), thus becoming a publicly traded and owned entity. Businesses
+usually go public to raise capital in hopes of expanding. Venture capitalists
+may use IPOs as an exit strategy (a way of getting out of their investment in a
+company).</p></li>
+
+<li><p>Money Laundering. Money laundering is the process of creating the appearance
+that large amounts of money obtained from criminal activity, such as drug
+trafficking or terrorist activity, originated from a legitimate source. The
+money from the illicit activity is considered dirty, and the process &ldquo;launders&rdquo;
+the money to make it look clean.</p></li>
+
+<li><p>Cost of &ldquo;going public.&rdquo; Going public is the process of selling shares that
+were formerly privately held to new investors for the first time. Otherwise
+known as an initial public offering (IPO). Going public is very expensive.
+Usually a company today needs $250,000,000.00 in revenue to justify going
+public. Before Enron it was common to see companies go public with a revenue of
+$10,000,000.00 a year.</p></li>
+</ol>
+
+<h1>Go Related</h1>
+
+<h2>for</h2>
+
+<p>Different syntax and ways for loops can be used in Go code.  How do you build an
+infinite loop wit a for in go.  What are <code>break</code> and <code>continue</code> in a loop.</p>
+
+<p>See: <a href="https://gobyexample.com/for">https://gobyexample.com/for</a></p>
+
+<h2>Functions and Multiple Return Values</h2>
+
+<p>Examples of returning more than one value from a function.  How to declare a function.</p>
+
+<p>See: <a href="https://gobyexample.com/multiple-return-values">https://gobyexample.com/multiple-return-values</a></p>
+
+<h2>Maps</h2>
+
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+
+	m5 := make(map[string]string)
+
+	m5[&quot;star trek&quot;] = &quot;yes&quot;
+	m5[&quot;star wars&quot;] = &quot;no&quot;
+	m5[&quot;ghostbusters&quot;] = &quot;no&quot;
+	m5[&quot;star trek original&quot;] = &quot;yes&quot;
+
+	fmt.Printf(&quot;m5 in: %+v\n&quot;, m5)
+
+	for key, value := range m5 {
+		m5[key] = string.ToUpper(value)
+	}
+
+	go func() {
+		delete(m5,&quot;ghostbusters&quot;)
+	}()
+
+	fmt.Printf(&quot;: %+v\n&quot;, m5)
+}
+
+</code></pre>
+
+<p>See: <a href="https://gobyexample.com/maps">https://gobyexample.com/maps</a></p>
+
+<p>Be able to modify the above map so that it has a lock and prevents
+concurrent access to the map.  In lecture 05 look at the use of
+Lock and Unlock.</p>
+
+<p>Be able to change the above code to wait for the completion of
+the go-routine running.  In lecture 07 there is an example, ex0.go.</p>
+
+<h2>Slices and Arrays</h2>
+
+<p>See: <a href="https://gobyexample.com/slices">https://gobyexample.com/slices</a></p>
+
+<p>Be able to create a sub-slice of an existing slice.  Suppose that
+you have a string:</p>
+
+<pre><code>	var s string
+	s = &quot;http://127.0.0.1:8000/&quot;
+</code></pre>
+
+<p>You want the first 5 characters to see if this is a <code>http:</code> or a <code>https</code> connection.</p>
+
+<pre><code>	if s[0:5] == &quot;http:&quot; {
+</code></pre>
+
+<h2>Interfaces</h2>
+
+<p>See: <a href="https://gobyexample.com/interfaces">https://gobyexample.com/interfaces</a></p>
+
+<p>Be able to write a simple interface that has a function.</p>
+
+<h2>Closure</h2>
+
+<p>See: <a href="https://gobyexample.com/closures">https://gobyexample.com/closures</a></p>
+
+<p>Be able to write a simple closure.</p>
+
+</div>
+

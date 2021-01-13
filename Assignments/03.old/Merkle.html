@@ -1,0 +1,102 @@
+<h1>Assignment 3</h1>
+
+<p>200pts</p>
+
+<h1>Pt 1: Merkle Trees : Assignment 3</h1>
+
+<p>One of the major security and validity checks that blockchains
+do is using Merkle trees.</p>
+
+<p>In this assignment you will implement a Merkle tree hash.</p>
+
+<p>When you pull code from git you should have a <code>./A-03/hash</code> directory.
+This is a copy of Assignment 2&rsquo;s <code>./A-02/hash</code>.  The new code that you will
+be working on is in <code>./merkle</code>.</p>
+
+<h3>Pseudo Code</h3>
+
+<ol>
+<li>Create a slice to hold the hashes of the leaves.  Each leaf hash is a <code>[]byte</code>.  So make the data type <code>[][]byte</code>.
+Make this slice of slice of byte then length of the data.  That would be <code>len(data)</code>.  Let&rsquo;s call this <code>hTmp</code>.</li>
+<li>For each data block
+
+<ol>
+<li>Calculate a hash for the data block using <code>hash.HashOf()</code>.</li>
+<li>Save this in the slice created in (1) above.</li>
+</ol></li>
+<li>Create a <code>[][]byte</code> slice to hold the intermediate hashes in the tree.
+This will need to be no more than <code>len(data)/2+1</code> in length.  The plus 1 is so that 0 blocks of hasing or an odd
+number of blocks will have enough space.  Let&rsquo;s call this <code>hMid</code>.</li>
+<li>Declare a variable <code>ln</code>, and set it to  <code>len(data)/2+1</code></li>
+<li>While <code>ln &gt;= 1</code> (Hint: the language only has <code>for</code> loops with lots of different ways of doing it)
+
+<ol>
+<li>For each pair of hashes (if you have an odd number just use the single hash)
+
+<ul>
+<li>Calculate the hash of the pair using <code>hash.Keccak256()</code>.  It takes a variable number of arguments so you can
+pass 1 or 2 arguments to it.</li>
+<li>Append this to <code>hMid</code>.</li>
+</ul></li>
+<li>Replace hTmp with hMid</li>
+<li>Recalculate <code>ln</code> set it to <code>len(hTmp)/2</code></li>
+<li>Generate a new empty hMid of allocated space of <code>len(hTmp)/2</code>.</li>
+</ol></li>
+<li>Return <code>hTmp[0]</code></li>
+</ol>
+
+<h2>Submit</h2>
+
+<ol>
+<li>Your code, ./merkle/merkle.go.</li>
+<li>Any additional test cases that you created.</li>
+<li>Your prove that this works.</li>
+</ol>
+
+<h2>References</h2>
+
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Merkle_tree">Wikipedia has a nice discussion</a></li>
+<li><a href="https://brilliant.org/wiki/merkle-tree/">Another explanation of Merkle Trees - with more details</a></li>
+</ol>
+
+<h1>Pt 2: Basic Client Server</h1>
+
+<p>This part of the homework is to add a very simple API call to a client server.  The server is in ./simple-server, the sample client is in
+./simple-client.</p>
+
+<p>Modify the sever to have a <code>/double</code> that will take a value that it is passed on a <code>GET</code> call and double that value.  The return the
+doubled value to the client in a JSON format.</p>
+
+<p>So&hellip;</p>
+
+<pre><code>	http://localhost:3000/double?value=12
+</code></pre>
+
+<p>will return</p>
+
+<pre><code>	{&quot;double&quot;:24}
+</code></pre>
+
+<p>You will need to set the MIME type of the return to JSON with</p>
+
+<pre><code>	www.Header().Set(&quot;Content-Type&quot;, &quot;application/json; charset=utf-8&quot;)
+</code></pre>
+
+<p>Use curl or wget to test this call.</p>
+
+<pre><code>	wget 'http://localhost:3000/double?value=100'
+</code></pre>
+
+<p>or</p>
+
+<pre><code>	curl 'http://localhost:3000/double?value=100'
+</code></pre>
+
+<p>Test this with a request from a browser and with the <code>./simple-client</code> code.</p>
+
+<h2>Submit</h2>
+
+<ol>
+<li>a copy of the 2 modified .go files in for the client and the server.</li>
+</ol>

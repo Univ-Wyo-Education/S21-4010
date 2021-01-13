@@ -1,0 +1,83 @@
+
++> truffle migrate --reset
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/Migrations.sol
+> Compiling ./contracts/SignedData.sol
+> Compiling ./contracts/SignedDataVersion01.sol
+> Compiling openzeppelin-solidity/contracts/ownership/Ownable.sol
+> Artifacts written to /Users/corwin/go/src/github.com/Univ-Wyo-Education/S19-4010/a/07/eth/build/contracts
+> Compiled successfully using:
+   - solc: 0.5.0+commit.1d4f565a.Emscripten.clang
+
+
+Starting migrations...
+======================
+> Network name:    'development'
+> Network id:      5777
+> Block gas limit: 0x6691b7
+
+
+1_initial_migration.js
+======================
+
+   Replacing 'Migrations'
+   ----------------------
+   > transaction hash:    0x650cc1505c627c2eca03175c9ea6c49c6b4a9e9817a27508f1488470d1a91bff
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xa9F1FF9d54De3217274d48dBbF1295DCFFae8b07
+   > account:             0xDc60Dc086226238C47Ac77b71dFded515146AC0E
+   > balance:             99.99430184
+   > gas used:            284908
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00569816 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00569816 ETH
+
+
+2_initial_migration.js
+======================
+
+   Replacing 'SignedDataVersion01'
+   -------------------------------
+   > transaction hash:    0xbf3f6f7ef78e1048b495edf7ed321b8b29414f0184faf96297a6594f2f336ffb
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x07c82a6245Df224A2D874558b554D37367E46F54
+   > account:             0xDc60Dc086226238C47Ac77b71dFded515146AC0E
+   > balance:             99.97361672
+   > gas used:            992222
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.01984444 ETH
+
+
+   Replacing 'SignedData'
+   ----------------------
+   > transaction hash:    0x3b8a840cfa3d84544ef0adba1ecfa38b2b6337c2c6ac0d4f27073ae038c6cbe1
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x7282Fe21EB3f4df40cc0063e16F7934de384510B
+   > account:             0xDc60Dc086226238C47Ac77b71dFded515146AC0E
+   > balance:             99.95807326
+   > gas used:            777173
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.01554346 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:           0.0353879 ETH
+
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.04108606 ETH
+

@@ -1,0 +1,19 @@
+<div class="slide">
+
+<h1> Redux Reducer </h1>
+
+<pre class="size24">
+export default function ImageReducer ( state = INITIAL_STATE, action ) {
+  switch ( action.type ) {
+  case "SHOW_IMG":
+    return { ...state,               // make a copy of state
+      image_url: action.payload.url, // change this in state
+      img_height: action.payload.height, 
+      img_width: action.payload.width 
+    };
+  }
+  return state;
+}
+</pre>
+
+</div>

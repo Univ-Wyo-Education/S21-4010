@@ -1,0 +1,1513 @@
+<style>
+@font-face {
+	font-family: octicons-link;
+	src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	line-height: 1.5;
+	color: #24292e;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 16px;
+	line-height: 1.5;
+	word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+	color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+	color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+	color: #6f42c1;
+}
+
+.markdown-body .pl-smi,
+.markdown-body .pl-s .pl-s1 {
+	color: #24292e;
+}
+
+.markdown-body .pl-ent {
+	color: #22863a;
+}
+
+.markdown-body .pl-k {
+	color: #d73a49;
+}
+
+.markdown-body .pl-s,
+.markdown-body .pl-pds,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sre,
+.markdown-body .pl-sr .pl-sra {
+	color: #032f62;
+}
+
+.markdown-body .pl-v,
+.markdown-body .pl-smw {
+	color: #e36209;
+}
+
+.markdown-body .pl-bu {
+	color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+	color: #fafbfc;
+	background-color: #b31d28;
+}
+
+.markdown-body .pl-c2 {
+	color: #fafbfc;
+	background-color: #d73a49;
+}
+
+.markdown-body .pl-c2::before {
+	content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+	font-weight: bold;
+	color: #22863a;
+}
+
+.markdown-body .pl-ml {
+	color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+	font-weight: bold;
+	color: #005cc5;
+}
+
+.markdown-body .pl-mi {
+	font-style: italic;
+	color: #24292e;
+}
+
+.markdown-body .pl-mb {
+	font-weight: bold;
+	color: #24292e;
+}
+
+.markdown-body .pl-md {
+	color: #b31d28;
+	background-color: #ffeef0;
+}
+
+.markdown-body .pl-mi1 {
+	color: #22863a;
+	background-color: #f0fff4;
+}
+
+.markdown-body .pl-mc {
+	color: #e36209;
+	background-color: #ffebda;
+}
+
+.markdown-body .pl-mi2 {
+	color: #f6f8fa;
+	background-color: #005cc5;
+}
+
+.markdown-body .pl-mdr {
+	font-weight: bold;
+	color: #6f42c1;
+}
+
+.markdown-body .pl-ba {
+	color: #586069;
+}
+
+.markdown-body .pl-sg {
+	color: #959da5;
+}
+
+.markdown-body .pl-corl {
+	text-decoration: underline;
+	color: #032f62;
+}
+
+.markdown-body .octicon {
+	display: inline-block;
+	vertical-align: text-top;
+	fill: currentColor;
+}
+
+.markdown-body a {
+	background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+	outline-width: 0;
+}
+
+.markdown-body strong {
+	font-weight: inherit;
+}
+
+.markdown-body strong {
+	font-weight: bolder;
+}
+
+.markdown-body h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+.markdown-body img {
+	border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+.markdown-body hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+}
+
+.markdown-body input {
+	font: inherit;
+	margin: 0;
+}
+
+.markdown-body input {
+	overflow: visible;
+}
+
+.markdown-body [type="checkbox"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+.markdown-body * {
+	box-sizing: border-box;
+}
+
+.markdown-body input {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+.markdown-body a {
+	color: #0366d6;
+	text-decoration: none;
+}
+
+.markdown-body a:hover {
+	text-decoration: underline;
+}
+
+.markdown-body strong {
+	font-weight: 600;
+}
+
+.markdown-body hr {
+	height: 0;
+	margin: 15px 0;
+	overflow: hidden;
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid #dfe2e5;
+}
+
+.markdown-body hr::before {
+	display: table;
+	content: "";
+}
+
+.markdown-body hr::after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+.markdown-body table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+	padding: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body h1 {
+	font-size: 32px;
+	font-weight: 600;
+}
+
+.markdown-body h2 {
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.markdown-body h3 {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.markdown-body h4 {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.markdown-body h5 {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.markdown-body h6 {
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.markdown-body p {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+	margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+	x-list-style-type: lower-roman;
+	  list-style-type: decimal;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+	list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+	margin-left: 0;
+}
+
+.markdown-body code {
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-size: 12px;
+}
+
+.markdown-body pre {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-size: 12px;
+}
+
+.markdown-body .octicon {
+	vertical-align: text-bottom;
+}
+
+.markdown-body .pl-0 {
+	padding-left: 0 !important;
+}
+
+.markdown-body .pl-1 {
+	padding-left: 4px !important;
+}
+
+.markdown-body .pl-2 {
+	padding-left: 8px !important;
+}
+
+.markdown-body .pl-3 {
+	padding-left: 16px !important;
+}
+
+.markdown-body .pl-4 {
+	padding-left: 24px !important;
+}
+
+.markdown-body .pl-5 {
+	padding-left: 32px !important;
+}
+
+.markdown-body .pl-6 {
+	padding-left: 40px !important;
+}
+
+.markdown-body::before {
+	display: table;
+	content: "";
+}
+
+.markdown-body::after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+.markdown-body>*:first-child {
+	margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+	margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+	color: inherit;
+	text-decoration: none;
+}
+
+.markdown-body .anchor {
+	float: left;
+	padding-right: 4px;
+	margin-left: -20px;
+	line-height: 1;
+}
+
+.markdown-body .anchor:focus {
+	outline: none;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+.markdown-body hr {
+	height: 0.25em;
+	padding: 0;
+	margin: 24px 0;
+	background-color: #e1e4e8;
+	border: 0;
+}
+
+.markdown-body blockquote {
+	padding: 0 1em;
+	color: #6a737d;
+	border-left: 0.25em solid #dfe2e5;
+}
+
+.markdown-body blockquote>:first-child {
+	margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+	margin-bottom: 0;
+}
+
+.markdown-body kbd {
+	display: inline-block;
+	padding: 3px 5px;
+	font-size: 11px;
+	line-height: 10px;
+	color: #444d56;
+	vertical-align: middle;
+	background-color: #fafbfc;
+	border: solid 1px #c6cbd1;
+	border-bottom-color: #959da5;
+	border-radius: 3px;
+	box-shadow: inset 0 -1px 0 #959da5;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+	margin-top: 24px;
+	margin-bottom: 16px;
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+	color: #1b1f23;
+	vertical-align: middle;
+	visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+	text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+	visibility: visible;
+}
+
+.markdown-body h1 {
+	padding-bottom: 0.3em;
+	font-size: 2em;
+	border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h2 {
+	padding-bottom: 0.3em;
+	font-size: 1.5em;
+	border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h3 {
+	font-size: 1.25em;
+}
+
+.markdown-body h4 {
+	font-size: 1em;
+}
+
+.markdown-body h5 {
+	font-size: 0.875em;
+}
+
+.markdown-body h6 {
+	font-size: 0.85em;
+	color: #6a737d;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+	padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body li {
+	word-wrap: break-all;
+}
+
+.markdown-body li>p {
+	margin-top: 16px;
+}
+
+.markdown-body li+li {
+	margin-top: 0.25em;
+}
+
+.markdown-body dl {
+	padding: 0;
+}
+
+.markdown-body dl dt {
+	padding: 0;
+	margin-top: 16px;
+	font-size: 1em;
+	font-style: italic;
+	font-weight: 600;
+}
+
+.markdown-body dl dd {
+	padding: 0 16px;
+	margin-bottom: 16px;
+}
+
+.markdown-body table {
+	display: block;
+	width: 100%;
+	overflow: auto;
+}
+
+.markdown-body table th {
+	font-weight: 600;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+	padding: 6px 13px;
+	border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+	background-color: #fff;
+	border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+	background-color: #f6f8fa;
+}
+
+.markdown-body img {
+	max-width: 100%;
+	box-sizing: content-box;
+	background-color: #fff;
+}
+
+.markdown-body img[align=right] {
+	padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+	padding-right: 20px;
+}
+
+.markdown-body code {
+	padding: 0.2em 0.4em;
+	margin: 0;
+	font-size: 85%;
+	background-color: rgba(27,31,35,0.05);
+	border-radius: 3px;
+}
+
+.markdown-body pre {
+	word-wrap: normal;
+}
+
+.markdown-body pre>code {
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	word-break: normal;
+	white-space: pre;
+	background: transparent;
+	border: 0;
+}
+
+.markdown-body .highlight {
+	margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+	margin-bottom: 0;
+	word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+	padding: 16px;
+	overflow: auto;
+	font-size: 85%;
+	line-height: 1.45;
+	background-color: #f6f8fa;
+	border-radius: 3px;
+}
+
+.markdown-body pre code {
+	display: inline;
+	max-width: auto;
+	padding: 0;
+	margin: 0;
+	overflow: visible;
+	line-height: inherit;
+	word-wrap: normal;
+	background-color: transparent;
+	border: 0;
+}
+
+.markdown-body .full-commit .btn-outline:not(:disabled):hover {
+	color: #005cc5;
+	border-color: #005cc5;
+}
+
+.markdown-body kbd {
+	display: inline-block;
+	padding: 3px 5px;
+	font: 11px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	line-height: 10px;
+	color: #444d56;
+	vertical-align: middle;
+	background-color: #fafbfc;
+	border: solid 1px #d1d5da;
+	border-bottom-color: #c6cbd1;
+	border-radius: 3px;
+	box-shadow: inset 0 -1px 0 #c6cbd1;
+}
+
+.markdown-body :checked+.radio-label {
+	position: relative;
+	z-index: 1;
+	border-color: #0366d6;
+}
+
+.markdown-body .task-list-item {
+	list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+	margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+	margin: 0 0.2em 0.25em -1.6em;
+	vertical-align: middle;
+}
+
+.markdown-body hr {
+	border-bottom-color: #eee;
+}
+
+</style>
+<style>
+ol {
+    display: block;
+    list-style-type: decimal;
+}
+</style>
+
+<div class="markdown-body">
+
+<h1>Introduction to Programming in Go</h1>
+
+<ol>
+<li>Install Go</li>
+<li>Verify that you can compile and run (Hello-World.go) (5pts)</li>
+<li>Echo command line arguments (echo1.go) (5pts)</li>
+<li>Parse command line arguments (echo2.go) (5pts)</li>
+<li>Read and write JSON file (read-json1.go) (10pts)</li>
+<li>Test a simple library package (15pts)</li>
+<li>Printing (print1.go) (10pts)</li>
+<li>Copy a File (copy1.go, copy2.go) (20pts)</li>
+<li>Hash and a simple test in Go (test1.go) (30pts)</li>
+<li>Summary</li>
+</ol>
+
+<p><em>100 Points total</em>.</p>
+
+<p>Item #8 and #9 will be the first auto-graded items.  I will use automated tests to check that the code works.</p>
+
+<p>Note: Not all the assignments will be this long.  Don&rsquo;t Panic!</p>
+
+<h2>Install Go</h2>
+
+<p>Go runs on Windows, Mac and Linux (and a bunch of other systems too).  To install you will need to
+download the Go compiler for your system.  If you already have Go installed you will may have to
+delete the old version, then install the new version.   Go is super-stable - there is no reason
+to keep an old version of the compiler around.</p>
+
+<p>Search google for &ldquo;download golang&rdquo;.  Go is usually referred to as &ldquo;golang&rdquo; when you search for it.</p>
+
+<p>You should find: <a href="https://golang.org/dl/">https://golang.org/dl/</a>.  The page should look like
+<img src="go-download.png" alt="Go Download Page" /></p>
+
+<p>For Windows there is a <code>.msi</code> installer that is very good.  It will automatically install
+go into <code>C:\go\</code> and setup your permissions.  You can choose a different path for the install.
+Follow the instructions on the download site for Windows.</p>
+
+<p>Install at least version 1.13.6 of the language.   On mac you download .pkg and click on it.
+On windows the .msi and run it (double click).  On Linux&hellip;  Follow the instructions on the
+download page for your flavor of Linux.</p>
+
+<p>You will need to use an editor.  I don&rsquo;t usually use an IDE.  I do use vi (vim).  Pick
+a text editor that you like.</p>
+
+<p>If you need to create a portable USB drive with Go and VIM on it see me after class.  This will
+apply to the people using the UW computers.  I am working on it.</p>
+
+<p>You will need a github.com account. Go and create one if you do not already have one.
+A free account will work.</p>
+
+<p>Submit:</p>
+
+<ol>
+<li>run <code>go version</code> at the command line and capture the output.   Submit a 1 line file with the output
+in it.  You can cut paste or pipe the output to a file.  You should see a version around <code>go1.13</code> or <code>go1.13.6</code>.</li>
+</ol>
+
+<h2>(1.2) Verify that you can compile and run (Hello-World.go) (5pts)</h2>
+
+<p>For this class you will need to have <code>git</code> installed.  On Mac you should be able to use <code>brew</code> to install git.</p>
+
+<pre><code class="language-SH">	brew install git
+</code></pre>
+
+<p>On Windows download from <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a> and install git.
+This will put a funny 4 square icon on your desktop that says &lsquo;bash&rsquo; in it.  Click on that to bring up a
+<code>bash</code> shell.</p>
+
+<p>Let&rsquo;s put our code in the right place from the very start.  On a mac that is <code>~/go/src/github.com/[Your Github Account]/</code>.
+In this case go to that directory - or build it.  Then create a directory called <code>hello-world</code>.
+I used my username in this.  You need to use your github.com username.</p>
+
+<pre><code class="language-SH">	cd
+	mkdir -p ./go/src/github.com/pschlump
+	cd ./go/src/github.com/pschlump
+	mkdir hello-world
+	cd hello-world
+</code></pre>
+
+<p>In Windows you should be in your home directory xyzzy or a similar directory.  In the bash shell from git
+the same commands as on Mac should work (the did for me a few minutes ago).</p>
+
+<p>Cut and paste - or type in (probably better for you) the following program.   These instructions are
+also on the Go download page.  Put it into a file called <code>main.go</code>.</p>
+
+<pre><code class="language-Go">	package main
+
+	// Your Name - it is important if you want to get credit for your assignment.
+	// Assignment 1.2 hello world - This is important too.  If you want credit.
+
+	import &quot;fmt&quot;
+
+	func main() {
+		fmt.Printf(&quot;Hello Wonderful World\n&quot;)
+	}
+</code></pre>
+
+<p>To run it:</p>
+
+<pre><code class="language-SH">	go build 
+	./hello-world
+</code></pre>
+
+<p>or on Windows</p>
+
+<pre><code class="language-SH">	go build
+	./hello-world.exe
+</code></pre>
+
+<p>If you get an error about access an un-exported function, then you failed to capitalize the first
+letter in a method call. Capital letters tell Go that the function is exported.  <code>fmt.printf</code>
+will cause this error.  <code>fmt.Printf</code> will work.</p>
+
+<p>You can run a go program with just <code>go run</code>.</p>
+
+<pre><code class="language-SH">	go run hello-world.go
+</code></pre>
+
+<p>Submit:</p>
+
+<ol>
+<li>A copy of your code.</li>
+<li>Change the <code>fmt.Pr...</code> to <code>fmt.Println(&quot;Hello, 世界&quot;)</code> - re run the code and save the output.
+What is <code>世界</code>?</li>
+</ol>
+
+<h3>References</h3>
+
+<ol>
+<li><a href="https://tour.golang.org/welcome/1">A Tour of Go</a></li>
+<li><a href="https://golangbot.com/hello-world/">Hello World Explained</a></li>
+</ol>
+
+<p>You may want to work through the <a href="https://tour.golang.org/welcome/1">A Tour of Go</a>.  That will
+help with this class.</p>
+
+<h3>Mac and Linux</h3>
+
+<p>This is the set of commands for setting up your Go environment.</p>
+
+<pre><code>	$ export GOPATH=/Users/&lt;Your Github Username&gt;/go
+	$ mkdir -p ~/go/src/github.com/&lt;Your Github Username&gt;
+	$ cd ~/go/src/github.com/&lt;Your Github Username&gt;
+	$ mkdir hello-world
+	$ cd hello-world
+	$ vi hw.go
+	$ go build
+	$ ./hello-world
+	Hello Wonderful World
+</code></pre>
+
+<h3>PC / Windows</h3>
+
+<p>You are probably in a directory something like <code>C:\home\your-name</code>.  I also have a copy of Vi for windows
+installed.  You can use your favorite text editor instead.  I installed vim using the gvim81.exe from
+<a href="https://www.vim.org/download.php#pc">https://www.vim.org/download.php#pc</a>.</p>
+
+<pre><code>	$ mkdir hello-world
+	$ cd hello-world
+	$ vi hw.go
+	$ go build
+	$ hello-world.exe
+	Hello Wonderful World
+</code></pre>
+
+<p>You will want to create a directory for each main program and under that directories for each package
+that you create in Go.</p>
+
+<p>If you have a different text editor that you like better than vim - then install it - use it (Microsoft
+Word is not an editor!  It will not create files that you can compile with Go.)</p>
+
+<p>I worked through the rest of the homework on a Windows 10 system with very little Windows related difficulty.
+Using the git-bash your <code>C:\</code> drive is <code>/c/</code>, your <code>E:\</code> drive is <code>/e/</code>.  You use <code>/</code> for all the directory
+separators.</p>
+
+<h2>(1.3) Echo command line arguments (echo1.go) (5pts)</h2>
+
+<p>Echo should take the command line arguments (after the 0th one, the name of the command) and print them out.
+Cut and paste the following code.  Get it to run.  Compile with <code>go build</code>.   Run it with <code>go run &lt;your file&gt;.go Arguments</code>.</p>
+
+<pre><code class="language-Go">	package main
+
+	// Your Name - it is important if you want to get credit for your assignment.
+	// Assignment 1.3 echo command line arguments.
+
+	import (
+		&quot;fmt&quot;
+		&quot;os&quot;
+	)
+
+	func main() {
+		ags := os.Args[1:]
+		for ii, ag := range ags {
+			if ii &lt; len(ags) {
+				fmt.Printf(&quot;%s &quot;, ag)
+			} else {
+				fmt.Printf(&quot;%s&quot;, ag)
+			}
+		}
+		fmt.Printf(&quot;\n&quot;)
+	}
+</code></pre>
+
+<ol>
+<li><code>import</code> is a list</li>
+<li><code>os.Args[1:]</code> is a slice of an array</li>
+<li><code>range</code></li>
+<li>no semicolons</li>
+<li><code>:=</code> declares variables.</li>
+</ol>
+
+<p>Submit:</p>
+
+<ol>
+<li>A copy of your code with your name in it.</li>
+<li>An example (cut and paste) of running this with the arguments <code>aa BB cc</code>.</li>
+</ol>
+
+<h3>References</h3>
+
+<ol>
+<li><a href="https://golang.org/pkg/os/">os Package</a></li>
+</ol>
+
+<h2>(1.4) Parse command line arguments (echo2.go) (5pts)</h2>
+
+<p>Cut and paste the following code.  Get it to work.  Run it.
+Save the output - edit the code and change <code>Your Name</code>.
+Add your email address.</p>
+
+<p>Follow THIS link, <a href="https://golang.org/pkg/encoding/json/">JSON in Go</a>.
+There is a section with an &ldquo;Example (CustomMarshalJSON)&rdquo; - Click on the example to open the
+example.  In the example an custom Go type called <code>Animal</code> is created (Around line 10).
+Custom code allows saving of the <code>Animal</code> type in a JSON file and re-loading the
+<code>Animal</code> type from the file.   In the JSON file it will be &ldquo;zebra&rdquo; &ldquo;gopher&rdquo; - in
+the Go code it will be an integer constant (like a C++ <code>enum</code>).  The Constant named
+values are created around lines 12 to 15.
+This process is called marshal/unmarshal.   The functions are called UnmarshallJSON
+and MarshallJSON.   You should cut-paste the code, put it into a directory and run it.</p>
+
+<p>Create the echo2 directory and <code>cd</code> into it.
+You should be in a directory <code>~/go/src/github.com/&lt;YourGithubUsername&gt;/echo2</code>.</p>
+
+<p>Edit main.go and put this code in it:</p>
+
+<pre><code class="language-Go">	package main
+
+	// Your Name - it is important if you want to get credit for your assignment.
+	// Your Email Address 
+	// Assignment 1.4 echo command line arguments and parse arguments.
+
+	import (
+		&quot;encoding/json&quot;
+		&quot;flag&quot;
+		&quot;fmt&quot;
+		&quot;io/ioutil&quot;
+		&quot;os&quot;
+	)
+
+	type ConfigData struct {
+		Name  string
+		Value string `json:&quot;Year&quot;` 
+	}
+
+	func main() {
+		var Cfg = flag.String(&quot;cfg&quot;, &quot;cfg.json&quot;, &quot;config file for this call&quot;)
+
+		flag.Parse() // Parse CLI arguments to this program, --cfg &lt;name&gt;.json
+
+		fns := flag.Args()
+		if len(fns) == 0 {
+			fmt.Fprintf(os.Stderr, &quot;Usage: ./echo2 [-cfg cfg.json] arg1 ...\n&quot;)
+			os.Exit(1)
+		}
+
+		if Cfg == nil {
+			fmt.Printf(&quot;--cfg is a required parameter\n&quot;)
+			os.Exit(1)
+		}
+
+		gCfg, err := ReadConfig(*Cfg)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, &quot;Unable to read confguration: %s error %s\n&quot;, *Cfg, err)
+			os.Exit(1)
+		}
+
+		fmt.Printf(&quot;Congiguration: %+v\n&quot;, gCfg)
+		fmt.Printf(&quot;JSON: %+v\n&quot;, IndentJSON(gCfg))
+
+		for ii, ag := range fns {
+			if ii &lt; len(fns) {
+				fmt.Printf(&quot;%s &quot;, ag)
+			} else {
+				fmt.Printf(&quot;%s&quot;, ag)
+			}
+		}
+		fmt.Printf(&quot;\n&quot;)
+	}
+
+	func ReadConfig(filename string) (rv ConfigData, err error) {
+		var buf []byte
+		buf, err = ioutil.ReadFile(filename)
+		if err != nil {
+			return ConfigData{}, err
+		}
+		err = json.Unmarshal(buf, &amp;rv)
+		if err != nil {
+			return ConfigData{}, err
+		}
+		return
+	}
+
+	func IndentJSON(v interface{}) string {
+		s, err := json.MarshalIndent(v, &quot;&quot;, &quot;\t&quot;)
+		if err != nil {
+			return fmt.Sprintf(&quot;Error:%s&quot;, err)
+		} else {
+			return string(s)
+		}
+	}
+</code></pre>
+
+<p>Create a 2nd file - call it cfg.json with:</p>
+
+<pre><code class="language-JSON">{
+	&quot;Name&quot;: &quot;Corwin&quot;,
+	&quot;Year&quot;: &quot;100&quot;,
+	&quot;Value&quot;: &quot;200&quot;
+}
+</code></pre>
+
+<h3>Read Code</h3>
+
+<p>Go through this program and read and analyze the following things:</p>
+
+<ol>
+<li><code>type ConfigData struct</code> read and understand that this will declare a struct.</li>
+<li><code>var Cfg =...</code> Declare a variable.  It will be a pointer to a string because <code>flag.Stgring</code> returns a pointer to a string.</li>
+<li><code>flag.Parse()</code> this uses the <code>flag</code> package to parse the command line arguments.</li>
+<li><code>fns := flag.Args()</code> this will pick off the remaining arguments from the command line.  If you have <code>echo2 --cfg file.json A B C</code> this will be a slice, 3 long, with the strings <code>A</code>, <code>B</code>, <code>C</code> in it.</li>
+<li><code>ReadConfig</code> call the <code>ReadConfig</code> function.  The function is declared later in the file.</li>
+<li><code>fmt.Print.... %+v</code> print out a structure with the field names.  Very useful for debugging your program.</li>
+<li><code>func ReadConfig</code> declares a function.  Note functions can return a set of values, not just one.</li>
+<li><code>return ConfigData{}, err</code> declare an empty <code>ConfigData{}</code> and return an error.</li>
+<li><code>func IndentJSON.... v interface{}</code> create a data type that can receive any type that is passed.</li>
+<li><code>json.MarshalIndent</code> marshal data into a string.</li>
+</ol>
+
+<p>Why did <code>100</code> print out.  What happened to <code>200</code>.  Create a new JSON file under a new name and
+set the year field to 2018.</p>
+
+<p>Submit:</p>
+
+<ol>
+<li>Your code.  Modify the comment in the code to have your name and assignment number.</li>
+<li>Your JSON file with the year modified to 2018.</li>
+</ol>
+
+<h3>References</h3>
+
+<ol>
+<li><a href="https://golang.org/pkg/encoding/json/">JSON in Go</a></li>
+</ol>
+
+<h2>(1.5) Read and write JSON file (read-json1.go) (10pts)</h2>
+
+<p>Use the following structure to read a JSON file.  Create a program that will read
+JSON in, print it, write it out in a new JSON file.   Get the file name for the input
+and output from the command line.</p>
+
+<p>Add a map/dictionary field in the JSON input that is</p>
+
+<pre><code>	{
+		&quot;TxHash&quot;: &quot;Your actual Name&quot;,
+		&quot;TxIn&quot;: 22,
+		&quot;TxOut&quot;: 44
+	}
+</code></pre>
+
+<p>Example Run:</p>
+
+<pre><code class="language-SH">	./read-json1 --input in.json --output out.json
+</code></pre>
+
+<p>The struct to include in your code.</p>
+
+<pre><code class="language-Go">	type TransactionType struct {
+		TxHash	string
+		TxIn	int
+		TxOut	int
+	}
+</code></pre>
+
+<p>You will need to use:</p>
+
+<ol>
+<li><code>ioutil.WriteFile</code> <a href="https://golang.org/pkg/io/ioutil/">ioutil package</a></li>
+<li><code>IndentJSON</code> from above.</li>
+</ol>
+
+<p>Submit:</p>
+
+<ol>
+<li>Your program.</li>
+<li>Your JSON input file.</li>
+<li>Your JSON output file.</li>
+</ol>
+
+<h3>References</h3>
+
+<ol>
+<li><a href="https://golang.org/pkg/io/ioutil/">ioutil package</a></li>
+</ol>
+
+<h2>(1.6) Test a simple library package (15pts)</h2>
+
+<p>Goal: create a go package and a test for that package.</p>
+
+<p>Create a new directory inside your github.com/username.   This example will use <code>pschlump</code> as the username.
+You need to substitute your github.com user name.</p>
+
+<pre><code>	cd
+	mkdir -p ~/go/src/github.com/pschlump/mkPkg/test1
+	cd ~/go/src/github.com/pschlump/mkPkg/test1
+	vi test1.go
+</code></pre>
+
+<p>In this case I created 2 directories, <code>mkPkg</code> and inside it <code>test1</code>.</p>
+
+<p>A simple example package in the <code>mkPkg/test1</code> directory edit a file, lets call it <code>test1.go</code>.</p>
+
+<pre><code>	package test1
+
+	// Your Name
+
+	// DoubleValue returns twice the value passed.
+	func DoubleValue ( n int ) int {				// note the capital 'D' in double 
+		return n * 2
+	}
+
+	// add function TrippleValue
+</code></pre>
+
+<p>It will make life simpler if you make the package name the same as the directory name.
+Don&rsquo;t put blanks in your directory names.</p>
+
+<p>The capital letter at the beginning of <code>DoubleValue</code> tells Go that you are exporting the name.</p>
+
+<p>The test code is placed into <code>mkPkg/test1</code> in the file <code>test1_test.go</code>.</p>
+
+<pre><code>	package test1
+
+	import &quot;testing&quot;
+
+	// Your Name
+
+	func TestDouble(t *testing.T) {
+
+		tests := []struct {
+			in       int
+			expected int
+		}{
+			{
+				in:       23,
+				expected: 46,
+			},
+			{
+				in:       1,
+				expected: 2,
+			},
+		}
+
+		for ii, test := range tests {
+			rr := DoubleValue(test.in)
+			if rr != test.expected {
+				t.Errorf(&quot;Test %d, expected %d got %d\n&quot;, ii, test.expected, rr)
+			}
+		}
+
+	}
+
+	// add test for TripleValue at this point
+</code></pre>
+
+<p>to run the test in the directory <code>mkPkg/test1</code>:</p>
+
+<pre><code class="language-SH">	go test
+</code></pre>
+
+<p>It should print out &lsquo;PASS&rsquo; when the test work.  If the test fails you should get errors.</p>
+
+<p>It is really important that you understand how Go testing works.  This will be 1 of 2 ways
+in which your code will be graded.  You will be expected to develop your own unit tests.
+I will supply my grader with additional tests and those will be run with your code.</p>
+
+<p>We will create a simple main program that will use the package that <code>test1</code>.  Go up 1
+level to <code>~/go/src/github.com/pschlump/mkPkg</code>.</p>
+
+<p>Edit a main program:</p>
+
+<pre><code>	package main
+
+	// Your Name
+
+	import (
+		&quot;fmt&quot;
+
+		&quot;github.com/pschlump/myPkg/test1&quot; // import package you created
+	)
+
+	func main() {
+		out := test1.DoubleValue(8) 	// Call function in your package
+		fmt.Printf(&quot;out = %d\n&quot;, out) 	// should print &quot;out = 16&quot;
+		// add call to TripleValue at this point
+	}
+</code></pre>
+
+<p>Submit:</p>
+
+<ol>
+<li>Your package.</li>
+<li>Your test code.</li>
+<li>Your main program.</li>
+</ol>
+
+<h3>References</h3>
+
+<ol>
+<li><a href="https://www.golang-book.com/books/intro/11">Intro to packages</a></li>
+<li><a href="https://blog.alexellis.io/golang-writing-unit-tests/">Intro to testing</a> is really good and has way more on testing.</li>
+</ol>
+
+<h2>(1.7) Printing (print1.go) (10pts)</h2>
+
+<p>The <code>fmt</code> package provides lots of useful output options. Go and read about <a href="https://golang.org/pkg/fmt/">fmt</a>.</p>
+
+<p>In the following program</p>
+
+<pre><code class="language-Go">	package main
+
+	import (
+		&quot;encoding/json&quot;
+		&quot;fmt&quot;
+	)
+
+	var IVar int
+	var SVar string
+	var I64Var int64
+	var UIVar uint64
+
+	type Example17 struct {
+		A int
+		B string
+	}
+
+	var E17 Example17
+
+	// Add int64 and uint64 types
+	var SliceOfString []string
+	var MapOfString map[string]string
+	var MapOfBool map[string]bool
+
+	// init will initilize data before main() runs.  You can have more than one init() function.
+	func init() {
+		SliceOfString = make([]string, 0, 10)
+		MapOfString = make(map[string]string)
+		MapOfBool = make(map[string]bool)
+	}
+
+	func main() {
+		SliceOfString = append(SliceOfString, &quot;AAA&quot;, &quot;BBB&quot;)
+		MapOfString[&quot;mark&quot;] = &quot;first&quot;
+		MapOfString[&quot;twain&quot;] = &quot;last&quot;
+		MapOfBool[&quot;mark&quot;] = true
+		MapOfBool[&quot;twain&quot;] = false
+
+		fmt.Printf(&quot;IVar = %d, type of IVar %T\n&quot;, IVar, IVar)
+		fmt.Printf(&quot;IVar = %v, type of IVar %T\n&quot;, IVar, IVar)
+
+		// TODO: add prints for your int64 and uint64 types
+
+		fmt.Printf(&quot;SVar = %s, type of SVar %T\n&quot;, SVar, SVar)
+		fmt.Printf(&quot;Address of SVar = %s, type of SVar %T\n&quot;, &amp;SVar, &amp;SVar)
+		fmt.Printf(&quot;E17 = %s, type of E17 %T\n&quot;, &amp;E17, &amp;E17)
+		fmt.Printf(&quot;    E17 = %+v, E17 as JSON: %s\n&quot;, &amp;E17, IndentJSON(E17))
+
+		// TODO: add prints for the other types above - so you can see them printed out.
+		// TODO: use a %s and a %T for SliceOfString
+		// TODO: use a %s and a %T for MapOfString
+		// TODO: use a %#v and a %T for MapOfBool
+		// TODO: Print out each of them with the IndentJSON function.
+	}
+
+	func IndentJSON(v interface{}) string {
+		s, err := json.MarshalIndent(v, &quot;&quot;, &quot;\t&quot;)
+		if err != nil {
+			return fmt.Sprintf(&quot;Error:%s&quot;, err)
+		} else {
+			return string(s)
+		}
+	}
+</code></pre>
+
+<p>Add a print statement to show the type of the variables. See the comments with TODO in the code.</p>
+
+<p>Submit:</p>
+
+<ol>
+<li>Your program with the extra print statements.</li>
+<li>The output from running the program with the extra print statements.</li>
+</ol>
+
+<h2>(1.8) Copy a File (copy1.go, copy2.go) (20pts)</h2>
+
+<p>Implement a simple program to copy a file.  See <a href="https://shapeshed.com/copy-a-file-in-go/">copy a file in go</a>
+and modify the code to take the input and output file names from the command line.   Go and read about
+<code>defer</code> and see how it is used.</p>
+
+<pre><code class="language-SH">	copy-file input-file-name output-file-name
+</code></pre>
+
+<p>There is a line in the example code, <code>_, err = io.Copy...</code>.  What is the <code>_</code> for?  Replace it with a
+statement like this:  (note the := that will declare test1)</p>
+
+<pre><code class="language-Go">	test1, err := io.Copy(to, from)
+</code></pre>
+
+<p>Recompile the code - what happens?</p>
+
+<p>Implement a copy file program that uses <code>ioutil.ReadFile</code> and <code>ioutil.WriteFile</code>.   What are the disadvantages
+of doing the copy in this way?
+Write a paragraph explaining the disadvantages of the <code>ioutil.ReadFile</code>, <code>ioutil.WriteFile</code> disadvantages.</p>
+
+<p>Submit:</p>
+
+<ol>
+<li>Both of your programs.  The original with the <code>io.Copy(...)</code> in it and the one that uses <code>ioutil.ReadFile</code>.<br />
+Add a note that this is a copy from the website, <a href="https://shapeshed.com/copy-a-file-in-go/">copy a file in go</a>
+and a note with your name and email address.</li>
+<li>Your written paragraph.<br /></li>
+</ol>
+
+<h3>References</h3>
+
+<ol>
+<li><a href="https://tour.golang.org/flowcontrol/12">defer</a></li>
+<li><a href="https://golang.org/pkg/log/">log</a></li>
+</ol>
+
+<h2>(1.9) Hash and a simple test in Go (ksum.go) (30pts)</h2>
+
+<p>This is the first set of code that we will directly use in building our blockchain.</p>
+
+<p>A hash is a number, usually large, that maps a set of data into a unique number.
+A different set of data will result in a different hash. The file <code>file1</code>
+will hash to <code>ecd67ca5a72802084fcea4883b6877ecfba7f95c0aece07ea504359d54eb4610</code>.
+That&rsquo;s a big number.  Note that the number is in base 16 when it was printed
+out (so it has <code>0..9</code> and <code>a..f</code> for digits).
+It is possible that two different sets of data will produce the same
+value.  This is called a hash collision.  A good hash rarely has collisions.</p>
+
+<p>We will use a bunch of different hash functions.  All of the has functions have a
+similar interface in Go.   Today&rsquo;s function is Keccak256.  This is the hash that
+is used in Ethereum.   It is a <code>sha3</code> derivative.</p>
+
+<p>The Go documentation for sha3 includes keccak256 but we will be using the one in
+the Go-Ethereum package.</p>
+
+<p>An example of using it is: <a href="https://gist.github.com/miguelmota/01d051b2208ea706a273dbf0dd673844">keccak256</a>
+Note that the example is wrong, the output will be in lower case.  The example shows it in upper case.
+Go and read the example.</p>
+
+<p>This Ethereum code includes a function that you will want to copy.  Lines 44 to 51.  Give credit where
+credit is due. (See Below - I copied it)</p>
+
+<p>Note that the Keccak256 function takes a slice of byte, <code>[]byte</code>, and returns a slice of byte.
+We will need to type-cast strings into this type to get it to work in the demo.</p>
+
+<p>Copy 1.8&rsquo;s ioutil.ReadFile version of the copy into a new directory called <code>ksum</code>.  We are goging to modify
+it to print out the keccak256 sum of a file.  This is like <a href="https://linux.die.net/man/1/md5sum">md5sum</a> or <a href="https://linux.die.net/man/1/sha1sum">sha1sum</a>.
+Go and read the documentation on these 2 command line utilities.
+We will build the keccak256 sum program.  You don&rsquo;t need to implement any of the command line options like <code>-b/--binary</code>.  Just
+read more than one file and print out the results.</p>
+
+<p>Sample Output:</p>
+
+<pre><code>	$ ksum file1 file2.txt file3
+	file1 ecd67ca5a72802084fcea4883b6877ecfba7f95c0aece07ea504359d54eb4610
+	file2.txt 0695253b82a83d557392ab196ff309a1fedc6cbab0d7d4186d2664dcec92b5ff
+	file3 fb15d651aaf994584aa6da109b5dba096de83bf2f44da6a224cf41d8d5e92f14
+</code></pre>
+
+<p>I have supplied the fiels <code>file1</code>, <code>file2.txt</code>, and <code>file3</code>.</p>
+
+<p>Process as many files as are on the command line.</p>
+
+<p>So start out with an example - that just calculates the hash of the string <code>&quot;bob&quot;</code>:</p>
+
+<pre><code class="language-Go">package main
+
+import (
+	&quot;flag&quot;
+	&quot;fmt&quot;
+	&quot;io/ioutil&quot;
+	&quot;os&quot;
+
+	&quot;golang.org/x/crypto/sha3&quot;
+)
+
+func main() {
+	flag.Parse()
+
+	fns := flag.Args()
+	if len(fns) == 0 {
+		fmt.Fprintf(os.Stderr, &quot;Usage: ./ksum [file ...]\n&quot;)
+		os.Exit(1)
+	}
+
+	for _, fn := range fns {
+		data, err := ioutil.ReadFile(fn)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, &quot;Unable to read %s, error: %s\n&quot;, fn, err)
+			continue
+		}
+		fmt.Printf(&quot;%s %x\n&quot;, fn, Keccak256(data))
+	}
+}
+
+// Keccak256 calculates and returns the Keccak256 hash of the input data.
+func Keccak256(data ...[]byte) []byte {
+	d := sha3.NewLegacyKeccak256()
+	for _, b := range data {
+		d.Write(b)
+	}
+	return d.Sum(nil)
+}
+
+</code></pre>
+
+<p>After you create/copy this code into a file, in a directory called ksum, you will need to</p>
+
+<pre><code>	go get
+</code></pre>
+
+<p>to have Go pull in <code>github.org/x/crypto/sha3</code> package.
+If you do not do the <code>go get</code> you
+will get an error <code>cannot find package...</code>.  The <code>go get</code> will pull in the dependencies for this
+from github so it will take will take a little bit.</p>
+
+<p>Add in the ability to process the command line.  <code>ioutil.ReadFile</code> returns a byte slice and an error.
+Report the error if it occurs.  You will not need a type cast to pass the byte slice to Keccak256.</p>
+
+<p><code>fmt.Printf</code> can print out in hex.  Note the <code>%x</code> format.</p>
+
+<h3>Pseudo-Code for your program.</h3>
+
+<ol>
+<li>Process command line to get the file names.</li>
+<li>For each argument (file name from the command line)<br />
+
+<ul>
+<li>read in the data in the file.</li>
+<li>calculate the hash for the data.</li>
+<li>print out file name and the hex string for the hash.</li>
+</ul></li>
+</ol>
+
+<p>Submit:</p>
+
+<ol>
+<li>Test your code with file1, file2.txt, file3 (download from the following locations):
+<a href="https://github.com/Univ-Wyo-Education/S20-4010/tree/master/Assignments/01/file1">https://github.com/Univ-Wyo-Education/S20-4010/tree/master/Assignments/01/file1</a>,
+<a href="https://github.com/Univ-Wyo-Education/S20-4010/tree/master/Assignments/01/file2.txt">https://github.com/Univ-Wyo-Education/S20-4010/tree/master/Assignments/01/file2.txt</a>,
+<a href="https://github.com/Univ-Wyo-Education/S20-4010/tree/master/Assignments/01/file3">https://github.com/Univ-Wyo-Education/S20-4010/tree/master/Assignments/01/file3</a> . Save
+the output.  Submit the output with the hashes.   Test your code with some other files of your choice.   Submit the output from
+that with the files that you used.</li>
+<li>your code for doing this (remember your name in the program)</li>
+</ol>
+
+<h2>(1.10) Summary</h2>
+
+<p>Go is a simple language that Google developed.  It is not an &ldquo;academic&rdquo; research language.  There are no new cool features.
+The good things about go are:</p>
+
+<ol>
+<li>The go compiler is really fast.</li>
+<li>The code is statically linked and optimized.</li>
+<li>The set of tools for the language extensive ( go vet, golint, testing, flame graphs etc. )</li>
+<li>The garbage collector is revolutionary.</li>
+<li>It matches with modern hardware.</li>
+<li>The language is industrial scale.</li>
+<li>Lots of really good documentation.</li>
+<li>Extensive library.</li>
+<li>Easy to learn.</li>
+<li>Fun to program in.</li>
+<li>Reliable.</li>
+</ol>
+
+<p>Go is missing generics and objects.  When I first started to use Go I thought that it would be a big deal to not have
+objects.  Turns out I really don&rsquo;t need or want objects.  Generics would be useful on rare occasions.</p>
+
+<p>Save your code from this assignment.  We will be using chunks of it in the next assignment.</p>
+
+</div>
+

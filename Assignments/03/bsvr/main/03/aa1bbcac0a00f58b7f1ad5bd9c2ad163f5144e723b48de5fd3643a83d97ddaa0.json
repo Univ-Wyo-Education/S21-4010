@@ -1,0 +1,65 @@
+{
+	"Index": 2,
+	"Desc": "",
+	"ThisBlockHash": "aa1bbcac0a00f58b7f1ad5bd9c2ad163f5144e723b48de5fd3643a83d97ddaa0",
+	"PrevBlockHash": "a63d4960b2c1ab2c53d61450b0714a0c2bd98be2b2fc4fbe0b21bff4a3a5d83b",
+	"Nonce": 10,
+	"Seal": "02f7b7d71cc74812cbcdc6b41f3f322f2871a5361abdda405a107363757e8e0f",
+	"MerkleHash": "285e8c0fb93b04cfac6a87253338d84a35cf3a39e1c1f48bbc3107ba10f1011c",
+	"Tx": [
+		{
+			"TxOffset": 0,
+			"Input": [
+				{
+					"BlockNo": 1,
+					"TxOffset": 0,
+					"TxOutputPos": 1,
+					"Amount": 499967
+				}
+			],
+			"Output": [
+				{
+					"BlockNo": 2,
+					"TxOffset": 0,
+					"TxOutputPos": 0,
+					"Account": "6e06bf940bb57ade69cb03153d1c3842411bd3c1",
+					"Amount": 33
+				},
+				{
+					"BlockNo": 2,
+					"TxOffset": 0,
+					"TxOutputPos": 1,
+					"Account": "885765a2fcfb72e68d82d656c6411b7d27bacdd7",
+					"Amount": 499934
+				}
+			],
+			"SCOwnerAccount": "",
+			"SCAddress": "",
+			"SCOutputData": "",
+			"Account": "885765a2fcfb72e68d82d656c6411b7d27bacdd7",
+			"Signature": "",
+			"Message": "",
+			"Comment": "Tx Memo"
+		},
+		{
+			"TxOffset": 1,
+			"Input": [],
+			"Output": [
+				{
+					"BlockNo": 2,
+					"TxOffset": 1,
+					"TxOutputPos": 0,
+					"Account": "db180da9a8982c7bb75ca40039f959cb959c62e8",
+					"Amount": 100
+				}
+			],
+			"SCOwnerAccount": "",
+			"SCAddress": "",
+			"SCOutputData": "",
+			"Account": "db180da9a8982c7bb75ca40039f959cb959c62e8",
+			"Signature": "",
+			"Message": "",
+			"Comment": "Mining Reward"
+		}
+	]
+}

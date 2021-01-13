@@ -1,0 +1,30 @@
+<div class="slide">
+
+<h1> Change in Job Market </h1>
+
+<table class="table table-bordered table-fmt float-left">
+	<thead>
+		<tr> <th> Proportion of Jobs Using Functional Programming </th> </tr>
+	</thead>
+	<tbody>
+		<tr> <td>  2% </td> </tr>
+		<tr> <td>  1% </td> </tr>
+		<tr> <td>  2% </td> </tr>
+		<tr> <td>  2% </td> </tr>
+		<tr> <td>  4% </td> </tr>
+		<tr> <td>  3% </td> </tr>
+		<tr> <td>  5% </td> </tr>
+		<tr> <td>  7% </td> </tr>
+		<tr> <td>  7% </td> </tr>
+		<tr> <td>  9% </td> </tr>
+		<tr> <td> 10% </td> </tr>
+		<tr> <td> 11% </td> </tr>
+		<tr> <td> 10% </td> </tr>
+		<tr> <td> 13% </td> </tr>
+		<tr> <td> 14% </td> </tr>
+	</tbody>
+</table>
+
+<img class="float-left" src="./img/spinner-gif-13.gif">
+
+</div>

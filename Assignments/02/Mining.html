@@ -1,0 +1,1034 @@
+<style>
+@font-face {
+	font-family: octicons-link;
+	src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	line-height: 1.5;
+	color: #24292e;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 16px;
+	line-height: 1.5;
+	word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+	color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+	color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+	color: #6f42c1;
+}
+
+.markdown-body .pl-smi,
+.markdown-body .pl-s .pl-s1 {
+	color: #24292e;
+}
+
+.markdown-body .pl-ent {
+	color: #22863a;
+}
+
+.markdown-body .pl-k {
+	color: #d73a49;
+}
+
+.markdown-body .pl-s,
+.markdown-body .pl-pds,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sre,
+.markdown-body .pl-sr .pl-sra {
+	color: #032f62;
+}
+
+.markdown-body .pl-v,
+.markdown-body .pl-smw {
+	color: #e36209;
+}
+
+.markdown-body .pl-bu {
+	color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+	color: #fafbfc;
+	background-color: #b31d28;
+}
+
+.markdown-body .pl-c2 {
+	color: #fafbfc;
+	background-color: #d73a49;
+}
+
+.markdown-body .pl-c2::before {
+	content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+	font-weight: bold;
+	color: #22863a;
+}
+
+.markdown-body .pl-ml {
+	color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+	font-weight: bold;
+	color: #005cc5;
+}
+
+.markdown-body .pl-mi {
+	font-style: italic;
+	color: #24292e;
+}
+
+.markdown-body .pl-mb {
+	font-weight: bold;
+	color: #24292e;
+}
+
+.markdown-body .pl-md {
+	color: #b31d28;
+	background-color: #ffeef0;
+}
+
+.markdown-body .pl-mi1 {
+	color: #22863a;
+	background-color: #f0fff4;
+}
+
+.markdown-body .pl-mc {
+	color: #e36209;
+	background-color: #ffebda;
+}
+
+.markdown-body .pl-mi2 {
+	color: #f6f8fa;
+	background-color: #005cc5;
+}
+
+.markdown-body .pl-mdr {
+	font-weight: bold;
+	color: #6f42c1;
+}
+
+.markdown-body .pl-ba {
+	color: #586069;
+}
+
+.markdown-body .pl-sg {
+	color: #959da5;
+}
+
+.markdown-body .pl-corl {
+	text-decoration: underline;
+	color: #032f62;
+}
+
+.markdown-body .octicon {
+	display: inline-block;
+	vertical-align: text-top;
+	fill: currentColor;
+}
+
+.markdown-body a {
+	background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+	outline-width: 0;
+}
+
+.markdown-body strong {
+	font-weight: inherit;
+}
+
+.markdown-body strong {
+	font-weight: bolder;
+}
+
+.markdown-body h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+.markdown-body img {
+	border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+.markdown-body hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+}
+
+.markdown-body input {
+	font: inherit;
+	margin: 0;
+}
+
+.markdown-body input {
+	overflow: visible;
+}
+
+.markdown-body [type="checkbox"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+.markdown-body * {
+	box-sizing: border-box;
+}
+
+.markdown-body input {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+.markdown-body a {
+	color: #0366d6;
+	text-decoration: none;
+}
+
+.markdown-body a:hover {
+	text-decoration: underline;
+}
+
+.markdown-body strong {
+	font-weight: 600;
+}
+
+.markdown-body hr {
+	height: 0;
+	margin: 15px 0;
+	overflow: hidden;
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid #dfe2e5;
+}
+
+.markdown-body hr::before {
+	display: table;
+	content: "";
+}
+
+.markdown-body hr::after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+.markdown-body table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+	padding: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body h1 {
+	font-size: 32px;
+	font-weight: 600;
+}
+
+.markdown-body h2 {
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.markdown-body h3 {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.markdown-body h4 {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.markdown-body h5 {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.markdown-body h6 {
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.markdown-body p {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+	margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+	x-list-style-type: lower-roman;
+	  list-style-type: decimal;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+	list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+	margin-left: 0;
+}
+
+.markdown-body code {
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-size: 12px;
+}
+
+.markdown-body pre {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-size: 12px;
+}
+
+.markdown-body .octicon {
+	vertical-align: text-bottom;
+}
+
+.markdown-body .pl-0 {
+	padding-left: 0 !important;
+}
+
+.markdown-body .pl-1 {
+	padding-left: 4px !important;
+}
+
+.markdown-body .pl-2 {
+	padding-left: 8px !important;
+}
+
+.markdown-body .pl-3 {
+	padding-left: 16px !important;
+}
+
+.markdown-body .pl-4 {
+	padding-left: 24px !important;
+}
+
+.markdown-body .pl-5 {
+	padding-left: 32px !important;
+}
+
+.markdown-body .pl-6 {
+	padding-left: 40px !important;
+}
+
+.markdown-body::before {
+	display: table;
+	content: "";
+}
+
+.markdown-body::after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+.markdown-body>*:first-child {
+	margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+	margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+	color: inherit;
+	text-decoration: none;
+}
+
+.markdown-body .anchor {
+	float: left;
+	padding-right: 4px;
+	margin-left: -20px;
+	line-height: 1;
+}
+
+.markdown-body .anchor:focus {
+	outline: none;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+.markdown-body hr {
+	height: 0.25em;
+	padding: 0;
+	margin: 24px 0;
+	background-color: #e1e4e8;
+	border: 0;
+}
+
+.markdown-body blockquote {
+	padding: 0 1em;
+	color: #6a737d;
+	border-left: 0.25em solid #dfe2e5;
+}
+
+.markdown-body blockquote>:first-child {
+	margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+	margin-bottom: 0;
+}
+
+.markdown-body kbd {
+	display: inline-block;
+	padding: 3px 5px;
+	font-size: 11px;
+	line-height: 10px;
+	color: #444d56;
+	vertical-align: middle;
+	background-color: #fafbfc;
+	border: solid 1px #c6cbd1;
+	border-bottom-color: #959da5;
+	border-radius: 3px;
+	box-shadow: inset 0 -1px 0 #959da5;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+	margin-top: 24px;
+	margin-bottom: 16px;
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+	color: #1b1f23;
+	vertical-align: middle;
+	visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+	text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+	visibility: visible;
+}
+
+.markdown-body h1 {
+	padding-bottom: 0.3em;
+	font-size: 2em;
+	border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h2 {
+	padding-bottom: 0.3em;
+	font-size: 1.5em;
+	border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h3 {
+	font-size: 1.25em;
+}
+
+.markdown-body h4 {
+	font-size: 1em;
+}
+
+.markdown-body h5 {
+	font-size: 0.875em;
+}
+
+.markdown-body h6 {
+	font-size: 0.85em;
+	color: #6a737d;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+	padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body li {
+	word-wrap: break-all;
+}
+
+.markdown-body li>p {
+	margin-top: 16px;
+}
+
+.markdown-body li+li {
+	margin-top: 0.25em;
+}
+
+.markdown-body dl {
+	padding: 0;
+}
+
+.markdown-body dl dt {
+	padding: 0;
+	margin-top: 16px;
+	font-size: 1em;
+	font-style: italic;
+	font-weight: 600;
+}
+
+.markdown-body dl dd {
+	padding: 0 16px;
+	margin-bottom: 16px;
+}
+
+.markdown-body table {
+	display: block;
+	width: 100%;
+	overflow: auto;
+}
+
+.markdown-body table th {
+	font-weight: 600;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+	padding: 6px 13px;
+	border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+	background-color: #fff;
+	border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+	background-color: #f6f8fa;
+}
+
+.markdown-body img {
+	max-width: 100%;
+	box-sizing: content-box;
+	background-color: #fff;
+}
+
+.markdown-body img[align=right] {
+	padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+	padding-right: 20px;
+}
+
+.markdown-body code {
+	padding: 0.2em 0.4em;
+	margin: 0;
+	font-size: 85%;
+	background-color: rgba(27,31,35,0.05);
+	border-radius: 3px;
+}
+
+.markdown-body pre {
+	word-wrap: normal;
+}
+
+.markdown-body pre>code {
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	word-break: normal;
+	white-space: pre;
+	background: transparent;
+	border: 0;
+}
+
+.markdown-body .highlight {
+	margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+	margin-bottom: 0;
+	word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+	padding: 16px;
+	overflow: auto;
+	font-size: 85%;
+	line-height: 1.45;
+	background-color: #f6f8fa;
+	border-radius: 3px;
+}
+
+.markdown-body pre code {
+	display: inline;
+	max-width: auto;
+	padding: 0;
+	margin: 0;
+	overflow: visible;
+	line-height: inherit;
+	word-wrap: normal;
+	background-color: transparent;
+	border: 0;
+}
+
+.markdown-body .full-commit .btn-outline:not(:disabled):hover {
+	color: #005cc5;
+	border-color: #005cc5;
+}
+
+.markdown-body kbd {
+	display: inline-block;
+	padding: 3px 5px;
+	font: 11px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	line-height: 10px;
+	color: #444d56;
+	vertical-align: middle;
+	background-color: #fafbfc;
+	border: solid 1px #d1d5da;
+	border-bottom-color: #c6cbd1;
+	border-radius: 3px;
+	box-shadow: inset 0 -1px 0 #c6cbd1;
+}
+
+.markdown-body :checked+.radio-label {
+	position: relative;
+	z-index: 1;
+	border-color: #0366d6;
+}
+
+.markdown-body .task-list-item {
+	list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+	margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+	margin: 0 0.2em 0.25em -1.6em;
+	vertical-align: middle;
+}
+
+.markdown-body hr {
+	border-bottom-color: #eee;
+}
+
+</style>
+<style>
+ol {
+    display: block;
+    list-style-type: decimal;
+}
+</style>
+
+<div class="markdown-body">
+
+<h1>Part 1 - What is Mining? (100pts)</h1>
+
+<pre><code>Part 1 directories:
+	block
+	cli
+	config
+	hash
+	index
+	lib
+	main
+	mine
+
+Part 2 - also uses ./hash
+	merkle
+</code></pre>
+
+<p>In this assignment you will implement proof-of-work mining.  Before we get to the details on mining
+let&rsquo;s start at the beginning of our blockchain.</p>
+
+<p>At the root of our blockchain is a special block called the &ldquo;genesis&rdquo; block.  Basically the &ldquo;genesis&rdquo; block is the
+beginning block in our blockchain. It is special because it will not point back to any previous block.</p>
+
+<p>The code that you are given can write out the genesis block, and an index to where to find it. In most blockchains like
+Bitcoin  some sort of a database is used for storing the blocks.</p>
+
+<p>We are not going to do that. We are going to store all of them in files in the file system. This is so you can see the
+blocks. Also we are going to store the blocks in JSON as text so you can read the blocks. Using a database is faster but
+has lots of overhead. It can also be very frustrating when you are attempting to determine if the block is correct and
+you can&rsquo;t easily see what is in the  block.</p>
+
+<p>Our blocks will be written (by default) in the <code>./data</code> directory. The format for the blocks is <code>hash.json</code>, where hash
+is the block hash.</p>
+
+<p>To get started, first checkout the code for Assignment 2 - this can be done by: (You can go online to it and cut-paste
+the link - that is what I usually do. In the browser go to
+<a href="https://github.com/Univ-Wyo-Education">https://github.com/Univ-Wyo-Education</a>. Then click on the
+<code>S20-4010</code> repository. When that comes up there is a green button on the left that says <code>Clone or
+download</code>. Click on that. Cut and paste the URL.)</p>
+
+<p>(You have probably already done this)</p>
+
+<pre><code class="language-sh">	cd ~/go/src/github.com/
+	mkdir Univ-Wyo-Education
+	cd Univ-Wyo-Education
+	git clone https://github.com/Univ-Wyo-Education/S20-4010.git
+	cd S20-4010
+</code></pre>
+
+<p>If you have already cloned the S20-4010 set of information you will need to update it to current.
+You may have made changes already.</p>
+
+<pre><code>	cd ~/go/src/github.com/Univ-Wyo-Education/S20-4010
+	git stash
+	git pull
+	git checkout -b hw02
+</code></pre>
+
+<p>The <code>checkout -b</code> will create a new branch for you to work on.</p>
+
+<p>Having your own branch (you can name it other than hw2) will allow you to
+switch back and forth between the original code and your modified code.</p>
+
+<p>Then from the <code>~/go/src/github.com/Univ-Wyo-Education/S20-4010</code> directory
+change directory into assignment 2.</p>
+
+<pre><code class="language-sh">	cd Assignmetnts/02
+</code></pre>
+
+<p>Our starting code is in this directory.  Specifically we will want to
+compile the main program.  It is in ./main.  Cd to that directory.
+You shooed end up in:
+<code>~/go/src/github.com/Univ-Wyo-Education/S20-4010/a/02</code></p>
+
+<pre><code class="language-sh">	cd ./main
+	go get
+	go build
+</code></pre>
+
+<p><code>go get</code> will pull in any dependent packages that are needed to build this.</p>
+
+<p>Run main to create the genesis block and the initial index.</p>
+
+<pre><code class="language-sh">	./main --create-genesis
+</code></pre>
+
+<p>This should create a directory with 2 files in it.  The default
+is in the <code>./data</code> directory ( <code>.../a/02/main/data</code> ).  The files are:</p>
+
+<pre><code>	136c53391115ab7ff717bd24e62dd0df2c270500d7194290169a83488022548e.json
+	index.json
+</code></pre>
+
+<p>You should look at the contents of the 2 files.
+Edit the files with a text editor like <code>vi</code>, <code>vim</code> or whatever editor you
+use for editing code (don&rsquo;t modify the files).
+The one with the long name is our genesis block. The <code>index.json</code> is an
+index that will allow us to find data blocks as we are building the this blockchain.</p>
+
+<p>The code is missing the chunk that will do the block mining. The stubbed out function is in
+<code>.../a/02/mine/mine.go</code>. Your
+assignment is to implement the body of the function. You will want to verify that it works by running</p>
+
+<pre><code class="language-sh">	go test
+</code></pre>
+
+<p>in the <code>.../a/02/mine</code> directory.  If you run that now you should get <code>FAIL</code>
+because you have not implemented it yet.</p>
+
+<p>Take the time to go and poke through the code.  This code is the basis
+for your mid-term project.  You are going to need to be familiar with
+all of it.  Run all the tests.   If you have questions about it now is
+the time to be asking them.</p>
+
+<h2>Mining</h2>
+
+<p>Mining is the process of doing some hard work that anybody can easily check to verify that
+a digital seal has been put on a block.  The seals that we will use are hashes with special
+properties.  In our case the property will be that the first 4 characters of the hex
+string representation of the hash will need to be zeros.  &ldquo;0000&rdquo; at the beginning of
+the hash.   To generate a hash with this pattern we will include a 64 bit integer in
+the data.  Each time we hash the data if we do not get a hash with our special property
+we will increment the integer and try again.  After enough increments we will stumble
+upon a hash with the properly.</p>
+
+<p>The difficulty is controlled by the number of 0&rsquo;s at the beginning of our hash.
+If we want to increases the difficulty we can go to 00000 or 000000 zeros.  In
+Bitcoin this difficulty automatically increases.  In Ethereum this difficulty is
+set by group consensus.</p>
+
+<h3>Pseudo Code for the mining.</h3>
+
+<p>Code that I have supplied you with:</p>
+
+<table>
+<thead>
+<tr>
+<th align="right">go Package</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="right">block</td>
+<td>Operations on blocks like initialization and searilization.</td>
+</tr>
+
+<tr>
+<td align="right"></td>
+<td>Look in the <code>.../a/02/block/block.go</code> file.</td>
+</tr>
+
+<tr>
+<td align="right">hash</td>
+<td>Convenience functions to work with keccak256 hash.</td>
+</tr>
+
+<tr>
+<td align="right"></td>
+<td>Look in the <code>.../a/02/hash/hash.go</code> file.</td>
+</tr>
+</tbody>
+</table>
+
+<p><code>go</code> Library functions you will need to use:</p>
+
+<table>
+<thead>
+<tr>
+<th align="right">go Package</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="right">hex</td>
+<td>Convert from/to base 16 strings.</td>
+</tr>
+
+<tr>
+<td align="right"></td>
+<td><a href="https://golang.org/pkg/encoding/hex/">https://golang.org/pkg/encoding/hex/</a></td>
+</tr>
+
+<tr>
+<td align="right">fmt</td>
+<td>Generate formatted output.</td>
+</tr>
+
+<tr>
+<td align="right"></td>
+<td><a href="https://golang.org/pkg/fmt/">https://golang.org/pkg/fmt</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>In the file <code>./mine/mine.go</code>, implement the function MineBlock.</p>
+
+<pre><code>	// Pseudo-Code:
+	//
+	// 1. Use an infinite loop to:
+	//   1. Serialize the data from the block for hashing, Call
+	//     `block.SearilizeForSeal` to do this.
+	//   2. Calculate the hash of the data, Call `hash.HashOf` to do this.
+	//      This is the slow part.  What would happen if we replaced the
+	//      software with a hash calculator on a graphics card where you
+	//      could run 4096 - 10240 hahes at once?  What would happen if we
+	//      replaced the graphics card with an ASIC - so you had dedicated
+	//		hardware to do the hash and you could run 4 billion hashes a
+	//      second?
+	//   3. Convert the hash (it is []byte) to a hex string.  Use the
+	//      `hex.EncodeToString` standard go library function.
+	//   4. `fmt.Printf(&quot;((Mining)) Hash for Block [%s] nonce [%8d]\r&quot;,
+	//      theHashAsAString, bk.Nonce)` `\r` will overwrite the same line
+	//      instead of advancing to the next. (You may want to skip on
+	//      some windows systems)
+	//   5. See if the first 4 characters of the hash are 0's. - if so we
+	//      have met the work criteria.  In go this is
+	//     `if theHashAsAString[0:n] == difficulty (&quot;0000&quot; for example) {`.
+	//      This is create a slice, 4 long from character 0 with length of 4,
+	//      then compare that to the string `difficulty`.
+	//    -   Set the block's &quot;Seal&quot; to the hash
+	//    -   `fmt.Printf(&quot;((Mining)) Hash for Block [%s] nonce [%8d]\n&quot;,
+	//        theHashAsAString, bk.Nonce)` `\n` will overwrite the same
+	//        *and then advance* to the next line.
+	//    -   return
+	//   5. Increment the Nonce in the block, and...
+	//   6. Back to the top of the loop for another try at finding a seal
+	//      for this block.
+	//
+	// For the genesis block, when I do this it requires 54586 trips through
+	// the loop to calculate the proof of work (PoW).
+</code></pre>
+
+<p>In the <code>./mine</code> directory there is a test.  Implement the MineBlock function.  Run the
+test.  Remove the <code>InstructorImplementationMineBlock(bk) // TODO: Replace this line with your code.</code>
+Put your code in place of it.</p>
+
+<p>Submit your completed ./mine/mine.go file.</p>
+
+<p>My output when running the test.</p>
+
+<pre><code>+&gt; go test
+	((Mining)) Hash for Block [0000ae2cab130b4836988969f731c4f884ac4675790e5575a5161e5b96ab13d7] nonce [   54586]
+	((Mining)) Hash for Block [0000adc29a80f1f0df08c8687c013d179050f5d1b449599e4d1437e4fad23525] nonce [   46734]
+	((Mining)) Hash for Block [000013ce557332aaa68abe3b7bf1be856743a03689a802606a732e81713bb78c] nonce [    4527]
+	PASS
+	ok  	github.com/Univ-Wyo-Education/S20-4010/a/02/mine	0.237s
+</code></pre>
+
+<p>The grader has a somewhat more comprehensive automated test to run with this code (There is one more block
+to mine).   You get all the points for the assignment when it passes the test.</p>
+
+<h3>Before you submit your code!</h3>
+
+<p>Use the go formatter on your code.  Either <code>goimports -w *.go</code> or setup your editor to run
+<code>goimpors</code> every time you save a go file.  I have this setup in <code>vim</code>.  Other editors can
+do this also.</p>
+
+<h3>Submit</h3>
+
+<p>See the section at the end.</p>
+
+<h1>Part 2 - Merkle Trees (100pts)</h1>
+
+<p>One of the major security and validity checks that blockchains
+do is using Merkle trees.</p>
+
+<p>In this assignment you will implement a Merkle tree hash.</p>
+
+<p>When you pull code from git you should have a <code>./A-03/hash</code> directory.
+This is a copy of Assignment 2&rsquo;s <code>./A-02/hash</code>.  The new code that you will
+be working on is in <code>./merkle</code>.</p>
+
+<h3>Pseudo Code</h3>
+
+<ol>
+<li>Create a slice to hold the hashes of the leaves.  Each leaf hash is a <code>[]byte</code>.  So make the data type <code>[][]byte</code>.
+Make this slice of slice of byte then length of the data.  That would be <code>len(data)</code>.  Let&rsquo;s call this <code>hTmp</code>.</li>
+<li>For each data block
+
+<ol>
+<li>Calculate a hash for the data block using <code>hash.HashOf()</code>.</li>
+<li>Save this in the slice created in (1) above.</li>
+</ol></li>
+<li>Create a <code>[][]byte</code> slice to hold the intermediate hashes in the tree.
+This will need to be no more than <code>len(data)/2+1</code> in length.  The plus 1 is so that 0 blocks of hasing or an odd
+number of blocks will have enough space.  Let&rsquo;s call this <code>hMid</code>.</li>
+<li>Declare a variable <code>ln</code>, and set it to  <code>len(data)/2+1</code></li>
+<li>While <code>ln &gt;= 1</code> (Hint: the language only has <code>for</code> loops with lots of different ways of doing it)
+
+<ol>
+<li>For each pair of hashes (if you have an odd number just use the single hash)
+
+<ul>
+<li>Calculate the hash of the pair using <code>hash.Keccak256()</code>.  It takes a variable number of arguments so you can
+pass 1 or 2 arguments to it.</li>
+<li>Append this to <code>hMid</code>.</li>
+</ul></li>
+<li>Replace hTmp with hMid</li>
+<li>Recalculate <code>ln</code> set it to <code>len(hTmp)/2</code></li>
+<li>Generate a new empty hMid of allocated space of <code>len(hTmp)/2</code>.</li>
+</ol></li>
+<li>Return <code>hTmp[0]</code></li>
+</ol>
+
+<h1>Submit</h1>
+
+<ol>
+<li>mine.go - from part 1.</li>
+<li>a copy of your output from running <code>go test</code> in the <code>./mine</code> directory.</li>
+<li>Your code, ./merkle/merkle.go. - from part 2.</li>
+<li>Any additional test cases that you created.</li>
+<li>Your proof that this works.</li>
+</ol>
+
+<h1>References</h1>
+
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Merkle_tree">Wikipedia has a nice discussion</a></li>
+<li><a href="https://brilliant.org/wiki/merkle-tree/">Another explanation of Merkle Trees - with more details</a></li>
+</ol>
+
+</div>
+

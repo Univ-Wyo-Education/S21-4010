@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Image Viewer v0.0.2</title>
+	<!-- Copyright (C) Philip Schlump, 2017. -->
+</head>
+<style>
+.theImage {
+    max-width: inherit;
+    max-height: inherit;
+}
+.theImageDiv {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom:0;
+	right:0;
+}
+.theTitle {
+	position: absolute;
+	bottom: 10px;
+	left: 25px;
+}
+.theTitle h1.image {
+	font-size: 36px;
+	opacity: 0.5;
+	color: #888;
+	text-shadow:
+		-2px -2px 0 #000,
+		2px -2px 0 #000,
+		-2px 2px 0 #000,
+		2px 2px 0 #000;
+}
+.theTitle h1.html {
+	font-size: 36px;
+	opacity: 0.5;
+	color: #888;
+}
+body {
+	padding: 0;
+	margin: 0;
+	background-color: black;
+}
+.theHtmlDiv {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+}
+.theHtml {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	bottom: 10px;
+	right: 10px;
+	color: #222;
+	border: 2px solid #555;
+	padding: 20px;
+	background-color: white;
+	border-radius: 25px;
+}
+.end {
+	margin-top: 10px;
+	font-size: 20px;
+	font-weight: 500;
+	color: #333;
+}
+.quote {
+	margin-top: 10px;
+	font-size: 24px;
+	font-weight: 700;
+	color: #333;
+}
+.quote-perons {
+	font-size: 21px;
+	font-weight: 700;
+	padding-left: 40px;
+	text-decoration: underline;
+	text-decoration-style: double;
+	text-decoration-colro: blue;
+	margin-top: -2px;
+	margin-bottom: 20px;
+	color: #888;
+}
+.table-fmt {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 25%;
+}
+
+.table-fmt td, .table-fmt th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table-fmt tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+
+.table-fmt tr:hover {background-color: #ddd;}
+
+.table-fmt th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+	font-size: 19px;
+}
+
+.float-left {
+	float: left;
+	margin-right: 25px;
+}
+
+
+
+
+.size20 {
+	font-size: 20px;
+}
+.size24 {
+	font-size: 24px;
+}
+
+</style>
+<body>
+	<div class="theImageDiv" id="theImageDiv">
+		<img class="theImage" id="theImage" src="./img/spinner-gif-13.gif"  />
+	</div>
+	<div class="theHtmlDiv" id="theHtmlDiv">
+		<div class="theHtml" id="theHtml">
+		</div>
+	</div>
+	<div class="theTitle" id="theTitle"><h1>Ank More Pork</h1></div>
+
+	<script>
+		require('./renderer.js')
+	</script>
+</body>
+</html>

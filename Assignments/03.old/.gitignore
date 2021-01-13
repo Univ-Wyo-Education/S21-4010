@@ -1,0 +1,6 @@
+.DS_Store
+,*
+note.md
+simple-server/simple-server
+./merkle/ins_merkle.go
+server-main.go

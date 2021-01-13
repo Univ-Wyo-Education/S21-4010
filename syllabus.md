@@ -32,14 +32,17 @@ Office hours are on zoom - I will send out a link via email.
 ## Required texts
 
 Textbook: We have a textbook for the 2nd 1/2 of teh class on  Ethereum/Solidity. Solidity has moved from version 5.12 to 5.17 in the past 3 months.
-The text book for Go is a free online PDF: https://www.golang-book.com/books/intro We will also be using IOHK’s BlockChian. It
-is programmed in Haskell.
+The text book for Go is a free online PDF: [https://www.golang-book.com/books/intro](https://www.golang-book.com/books/intro)
+We will also be using IOHK’s BlockChian. It is programmed in Haskell.
+
+This means that you will need to program in Go, Solidity, Haskell in a single semester.  We will have some focus on how to learn a new
+language and become effective in that language.
 
 ## General requirements and expectations for the course
 
 You must demonstrate working homework to the instructor or to the class grader to pass the class (no matter how many
 points you get). For code developed in Go, test cases will be supplied.  The Go homework are cumulative.
-Homework 3 depends on getting a working version of 2 etc.
+Assinment 3 depends on getting a working version of 2 etc.
 
 The class will have lectures - pre-record, discussion groups that have attendance taken - you are required to attend
 10 of the 12 discussion topics - there will be multiple times for each topic, and homework.  Some of the homework
@@ -80,9 +83,8 @@ Work turned in late will loose 10% per calendar day, down to 40% of the original
 ## Class Overview
 
 1.  What is Blockchain / Bitcoin and Why it is Important.
-In 2009 a person or group of people named Satoshi Nakamoto published “Bitcoin: A Peer-to-Peer Electronic Cash
-System”.  The Bitcoin design was revolutionary — it elegantly tied cryptography, game theory, and economics
-into a trustless solution to the double-spend problem, and introduced the world to the first “chain of blocks,” a
+In 2009 a person or group of people named Satoshi Nakamoto published ["Bitcoin: A Peer-to-Peer Electronic Cash System"](https://www.golang-book.com/books/intro) .  The Bitcoin design was revolutionary — it elegantly tied cryptography, game theory, and economics
+into a trust-less solution to the double-spend problem, and introduced the world to the first “chain of blocks,” a
 censorship-resistant public ledger protected by proof-of-work.
 This is a big deal. Unlike traditional payments, Bitcoin transactions don’t rely on a trusted third-party. Anyone can
 connect to the network and transact, without fear of censorship. Satoshi’s work solved these problems, and founded the
@@ -173,7 +175,7 @@ Su Mo Tu We Th Fr Sa
 2. Revise dates/weeks to end of semester
 3. URL for lecture list
 4. The days for interctive
-5. Table of Homework
+5. Table of Assinment
 
 ]]])
 
@@ -190,19 +192,22 @@ This is an approximate schedule.  Updates will be noted in class.
 |   Jan&nbsp;21,&nbsp;2021 | 1       | What is a Blockchain. Why Go, Overview of the BlockChain.                  |
 |                          |         | What makes BlockChain special and useful?                                  |
 |                          |         | Computer trends.  What the future portends.                                |
+|                          |         | How applications work today - web3 applications.                           |
 |                          |         |                                                                            |
 |   Jan&nbsp;25,&nbsp;2021 | 2       | What is a hash, What are hashes used for, Types of hashes.                 |
 |                          |         |                                                                            |
 |   Jan&nbsp;25,&nbsp;2021 | 2       | Mining walk through.                                                       |
-|                          |         | Homework 1 Due - Go Hello World and 9 other chunks.  100pts.               |
 |                          |         |                                                                            |
-|   Jan&nbsp;25,&nbsp;2021 | 2       | Merkle Trees, Proof of work, Proof of stake.                               |
+|                          |         | [Assinment 1 Due - Go Hello World and 9 other chunks.  100pts.](https://xyzzy.com)               |
+|                          |         |                                                                            |
+|   Jan&nbsp;25,&nbsp;2021 | 2       | [Merkle Trees](https://en.wikipedia.org/wiki/Merkle_tree), Proof of work, Proof of stake.  IOHK Ouroboros Protocol. |
 |                          |         |                                                                            |
 |   Feb&nbsp;01,&nbsp;2021 | 3       | Economics of BlockChain.  Cheat Grass, Co2, Land Titles.                   |
 |                          |         |                                                                            |
 |   Feb&nbsp;01,&nbsp;2021 | 3       | More on Go complicated stuff; Map synchronization, Go core/panic.          |
 |                          |         | Go interfaces, Go weaknesses.                                              |
-|                          |         | Homework 2 Due - Mining(hashes) / Merkle Trees (very simple Merkle)        |
+|                          |         |                                                                            |
+|                          |         | [Assinment 2 Due - Mining(hashes) / Merkle Trees (very simple Merkle)](https://xyzzy.com)        |
 |                          |         |                                                                            |
 |   Feb&nbsp;01,&nbsp;2021 | 3       | Finance: Creating personal wealth, Purposes of a business, Terms and       |
 |                          |         | definitions.                                                               |
@@ -224,9 +229,11 @@ This is an approximate schedule.  Updates will be noted in class.
 |   Feb&nbsp;21,&nbsp;2021 | 6       | Standard Contracts, Simple tokens, Standard tokens, ERC-20, ERC-721,       |
 |                          |         | ERC-1203.                                                                  |
 |                          |         |                                                                            |
-|                          |         | Homework 3 Due - Client Server and Transactions.                           | 
-|                          |         | Homework 4 Due - Wallet.                                                   |
-|                          |         | Homework 5 Due - Signed Data - with client server.                         |
+|                          |         | [Assinment 3 Due - Client Server and Transactions.](https://xyzzy.com)                           | 
+|                          |         |                                                                            |
+|                          |         | [Assinment 4 Due - Wallet.](https://xyzzy.com)                                                   |
+|                          |         |                                                                            |
+|                          |         | [Assinment 5 Due - Signed Data - with client server.](https://xyzzy.com)                         |
 |                          |         |                                                                            |
 |   Feb&nbsp;21,&nbsp;2021 | 6       | Finance and Terms, Accounting(history)- Double Entry Book keeping,         |
 |                          |         | Cooking the books.                                                         |
@@ -253,21 +260,24 @@ This is an approximate schedule.  Updates will be noted in class.
 |   Mar&nbsp;07,&nbsp;2021 | 9       | More on ERC-20 and ERC-721 and ERC-1203                                    |
 |                          |         |                                                                            |
 |   Mar&nbsp;07,&nbsp;2021 | 9       | Creating wealth, Jobs in BlockChain, Blockchain economics.                 |
-|                          |         | Homework 6 Due - Metadata contract - signed documents.                     |
+|                          |         |                                                                            |
+|                          |         | [Assinment 6 Due - Metadata contract - signed documents.](https://xyzzy.com)                     |
 |                          |         |                                                                            |
 |   Mar&nbsp;14,&nbsp;2021 | 10      | Concurrency in Go, Go routines, Locks, Channels                            |
 |                          |         |                                                                            |
 |   Mar&nbsp;14,&nbsp;2021 | 10      | How ECDSA works, the Basics of public key security.                        |
 |                          |         |                                                                            |
 |   Mar&nbsp;14,&nbsp;2021 | 10      | Functional programming and contracts (Beginning of IOHK stuff)             |
-|                          |         | Homework 7 Due - Test-Net ERC-20/ERC-721 based contract.                   |
+|                          |         |                                                                            |
+|                          |         | [Assinment 7 Due - Test-Net ERC-20/ERC-721 based contract.](https://xyzzy.com)                   |
 |                          |         |                                                                            |
 |   Mar&nbsp;21,&nbsp;2021 | 11      | Insurance companies and Non fungible Tokens                                |
 |                          |         |                                                                            |
 |   Mar&nbsp;21,&nbsp;2021 | 11      | Testing and Test Output                                                    |
 |                          |         |                                                                            |
 |   Mar&nbsp;21,&nbsp;2021 | 11      | Automatic Verification of Code and Contracts                               |
-|                          |         | Homework 8 Due - Familiarize with IOHK/Marlow.                             |
+|                          |         |                                                                            |
+|                          |         | [Assinment 8 Due - Familiarize with IOHK/Marlow.](https://xyzzy.com)                             |
 |                          |         |                                                                            |
 |   Mar&nbsp;28,&nbsp;2021 | 12      | Tokens; Simple and Standard                                                |
 |                          |         |                                                                            |
@@ -275,7 +285,8 @@ This is an approximate schedule.  Updates will be noted in class.
 |                          |         | problem and the Honey-Badger solution.                                     |
 |                          |         |                                                                            |
 |   Mar&nbsp;28,&nbsp;2021 | 12      | IOHK’s system.  Nix-OS and Contracts.                                      |
-|                          |         | Homework 9 Due - IOHK/Marlow based state machine contract.                 |
+|                          |         |                                                                            |
+|                          |         | [Assinment 9 Due - IOHK/Marlow based state machine contract.](https://xyzzy.com)                 |
 |                          |         |                                                                            |
 |   Apr&nbsp;05,&nbsp;2021 | 13      | Legal Ramifications of BlockChain, ICOs 506(d), Subpart (s)                |
 |                          |         |                                                                            |

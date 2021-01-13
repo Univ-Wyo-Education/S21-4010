@@ -1,0 +1,1000 @@
+<style>
+@font-face {
+	font-family: octicons-link;
+	src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+}
+
+.markdown-body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	line-height: 1.5;
+	color: #24292e;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 16px;
+	line-height: 1.5;
+	word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+	color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+	color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+	color: #6f42c1;
+}
+
+.markdown-body .pl-smi,
+.markdown-body .pl-s .pl-s1 {
+	color: #24292e;
+}
+
+.markdown-body .pl-ent {
+	color: #22863a;
+}
+
+.markdown-body .pl-k {
+	color: #d73a49;
+}
+
+.markdown-body .pl-s,
+.markdown-body .pl-pds,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sre,
+.markdown-body .pl-sr .pl-sra {
+	color: #032f62;
+}
+
+.markdown-body .pl-v,
+.markdown-body .pl-smw {
+	color: #e36209;
+}
+
+.markdown-body .pl-bu {
+	color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+	color: #fafbfc;
+	background-color: #b31d28;
+}
+
+.markdown-body .pl-c2 {
+	color: #fafbfc;
+	background-color: #d73a49;
+}
+
+.markdown-body .pl-c2::before {
+	content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+	font-weight: bold;
+	color: #22863a;
+}
+
+.markdown-body .pl-ml {
+	color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+	font-weight: bold;
+	color: #005cc5;
+}
+
+.markdown-body .pl-mi {
+	font-style: italic;
+	color: #24292e;
+}
+
+.markdown-body .pl-mb {
+	font-weight: bold;
+	color: #24292e;
+}
+
+.markdown-body .pl-md {
+	color: #b31d28;
+	background-color: #ffeef0;
+}
+
+.markdown-body .pl-mi1 {
+	color: #22863a;
+	background-color: #f0fff4;
+}
+
+.markdown-body .pl-mc {
+	color: #e36209;
+	background-color: #ffebda;
+}
+
+.markdown-body .pl-mi2 {
+	color: #f6f8fa;
+	background-color: #005cc5;
+}
+
+.markdown-body .pl-mdr {
+	font-weight: bold;
+	color: #6f42c1;
+}
+
+.markdown-body .pl-ba {
+	color: #586069;
+}
+
+.markdown-body .pl-sg {
+	color: #959da5;
+}
+
+.markdown-body .pl-corl {
+	text-decoration: underline;
+	color: #032f62;
+}
+
+.markdown-body .octicon {
+	display: inline-block;
+	vertical-align: text-top;
+	fill: currentColor;
+}
+
+.markdown-body a {
+	background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+	outline-width: 0;
+}
+
+.markdown-body strong {
+	font-weight: inherit;
+}
+
+.markdown-body strong {
+	font-weight: bolder;
+}
+
+.markdown-body h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+.markdown-body img {
+	border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+.markdown-body hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+}
+
+.markdown-body input {
+	font: inherit;
+	margin: 0;
+}
+
+.markdown-body input {
+	overflow: visible;
+}
+
+.markdown-body [type="checkbox"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+.markdown-body * {
+	box-sizing: border-box;
+}
+
+.markdown-body input {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+.markdown-body a {
+	color: #0366d6;
+	text-decoration: none;
+}
+
+.markdown-body a:hover {
+	text-decoration: underline;
+}
+
+.markdown-body strong {
+	font-weight: 600;
+}
+
+.markdown-body hr {
+	height: 0;
+	margin: 15px 0;
+	overflow: hidden;
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid #dfe2e5;
+}
+
+.markdown-body hr::before {
+	display: table;
+	content: "";
+}
+
+.markdown-body hr::after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+.markdown-body table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+	padding: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body h1 {
+	font-size: 32px;
+	font-weight: 600;
+}
+
+.markdown-body h2 {
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.markdown-body h3 {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.markdown-body h4 {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.markdown-body h5 {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.markdown-body h6 {
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.markdown-body p {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+	margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+	x-list-style-type: lower-roman;
+	  list-style-type: decimal;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+	list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+	margin-left: 0;
+}
+
+.markdown-body code {
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-size: 12px;
+}
+
+.markdown-body pre {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-size: 12px;
+}
+
+.markdown-body .octicon {
+	vertical-align: text-bottom;
+}
+
+.markdown-body .pl-0 {
+	padding-left: 0 !important;
+}
+
+.markdown-body .pl-1 {
+	padding-left: 4px !important;
+}
+
+.markdown-body .pl-2 {
+	padding-left: 8px !important;
+}
+
+.markdown-body .pl-3 {
+	padding-left: 16px !important;
+}
+
+.markdown-body .pl-4 {
+	padding-left: 24px !important;
+}
+
+.markdown-body .pl-5 {
+	padding-left: 32px !important;
+}
+
+.markdown-body .pl-6 {
+	padding-left: 40px !important;
+}
+
+.markdown-body::before {
+	display: table;
+	content: "";
+}
+
+.markdown-body::after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+.markdown-body>*:first-child {
+	margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+	margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+	color: inherit;
+	text-decoration: none;
+}
+
+.markdown-body .anchor {
+	float: left;
+	padding-right: 4px;
+	margin-left: -20px;
+	line-height: 1;
+}
+
+.markdown-body .anchor:focus {
+	outline: none;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+.markdown-body hr {
+	height: 0.25em;
+	padding: 0;
+	margin: 24px 0;
+	background-color: #e1e4e8;
+	border: 0;
+}
+
+.markdown-body blockquote {
+	padding: 0 1em;
+	color: #6a737d;
+	border-left: 0.25em solid #dfe2e5;
+}
+
+.markdown-body blockquote>:first-child {
+	margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+	margin-bottom: 0;
+}
+
+.markdown-body kbd {
+	display: inline-block;
+	padding: 3px 5px;
+	font-size: 11px;
+	line-height: 10px;
+	color: #444d56;
+	vertical-align: middle;
+	background-color: #fafbfc;
+	border: solid 1px #c6cbd1;
+	border-bottom-color: #959da5;
+	border-radius: 3px;
+	box-shadow: inset 0 -1px 0 #959da5;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+	margin-top: 24px;
+	margin-bottom: 16px;
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+	color: #1b1f23;
+	vertical-align: middle;
+	visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+	text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+	visibility: visible;
+}
+
+.markdown-body h1 {
+	padding-bottom: 0.3em;
+	font-size: 2em;
+	border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h2 {
+	padding-bottom: 0.3em;
+	font-size: 1.5em;
+	border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h3 {
+	font-size: 1.25em;
+}
+
+.markdown-body h4 {
+	font-size: 1em;
+}
+
+.markdown-body h5 {
+	font-size: 0.875em;
+}
+
+.markdown-body h6 {
+	font-size: 0.85em;
+	color: #6a737d;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+	padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body li {
+	word-wrap: break-all;
+}
+
+.markdown-body li>p {
+	margin-top: 16px;
+}
+
+.markdown-body li+li {
+	margin-top: 0.25em;
+}
+
+.markdown-body dl {
+	padding: 0;
+}
+
+.markdown-body dl dt {
+	padding: 0;
+	margin-top: 16px;
+	font-size: 1em;
+	font-style: italic;
+	font-weight: 600;
+}
+
+.markdown-body dl dd {
+	padding: 0 16px;
+	margin-bottom: 16px;
+}
+
+.markdown-body table {
+	display: block;
+	width: 100%;
+	overflow: auto;
+}
+
+.markdown-body table th {
+	font-weight: 600;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+	padding: 6px 13px;
+	border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+	background-color: #fff;
+	border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+	background-color: #f6f8fa;
+}
+
+.markdown-body img {
+	max-width: 100%;
+	box-sizing: content-box;
+	background-color: #fff;
+}
+
+.markdown-body img[align=right] {
+	padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+	padding-right: 20px;
+}
+
+.markdown-body code {
+	padding: 0.2em 0.4em;
+	margin: 0;
+	font-size: 85%;
+	background-color: rgba(27,31,35,0.05);
+	border-radius: 3px;
+}
+
+.markdown-body pre {
+	word-wrap: normal;
+}
+
+.markdown-body pre>code {
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	word-break: normal;
+	white-space: pre;
+	background: transparent;
+	border: 0;
+}
+
+.markdown-body .highlight {
+	margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+	margin-bottom: 0;
+	word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+	padding: 16px;
+	overflow: auto;
+	font-size: 85%;
+	line-height: 1.45;
+	background-color: #f6f8fa;
+	border-radius: 3px;
+}
+
+.markdown-body pre code {
+	display: inline;
+	max-width: auto;
+	padding: 0;
+	margin: 0;
+	overflow: visible;
+	line-height: inherit;
+	word-wrap: normal;
+	background-color: transparent;
+	border: 0;
+}
+
+.markdown-body .full-commit .btn-outline:not(:disabled):hover {
+	color: #005cc5;
+	border-color: #005cc5;
+}
+
+.markdown-body kbd {
+	display: inline-block;
+	padding: 3px 5px;
+	font: 11px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	line-height: 10px;
+	color: #444d56;
+	vertical-align: middle;
+	background-color: #fafbfc;
+	border: solid 1px #d1d5da;
+	border-bottom-color: #c6cbd1;
+	border-radius: 3px;
+	box-shadow: inset 0 -1px 0 #c6cbd1;
+}
+
+.markdown-body :checked+.radio-label {
+	position: relative;
+	z-index: 1;
+	border-color: #0366d6;
+}
+
+.markdown-body .task-list-item {
+	list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+	margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+	margin: 0 0.2em 0.25em -1.6em;
+	vertical-align: middle;
+}
+
+.markdown-body hr {
+	border-bottom-color: #eee;
+}
+
+</style>
+<style>
+ol {
+    display: block;
+    list-style-type: decimal;
+}
+</style>
+
+<div class="markdown-body">
+
+<h1>Honey Badger Byzantine</h1>
+
+<h2>Videos</h2>
+
+<p><a href="https://youtu.be/kSqNfwIVfP4">https://youtu.be/kSqNfwIVfP4 - Lect-31-4010-pt1-news.mp4</a><br>
+<a href="https://youtu.be/4ZUhsp5CWa0">https://youtu.be/4ZUhsp5CWa0 - Lect-31-4010-pt2-multi-sig.mp4</a><br>
+<a href="https://youtu.be/r3ui8hxSfdI">https://youtu.be/r3ui8hxSfdI - Lect-31-4010-pt3-homomorphic-Encryption.mp4</a><br></p>
+
+<p>From Amazon S3 - for download (same as youtube videos)</p>
+
+<p><a href="http://uw-s20-2015.s3.amazonaws.com/Lect-31-4010-pt1-news.mp4">http://uw-s20-2015.s3.amazonaws.com/Lect-31-4010-pt1-news.mp4</a><br>
+<a href="http://uw-s20-2015.s3.amazonaws.com/Lect-31-4010-pt2-multi-sig.mp4">http://uw-s20-2015.s3.amazonaws.com/Lect-31-4010-pt2-multi-sig.mp4</a><br>
+<a href="http://uw-s20-2015.s3.amazonaws.com/Lect-31-4010-pt3-homomorphic-Encryption.mp4">http://uw-s20-2015.s3.amazonaws.com/Lect-31-4010-pt3-homomorphic-Encryption.mp4</a><br></p>
+
+<h2>News</h2>
+
+<ol>
+<li>China is officially testing a cryptocurrency as a national currency.</li>
+<li>Australia is using a blockchain solution for registration of clinical trials.</li>
+</ol>
+
+<h2>Implementations</h2>
+
+<ul>
+<li><a href="https://github.com/pschlump/hbbft">go https://github.com/pschlump/hbbft</a>
+my copy or <a href="https://github.com/anthdm/hbbft">Original https://github.com/anthdm/hbbft</a>
+or anotehr implemenation<a href="https://githhub.com/poanetwork/hbbft">Go https://githhub.com/poanetwork/hbbft</a></li>
+<li><a href="https://github.com/poanetwork/hbbft">Rust https://github.com/helium/erlang-hbbft</a></li>
+<li><a href="https://github.com/helium/erlang-hbbft">Erlang https://github.com/helium/erlang-hbbft</a></li>
+<li><a href="https://github.com/initc3/HoneyBadgerBFT-Python/">Python https://github.com/initc3/HoneyBadgerBFT-Python/</a></li>
+</ul>
+
+<h2>References</h2>
+
+<ul>
+<li><a href="https://eprint.iacr.org/2016/199.pdf">The Honey Badger BFT protocols</a></li>
+<li><a href="http://pmg.csail.mit.edu/papers/osdi99.pdf">Practical Byzantine Fault Tolerance</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Threshold_cryptosystem">Treshold encryption</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Shared_secret">Shared secret</a></li>
+</ul>
+
+<h2>Overview - How it works at a high level</h2>
+
+<p>Threshold ECDSA overview.</p>
+
+<h2>Details of t-ECDSA</h2>
+
+<h3>Additively Homomorphic Encryption</h3>
+
+<p><img src="./ah01-v2.png" alt="Additively homomorphic encryption" /></p>
+
+<p>Additively homomorphic encryption has a nice feature, allowing to operate on ciphertexts. One example of additively
+homomorphic encryption scheme is Paillier, for which there exists an efficiently computable operation “add”, so
+addition operation, that’s plus with e subindex on the slide, that allows to add two ciphertexts together.</p>
+
+<p>So, we can have two values, a and b. We can first encrypt those values and then, using this special operation, add those
+two ciphertexts together. Or we can first, having those two values, add them together and then encrypt the result. When
+we decrypt we will get exactly the same value in both cases.</p>
+
+<p>Paillier Based Encryption - works like Elliptic Curve.</p>
+
+<h3>Threshold Encryption</h3>
+
+<p><img src="matrix.png" alt="N equastions in N Unknowns" /></p>
+
+<p><br></p>
+
+<p><img src="./th01.png" alt="Threshold Encryption" /></p>
+
+<p>(t, n) threshold encryption. The easiest way to explain it is to say that we have n players; each one has the same
+public key, but also each player has its unique share of the secret key. So, on this slide we have secret_share 1,
+secret_share 2, secret_share 3…secret_share n, and signers — if you have a message encrypted under the public
+key, signers must cooperate using a special communication protocol that does not expose the secret key in order to
+decrypt it.</p>
+
+<h3>Commitment Scheme</h3>
+
+<p><img src="./cs01.png" alt="Commitment Scheme" /></p>
+
+<p>Let&rsquo;s say that Alice and Caroline are playing a coin flipping game. Alice chooses the side of the coin, evaluates a
+commitment to her choice, and sends the commitments to Caroline. Now Caroline throws the coin into the air and says what
+the result is. Next, Alice sends a special value called decommitment key, which allows Caroline to evaluate the
+commitment and to see if the value that was initially chosen by Alice is really what she’s saying now.</p>
+
+<p>The decommitment key allows to validate the commitment, but also has a nice feature, allowing to define unconditionally
+hiding schemes. So, no matter what Caroline does, no matter how high computing power she has, she cannot guess the value
+Alice committed to without having the decommitment key. She cannot do it from just the commitment.</p>
+
+<h3>Key Generation First</h3>
+
+<p>Assume we have n signers, each signer is initialized with the additively homomorphic threshold encryption scheme, and
+this happens in the setup phase:</p>
+
+<p><img src="./te01.png" alt="Key Generation Setup" /></p>
+
+<p>This is from <a href="https://eprint.iacr.org/2016/013.pdf"> Threshold-optimal DSA/ECDSA signatures and <br>
+an application to Bitcoin wallet security <br>
+Rosario Gennaro, Steven Goldfeder, and Arvind Narayanan https://eprint.iacr.org/2016/013.pdf</a>
+The paper is 42 pages long.</p>
+
+<p>We have two types of keys. We have threshold additively homomorphic encryption scheme keys which are initialized in the
+set-up phase and we also have t-ECDSA key that we use for signing. And this second key is what we are going to generate
+now. For the additively homomorphic threshold encryption scheme, we just assume that it’s done in the set-up phase.</p>
+
+<p>Key Generation it’s easy, because we can use a zero-knowledge proof and the commitnment to detect if one party misbehaves.
+If you have a bad party then replace them.</p>
+
+<p>Use a trusted dealer that generates a set of keys, distributes them, then forgets them.
+Or execute some kind of a dealerless protocol in order to execute the keys by all group members together.
+See <a href="https://link.springer.com/chapter/10.1007/978-3-642-17955-6_4">https://link.springer.com/chapter/10.<sup>1007</sup>&frasl;<sub>978</sub>-3-642-17955-6_4</a></p>
+
+<h3>Key Generation : Choose a random &lsquo;x&rsquo;</h3>
+
+<p>In the first step, each player chooses a random integer x, which will be used as a secret key share of that player:</p>
+
+<p><img src="./te02.png" alt="Choose Randome X" /></p>
+
+<p><code>x</code> cannot be greater than <code>q</code>. <code>q</code> is the elliptic curve cardinality, so it’s the number of points elliptic curve
+has. On all of the slides, <code>q</code> stands for the cardinality of the elliptic curve. Each player computes <code>y</code> as <code>g</code> to the
+power of <code>x</code>. This is an elliptic curve operation, and basically, we multiply curve’s generator point by <code>x</code>. This is
+a notation you will often find for groups, but since elliptic curve is a group we can use it also here.</p>
+
+<h3>Key Generation : Generate Commitments and Broadcast</h3>
+
+<p>Then, each player computes a commitment to this value, and in the second round, publishes this commitment to all of the
+players in the group:</p>
+
+<p><img src="./te03.png" alt="Commitments Generated" /></p>
+
+<h3>Key Generation: Reveal encrypted &lsquo;x&rsquo;</h3>
+
+<p>Each player reveals <code>x</code> in an encrypted form, it’s <code>α</code> (alpha) below:</p>
+
+<p><img src="./te04.png" alt="Reveal encrypted X" /></p>
+
+<p>Encryption is done with the additively homomorphic encryption scheme we initialized in the set-up phase. What’s more,
+each player reveals the public key share, the decommitment key, and the zero-knowledge proof stating that all those
+values together make sense. This allows for a validation of the commitment, but also allows all players to see if all
+those shares that the player just revealed together makes some sense.</p>
+
+<p>So, the zero-knowledge proof says that there exists a number <code>x</code> such that curve’s generator point multiplied by <code>x</code>
+gives point <code>y</code>, and <code>y</code> is public at this moment because it was just revealed, and that if we decrypt the value α that
+we have just published — it’s the encrypted secret key — we’ll get that number <code>x</code>.</p>
+
+<p>Of course, it’s a zero-knowledge proof, so it is not possible to guess what <code>x</code> really is, but what we say here is
+that it lies in the range from (-q³, q³) , and since <code>q</code> is the cardinality of the elliptic curve, this range is
+really huge.</p>
+
+<h3>Key Generation: Generate ECDSA final key</h3>
+
+<p>All signers use the add operation of the additively homomorphic threshold scheme to produce the final t-ECDSA key, so
+all of the encrypted shares of x can be added:</p>
+
+<p><img src="./te05.png" alt="Now Generate Key" /></p>
+
+<p>We get the secret key in an encrypted form, all revealed public shares of y can be added, and as a result, we have the
+public key. Addition operation here is just addition of elliptic curve points, so it’s easy.</p>
+
+<h2>Signature</h2>
+
+<h3>Signature: Step 1 and 2</h3>
+
+<p>We have <code>α</code>, which is a t-ECDSA private key in encrypted form shared between all the signers, and we have <code>y</code> which is
+a t-ECDSA public key. Public keys are just a point on the elliptic curve.</p>
+
+<p><img src="./si00.png" alt="Start with t-ECDSA" /></p>
+
+<p>In the first round each party draws a random integer <code>ρ</code>:</p>
+
+<p><img src="./si02.png" alt="Round 1" /></p>
+
+<p>Encrypt the value with additively homomorphic threshold encryption scheme:</p>
+
+<p><img src="./si03.png" alt="Round 2" /></p>
+
+<p>Multiply the secret ECDSA key (<code>α</code> below) by this random value:</p>
+
+<p><img src="./si04.png" alt="Multiply" /></p>
+
+<p>Use addition to implement multiplication. Each signer publishes commitment to those values, and in the second round
+reveals all those values, along with the zero-knowledge proof, stating that they make sense:</p>
+
+<p><img src="./si05.png" alt="Multiply" /></p>
+
+<p>Using zero-knowledge proof and the commitment we can now prove that the values we have are correct.</p>
+
+<p>Join all the shares together (This means broadcast all the shares so that everybody has them):</p>
+
+<p>Reveal the commitments:</p>
+
+<p><img src="./si06.png" alt="Broadcast Shares and Join them together" /></p>
+
+<h3>Signature: Step 3 and 4</h3>
+
+<p>The same commit-reveal pattern is used in the 3rd and 4th round:</p>
+
+<p><img src="./si07.png" alt="Known at this point" /></p>
+
+<p>On the right side we have all the parameters that were evaluated so far, and all players have the same values.</p>
+
+<p>In the third round each party draws a random integer <code>kᵢ</code>:</p>
+
+<p><img src="./si08.png" alt="Draw random k-sub-i" /></p>
+
+<p>And a random integer <code>cᵢ</code>:</p>
+
+<p><img src="./si09.png" alt="Draw random c-sub-i" /></p>
+
+<p><code>q</code> all the time stands for the cardinality of the elliptic curve, so the number of points on the elliptic curve.</p>
+
+<p>Each party computes <code>rᵢ</code> as <code>g</code> to the power of <code>k</code> — we basically multiply curve generator point by it:</p>
+
+<p><img src="./si10.png" alt="Calculate r-sub-i" /></p>
+
+<p>Each party computes the parameter <code>w</code> which is <code>k</code> time <code>ρ</code> plus <code>c</code> times <code>q</code>:</p>
+
+<p><img src="./si11.png" alt="Calculate w" /></p>
+
+<p><code>q</code> all the time is the cardinality of the elliptic curve, and we can compute it because we use additively homomorphic
+threshold encryption.</p>
+
+<p>At the end, each party commits to all those parameters, and in the round 4 generated parameters are revealed, along with
+the zero-knowledge proof stating that they make sense together:</p>
+
+<p><img src="./si11a.png" alt="Zero Knowledge Proff of r and w are correct" /></p>
+
+<p>Having all those parameters from all the group members we can add them together, just like we did after the round 2. We
+sum up all <code>k</code> shares, all <code>c</code> shares, all <code>w</code> shares.  We evaluate parameter <code>r</code> as a sum of all <code>rᵢ</code> shares and
+we use a special hash function:</p>
+
+<p><img src="./si12.png" alt="Results of 3 and 4" /></p>
+
+<p>This is the standard ECDSA.  <code>x</code> is a point coordinate modulo the <code>q</code> elliptic curve order.</p>
+
+<h3>Signature: Step 5</h3>
+
+<p>All parameters on the right side are shared by all signers in the group.</p>
+
+<p>Now we need to do some discrete mathematics magic to produce a signature.
+Using all those parameters we have evaluated so far, and since we operate on encrypted data, the signature will be also
+encrypted.  But this is something we will deal in the final round 6.</p>
+
+<p><img src="./si15.png" alt="So Far" /></p>
+
+<p>The very first thing we need to do is that we execute a threshold decryption mechanism to have all the players decrypt
+the parameter <code>w</code> and assign this value to <code>η</code>:</p>
+
+<p><img src="./si16.png" alt="Get decrypted w" /></p>
+
+<p>Compute yet one parameter called <code>Ψ</code> which is multiplicative inverse of <code>η</code> modulo <code>q</code>, and <code>q</code> is all the time
+cardinality of the elliptic curve:</p>
+
+<p><img src="./si17.png" alt="Calcualte rho" /></p>
+
+<p>Having <code>m</code>, the hash of the message we are signing (or a hash of the transaction), we start evaluating the signature
+with the following equation:</p>
+
+<p><img src="./si18.png" alt="Calcualte m" /></p>
+
+<p><code>c</code> is the value we have just evaluated, and <code>u</code>, <code>r</code> and <code>v</code> are the parameters jointly evaluated by all the signers in
+previous rounds.</p>
+
+<p>So, since <code>u</code> is an encrypted <code>ρ</code>, and <code>v</code> is an encrypted <code>ρ</code> multiplied by the secret ECDSA key, we can do the
+following transformation:</p>
+
+<p><img src="./si19.png" alt="Transformation" /></p>
+
+<p>Replace <code>Ψ</code> with the value it represents, we will get the following equation:</p>
+
+<p><img src="./si20.png" alt="Eq" /></p>
+
+<p>Eliminate ρ, we get this:</p>
+
+<p><img src="./si21.png" alt="Eq" /></p>
+
+<p>This is the equation is for the standard ECDSA signature, where <code>k</code> is the cryptographically secure random integer,
+<code>n</code> is the message hash, <code>x</code> is our secret ECDSA key, and <code>r</code> is the curve generated point multiplied <code>k</code> times modulo
+<code>q</code>.</p>
+
+<p>All those equations were done on ciphertexts, so at the end our signature is also encrypted:</p>
+
+<p><img src="./si22.png" alt="Eq" /></p>
+
+<h3>Signature: Step 6 - Deal with encrypted results</h3>
+
+<p>All the players execute a threshold decryption mechanism to learn the value of <code>s</code>. And the decrypted value <code>s</code> and
+parameter <code>r</code> evaluated in round 4 together make the signature:</p>
+
+<p><img src="./si30.png" alt="Decrypt results get s and r" /></p>
+
+</div>
+

@@ -1,0 +1,25 @@
+{
+	"Index": [
+		"29e68e530d0718dd01759e8c9a5276d20687bc5ec23e60dce063c2b97ba6b04f"
+	],
+	"BlockHashToIndex": {
+		"29e68e530d0718dd01759e8c9a5276d20687bc5ec23e60dce063c2b97ba6b04f": 0
+	},
+	"AddrData": {
+		"AddrIndex": null
+	},
+	"FindValue": {
+		"AddrIndex": {
+			"0xdb180da9a8982c7bb75ca40039f959cb959c62e8": {
+				"Addr": "db180da9a8982c7bb75ca40039f959cb959c62e8",
+				"Value": [
+					{
+						"BlockIndex": 0,
+						"TxOffset": 0,
+						"TxOutputPos": 0
+					}
+				]
+			}
+		}
+	}
+}

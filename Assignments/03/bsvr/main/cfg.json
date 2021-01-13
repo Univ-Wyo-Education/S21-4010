@@ -1,0 +1,23 @@
+{
+	"DataDir": "./data",
+	"MiningReward": 100,
+	"InitialAccounts": [
+		{ "AcctStr":"0x885765a2fcfB72e68D82D656C6411b7D27BacDD7", "Value": 500000 },
+		{ "AcctStr":"0x6E06bF940bb57adE69Cb03153d1C3842411bD3c1", "Value": 500000 },
+		{ "AcctStr":"0x3B65b88e4256C8926358551072f17460EFe5452B", "Value": 500000 },
+		{ "AcctStr":"0x40681739B0ef568acce20F5575aD4cf24223926f", "Value": 500000 },
+		{ "AcctStr":"0x4aF64cd87A47aaB7cffdbAda6bfD6aef47036c03", "Value": 500000 },
+		{ "AcctStr":"0xB0D533A8064ed180967Aa4Dafa453deAb107961C", "Value": 500000 },
+		{ "AcctStr":"0x31568CC92115a2EBE6eB37E9a7c7f6334B988196", "Value": 500000 },
+		{ "AcctStr":"0x9d41E5938767466af28865e1c33071f1561D57a8", "Value": 500000 },
+		{ "AcctStr":"0xe7B8A518bf1B5c4f01b2A7eE39a2800A982E06Ee", "Value": 500000 },
+		{ "AcctStr":"0x4e27d9C8bA3a6904F7A7Cb31Eae5cCCe8BF33300", "Value": 500000 },
+		{ "AcctStr":"0x5AE7B3Cf64Adc3D7FEf099319a9be4acb8bD73ED", "Value": 500000 },
+		{ "AcctStr":"0x0C34a1A3c5Ae302cB41F9Cfd999E7950B8eBf40f", "Value": 500000 },
+		{ "AcctStr":"0x42F487a6d5c86962310D5aB5aFE5CaD7bC80805B", "Value": 500000 },
+		{ "AcctStr":"0x7e3aFEc048bC7be745d0fA0F5af97D3978C40E9A", "Value": 500000 },
+		{ "AcctStr":"0xDb180Da9A8982C7Bb75Ca40039f959CB959c62e8", "Value": 500000 }
+	],
+	"MiningRewardAcct":"0xDb180Da9A8982C7Bb75Ca40039f959CB959c62e8",
+	"MiningDifficulty":"0"
+}

@@ -1,0 +1,31 @@
++> ./main --create-genesis
+panic: assignment to entry in nil map
+
+goroutine 1 [running]:
+panic(0x10f2240, 0x1129210)
+	/usr/local/Cellar/go/1.10.3/libexec/src/runtime/panic.go:551 +0x3c1 fp=0xc42005db40 sp=0xc42005daa0 pc=0x1026ca1
+runtime.mapassign_faststr(0x10f1940, 0x0, 0xc42009c6a8, 0x2, 0x1)
+	/usr/local/Cellar/go/1.10.3/libexec/src/runtime/hashmap_fast.go:696 +0x407 fp=0xc42005dbb0 sp=0xc42005db40 pc=0x100ab97
+github.com/Univ-Wyo-Education/Blockchain-4010-Fall-2018/Assignments/A-04/cli.(*CLI).AppendTxToBlock(0xc4200e0000, 0xc4200ba140, 0xc4200e4000)
+	/Users/corwin/go/src/github.com/Univ-Wyo-Education/Blockchain-4010-Fall-2018/Assignments/A-04/cli/cli.go:272 +0x225 fp=0xc42005dc60 sp=0xc42005dbb0 pc=0x10d36b5
+github.com/Univ-Wyo-Education/Blockchain-4010-Fall-2018/Assignments/A-04/cli.(*CLI).CreateGenesis(0xc4200e0000, 0xc4200aa030, 0x0, 0x0)
+	/Users/corwin/go/src/github.com/Univ-Wyo-Education/Blockchain-4010-Fall-2018/Assignments/A-04/cli/cli.go:99 +0x17b fp=0xc42005de10 sp=0xc42005dc60 pc=0x10d1d1b
+main.main()
+	/Users/corwin/go/src/github.com/Univ-Wyo-Education/Blockchain-4010-Fall-2018/Assignments/A-04/main/main.go:51 +0x5a9 fp=0xc42005df88 sp=0xc42005de10 pc=0x10d3f19
+runtime.main()
+	/usr/local/Cellar/go/1.10.3/libexec/src/runtime/proc.go:198 +0x212 fp=0xc42005dfe0 sp=0xc42005df88 pc=0x10289b2
+runtime.goexit()
+	/usr/local/Cellar/go/1.10.3/libexec/src/runtime/asm_amd64.s:2361 +0x1 fp=0xc42005dfe8 sp=0xc42005dfe0 pc=0x104efa1
+
+goroutine 2 [force gc (idle)]:
+runtime.gopark(0x111b2c0, 0x11b3d80, 0x11141bc, 0xf, 0x111b114, 0x1)
+	/usr/local/Cellar/go/1.10.3/libexec/src/runtime/proc.go:291 +0x11a fp=0xc420048768 sp=0xc420048748 pc=0x1028e0a
+runtime.goparkunlock(0x11b3d80, 0x11141bc, 0xf, 0x14, 0x1)
+	/usr/local/Cellar/go/1.10.3/libexec/src/runtime/proc.go:297 +0x5e fp=0xc4200487a8 sp=0xc420048768 pc=0x1028ebe
+runtime.forcegchelper()
+	/usr/local/Cellar/go/1.10.3/libexec/src/runtime/proc.go:248 +0xcc fp=0xc4200487e0 sp=0xc4200487a8 pc=0x1028c4c
+runtime.goexit()
+	/usr/local/Cellar/go/1.10.3/libexec/src/runtime/asm_amd64.s:2361 +0x1 fp=0xc4200487e8 sp=0xc4200487e0 pc=0x104efa1
+created by runtime.init.4
+	/usr/local/Cellar/go/1.10.3/libexec/src/runtime/proc.go:237 +0x35
+

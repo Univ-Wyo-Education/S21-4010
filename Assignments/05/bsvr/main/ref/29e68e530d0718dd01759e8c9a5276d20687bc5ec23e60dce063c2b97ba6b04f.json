@@ -1,0 +1,31 @@
+{
+	"Index": 0,
+	"Desc": "GenesisBlock Fri Aug 17 23:16:12 MDT 2018",
+	"ThisBlockHash": "29e68e530d0718dd01759e8c9a5276d20687bc5ec23e60dce063c2b97ba6b04f",
+	"PrevBlockHash": "",
+	"Nonce": 79346,
+	"Seal": "0000123bfc15d93e3a5dc3670727f1d64c709a21466420ac203d051dec7bed4a",
+	"MerkleHash": "0378780172acb6d6721cb96a091a70d4287d664fcff9f06a7b4a527a456885d2",
+	"Tx": [
+		{
+			"TxOffset": 0,
+			"Input": [],
+			"Output": [
+				{
+					"BlockNo": 0,
+					"TxOffset": 0,
+					"TxOutputPos": 0,
+					"Account": "db180da9a8982c7bb75ca40039f959cb959c62e8",
+					"Amount": 0
+				}
+			],
+			"SCOwnerAccount": "",
+			"SCAddress": "",
+			"SCOutputData": "",
+			"Account": "db180da9a8982c7bb75ca40039f959cb959c62e8",
+			"Signature": "",
+			"Message": "",
+			"Comment": "Mining Reward"
+		}
+	]
+}

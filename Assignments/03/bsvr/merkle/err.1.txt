@@ -1,0 +1,27 @@
++> go test
+--- FAIL: TestMerkleHash (0.00s)
+panic: runtime error: index out of range [recovered]
+	panic: runtime error: index out of range
+
+goroutine 5 [running]:
+panic(0x11178c0, 0x11e9000)
+	/usr/local/Cellar/go/1.10.3/libexec/src/runtime/panic.go:551 +0x3c1 fp=0xc420087bc0 sp=0xc420087b20 pc=0x1028081
+testing.tRunner.func1(0xc4200b80f0)
+	/usr/local/Cellar/go/1.10.3/libexec/src/testing/testing.go:742 +0x29d fp=0xc420087c30 sp=0xc420087bc0 pc=0x10b880d
+runtime.call32(0x0, 0x1146338, 0xc4200286f0, 0x800000008)
+	/usr/local/Cellar/go/1.10.3/libexec/src/runtime/asm_amd64.s:573 +0x3b fp=0xc420087c60 sp=0xc420087c30 pc=0x10514bb
+panic(0x11178c0, 0x11e9000)
+	/usr/local/Cellar/go/1.10.3/libexec/src/runtime/panic.go:502 +0x229 fp=0xc420087d00 sp=0xc420087c60 pc=0x1027ee9
+runtime.panicindex()
+	/usr/local/Cellar/go/1.10.3/libexec/src/runtime/panic.go:28 +0x5e fp=0xc420087d20 sp=0xc420087d00 pc=0x1026d2e
+github.com/Univ-Wyo-Education/Blockchain-4010-Fall-2018/Assignments/A-03/merkle.MerkleHash(0xc42008e2a0, 0x2, 0x2, 0x100efa8, 0x10b49cd, 0x11be2f0)
+	/Users/corwin/go/src/github.com/Univ-Wyo-Education/Blockchain-4010-Fall-2018/Assignments/A-03/merkle/merkle.go:31 +0x5b9 fp=0xc420087e50 sp=0xc420087d20 pc=0x10f4c19
+github.com/Univ-Wyo-Education/Blockchain-4010-Fall-2018/Assignments/A-03/merkle.TestMerkleHash(0xc4200b80f0)
+	/Users/corwin/go/src/github.com/Univ-Wyo-Education/Blockchain-4010-Fall-2018/Assignments/A-03/merkle/merkle_test.go:25 +0x25a fp=0xc420087fa8 sp=0xc420087e50 pc=0x10f4e9a
+testing.tRunner(0xc4200b80f0, 0x1145db8)
+	/usr/local/Cellar/go/1.10.3/libexec/src/testing/testing.go:777 +0xd0 fp=0xc420087fd0 sp=0xc420087fa8 pc=0x10b4a70
+runtime.goexit()
+	/usr/local/Cellar/go/1.10.3/libexec/src/runtime/asm_amd64.s:2361 +0x1 fp=0xc420087fd8 sp=0xc420087fd0 pc=0x1053ac1
+created by testing.(*T).Run
+	/usr/local/Cellar/go/1.10.3/libexec/src/testing/testing.go:824 +0x2e0
+

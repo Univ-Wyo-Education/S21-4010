@@ -1,0 +1,987 @@
+<style>
+@font-face {
+	font-family: octicons-link;
+	src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	line-height: 1.5;
+	color: #24292e;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 16px;
+	line-height: 1.5;
+	word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+	color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+	color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+	color: #6f42c1;
+}
+
+.markdown-body .pl-smi,
+.markdown-body .pl-s .pl-s1 {
+	color: #24292e;
+}
+
+.markdown-body .pl-ent {
+	color: #22863a;
+}
+
+.markdown-body .pl-k {
+	color: #d73a49;
+}
+
+.markdown-body .pl-s,
+.markdown-body .pl-pds,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sre,
+.markdown-body .pl-sr .pl-sra {
+	color: #032f62;
+}
+
+.markdown-body .pl-v,
+.markdown-body .pl-smw {
+	color: #e36209;
+}
+
+.markdown-body .pl-bu {
+	color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+	color: #fafbfc;
+	background-color: #b31d28;
+}
+
+.markdown-body .pl-c2 {
+	color: #fafbfc;
+	background-color: #d73a49;
+}
+
+.markdown-body .pl-c2::before {
+	content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+	font-weight: bold;
+	color: #22863a;
+}
+
+.markdown-body .pl-ml {
+	color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+	font-weight: bold;
+	color: #005cc5;
+}
+
+.markdown-body .pl-mi {
+	font-style: italic;
+	color: #24292e;
+}
+
+.markdown-body .pl-mb {
+	font-weight: bold;
+	color: #24292e;
+}
+
+.markdown-body .pl-md {
+	color: #b31d28;
+	background-color: #ffeef0;
+}
+
+.markdown-body .pl-mi1 {
+	color: #22863a;
+	background-color: #f0fff4;
+}
+
+.markdown-body .pl-mc {
+	color: #e36209;
+	background-color: #ffebda;
+}
+
+.markdown-body .pl-mi2 {
+	color: #f6f8fa;
+	background-color: #005cc5;
+}
+
+.markdown-body .pl-mdr {
+	font-weight: bold;
+	color: #6f42c1;
+}
+
+.markdown-body .pl-ba {
+	color: #586069;
+}
+
+.markdown-body .pl-sg {
+	color: #959da5;
+}
+
+.markdown-body .pl-corl {
+	text-decoration: underline;
+	color: #032f62;
+}
+
+.markdown-body .octicon {
+	display: inline-block;
+	vertical-align: text-top;
+	fill: currentColor;
+}
+
+.markdown-body a {
+	background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+	outline-width: 0;
+}
+
+.markdown-body strong {
+	font-weight: inherit;
+}
+
+.markdown-body strong {
+	font-weight: bolder;
+}
+
+.markdown-body h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+.markdown-body img {
+	border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+.markdown-body hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+}
+
+.markdown-body input {
+	font: inherit;
+	margin: 0;
+}
+
+.markdown-body input {
+	overflow: visible;
+}
+
+.markdown-body [type="checkbox"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+.markdown-body * {
+	box-sizing: border-box;
+}
+
+.markdown-body input {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+.markdown-body a {
+	color: #0366d6;
+	text-decoration: none;
+}
+
+.markdown-body a:hover {
+	text-decoration: underline;
+}
+
+.markdown-body strong {
+	font-weight: 600;
+}
+
+.markdown-body hr {
+	height: 0;
+	margin: 15px 0;
+	overflow: hidden;
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid #dfe2e5;
+}
+
+.markdown-body hr::before {
+	display: table;
+	content: "";
+}
+
+.markdown-body hr::after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+.markdown-body table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+	padding: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body h1 {
+	font-size: 32px;
+	font-weight: 600;
+}
+
+.markdown-body h2 {
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.markdown-body h3 {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.markdown-body h4 {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.markdown-body h5 {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.markdown-body h6 {
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.markdown-body p {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+	margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+	x-list-style-type: lower-roman;
+	  list-style-type: decimal;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+	list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+	margin-left: 0;
+}
+
+.markdown-body code {
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-size: 12px;
+}
+
+.markdown-body pre {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-size: 12px;
+}
+
+.markdown-body .octicon {
+	vertical-align: text-bottom;
+}
+
+.markdown-body .pl-0 {
+	padding-left: 0 !important;
+}
+
+.markdown-body .pl-1 {
+	padding-left: 4px !important;
+}
+
+.markdown-body .pl-2 {
+	padding-left: 8px !important;
+}
+
+.markdown-body .pl-3 {
+	padding-left: 16px !important;
+}
+
+.markdown-body .pl-4 {
+	padding-left: 24px !important;
+}
+
+.markdown-body .pl-5 {
+	padding-left: 32px !important;
+}
+
+.markdown-body .pl-6 {
+	padding-left: 40px !important;
+}
+
+.markdown-body::before {
+	display: table;
+	content: "";
+}
+
+.markdown-body::after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+.markdown-body>*:first-child {
+	margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+	margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+	color: inherit;
+	text-decoration: none;
+}
+
+.markdown-body .anchor {
+	float: left;
+	padding-right: 4px;
+	margin-left: -20px;
+	line-height: 1;
+}
+
+.markdown-body .anchor:focus {
+	outline: none;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+.markdown-body hr {
+	height: 0.25em;
+	padding: 0;
+	margin: 24px 0;
+	background-color: #e1e4e8;
+	border: 0;
+}
+
+.markdown-body blockquote {
+	padding: 0 1em;
+	color: #6a737d;
+	border-left: 0.25em solid #dfe2e5;
+}
+
+.markdown-body blockquote>:first-child {
+	margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+	margin-bottom: 0;
+}
+
+.markdown-body kbd {
+	display: inline-block;
+	padding: 3px 5px;
+	font-size: 11px;
+	line-height: 10px;
+	color: #444d56;
+	vertical-align: middle;
+	background-color: #fafbfc;
+	border: solid 1px #c6cbd1;
+	border-bottom-color: #959da5;
+	border-radius: 3px;
+	box-shadow: inset 0 -1px 0 #959da5;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+	margin-top: 24px;
+	margin-bottom: 16px;
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+	color: #1b1f23;
+	vertical-align: middle;
+	visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+	text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+	visibility: visible;
+}
+
+.markdown-body h1 {
+	padding-bottom: 0.3em;
+	font-size: 2em;
+	border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h2 {
+	padding-bottom: 0.3em;
+	font-size: 1.5em;
+	border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h3 {
+	font-size: 1.25em;
+}
+
+.markdown-body h4 {
+	font-size: 1em;
+}
+
+.markdown-body h5 {
+	font-size: 0.875em;
+}
+
+.markdown-body h6 {
+	font-size: 0.85em;
+	color: #6a737d;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+	padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body li {
+	word-wrap: break-all;
+}
+
+.markdown-body li>p {
+	margin-top: 16px;
+}
+
+.markdown-body li+li {
+	margin-top: 0.25em;
+}
+
+.markdown-body dl {
+	padding: 0;
+}
+
+.markdown-body dl dt {
+	padding: 0;
+	margin-top: 16px;
+	font-size: 1em;
+	font-style: italic;
+	font-weight: 600;
+}
+
+.markdown-body dl dd {
+	padding: 0 16px;
+	margin-bottom: 16px;
+}
+
+.markdown-body table {
+	display: block;
+	width: 100%;
+	overflow: auto;
+}
+
+.markdown-body table th {
+	font-weight: 600;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+	padding: 6px 13px;
+	border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+	background-color: #fff;
+	border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+	background-color: #f6f8fa;
+}
+
+.markdown-body img {
+	max-width: 100%;
+	box-sizing: content-box;
+	background-color: #fff;
+}
+
+.markdown-body img[align=right] {
+	padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+	padding-right: 20px;
+}
+
+.markdown-body code {
+	padding: 0.2em 0.4em;
+	margin: 0;
+	font-size: 85%;
+	background-color: rgba(27,31,35,0.05);
+	border-radius: 3px;
+}
+
+.markdown-body pre {
+	word-wrap: normal;
+}
+
+.markdown-body pre>code {
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	word-break: normal;
+	white-space: pre;
+	background: transparent;
+	border: 0;
+}
+
+.markdown-body .highlight {
+	margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+	margin-bottom: 0;
+	word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+	padding: 16px;
+	overflow: auto;
+	font-size: 85%;
+	line-height: 1.45;
+	background-color: #f6f8fa;
+	border-radius: 3px;
+}
+
+.markdown-body pre code {
+	display: inline;
+	max-width: auto;
+	padding: 0;
+	margin: 0;
+	overflow: visible;
+	line-height: inherit;
+	word-wrap: normal;
+	background-color: transparent;
+	border: 0;
+}
+
+.markdown-body .full-commit .btn-outline:not(:disabled):hover {
+	color: #005cc5;
+	border-color: #005cc5;
+}
+
+.markdown-body kbd {
+	display: inline-block;
+	padding: 3px 5px;
+	font: 11px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	line-height: 10px;
+	color: #444d56;
+	vertical-align: middle;
+	background-color: #fafbfc;
+	border: solid 1px #d1d5da;
+	border-bottom-color: #c6cbd1;
+	border-radius: 3px;
+	box-shadow: inset 0 -1px 0 #c6cbd1;
+}
+
+.markdown-body :checked+.radio-label {
+	position: relative;
+	z-index: 1;
+	border-color: #0366d6;
+}
+
+.markdown-body .task-list-item {
+	list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+	margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+	margin: 0 0.2em 0.25em -1.6em;
+	vertical-align: middle;
+}
+
+.markdown-body hr {
+	border-bottom-color: #eee;
+}
+
+</style>
+<style>
+ol {
+    display: block;
+    list-style-type: decimal;
+}
+</style>
+
+<div class="markdown-body">
+
+<h1>Lecture 33 - Byzantine Fault Tolerance</h1>
+
+<h2>Videos</h2>
+
+<p><a href="https://youtu.be/wItXpoCIurc">https://youtu.be/wItXpoCIurc - Lect-33-4010-BFT-pt1.mp4</a><br>
+<a href="https://youtu.be/_bhabm9Iy5k">https://youtu.be/_bhabm9Iy5k - Lect-33-4010-BFT-pt2.mp4</a><br>
+<a href="https://youtu.be/hbnVxTb8zoo">https://youtu.be/hbnVxTb8zoo - Lect-33-4010-pt3-BFT.mp4</a><br>
+<a href="https://youtu.be/7_2yrIOFm-Q">https://youtu.be/7_2yrIOFm-Q - Lect-33-4010-pt4.mp4</a><br></p>
+
+<p>From Amazon S3 - for download (same as youtube videos)</p>
+
+<p><a href="http://uw-s20-2015.s3.amazonaws.com/Lect-33-4010-BFT-pt1.mp4">http://uw-s20-2015.s3.amazonaws.com/Lect-33-4010-BFT-pt1.mp4</a><br>
+<a href="http://uw-s20-2015.s3.amazonaws.com/Lect-33-4010-BFT-pt2.mp4">http://uw-s20-2015.s3.amazonaws.com/Lect-33-4010-BFT-pt2.mp4</a><br>
+<a href="http://uw-s20-2015.s3.amazonaws.com/Lect-33-4010-pt3-BFT.mp4">http://uw-s20-2015.s3.amazonaws.com/Lect-33-4010-pt3-BFT.mp4</a><br>
+<a href="http://uw-s20-2015.s3.amazonaws.com/Lect-33-4010-pt4.mp4">http://uw-s20-2015.s3.amazonaws.com/Lect-33-4010-pt4.mp4</a><br></p>
+
+<h2>Papers</h2>
+
+<p>Original paper by Leslie Lamport, Robert Shostak and Marshall Pease, 1982:
+<a href="https://people.eecs.berkeley.edu/~luca/cs174/byzantine.pdf">https://people.eecs.berkeley.edu/~luca/cs174/byzantine.pdf</a></p>
+
+<p>Practical Byzantine Fault Tolerance and Proactive Recovery&rdquo; by Miguel Castro and Barbara Liskov:
+<a href="http://www.pmg.csail.mit.edu/papers/bft-tocs.pdf">http://www.pmg.csail.mit.edu/papers/bft-tocs.pdf</a></p>
+
+<p>Honney Badger BFT, 2016:
+<a href="https://eprint.iacr.org/2016/199.pdf">https://eprint.iacr.org/2016/199.pdf</a></p>
+
+<p>Go Implementation:
+<a href="https://github.com/anthdm/hbbft">https://github.com/anthdm/hbbft</a></p>
+
+<h2>What is Byzantine Fault Tollerance</h2>
+
+<p>A system for recovery and data distribution with worst possible failures and
+communication failure.</p>
+
+<ol>
+<li>Nodes can fail.</li>
+<li>Nodes can be malicious.</li>
+<li>Communication can fail.</li>
+<li>Communication can be malicious.</li>
+</ol>
+
+<p>What can go wrong?</p>
+
+<ol>
+<li>Crash - or worst - Crash - recover - Crash - recover &hellip;.</li>
+<li>Corrupted data - data rot - disk failure - database error.</li>
+<li>Service is gone - You depend on a google service that was deprecated.</li>
+<li>User - query of death - A user - legitimate runs a query that is bad, really really bad.</li>
+<li>Denial of Service Attack - malicious.</li>
+<li>Lots of people like you - crushed by load (Flash Crowd, Viral etc)</li>
+<li>A server went down - cascade failure</li>
+<li>Fails for a customer but not you</li>
+<li>Lost data - it&rsquo;s gone</li>
+<li>Security Breach</li>
+<li>Network Failures - Google reports that 99% of database failures are really network failure.</li>
+<li>The Back Hoe!</li>
+<li>The Squirl!</li>
+<li>Fire / Flood / Earthquake / Volcano.</li>
+<li>Your system has caused a fire</li>
+<li>Data center raided by FBI - &ldquo;Hackers Game&rdquo;.</li>
+<li>Hacked node - Yep -had that.</li>
+<li>Non-Hack - then  - system administrator intended to run <code>rm -rf ./dev</code> instead ran <code>rm -rf /dev</code>.</li>
+<li>Runaway automation &ndash; Example $400 million error</li>
+<li>This message <code>Got server HTTP error: HTTP Error 404: Not Found. Retrying fragment 7 (attempt 1 of 10)...</code></li>
+<li>Certificate Expire - They only last for a limited amount of time!  Let&rsquo;s Encrypt and ACME protocol.</li>
+<li>Power is off - network is off - etc.</li>
+<li>Shift in workload&hellip;.</li>
+<li>Index in database got dropped (ran out of space etc.)</li>
+<li>Personal change ( person quit, died etc.)</li>
+<li>System commits suicide - License Key Timeout.</li>
+<li>Missing source - You think all is well but you find out that the version of the code you have is out of date and you DON&rsquo;T have the current version.</li>
+<li>Windows leeks memory - and it crashes - Expedia.</li>
+<li>Random variation in &hellip; Power, Load, etc.</li>
+<li>Library you are using - has a flaw!</li>
+<li>Network is just slow.</li>
+<li>Email crashes entire network - England&rsquo;s NHS - and &ldquo;Reply All&rdquo;.</li>
+</ol>
+
+<p>Things that are in-frequent are not worth automation.  Things that happen often are.
+Look at a ROI model - and how much real costs are.  Take labor time 1.53 for burdened
+then look at amount of down time.</p>
+
+<p>Generally 2 different kind of failures:</p>
+
+<ol>
+<li>Stop Failure: When a node fails - it might have a redundant node and recover but the point is that the node stooped for a while.
+This could also be just a communication failure.   You really can&rsquo;t tell the difference between a node failing and the nodes
+communication failing.</li>
+<li>Now all the other failures - nodes doing what is not correct (traitor) - sends message A to one peer, B to another peer.
+This may not be a malicious failure.  It could be just an error in transmission.  It could also be that you have a
+malicious node operator - or - a hacked node.</li>
+</ol>
+
+<h2>Two Generals Problem</h2>
+
+<ol>
+<li>2 generals with armies.</li>
+<li>Opponent is larger than each of the 2 armies but smaller than the combined 2 armies.</li>
+<li>Incentive to cheat.</li>
+</ol>
+
+<p>Come up with a solution (Like TCP/IP Syn / SynAck / Ack)</p>
+
+<pre><code>
+    [General A] ------&gt; Syn -&gt;&gt;&gt;&gt;&gt; [General B]
+                Attack In Morning        |
+                                         |
+                                         |
+    [General A] &lt;&lt;&lt;&lt;- Yep Let's Do It &lt;--+
+        |
+        |
+        +--- Ack (Got Message) ---&gt; [Genreal B]
+
+</code></pre>
+
+<p>With the network as the &ldquo;opponent&rdquo; there is no way to solve this.  <em>General B</em>
+never knows until a successful <code>Ack</code> what state he should be in.</p>
+
+<p>There is no way to get consensus.</p>
+
+<p>Let&rsquo;s reverse this and let&rsquo;s assume that the nodes are the corrupting element.</p>
+
+<p>Lamport&rsquo;s &lsquo;82 paper has a solution.  Very Ugly - Very Slow.  Speed is <code>O(n^(f+1))</code>.
+Puts proven bounds on number of bad nodes and what can be done to solve this.</p>
+
+<p>Is this valuable:</p>
+
+<ol>
+<li>Boeing 767, 777 both use a solution for fly by wire.</li>
+<li>Blockchains/Cryptocurrency is using this.</li>
+<li>Data distribution over a faulty network.</li>
+<li>IBM Hyperledger (Merk, IBM Food Trust etc).</li>
+<li>Zilliqa uses an optimized version pBFT with a PoW round every ~100 blocks.</li>
+<li>Ripple (XRP) uses a modified pBFT solution.</li>
+<li>MasterCard&rsquo;s internal blockchain (5000 TPS) uses a pBFT</li>
+</ol>
+
+<p>One of the big keys to this is getting the Assumptions correct.  Clearly not solvable
+with just 2 nodes.  What about with more nodes?  What failure cases are you going to
+ignore and what cases are you going to program for?</p>
+
+<p>In pBFT - it turns out that half+1 of the nodes agreeing is a &ldquo;consensus&rdquo; - in the
+generals case it is either attack-or-wait.  This will not mean that &ldquo;attack&rdquo; is the
+true/correct result or that wait is the true/correct result.  What it meas is that
+the system has reached a &ldquo;consensus&rdquo; decisions.   To the half+1 you need more
+than 2 nodes.  Let&rsquo;s talk about 5 nodes, A..F.</p>
+
+<h2>Multi Generals and Consensus</h2>
+
+<p>After Consensus:</p>
+
+<pre><code>General A         - A D D A A
+General B         - A D D A A
+General C         - D A A A A
+General D         - A D D A A
+General E         - A A D A A
+                    ^ &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; This one!
+</code></pre>
+
+<p>Communicate 1 decision from 1 general to all the all the other generals.  Solves 1 communication.</p>
+
+<p>How many traitors can we deal with?</p>
+
+<p>Trivial Case - 1 general.</p>
+
+<p>2 - general.  If 1 traitor, then no conses.</p>
+
+<p>Leader general says Attack, then how if you as a non-leader know.  You could ask your piers.
+Walk through cases.  Ask Piers</p>
+
+<ol>
+<li>Case with peer as a traitor.</li>
+<li>Case with leader as a traitor.</li>
+</ol>
+
+<p>No Solution w/ 3 generals and 1 traitor case.</p>
+
+<p>How many generals to tolerate 1 traitor.  Generals = 3, 1 traitor.   3m+1. &ndash; Or look at it as
+you have to have less than <sup>1</sup>&frasl;<sub>3</sub> traitors.</p>
+
+<p>Proof:  Assume that a solution exists.  12 Generals 4 Traitors.  Simulate each one.
+Determine that you don&rsquo;t have a distinct answer.   The lack of a unique solution
+means that you can&rsquo;t have this many.   Simulate with 12 and 5 &hellip; same result.
+Simulate with all cases with 12 and 3 - you can get a unique solution.</p>
+
+<p>Algorithm that works:</p>
+
+<ol>
+<li>0 Traitors - then everybody shares - all agree - all good</li>
+<li>M Traitors - less than <sup>1</sup>&frasl;<sub>3</sub> - sends order.   Record order.  Add up all the total number
+of orders - and when you have a set of answers.  Use majority.</li>
+</ol>
+
+<p>Demo of this with a traitor.</p>
+
+<p>2 traitors means you will need 7 generals.</p>
+
+<p>m = number of traitors.</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">Traitors</th>
+<th align="left">Order</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">m = 0</td>
+<td align="left">0</td>
+</tr>
+
+<tr>
+<td align="center">m = 1</td>
+<td align="left">n^2</td>
+</tr>
+
+<tr>
+<td align="center">m = 2</td>
+<td align="left">n^3</td>
+</tr>
+
+<tr>
+<td align="center">m = 3</td>
+<td align="left">n^4</td>
+</tr>
+</tbody>
+</table>
+
+<p>messages.</p>
+
+<p>In a practical sense then Ethereum with 11401 nodes as of today, you have to a lot of traitors ( 11401 devided by 3 )  to effect the
+system.  Since each node costs thousands (average of 18204.00) of dollars and effective attack on the system would cost <code>3800 * 18k</code> or about <code>$70</code> million in hardware to
+attack the system.</p>
+
+<h2>Practical Byzantine Fault Tolerance</h2>
+
+<p>For pBFT to work, we assume that the amount of malicious (lying) nodes in the network cannot simultaneously equal or
+exceed <sup>1</sup>&frasl;<sub>3</sub> of the total number of nodes during any one time of vulnerability. The larger the number of nodes in the
+system the more robust the system. With <code>n</code> nodes as long as at most (n-(<sup>1</sup>&frasl;<sub>3</sub>)) are malicious or faulty at the same time
+the pBFT algorithm provides both speed and safety.  Eventual consensus of the replies is achieved due to
+linearizability.</p>
+
+<p>Each round of pBFT consensus (called views) is in 4 distinct phases. This model follows more of a &ldquo;Commander and
+Lieutenant&rdquo; system than a pure Byzantine Generals’ Problem, where all generals are equal, due to the presence of a
+leader node. The phases are below.</p>
+
+<ol>
+<li>A client sends a request to the leader node to invoke a service operation.</li>
+<li>The leader node uses &ldquo;hear-say&rdquo; to multicasts the request to the other nodes.</li>
+<li>The nodes execute the request and then send a reply to the client.</li>
+<li>The client awaits f + 1 (f represents the maximum number of nodes that may be faulty) replies from different nodes with the same result. This result is the result of the operation.</li>
+</ol>
+
+<p>The requirements for the nodes are that they are deterministic and start in the same state. The final result is that all
+honest nodes come to an agreement on the order of the record and they either accept it or reject it.</p>
+
+<p>The leader node can be changed in a round robin type format during every view and can even be replaced with a protocol
+called view change if a specific amount of time has passed without the leader node multicasting the request. A
+majority of honest nodes can also decide whether a leader is faulty and remove them with the next leader in line as
+the replacement.</p>
+
+<p>The primary advantages of the pBFT model is its ability to provide transaction finality without the need for
+confirmations like in Proof-of-Work models. If a proposed block is agreed upon by the nodes in a pBFT system, then that
+block is final.   This addresses a lot of the energy usage concerns of Eth/BTC.</p>
+
+<p>The model only works well with small consensus group sizes and has a large amount of communication overhead.
+The paper mentions using digital signatures and MACs (Method Authentication Codes) for authenticating messages.
+This is extremely inefficient and will not scale. Also you can&rsquo;t prove the authenticity of the messages.
+Digital signatures are a better solution.</p>
+
+<h1>Copyright</h1>
+
+<p>Copyright &copy; University of Wyoming, 2020.</p>
+
+</div>
+

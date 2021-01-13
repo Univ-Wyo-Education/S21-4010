@@ -1,0 +1,75 @@
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+Starting migrations...
+======================
+> Network name:    'development'
+> Network id:      5777
+> Block gas limit: 0x6691b7
+
+
+1_initial_migration.js
+======================
+
+   Replacing 'Migrations'
+   ----------------------
+   > transaction hash:    0xe7054e2e0e0a1c9cd6de6d56b00dec9303aa81b26579d514a448754210263dee
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x62F39dcaCa59869778A68E9f85C61fe93ae11d6E
+   > account:             0xc0c4B94355fD676a29856008e625B51d1acD04eD
+   > balance:             99.88683854
+   > gas used:            284844
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00569688 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00569688 ETH
+
+
+2_initial_migration.js
+======================
+
+   Replacing 'SignedDataVersion01'
+   -------------------------------
+   > transaction hash:    0x74ffdb14295be5756baf57facc0831386a5716e5e51f00e1f0f832ffdf4e70d4
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x610F752d87f2DEB77614BCa1cbA3438FD8b4377b
+   > account:             0xc0c4B94355fD676a29856008e625B51d1acD04eD
+   > balance:             99.86615342
+   > gas used:            992222
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.01984444 ETH
+
+
+   Replacing 'SignedData'
+   ----------------------
+   > transaction hash:    0xe52a41e63ed2f5d4db29d4106f32e65e7f50845e2c20ecae76976d906755989e
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x72D0f0E20e38CF6f550D5879dE5428f851cD9482
+   > account:             0xc0c4B94355fD676a29856008e625B51d1acD04eD
+   > balance:             99.85060996
+   > gas used:            777173
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.01554346 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:           0.0353879 ETH
+
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.04108478 ETH
+
