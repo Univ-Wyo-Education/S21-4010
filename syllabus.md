@@ -102,6 +102,28 @@ a limited programming background I will work with you.
 
 
 
+
+# The 5 Interactive discussions.
+
+ These are required.  They will be
+on zoom.  Choose a time of day to attend.  They will be held at 3 different
+times a day - so you only need to attend one of the 3 on that a day.
+Each of the synchronous zoom discussions will be at 9:00am, 4:00pm and
+6:00pm on a Wednesday.  If you are unable to make one of the times let me
+know and I will find a time.  These will be about 45 minutes long.
+
+0. Blockchain and Cryptocurrencies - Feb 3
+1. Blockchain in Supply Chain - Feb 17
+2. Real Security / Personal Security - Feb 24
+3. Backup and the Law - Mar 10
+4. Future of Blockchain - Mar 17
+
+
+
+
+
+
+
 m4_define([[[m4_comment]]],[[[]]])
 
 m4_comment([[[
@@ -149,6 +171,9 @@ Su Mo Tu We Th Fr Sa
 
 1. Solidity stuff - revise
 2. Revise dates/weeks to end of semester
+3. URL for lecture list
+4. The days for interctive
+5. Table of Homework
 
 ]]])
 
@@ -156,109 +181,109 @@ Su Mo Tu We Th Fr Sa
 
 This is an approximate schedule.  Updates will be noted in class.
 
-| Date                            | Week No | Topics                                                                     |
-|---------------------------------|:-------:|:---------------------------------------------------------------------------|
-|          Jan&nbsp;21,&nbsp;2021 | 1       | Introduction to class                                                      |
-|                                 |         | Cover Syllabus - Syllabus revisions  - Office Hours - Class Policy         |
-|                                 |         | My background, an introduction to Go, Solidity and Contracts.              |
-|                                 |         |                                                                            |
-|          Jan&nbsp;21,&nbsp;2021 | 1       | What is a Blockchain. Why Go, Overview of the BlockChain.                  |
-|                                 |         | What makes BlockChain special and useful?                                  |
-|                                 |         | Computer trends.  What the future portends.                                |
-|                                 |         |                                                                            |
-|          Jan&nbsp;25,&nbsp;2021 | 2       | What is a hash, What are hashes used for, Types of hashes.                 |
-|                                 |         |                                                                            |
-|          Jan&nbsp;25,&nbsp;2021 | 2       | Mining walk through.                                                       |
-|                                 |         | Homework 1 Due - Go Hello World and 9 other chunks.  100pts.               |
-|                                 |         |                                                                            |
-|          Jan&nbsp;25,&nbsp;2021 | 2       | Merkle Trees, Proof of work, Proof of stake.                               |
-|                                 |         |                                                                            |
-|          Feb&nbsp;01,&nbsp;2021 | 3       | Economics of BlockChain.  Cheat Grass, Co2, Land Titles.                   |
-|                                 |         |                                                                            |
-|          Feb&nbsp;01,&nbsp;2021 | 3       | More on Go complicated stuff; Map synchronization, Go core/panic.          |
-|                                 |         | Go interfaces, Go weaknesses.                                              |
-|                                 |         | Homework 2 Due - Mining(hashes) / Merkle Trees (very simple Merkle)        |
-|                                 |         |                                                                            |
-|          Feb&nbsp;01,&nbsp;2021 | 3       | Finance: Creating personal wealth, Purposes of a business, Terms and 		 |
-|                                 |         | definitions.                                                               |
-|                                 |         |                                                                            |
-|          Feb&nbsp;07,&nbsp;2021 | 4       | Transactions / Data Storage                                                |
-|                                 |         |                                                                            |
-|          Feb&nbsp;07,&nbsp;2021 | 4       | Public Private Keys                                                        |
-|                                 |         |                                                                            |
-|          Feb&nbsp;07,&nbsp;2021 | 4       | ECDSA & RSA encryption, Quantum Computers and NTRU.                        |
-|                                 |         |                                                                            |
-|          Feb&nbsp;14,&nbsp;2021 | 5       | Digital Security.                                                          |
-|                                 |         |                                                                            |
-|          Feb&nbsp;14,&nbsp;2021 | 5       | Blockchain Economics; Blockchain in non-profs, Proof of trust, 			 |
-|                                 |         | Tracking of donations, Software economics, Normal technology cycles, SQL 	 |
-|                                 |         | crash, .com crash.                                                         |
-|                                 |         |                                                                            |
-|          Feb&nbsp;14,&nbsp;2021 | 5       | Smart Contracts, Solidity(Ethereum), Haskell(IOHK)                         |
-|                                 |         |                                                                            |
-|          Feb&nbsp;21,&nbsp;2021 | 6       | Standard Contracts, Simple tokens, Standard tokens, ERC-20, ERC-721,       |
-|                                 |         | ERC-1203.                                                                  |
-|                                 |         |                                                                            |
-|                                 |         | Homework 3 Due - Client Server and Transactions.                           | 
-|                                 |         | Homework 4 Due - Wallet.                                                   |
-|                                 |         | Homework 5 Due - Signed Data - with client server.        			     |
-|                                 |         |                                                                            |
-|          Feb&nbsp;21,&nbsp;2021 | 6       | Finance and Terms, Accounting(history)- Double Entry Book keeping,         |
-|                                 |         | Cooking the books.                                                         |
-|                                 |         |                                                                            |
-|          Feb&nbsp;21,&nbsp;2021 | 6       | Wallets, Analogy for what BlockChain is, Client-Server how to implement    |
-|                                 |         |                                                                            |
-|          Feb&nbsp;28,&nbsp;2021 |         | Midterm Exam                                                               |
-|                                 |         |                                                                            |
-|          Feb&nbsp;28,&nbsp;2021 | 7       | Standard contracts, Go and Ethereum, ERC-20, Events, interoperability.     |
-|                                 |         |                                                                            |
-|          Feb&nbsp;28,&nbsp;2021 | 7       | Client/Servers                                                             |
-|                                 |         |                                                                            |
-|          Feb&nbsp;28,&nbsp;2021 | 7       | Client/Servers part 2.                                                     |
-|                                 |         |                                                                            |
-|          Mar&nbsp;01,&nbsp;2021 | 8       | Installing NPM and Node, Why use Ethereum, Eth and Gas, Truffle            |
-|                                 |         | development system.                                                        |
-|                                 |         |                                                                            |
-|          Mar&nbsp;01,&nbsp;2021 | 8       | Smart Contracts in detail.                                                 |
-|                                 |         |                                                                            |
-|          Mar&nbsp;01,&nbsp;2021 | 8       | What are dApp and web3, Interoperability between chains.                   |
-|                                 |         |                                                                            |
-|          Mar&nbsp;07,&nbsp;2021 | 9       | Patterns and How to Learn New Languages: Solidity.                         |
-|                                 |         |                                                                            |
-|          Mar&nbsp;07,&nbsp;2021 | 9       | More on ERC-20 and ERC-721 and ERC-1203                                    |
-|                                 |         |                                                                            |
-|          Mar&nbsp;07,&nbsp;2021 | 9       | Creating wealth, Jobs in BlockChain, Blockchain economics.                 |
-|                                 |         | Homework 6 Due - Metadata contract - signed documents.                     |
-|                                 |         |                                                                            |
-|          Mar&nbsp;14,&nbsp;2021 | 10      | Concurrency in Go, Go routines, Locks, Channels                            |
-|                                 |         |                                                                            |
-|          Mar&nbsp;14,&nbsp;2021 | 10      | How ECDSA works, the Basics of public key security.                        |
-|                                 |         |                                                                            |
-|          Mar&nbsp;14,&nbsp;2021 | 10      | Functional programming and contracts (Beginning of IOHK stuff)             |
-|                                 |         | Homework 7 Due - Test-Net ERC-20/ERC-721 based contract.                   |
-|                                 |         |                                                                            |
-|          Mar&nbsp;21,&nbsp;2021 | 11      | Insurance companies and Non fungible Tokens                                |
-|                                 |         |                                                                            |
-|          Mar&nbsp;21,&nbsp;2021 | 11      | Testing and Test Output                                                    |
-|                                 |         |                                                                            |
-|          Mar&nbsp;21,&nbsp;2021 | 11      | Automatic Verification of Code and Contracts                               |
-|                                 |         | Homework 8 Due - Familiarize with IOHK/Marlow.                             |
-|                                 |         |                                                                            |
-|          Mar&nbsp;28,&nbsp;2021 | 12      | Tokens; Simple and Standard                                                |
-|                                 |         |                                                                            |
-|          Mar&nbsp;28,&nbsp;2021 | 12      | Zero Knowledge Proofs, Digital Security, zk-SNAKRS, Byzantine Generals     |
-|                                 |         | problem and the Honey-Badger solution.                                     |
-|                                 |         |                                                                            |
-|          Mar&nbsp;28,&nbsp;2021 | 12      | IOHK’s system.  Nix-OS and Contracts.                                      |
-|                                 |         | Homework 9 Due - IOHK/Marlow based state machine contract.                 |
-|                                 |         |                                                                            |
-|          Apr&nbsp;05,&nbsp;2021 | 13      | Legal Ramifications of BlockChain, ICOs 506(d), Subpart (s)                |
-|                                 |         |                                                                            |
-|          Apr&nbsp;05,&nbsp;2021 | 13      | Personal Security Friction vs Access.                                      |
-|                                 |         |                                                                            |
-|          Apr&nbsp;05,&nbsp;2021 | 13      | More on Security and Encryption                                            |
-|                                 |         |                                                                            |
-|          Apr&nbsp;12,&nbsp;2021 | 14      | Final Review                                                               |
+| Date                     | Week No | Topics                                                                     |
+|--------------------------|:-------:|:---------------------------------------------------------------------------|
+|   Jan&nbsp;21,&nbsp;2021 | 1       | Introduction to class                                                      |
+|                          |         | Cover Syllabus - Syllabus revisions  - Office Hours - Class Policy         |
+|                          |         | My background, an introduction to Go, Solidity and Contracts.              |
+|                          |         |                                                                            |
+|   Jan&nbsp;21,&nbsp;2021 | 1       | What is a Blockchain. Why Go, Overview of the BlockChain.                  |
+|                          |         | What makes BlockChain special and useful?                                  |
+|                          |         | Computer trends.  What the future portends.                                |
+|                          |         |                                                                            |
+|   Jan&nbsp;25,&nbsp;2021 | 2       | What is a hash, What are hashes used for, Types of hashes.                 |
+|                          |         |                                                                            |
+|   Jan&nbsp;25,&nbsp;2021 | 2       | Mining walk through.                                                       |
+|                          |         | Homework 1 Due - Go Hello World and 9 other chunks.  100pts.               |
+|                          |         |                                                                            |
+|   Jan&nbsp;25,&nbsp;2021 | 2       | Merkle Trees, Proof of work, Proof of stake.                               |
+|                          |         |                                                                            |
+|   Feb&nbsp;01,&nbsp;2021 | 3       | Economics of BlockChain.  Cheat Grass, Co2, Land Titles.                   |
+|                          |         |                                                                            |
+|   Feb&nbsp;01,&nbsp;2021 | 3       | More on Go complicated stuff; Map synchronization, Go core/panic.          |
+|                          |         | Go interfaces, Go weaknesses.                                              |
+|                          |         | Homework 2 Due - Mining(hashes) / Merkle Trees (very simple Merkle)        |
+|                          |         |                                                                            |
+|   Feb&nbsp;01,&nbsp;2021 | 3       | Finance: Creating personal wealth, Purposes of a business, Terms and       |
+|                          |         | definitions.                                                               |
+|                          |         |                                                                            |
+|   Feb&nbsp;07,&nbsp;2021 | 4       | Transactions / Data Storage                                                |
+|                          |         |                                                                            |
+|   Feb&nbsp;07,&nbsp;2021 | 4       | Public Private Keys                                                        |
+|                          |         |                                                                            |
+|   Feb&nbsp;07,&nbsp;2021 | 4       | ECDSA & RSA encryption, Quantum Computers and NTRU.                        |
+|                          |         |                                                                            |
+|   Feb&nbsp;14,&nbsp;2021 | 5       | Digital Security.                                                          |
+|                          |         |                                                                            |
+|   Feb&nbsp;14,&nbsp;2021 | 5       | Blockchain Economics; Blockchain in non-profs, Proof of trust,             |
+|                          |         | Tracking of donations, Software economics, Normal technology cycles, SQL   |
+|                          |         | crash, .com crash.                                                         |
+|                          |         |                                                                            |
+|   Feb&nbsp;14,&nbsp;2021 | 5       | Smart Contracts, Solidity(Ethereum), Haskell(IOHK)                         |
+|                          |         |                                                                            |
+|   Feb&nbsp;21,&nbsp;2021 | 6       | Standard Contracts, Simple tokens, Standard tokens, ERC-20, ERC-721,       |
+|                          |         | ERC-1203.                                                                  |
+|                          |         |                                                                            |
+|                          |         | Homework 3 Due - Client Server and Transactions.                           | 
+|                          |         | Homework 4 Due - Wallet.                                                   |
+|                          |         | Homework 5 Due - Signed Data - with client server.                         |
+|                          |         |                                                                            |
+|   Feb&nbsp;21,&nbsp;2021 | 6       | Finance and Terms, Accounting(history)- Double Entry Book keeping,         |
+|                          |         | Cooking the books.                                                         |
+|                          |         |                                                                            |
+|   Feb&nbsp;21,&nbsp;2021 | 6       | Wallets, Analogy for what BlockChain is, Client-Server how to implement    |
+|                          |         |                                                                            |
+|   Feb&nbsp;28,&nbsp;2021 |         | Midterm Exam                                                               |
+|                          |         |                                                                            |
+|   Feb&nbsp;28,&nbsp;2021 | 7       | Standard contracts, Go and Ethereum, ERC-20, Events, interoperability.     |
+|                          |         |                                                                            |
+|   Feb&nbsp;28,&nbsp;2021 | 7       | Client/Servers                                                             |
+|                          |         |                                                                            |
+|   Feb&nbsp;28,&nbsp;2021 | 7       | Client/Servers part 2.                                                     |
+|                          |         |                                                                            |
+|   Mar&nbsp;01,&nbsp;2021 | 8       | Installing NPM and Node, Why use Ethereum, Eth and Gas, Truffle            |
+|                          |         | development system.                                                        |
+|                          |         |                                                                            |
+|   Mar&nbsp;01,&nbsp;2021 | 8       | Smart Contracts in detail.                                                 |
+|                          |         |                                                                            |
+|   Mar&nbsp;01,&nbsp;2021 | 8       | What are dApp and web3, Interoperability between chains.                   |
+|                          |         |                                                                            |
+|   Mar&nbsp;07,&nbsp;2021 | 9       | Patterns and How to Learn New Languages: Solidity.                         |
+|                          |         |                                                                            |
+|   Mar&nbsp;07,&nbsp;2021 | 9       | More on ERC-20 and ERC-721 and ERC-1203                                    |
+|                          |         |                                                                            |
+|   Mar&nbsp;07,&nbsp;2021 | 9       | Creating wealth, Jobs in BlockChain, Blockchain economics.                 |
+|                          |         | Homework 6 Due - Metadata contract - signed documents.                     |
+|                          |         |                                                                            |
+|   Mar&nbsp;14,&nbsp;2021 | 10      | Concurrency in Go, Go routines, Locks, Channels                            |
+|                          |         |                                                                            |
+|   Mar&nbsp;14,&nbsp;2021 | 10      | How ECDSA works, the Basics of public key security.                        |
+|                          |         |                                                                            |
+|   Mar&nbsp;14,&nbsp;2021 | 10      | Functional programming and contracts (Beginning of IOHK stuff)             |
+|                          |         | Homework 7 Due - Test-Net ERC-20/ERC-721 based contract.                   |
+|                          |         |                                                                            |
+|   Mar&nbsp;21,&nbsp;2021 | 11      | Insurance companies and Non fungible Tokens                                |
+|                          |         |                                                                            |
+|   Mar&nbsp;21,&nbsp;2021 | 11      | Testing and Test Output                                                    |
+|                          |         |                                                                            |
+|   Mar&nbsp;21,&nbsp;2021 | 11      | Automatic Verification of Code and Contracts                               |
+|                          |         | Homework 8 Due - Familiarize with IOHK/Marlow.                             |
+|                          |         |                                                                            |
+|   Mar&nbsp;28,&nbsp;2021 | 12      | Tokens; Simple and Standard                                                |
+|                          |         |                                                                            |
+|   Mar&nbsp;28,&nbsp;2021 | 12      | Zero Knowledge Proofs, Digital Security, zk-SNAKRS, Byzantine Generals     |
+|                          |         | problem and the Honey-Badger solution.                                     |
+|                          |         |                                                                            |
+|   Mar&nbsp;28,&nbsp;2021 | 12      | IOHK’s system.  Nix-OS and Contracts.                                      |
+|                          |         | Homework 9 Due - IOHK/Marlow based state machine contract.                 |
+|                          |         |                                                                            |
+|   Apr&nbsp;05,&nbsp;2021 | 13      | Legal Ramifications of BlockChain, ICOs 506(d), Subpart (s)                |
+|                          |         |                                                                            |
+|   Apr&nbsp;05,&nbsp;2021 | 13      | Personal Security Friction vs Access.                                      |
+|                          |         |                                                                            |
+|   Apr&nbsp;05,&nbsp;2021 | 13      | More on Security and Encryption                                            |
+|                          |         |                                                                            |
+|   Apr&nbsp;12,&nbsp;2021 | 14      | Final Review                                                               |
 
 
 
