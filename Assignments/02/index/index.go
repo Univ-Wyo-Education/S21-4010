@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/Univ-Wyo-Education/S20-4010/Assignments/02/block"
-	"github.com/Univ-Wyo-Education/S20-4010/Assignments/02/lib"
+	"github.com/Univ-Wyo-Education/S21-4010/Assignments/02/block"
+	"github.com/Univ-Wyo-Education/S21-4010/Assignments/02/lib"
 )
 
 /*

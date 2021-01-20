@@ -4,8 +4,8 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/Univ-Wyo-Education/S20-4010/Assignments/02/block"
-	"github.com/Univ-Wyo-Education/S20-4010/Assignments/02/hash"
+	"github.com/Univ-Wyo-Education/S21-4010/Assignments/02/block"
+	"github.com/Univ-Wyo-Education/S21-4010/Assignments/02/hash"
 )
 
 func TestMineBlock(t *testing.T) {

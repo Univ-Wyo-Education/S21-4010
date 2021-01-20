@@ -6,11 +6,11 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/Univ-Wyo-Education/S20-4010/Assignments/02/block"
-	"github.com/Univ-Wyo-Education/S20-4010/Assignments/02/config"
-	"github.com/Univ-Wyo-Education/S20-4010/Assignments/02/index"
-	"github.com/Univ-Wyo-Education/S20-4010/Assignments/02/lib"
-	"github.com/Univ-Wyo-Education/S20-4010/Assignments/02/mine"
+	"github.com/Univ-Wyo-Education/S21-4010/Assignments/02/block"
+	"github.com/Univ-Wyo-Education/S21-4010/Assignments/02/config"
+	"github.com/Univ-Wyo-Education/S21-4010/Assignments/02/index"
+	"github.com/Univ-Wyo-Education/S21-4010/Assignments/02/lib"
+	"github.com/Univ-Wyo-Education/S21-4010/Assignments/02/mine"
 )
 
 type CLI struct {

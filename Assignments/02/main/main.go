@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Univ-Wyo-Education/S20-4010/Assignments/02/cli"
-	"github.com/Univ-Wyo-Education/S20-4010/Assignments/02/config"
+	"github.com/Univ-Wyo-Education/S21-4010/Assignments/02/cli"
+	"github.com/Univ-Wyo-Education/S21-4010/Assignments/02/config"
 )
 
 func main() {

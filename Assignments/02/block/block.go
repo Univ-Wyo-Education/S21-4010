@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/binary"
 
-	"github.com/Univ-Wyo-Education/S20-4010/Assignments/02/hash"
+	"github.com/Univ-Wyo-Education/S21-4010/Assignments/02/hash"
 )
 
 // GenesisDesc is the constant that marks that a block is a genesis block.
