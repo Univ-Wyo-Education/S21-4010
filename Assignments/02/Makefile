@@ -1,23 +1,30 @@
 
-all: Mining.html build
+PP=`pwd`
+FN=syllabus
+FN1=syllabus-5010
+DIR=../../../F20-1015
+IMG=
+PY=
+
+
+all: Hash.html build
 
 build:
 	( cd main ; go build )
 
-# You can get markdown-cli and compile it yourself.
-#
-# $ cd ~/go/src/github.com/
-# $ mkdir pschlump
-# $ cd pschlump
-# $ git pull https://github.com/pschlump/markdown-cli.git
-# $ go get
-# $ cd markdown-cli
-# $ go build
-#
-FR=../../Lectures/01
 
-Mining.html: Mining.md
-	markdown-cli --input=./Mining.md --output=Mining.html
-	cat ${FR}/css/pre ${FR}/css/markdown.css ${FR}/css/post ../../md.css ${FR}/css/hpre Mining.html ${FR}/css/hpost >/tmp/Mining.html
-	mv /tmp/Mining.html ./Mining.html
+#Hash.html: Hash.md
+#	markdown-cli --input=./Hash.md --output=Hash.html
+#	cat ${FR}/css/pre ${FR}/css/markdown.css ${FR}/css/post ../../md.css ${FR}/css/hpre Hash.html ${FR}/css/hpost >/tmp/Hash.html
+#	mv /tmp/Hash.html ./Hash.html
 
+
+%.md: %.raw.md $(PY) $(IMG)
+	m4 -P $< >$@
+
+%.html: %.md
+	blackfriday-tool ./$< $@
+	echo cat ./${DIR}/md.css $@ >/tmp/$@
+	cat ./${DIR}/css/pre ./${DIR}/css/markdown.css ./${DIR}/css/post ./${DIR}/md.css ./${DIR}/css/hpre $@ ./${DIR}/css/hpost >/tmp/$@
+	mv /tmp/$@ ./$@
+	echo "file://${PP}/$@" >>open.1
