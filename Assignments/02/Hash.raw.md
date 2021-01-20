@@ -38,7 +38,7 @@ is the block hash.
 To get started, first checkout the code for Assignment 2 - this can be done by: (You can go online to it and cut-paste
 the link - that is what I usually do. In the browser go to
 [https://github.com/Univ-Wyo-Education](https://github.com/Univ-Wyo-Education). Then click on the
-`S20-4010` repository. When that comes up there is a green button on the left that says `Clone or
+`S21-4010` repository. When that comes up there is a green button on the left that says `Clone or
 download`. Click on that. Cut and paste the URL.)
 
 (You have probably already done this)
@@ -47,15 +47,15 @@ download`. Click on that. Cut and paste the URL.)
 	cd ~/go/src/github.com/
 	mkdir Univ-Wyo-Education
 	cd Univ-Wyo-Education
-	git clone https://github.com/Univ-Wyo-Education/S20-4010.git
-	cd S20-4010
+	git clone https://github.com/Univ-Wyo-Education/S21-4010.git
+	cd S21-4010
 ```
 
-If you have already cloned the S20-4010 set of information you will need to update it to current.
+If you have already cloned the S21-4010 set of information you will need to update it to current.
 You may have made changes already.
 
 ```
-	cd ~/go/src/github.com/Univ-Wyo-Education/S20-4010
+	cd ~/go/src/github.com/Univ-Wyo-Education/S21-4010
 	git stash
 	git pull
 	git checkout -b hw02
@@ -66,7 +66,7 @@ The `checkout -b` will create a new branch for you to work on.
 Having your own branch (you can name it other than hw2) will allow you to 
 switch back and forth between the original code and your modified code.
 
-Then from the `~/go/src/github.com/Univ-Wyo-Education/S20-4010` directory
+Then from the `~/go/src/github.com/Univ-Wyo-Education/S21-4010` directory
 change directory into assignment 2.
 
 ```sh
@@ -76,7 +76,7 @@ change directory into assignment 2.
 Our starting code is in this directory.  Specifically we will want to
 compile the main program.  It is in ./main.  Cd to that directory.
 You shooed end up in:
-`~/go/src/github.com/Univ-Wyo-Education/S20-4010/a/02`
+`~/go/src/github.com/Univ-Wyo-Education/S21-4010/a/02`
 
 ```sh
 	cd ./main
@@ -212,7 +212,7 @@ My output when running the test.
 	((Mining)) Hash for Block [0000adc29a80f1f0df08c8687c013d179050f5d1b449599e4d1437e4fad23525] nonce [   46734]
 	((Mining)) Hash for Block [000013ce557332aaa68abe3b7bf1be856743a03689a802606a732e81713bb78c] nonce [    4527]
 	PASS
-	ok  	github.com/Univ-Wyo-Education/S20-4010/a/02/mine	0.237s
+	ok  	github.com/Univ-Wyo-Education/S21-4010/a/02/mine	0.237s
 ```
 
 The grader has a somewhat more comprehensive automated test to run with this code (There is one more block
