@@ -35,7 +35,7 @@
 Email: pschlump@uwyo.edu
 
 Phone: (for emergencies) 720-209-7888 - before you call you need to SMS me with who you are and what class you are in so that I add
-you to my address book.  I get far too many robo-calls to answer unknown phone numbers.  Generally I am avalible from 7AM to 10PM.
+you to my address book.  I get far too many robo-calls to answer unknown phone numbers.  Generally I am available from 7AM to 10PM.
 
 ## Office hours:
 
@@ -44,7 +44,7 @@ Office hours are on zoom - I will send out a link via email.
 
 ## Required texts
 
-Textbook: We have a textbook for the 2nd 1/2 of teh class on  Ethereum/Solidity. Solidity has moved from version 5.12 to 5.17 in the past 3 months.
+Textbook: We have a textbook for the 2nd 1/2 of the class on  Ethereum/Solidity. Solidity has moved from version 5.12 to 5.17 in the past 3 months.
 The text book for Go is a free online PDF: [https://www.golang-book.com/books/intro](https://www.golang-book.com/books/intro)
 We will also be using IOHK’s BlockChian. It is programmed in Haskell.
 
@@ -55,18 +55,17 @@ language and become effective in that language.
 
 You must demonstrate working homework to the instructor or to the class grader to pass the class (no matter how many
 points you get). For code developed in Go, test cases will be supplied.  The Go homework are cumulative.
-Assinment 3 depends on getting a working version of 2 etc.
+Assignment 3 depends on getting a working version of 2 etc.
 
 The class will have lectures - pre-record, discussion groups that have attendance taken - you are required to attend
-10 of the 12 discussion topics - there will be multiple times for each topic, and homework.  Some of the homework
-is done using an interactive tool at 
-[https://www.excellent-answers.com/learn-go.com](https://www.excellent-answers.com/learn-go.com).  I will supply
-you with your login to the site.  I am the author of the site so if you have problems please email me.
+the discussion - they will be at 3 different times of the day.   The topic is the same at each
+time so just attend one time.  There are 5 of these.
+
 
 
 ## Required examinations and assignments
 
-There will be 9 or 10 programming assignments over the course of the semester, as well as one midterm and a final exam. Tests
+There will be 9 programming assignments over the course of the semester, as well as one midterm and a final exam. Tests
 will be 800 points. 400 for the midterm, 400 for the final. 1,400 points are from the homework and paper, 100 to 200
 points per assignment.
 
@@ -162,8 +161,6 @@ This is an approximate schedule.  Updates will be noted in class.
 |                          |         |                                                                            |
 |   Jan&nbsp;25,&nbsp;2021 | 2       | Mining walk through.                                                       |
 |                          |         |                                                                            |
-|                          |         | [Assinment 1 Due - Go Hello World and 9 other chunks.  100pts.](https://github.com/Univ-Wyo-Education/S21-4010/blob/master/Assignments/01/Intro-To-Go.md) |
-|                          |         |                                                                            |
 |   Jan&nbsp;25,&nbsp;2021 | 2       | [Merkle Trees](https://en.wikipedia.org/wiki/Merkle_tree), Proof of work, Proof of stake.  IOHK Ouroboros Protocol. |
 |                          |         |                                                                            |
 |   Feb&nbsp;01,&nbsp;2021 | 3       | Economics of BlockChain.  Cheat Grass, Co2, Land Titles.                   |
@@ -171,7 +168,7 @@ This is an approximate schedule.  Updates will be noted in class.
 |   Feb&nbsp;01,&nbsp;2021 | 3       | More on Go complicated stuff; Map synchronization, Go core/panic.          |
 |                          |         | Go interfaces, Go weaknesses.                                              |
 |                          |         |                                                                            |
-|                          |         | [Assinment 2 Due - Mining(hashes) / Merkle Trees (very simple Merkle)](https://xyzzy.com)        |
+|                          |         | [Assinment 1 Due - Go Hello World and 9 other chunks.  100pts.](https://github.com/Univ-Wyo-Education/S21-4010/blob/master/Assignments/01/Intro-To-Go.md) |
 |                          |         |                                                                            |
 |   Feb&nbsp;01,&nbsp;2021 | 3       | Finance: Creating personal wealth, Purposes of a business, Terms and       |
 |                          |         | definitions.                                                               |
@@ -181,6 +178,8 @@ This is an approximate schedule.  Updates will be noted in class.
 |   Feb&nbsp;07,&nbsp;2021 | 4       | Public Private Keys                                                        |
 |                          |         |                                                                            |
 |   Feb&nbsp;07,&nbsp;2021 | 4       | ECDSA & RSA encryption, Quantum Computers and NTRU.                        |
+|                          |         |                                                                            |
+|                          |         | [Assinment 2 Due - Mining(hashes) / Merkle Trees (very simple Merkle)](https://github.com/Univ-Wyo-Education/S21-4010/blob/master/Assignments/02/Hash.md) |
 |                          |         |                                                                            |
 |   Feb&nbsp;14,&nbsp;2021 | 5       | Digital Security.                                                          |
 |                          |         |                                                                            |
@@ -193,11 +192,7 @@ This is an approximate schedule.  Updates will be noted in class.
 |   Feb&nbsp;21,&nbsp;2021 | 6       | Standard Contracts, Simple tokens, Standard tokens, ERC-20, ERC-721,       |
 |                          |         | ERC-1203.                                                                  |
 |                          |         |                                                                            |
-|                          |         | [Assinment 3 Due - Client Server and Transactions.](https://xyzzy.com)                           | 
-|                          |         |                                                                            |
-|                          |         | [Assinment 4 Due - Wallet.](https://xyzzy.com)                                                   |
-|                          |         |                                                                            |
-|                          |         | [Assinment 5 Due - Signed Data - with client server.](https://xyzzy.com)                         |
+|                          |         | [Assinment 3 Due - Client Server and Transactions.](https://github.com/Univ-Wyo-Education/S21-4010/blob/master/Assignments/03/Client-Server.md) |
 |                          |         |                                                                            |
 |   Feb&nbsp;21,&nbsp;2021 | 6       | Finance and Terms, Accounting(history)- Double Entry Book keeping,         |
 |                          |         | Cooking the books.                                                         |
@@ -212,6 +207,8 @@ This is an approximate schedule.  Updates will be noted in class.
 |                          |         |                                                                            |
 |   Feb&nbsp;28,&nbsp;2021 | 7       | Client/Servers part 2.                                                     |
 |                          |         |                                                                            |
+|                          |         | [Assinment 4 Due - Wallet.](https://github.com/Univ-Wyo-Education/S21-4010/blob/master/Assignments/04/Wallet.md) |
+|                          |         |                                                                            |
 |   Mar&nbsp;01,&nbsp;2021 | 8       | Installing NPM and Node, Why use Ethereum, Eth and Gas, Truffle            |
 |                          |         | development system.                                                        |
 |                          |         |                                                                            |
@@ -219,13 +216,15 @@ This is an approximate schedule.  Updates will be noted in class.
 |                          |         |                                                                            |
 |   Mar&nbsp;01,&nbsp;2021 | 8       | What are dApp and web3, Interoperability between chains.                   |
 |                          |         |                                                                            |
+|                          |         | [Assinment 5 Due - Signed Data - with client server.](https://github.com/Univ-Wyo-Education/S21-4010/blob/master/Assignments/05/Signed-Data.md) |
+|                          |         |                                                                            |
 |   Mar&nbsp;07,&nbsp;2021 | 9       | Patterns and How to Learn New Languages: Solidity.                         |
 |                          |         |                                                                            |
 |   Mar&nbsp;07,&nbsp;2021 | 9       | More on ERC-20 and ERC-721 and ERC-1203                                    |
 |                          |         |                                                                            |
 |   Mar&nbsp;07,&nbsp;2021 | 9       | Creating wealth, Jobs in BlockChain, Blockchain economics.                 |
 |                          |         |                                                                            |
-|                          |         | [Assinment 6 Due - Metadata contract - signed documents.](https://xyzzy.com)                     |
+|                          |         | [Assinment 6 Due - Metadata contract - signed documents.](https://github.com/Univ-Wyo-Education/S21-4010/blob/master/Assignments/06/Meta-Data-Contract.md) |
 |                          |         |                                                                            |
 |   Mar&nbsp;14,&nbsp;2021 | 10      | Concurrency in Go, Go routines, Locks, Channels                            |
 |                          |         |                                                                            |
@@ -233,7 +232,7 @@ This is an approximate schedule.  Updates will be noted in class.
 |                          |         |                                                                            |
 |   Mar&nbsp;14,&nbsp;2021 | 10      | Functional programming and contracts (Beginning of IOHK stuff)             |
 |                          |         |                                                                            |
-|                          |         | [Assinment 7 Due - Test-Net ERC-20/ERC-721 based contract.](https://xyzzy.com)                   |
+|                          |         | [Assinment 7 Due - Test-Net ERC-20/ERC-721 based contract.](https://github.com/Univ-Wyo-Education/S21-4010/blob/master/Assignments/07/ERC-Contract.md) |
 |                          |         |                                                                            |
 |   Mar&nbsp;21,&nbsp;2021 | 11      | Insurance companies and Non fungible Tokens                                |
 |                          |         |                                                                            |
@@ -241,7 +240,7 @@ This is an approximate schedule.  Updates will be noted in class.
 |                          |         |                                                                            |
 |   Mar&nbsp;21,&nbsp;2021 | 11      | Automatic Verification of Code and Contracts                               |
 |                          |         |                                                                            |
-|                          |         | [Assinment 8 Due - Familiarize with IOHK/Marlow.](https://xyzzy.com)                             |
+|                          |         | [Assinment 8 Due - Familiarize with IOHK/Marlow.](https://github.com/Univ-Wyo-Education/S21-4010/blob/master/Assignments/08/Cardano-Plutus.md) |
 |                          |         |                                                                            |
 |   Mar&nbsp;28,&nbsp;2021 | 12      | Tokens; Simple and Standard                                                |
 |                          |         |                                                                            |
@@ -250,7 +249,7 @@ This is an approximate schedule.  Updates will be noted in class.
 |                          |         |                                                                            |
 |   Mar&nbsp;28,&nbsp;2021 | 12      | IOHK’s system.  Nix-OS and Contracts.                                      |
 |                          |         |                                                                            |
-|                          |         | [Assinment 9 Due - IOHK/Marlow based state machine contract.](https://xyzzy.com)                 |
+|                          |         | [Assinment 9 Due - IOHK/Marlow based state machine contract.](https://github.com/Univ-Wyo-Education/S21-4010/blob/master/Assignments/09/State-Machine.md) |
 |                          |         |                                                                            |
 |   Apr&nbsp;05,&nbsp;2021 | 13      | Legal Ramifications of BlockChain, ICOs 506(d), Subpart (s)                |
 |                          |         |                                                                            |
