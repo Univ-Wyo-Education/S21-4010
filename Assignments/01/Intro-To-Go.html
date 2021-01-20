@@ -702,9 +702,16 @@ ol {
     display: block;
     list-style-type: decimal;
 }
+.pagebreak { page-break-before: always; }
+.half { height: 200px; }
 </style>
 
 <div class="markdown-body">
+
+<style>
+.pagebreak { page-break-before: always; }
+.half { height: 200px; }
+</style>
 
 <h1>Introduction to Programming in Go</h1>
 
@@ -785,34 +792,44 @@ I used my username in this.  You need to use your github.com username.</p>
 	cd hello-world
 </code></pre>
 
-<p>In Windows you should be in your home directory xyzzy or a similar directory.  In the bash shell from git
+<p>In Windows you should be in your home directory or a similar directory.  In the bash shell from git
 the same commands as on Mac should work (the did for me a few minutes ago).</p>
 
 <p>Cut and paste - or type in (probably better for you) the following program.   These instructions are
 also on the Go download page.  Put it into a file called <code>main.go</code>.</p>
 
-<pre><code class="language-Go">	package main
+<pre><code class="language-Go">package main
 
-	// Your Name - it is important if you want to get credit for your assignment.
-	// Assignment 1.2 hello world - This is important too.  If you want credit.
+// Your Name - it is important if you want to get credit for your assignment.
+// Assignment 1.2 hello world - This is important too.  If you want credit.`
 
-	import &quot;fmt&quot;
+import &quot;fmt&quot;
 
-	func main() {
-		fmt.Printf(&quot;Hello Wonderful World\n&quot;)
-	}
+func main() {
+	fmt.Printf(&quot;Hello Wonderful World\n&quot;)
+}
+
 </code></pre>
 
 <p>To run it:</p>
 
-<pre><code class="language-SH">	go build 
+<pre><code class="language-SH">	go mod init 
+	go build 
 	./hello-world
 </code></pre>
 
-<p>or on Windows</p>
+<p>or on Windows using the <code>bash</code> shell that is installed with git</p>
 
-<pre><code class="language-SH">	go build
+<pre><code class="language-SH">	go mod init 
+	go build
 	./hello-world.exe
+</code></pre>
+
+<p>or on Windows using the <code>powershell</code></p>
+
+<pre><code class="language-SH">	go mod init 
+	go build
+	.\hello-world
 </code></pre>
 
 <p>If you get an error about access an un-exported function, then you failed to capitalize the first
@@ -824,12 +841,20 @@ will cause this error.  <code>fmt.Printf</code> will work.</p>
 <pre><code class="language-SH">	go run hello-world.go
 </code></pre>
 
+<p>You only need to do the <code>go mod init</code> once in a directory, before the 1st <code>go build</code>.</p>
+
 <p>Submit:</p>
 
 <ol>
 <li>A copy of your code.</li>
 <li>Change the <code>fmt.Pr...</code> to <code>fmt.Println(&quot;Hello, 世界&quot;)</code> - re run the code and save the output.
 What is <code>世界</code>?</li>
+<li>Why is it important that you can use Unicode directly in your Go program?</li>
+<li><b>IMPORTANT!</b> check that your name is in the comments in your source code.</li>
+<li><b>IMPORTANT!</b> do not turn in the executable!  It will be large.   When you get done with all 9
+sections of the homework use tar on Mac or Linux or Zip on windows to collect all the sections of
+the homework.  Delete all the executable first - then upload the single file with all 9 sections
+in it.</li>
 </ol>
 
 <h3>References</h3>
@@ -852,6 +877,7 @@ help with this class.</p>
 	$ mkdir hello-world
 	$ cd hello-world
 	$ vi hw.go
+	$ go mod init
 	$ go build
 	$ ./hello-world
 	Hello Wonderful World
@@ -866,6 +892,7 @@ installed.  You can use your favorite text editor instead.  I installed vim usin
 <pre><code>	$ mkdir hello-world
 	$ cd hello-world
 	$ vi hw.go
+	$ go mod init
 	$ go build
 	$ hello-world.exe
 	Hello Wonderful World
@@ -886,27 +913,36 @@ separators.</p>
 <p>Echo should take the command line arguments (after the 0th one, the name of the command) and print them out.
 Cut and paste the following code.  Get it to run.  Compile with <code>go build</code>.   Run it with <code>go run &lt;your file&gt;.go Arguments</code>.</p>
 
-<pre><code class="language-Go">	package main
+<p>Let&rsquo;s build this in the <code>echo1</code> directory at the same level as <code>hellow-world</code>, so</p>
 
-	// Your Name - it is important if you want to get credit for your assignment.
-	// Assignment 1.3 echo command line arguments.
+<pre><code class="language-SH">	$ cd ..
+	$ mkdir echo1
+	$ cd echo1
+	$ go mod init
+</code></pre>
 
-	import (
-		&quot;fmt&quot;
-		&quot;os&quot;
-	)
+<pre><code class="language-Go">package main
 
-	func main() {
-		ags := os.Args[1:]
-		for ii, ag := range ags {
-			if ii &lt; len(ags) {
-				fmt.Printf(&quot;%s &quot;, ag)
-			} else {
-				fmt.Printf(&quot;%s&quot;, ag)
-			}
+// Your Name - it is important if you want to get credit for your assignment.
+// Assignment 1.3 echo command line arguments.
+
+import (
+	&quot;fmt&quot;
+	&quot;os&quot;
+)
+
+func main() {
+	ags := os.Args[1:]
+	for ii, ag := range ags {
+		if ii &lt; len(ags)-1 {
+			fmt.Printf(&quot;%s &quot;, ag)
+		} else {
+			fmt.Printf(&quot;%s&quot;, ag)
 		}
-		fmt.Printf(&quot;\n&quot;)
 	}
+	fmt.Printf(&quot;\n&quot;)
+}
+
 </code></pre>
 
 <ol>
@@ -923,6 +959,12 @@ Cut and paste the following code.  Get it to run.  Compile with <code>go build</
 <li>A copy of your code with your name in it.</li>
 <li>An example (cut and paste) of running this with the arguments <code>aa BB cc</code>.</li>
 </ol>
+
+<p>To Compile and run this</p>
+
+<pre><code>	$ go build
+	$ ./echo1
+</code></pre>
 
 <h3>References</h3>
 
@@ -949,92 +991,81 @@ and MarshallJSON.   You should cut-paste the code, put it into a directory and r
 <p>Create the echo2 directory and <code>cd</code> into it.
 You should be in a directory <code>~/go/src/github.com/&lt;YourGithubUsername&gt;/echo2</code>.</p>
 
+<p>Initialize the project in the echo2 directory.</p>
+
 <p>Edit main.go and put this code in it:</p>
 
-<pre><code class="language-Go">	package main
+<pre><code class="language-Go">package main
 
-	// Your Name - it is important if you want to get credit for your assignment.
-	// Your Email Address 
-	// Assignment 1.4 echo command line arguments and parse arguments.
+// Your Name - it is important if you want to get credit for your assignment.
+// Assignment 1.4 echo command line arguments and parse arguments.
 
-	import (
-		&quot;encoding/json&quot;
-		&quot;flag&quot;
-		&quot;fmt&quot;
-		&quot;io/ioutil&quot;
-		&quot;os&quot;
-	)
+import (
+	&quot;encoding/json&quot;
+	&quot;flag&quot;
+	&quot;fmt&quot;
+	&quot;io/ioutil&quot;
+	&quot;os&quot;
+)
 
-	type ConfigData struct {
-		Name  string
-		Value string `json:&quot;Year&quot;` 
+type ConfigData struct {
+	Name  string
+	Value string
+}
+
+func main() {
+	var Cfg = flag.String(&quot;cfg&quot;, &quot;cfg.json&quot;, &quot;config file for this call&quot;)
+
+	flag.Parse() // Parse CLI arguments to this, --cfg &lt;name&gt;.json
+
+	fns := flag.Args()
+	if len(fns) != 0 {
+		fmt.Fprintf(os.Stderr, &quot;Usage: ./echo2 [-cfg cfg.json] [arg1 ...]\n&quot;)
+		os.Exit(1)
 	}
 
-	func main() {
-		var Cfg = flag.String(&quot;cfg&quot;, &quot;cfg.json&quot;, &quot;config file for this call&quot;)
-
-		flag.Parse() // Parse CLI arguments to this program, --cfg &lt;name&gt;.json
-
-		fns := flag.Args()
-		if len(fns) == 0 {
-			fmt.Fprintf(os.Stderr, &quot;Usage: ./echo2 [-cfg cfg.json] arg1 ...\n&quot;)
-			os.Exit(1)
-		}
-
-		if Cfg == nil {
-			fmt.Printf(&quot;--cfg is a required parameter\n&quot;)
-			os.Exit(1)
-		}
-
-		gCfg, err := ReadConfig(*Cfg)
-		if err != nil {
-			fmt.Fprintf(os.Stderr, &quot;Unable to read confguration: %s error %s\n&quot;, *Cfg, err)
-			os.Exit(1)
-		}
-
-		fmt.Printf(&quot;Congiguration: %+v\n&quot;, gCfg)
-		fmt.Printf(&quot;JSON: %+v\n&quot;, IndentJSON(gCfg))
-
-		for ii, ag := range fns {
-			if ii &lt; len(fns) {
-				fmt.Printf(&quot;%s &quot;, ag)
-			} else {
-				fmt.Printf(&quot;%s&quot;, ag)
-			}
-		}
-		fmt.Printf(&quot;\n&quot;)
+	if Cfg == nil {
+		fmt.Printf(&quot;--cfg is a required parameter\n&quot;)
+		os.Exit(1)
 	}
 
-	func ReadConfig(filename string) (rv ConfigData, err error) {
-		var buf []byte
-		buf, err = ioutil.ReadFile(filename)
-		if err != nil {
-			return ConfigData{}, err
-		}
-		err = json.Unmarshal(buf, &amp;rv)
-		if err != nil {
-			return ConfigData{}, err
-		}
-		return
+	gCfg, err := ReadConfig(*Cfg)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, &quot;Unable to read confguration: %s error %s\n&quot;, *Cfg, err)
+		os.Exit(1)
 	}
 
-	func IndentJSON(v interface{}) string {
-		s, err := json.MarshalIndent(v, &quot;&quot;, &quot;\t&quot;)
-		if err != nil {
-			return fmt.Sprintf(&quot;Error:%s&quot;, err)
+	fmt.Printf(&quot;Congiguration: %+v\n&quot;, gCfg)
+
+	for ii, ag := range fns {
+		if ii &lt; len(fns) {
+			fmt.Printf(&quot;%s &quot;, ag)
 		} else {
-			return string(s)
+			fmt.Printf(&quot;%s&quot;, ag)
 		}
 	}
+	fmt.Printf(&quot;\n&quot;)
+}
+
+func ReadConfig(filename string) (rv ConfigData, err error) {
+	var buf []byte
+	buf, err = ioutil.ReadFile(filename)
+	if err != nil {
+	}
+	err = json.Unmarshal(buf, &amp;rv)
+	if err != nil {
+	}
+	return
+}
+
 </code></pre>
 
 <p>Create a 2nd file - call it cfg.json with:</p>
 
 <pre><code class="language-JSON">{
-	&quot;Name&quot;: &quot;Corwin&quot;,
-	&quot;Year&quot;: &quot;100&quot;,
-	&quot;Value&quot;: &quot;200&quot;
+	&quot;Name&quot;: &quot;Corwin&quot;
 }
+
 </code></pre>
 
 <h3>Read Code</h3>
@@ -1075,6 +1106,8 @@ set the year field to 2018.</p>
 <p>Use the following structure to read a JSON file.  Create a program that will read
 JSON in, print it, write it out in a new JSON file.   Get the file name for the input
 and output from the command line.</p>
+
+<p>Create a directory <code>read-json1</code> to for this section.</p>
 
 <p>Add a map/dictionary field in the JSON input that is</p>
 
@@ -1124,13 +1157,20 @@ and output from the command line.</p>
 
 <p>Goal: create a go package and a test for that package.</p>
 
+<p>Create a directory <code>mkPkg</code> to for this section.</p>
+
+<pre><code>	$ cd ..
+	$ mkdir mkPkg
+	$ cd mkPkg
+	$ go init mod
+</code></pre>
+
 <p>Create a new directory inside your github.com/username.   This example will use <code>pschlump</code> as the username.
 You need to substitute your github.com user name.</p>
 
-<pre><code>	cd
-	mkdir -p ~/go/src/github.com/pschlump/mkPkg/test1
-	cd ~/go/src/github.com/pschlump/mkPkg/test1
-	vi test1.go
+<pre><code>	$ mkdir -p test1
+	$ cd test1
+	$ vi test1.go
 </code></pre>
 
 <p>In this case I created 2 directories, <code>mkPkg</code> and inside it <code>test1</code>.</p>
@@ -1192,7 +1232,7 @@ Don&rsquo;t put blanks in your directory names.</p>
 
 <p>to run the test in the directory <code>mkPkg/test1</code>:</p>
 
-<pre><code class="language-SH">	go test
+<pre><code class="language-SH">	$ go test
 </code></pre>
 
 <p>It should print out &lsquo;PASS&rsquo; when the test work.  If the test fails you should get errors.</p>
@@ -1213,7 +1253,7 @@ level to <code>~/go/src/github.com/pschlump/mkPkg</code>.</p>
 	import (
 		&quot;fmt&quot;
 
-		&quot;github.com/pschlump/myPkg/test1&quot; // import package you created
+		&quot;github.com/...some-path.../myPkg/test1&quot; // import package you created
 	)
 
 	func main() {
@@ -1222,6 +1262,10 @@ level to <code>~/go/src/github.com/pschlump/mkPkg</code>.</p>
 		// add call to TripleValue at this point
 	}
 </code></pre>
+
+<p>Note that &hellip;some-path&hellip; is whatever path you are using for this.  It could be
+<code>Univ-Wyo-Education/S21-4010/Assignments/01</code> if you did your homework in a checked out copy of
+the class.</p>
 
 <p>Submit:</p>
 
@@ -1241,6 +1285,8 @@ level to <code>~/go/src/github.com/pschlump/mkPkg</code>.</p>
 <h2>(1.7) Printing (print1.go) (10pts)</h2>
 
 <p>The <code>fmt</code> package provides lots of useful output options. Go and read about <a href="https://golang.org/pkg/fmt/">fmt</a>.</p>
+
+<p>In a directory, <code>print1</code></p>
 
 <p>In the following program</p>
 
@@ -1324,6 +1370,8 @@ level to <code>~/go/src/github.com/pschlump/mkPkg</code>.</p>
 and modify the code to take the input and output file names from the command line.   Go and read about
 <code>defer</code> and see how it is used.</p>
 
+<p>In a directory, <code>copy-file</code>.</p>
+
 <pre><code class="language-SH">	copy-file input-file-name output-file-name
 </code></pre>
 
@@ -1357,7 +1405,9 @@ and a note with your name and email address.</li>
 
 <h2>(1.9) Hash and a simple test in Go (ksum.go) (30pts)</h2>
 
-<p>This is the first set of code that we will directly use in building our blockchain.</p>
+<p>This is the first set of code that we will directly use in building our Blockchain.</p>
+
+<p>Put this into a directory, <code>ksum</code>.</p>
 
 <p>A hash is a number, usually large, that maps a set of data into a unique number.
 A different set of data will result in a different hash. The file <code>file1</code>
@@ -1447,7 +1497,7 @@ func Keccak256(data ...[]byte) []byte {
 
 <p>After you create/copy this code into a file, in a directory called ksum, you will need to</p>
 
-<pre><code>	go get
+<pre><code>	$ go mod init
 </code></pre>
 
 <p>to have Go pull in <code>github.org/x/crypto/sha3</code> package.
@@ -1477,11 +1527,13 @@ Report the error if it occurs.  You will not need a type cast to pass the byte s
 
 <ol>
 <li>Test your code with file1, file2.txt, file3 (download from the following locations):
-<a href="https://github.com/Univ-Wyo-Education/S20-4010/tree/master/Assignments/01/file1">https://github.com/Univ-Wyo-Education/S20-4010/tree/master/Assignments/01/file1</a>,
-<a href="https://github.com/Univ-Wyo-Education/S20-4010/tree/master/Assignments/01/file2.txt">https://github.com/Univ-Wyo-Education/S20-4010/tree/master/Assignments/01/file2.txt</a>,
-<a href="https://github.com/Univ-Wyo-Education/S20-4010/tree/master/Assignments/01/file3">https://github.com/Univ-Wyo-Education/S20-4010/tree/master/Assignments/01/file3</a> . Save
+<a href="https://github.com/Univ-Wyo-Education/S21-4010/tree/master/Assignments/01/file1">https://github.com/Univ-Wyo-Education/S21-4010/tree/master/Assignments/01/file1</a>,
+<a href="https://github.com/Univ-Wyo-Education/S21-4010/tree/master/Assignments/01/file2.txt">https://github.com/Univ-Wyo-Education/S21-4010/tree/master/Assignments/01/file2.txt</a>,
+<a href="https://github.com/Univ-Wyo-Education/S21-4010/tree/master/Assignments/01/file3">https://github.com/Univ-Wyo-Education/S21-4010/tree/master/Assignments/01/file3</a> . Save
 the output.  Submit the output with the hashes.   Test your code with some other files of your choice.   Submit the output from
-that with the files that you used.</li>
+that with the files that you used.<br /></li>
+<li>Windows Note: You need to change the behavior of the windows exporter to show extensions.  In windows 10 look for the developer configuration and turn that on.</li>
+<li>Windows Note: It is international that file1 and file3  do not have any extension.</li>
 <li>your code for doing this (remember your name in the program)</li>
 </ol>
 
@@ -1493,6 +1545,7 @@ The good things about go are:</p>
 <ol>
 <li>The go compiler is really fast.</li>
 <li>The code is statically linked and optimized.</li>
+<li>Cross compile for Linux and different architectures like Web Assembler is built in.</li>
 <li>The set of tools for the language extensive ( go vet, golint, testing, flame graphs etc. )</li>
 <li>The garbage collector is revolutionary.</li>
 <li>It matches with modern hardware.</li>

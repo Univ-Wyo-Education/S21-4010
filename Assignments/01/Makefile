@@ -1,25 +1,29 @@
 
-all: Intro-To-Go.html
+PP=`pwd`
+DIR=../../../F20-1015
+IMG= go-download.png
+PY= file1 file2.txt file3
 
-FR=../../Lectures/01
+all: Intro-To-Go.md Intro-To-Go.html
 
-Intro-To-Go.html: Intro-To-Go.md
-	markdown-cli --input=./Intro-To-Go.md --output=Intro-To-Go.html
-	cat ${FR}/css/pre ${FR}/css/markdown.css ${FR}/css/post ../../md.css ${FR}/css/hpre Intro-To-Go.html ${FR}/css/hpost >/tmp/Intro-To-Go.html
-	mv /tmp/Intro-To-Go.html ./Intro-To-Go.html
+build:
+	(cd hello-world; go run hw.go)
+	(cd ans; go build)
+	(cd echo1; go build)
+	(cd echo2; go build)
+	(cd ksum; go build)
+	(cd mkPkg; go build)
+	(cd print1; go build)
+	(cd read-json1; go build)
 
-test: test01 test02
-.PHONEY: test test01 test02
 
-test01:
-	( cd hello-world ; go build ; ./hello-world ) >,a
-	diff ,a ref/hw.out
+%.md: %.raw.md $(PY) $(IMG)
+	m4 -P $< >$@
 
-test02:
-	( cd echo1 ; go build ; ./echo1 a b c X ) >,b
-	diff ,b ref/echo1.out
-
-clean:
-	rm ,a ,b echo1/echo1 hello-world/hello-world ksum/ksum
-
+%.html: %.md
+	blackfriday-tool ./$< $@
+	echo cat ./${DIR}/md.css $@ >/tmp/$@
+	cat ./${DIR}/css/pre ./${DIR}/css/markdown.css ./${DIR}/css/post ./${DIR}/md.css ./${DIR}/css/hpre $@ ./${DIR}/css/hpost >/tmp/$@
+	mv /tmp/$@ ./$@
+	echo "file://${PP}/$@" >>open.1
 

@@ -5,7 +5,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/pschlump/myPkg/test1" // import package you created
+	"github.com/Univ-Wyo-Education/S21-4010/Assignments/01/mkPkg/test1"
 )
 
 func main() {
