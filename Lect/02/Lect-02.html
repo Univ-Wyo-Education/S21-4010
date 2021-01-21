@@ -702,97 +702,191 @@ ol {
     display: block;
     list-style-type: decimal;
 }
+.pagebreak { page-break-before: always; }
+.half { height: 200px; }
 </style>
 
 <div class="markdown-body">
 
-<h2>Lecture 02 - What is a BlockChain - more on Go.</h2>
+<h2>Why Go?</h2>
 
-<h2>News</h2>
+<p>Why use Go?  Why is Go an important language to know?</p>
+
+<p>A little bit of history on computer architecture.</p>
+
+<p>About 1979 Bell Labs folks were porting the original vision of Unix from a PDP-7 to a PDP-11.
+This meant that they were going from 8k words of memory to 32k works of memory.  The computer
+had a single CPU processor.</p>
+
+<p>Computer languages were designed to reflect this &ldquo;single processor&rdquo; world.  C, became the
+most popular language and is reflected in the syntax and constructs of other languages
+like C++, Java, JavaScript (ECMA Script 262) and a wide variety of other programming
+languages.   Java&rsquo;s virtual machine (JVM) was build as an emulator of a single processor
+system.  There are fundamental assumptions in Java and many other programming languages
+that you are running on a single processor system.</p>
+
+<p>By 2000 (30+ years later) multi processor systems were starting to be available.
+C was still the top language.</p>
+
+<p>In 2020 you can get a server wit 96 CPU&rsquo;s and 1 terabyte of memory for around $50k.</p>
+
+<p>So we have 1-cpu designed languages with 96-cpu machines.  For some applications
+in Java like IBM WebSphere and Python&rsquo;s threading package you can run 2 threads
+on each CPU.  It is very hard to get threads to not step on each other - the code
+requires a LOT of effort to get correct.  In the case of the JVM and the python
+internal &ldquo;machine&rdquo; there are assumptions that you are on a single CPU.  For other
+languages that are compiled like C the assumption is at the compiler level.</p>
+
+<p>The reason that I bring up Java and the JVM is that there are lots of languages
+that run on the JVM like Closure, Jython, Kotlin.   I like and use some of
+these languages.</p>
+
+<p>Three Languages have adapted or been designed to work in this multi-cpu world.
+JavaScript (node.js) is the weakest of the three.  It allows for callbacks
+but still assumes that you are on a single CPU.  This gives you asynchronous
+IO but fails to address other concurrency problems.</p>
+
+<p>Rust addresses a number of the concurrency problems head on.  It is a hard
+to learn language.    This is because it detects all merry leeks at compile
+time.  Rust (if you take the time to get good at it) is the fastest and
+best language.</p>
+
+<p>Go is a simple easy to learn language.  It addresses memory leeks with a
+concurrent garbage collector.  This is really important.  It addresses
+multi-CPUs with a built in set of super-light weight threads called
+Go-Routines.   With JVM on a 96 CPU box we will get our best results
+with about 180 threads.  With Go on the same box we can get 5 to 20
+times the throughput with 25 to 100 million concurrent Go-Routines.
+This difference in performance is that the language handles the
+concurrency and the garbage collector.</p>
+
+<p>The situation for multi-CPU is about to get much more dramatic.
+Apple M1 silicon has for it&rsquo;s low end MacBook Air a 4-fast,4-efficient
+CPU design.  Apple is working on the M1X for it&rsquo;s high end
+laptops with a 20 CPU design and for its desktops a 32 to 128 CPU
+design.   This is in your desktop computer!   Amazon Web Services (AWS)
+is working on a 65 to 256 CPU design for servers.  The same $50k U-6
+box that you can get with 96 CPUs AWS will be building with 100+ 256CPU
+chips and 20 Tb of memory.  The power consumption will be less that
+<sup>1</sup>&frasl;<sub>2</sub> of current boxes - cutting the cooling (Air Conditioning) requirements
+in <sup>1</sup>&frasl;<sub>2</sub>.  This meas that it will take <sup>1</sup>&frasl;<sub>4</sub> the power to run.  So you get
+a 25000 CPU box for $50K.</p>
+
+<p>Single CPU languages like the JVM ones and others that rely on
+threads are going to slowly disappear.</p>
+
+<p>The exception to this is C.  C was designed to build supper efficient
+systems code for small CPU&rsquo;s.  Remember that the first version of
+Unix ran on a PDP-7 with 8k words of memory.  That was OS and the
+users progam in 8k.    The rise of IoT systems like the Linux system
+in the light bulb above my head are ideal for a language like C.
+It is a single-CPU with only 64k of memory.  This is why we see
+a resurgence in C programming.</p>
+
+<p>And&hellip; yes - I can login to my light bulb and use the vi` editor
+on it.  It is running a 32 bit ARM based CPU and I can cross
+compile C code and run it on my light bulb.</p>
+
+<p>For server based systems languages that address this multi-CPU
+world are going to dominate.  That is Go, Rust and node.js at the moment.
+Since Rust is hard to learn and node.js is only a <sup>1</sup>&frasl;<sub>2</sub> solution to
+the multi-CPU problem - we are going to learn Go.</p>
+
+<p>We will be using Go for the first <sup>1</sup>&frasl;<sub>2</sub> of the semester - then move
+on to building some smart contracts in a JavaScript based
+language (Solidity).  It is possible that we will do some
+work with IOHK&rsquo;s smart contract language - I am working on that.</p>
+
+<p>So for this semester Go, some HTML/CSS/JavaScript, then
+a second or third language to tackle.   The most important
+thing to walk away from this is - <em>How to Learn a Programming Language</em></p>
+
+<h2>How to Learn a Programming Language</h2>
+
+<p>There are a bunch of fundamental concepts in most languages.
+This is not how a language like Haskell or Closure works.
+Pure functional languages are quite different.   This is how
+most C-Derived languages work.  Go falls into this category.
+When you get this set of stuff down you know enough to write
+simple programs in the language.  This list applies to Go, Kotlin,
+Java and 500 other languages.  Integrated Development Environments (IDSs)
+go to huge lengths to hide some of these details - but usually fail.
+I am going to work through this list both at the command line using vi
+and using Visual Studio Code - an IDE.  VSCode has the best Go debugger.
+On a daily basis I use go at the command line with VI as my primary
+editor.  Remember all of those IoT devices.  Most of them have a
+command line and a vi editor.  Also note that I maintain systems
+that are remote - in Texas, Utah, Tokyo Japan and other locations.
+You cant use a GUI like VSCode on a remote system because it
+assumes that you have a mouse.  A mouse is a real-time hardware
+system and you have to be physically close to the system for it
+to work.  Between Wyoming and Tokyo the fastest communication is
+the speed of light - and about every 8 inches is 1 millionth
+of a second.  There are a lot of 8 inch distances to the other
+side of the world.   A mouse is basically unusable on a Graphical
+User Interface at that distance.  Vi and a command line work
+just fine.</p>
 
 <ol>
-<li>Canadian Steel / Supply chain tracking on blockchain.</li>
-<li>LinkedIn ranks blockchain as the number one technology skill companies need in 2020.</li>
-<li>Oil &amp; Gas Blockchain Consortium goes ahead with project around expense approval.</li>
+<li>How to install / run / compile code (Hello World)</li>
+<li>How to test code.</li>
+<li>How are files organized</li>
+<li>What is the main program</li>
+<li>Objects or Interfaces</li>
+<li>Functions or Methods</li>
+<li>Package Management</li>
+<li>if else</li>
+<li>Loops</li>
+<li>How data is passed to functions</li>
+<li>Maps/Dictionaries</li>
+<li>Structures</li>
+<li>File IO</li>
+<li>Network IO</li>
+<li>What is special about this language.</li>
 </ol>
 
-<h2>Question: What is a <strong>hash</strong>?</h2>
+<h2>What is special about Go?</h2>
 
-<ol>
-<li><p>(math) a mapping form a range to a domain.</p></li>
+<p>Go uses interfaces not objects.  This is better system than
+object oriented programming.
+You can use interfaces to build object like code - but why bother?
+The interface based code is a better solution that is easier to
+understand and test.</p>
 
-<li><p>Text to a number.</p>
+<p>Go has the worlds best garbage collector.  Letting the language
+do the memory management turns out to be a huge productivity
+boost.  You can cut development in time in <sup>1</sup>&frasl;<sub>2</sub> by using a
+garbage collector.  The real advantage of Java over C is not
+the object oriented - it is the garbage collector.  C++ shows
+that you can have objects in a C like language.</p>
 
-<pre><code>	abc               275f20377d6574b67399702947cb56849d2e02f7112c1d021603346c345b37f8
-	abd               3212601953780d3a8de118531b87bf6183edb8c81baf6982fdca260033a5f29b
-	war-and-peace.txt 67c570b0e09d70225d739aec9a7ea91631df1ea06ba44f0c9d9fe99e45f41756
-</code></pre></li>
+<p>The problem with the JVM (and most other systems like Python)
+garbage collector is that you can not use the entire machine.
+In a realistic world you can use 20% of the machine so that
+there is enough left over when you garbage collect to that your
+application will not stall during garbage collection.  Two
+years ago Java improved it&rsquo;s garbage collector and now you
+can use about 27% of the machine.  Go&rsquo;s garbage collector
+let&rsquo;s you use 80% to 90% of the macing - and there is no
+noticeable lag when it garbage collects.  Inf fact if you
+don&rsquo;t produce enough garbage you will get weird
+performance out of Go.  This is an invisible but valuable
+feature of the language.</p>
 
-<li><p>Different kinds of hash, MD5, SHA1, SHA256, SHA3, SHA512, Keccak256.</p></li>
-</ol>
+<p>Go has built in concurrency and concurrency controls.  This moves
+concurrency from a hot-patch like threads into the language
+itself.   It is practical to run millions of Go-Routines at
+once.   Go also has locks and communication channels.  This
+let&rsquo;s you build fast reliable systems.  Companies like Netflix
+and CloudFront have converted to all Go back ends.</p>
 
-<h2><strong>attestation</strong> - Definition of attestation - From Websters Dictionary.</h2>
-
-<p><a href="https://www.merriam-webster.com/dictionary/attestation">https://www.merriam-webster.com/dictionary/attestation</a>
-Faire Use - this is a quote.</p>
-
-<ol>
-<li>an act or instance of attesting something: such as
-
-<ol>
-<li>: a proving of the existence of something through evidence
-… a complete and formal attestation of your innocence. —Edward Bulwer-Lytton</li>
-<li>: an official verification of something as true or authentic the notary&rsquo;s attestation of the will</li>
-</ol></li>
-<li>the proof or evidence by which something (such as the usage of a word) is attested the earliest attestation of the term in print</li>
-</ol>
-
-<h2>Economics of Blockchain</h2>
-
-<p>In 2009 - bitcoin invented.</p>
-
-<p>In 2013 - smart contracts - Ethereum.</p>
-
-<p>In 2020 - 4% of transactions in 6 African countries on it.
-China and Russia are moving to replace national currency with it.
-Goldman Sacks / Apple are using it.  Visa expects $1T in transactions on it.</p>
-
-<p>Ability to create trust between non-trusting parties.</p>
-
-<p>Ability to create economic systems.</p>
-
-<p>Merick - shipping 40% decrease in shipping times.  World wide $380 Billion in trade.  90% of all the goods
-in the world are moved by ship.  38 days average shipping time. A 40% reduction is dropping that to 23 days.
-Difference is 15 days.  40% of 380 billion is 152 billion in capital that is not tied up - at an average
-capital cost of 10% = 15.2 billion - over the 23 days.  <sup>15</sup>&frasl;<sub>365</sub> * 15.2 billion. &ndash; About 0.62 billion.</p>
-
-<p>Estonia - All titles and property on the chain.  In US 5.51 Million Houses.  Average title search $3821.
-Title search in Estonia, $23.33 each.  Title insurance $1408.  My calculation $19 billion a year.</p>
-
-<p>Marshal Islands - off of the dollar and onto a blockchain.   The estimate is that the government will
-save around $5M a year or about $90 per resident a year.  For entire US 327 million - that is $29 billion
-dollars.</p>
-
-<p>Over 22 accredited educational educational institutions now issuing certificates based on blockchain.
-(Especial Interest in this because this is our project)</p>
-
-<p>Perspective on 28 or 29 billion - free college tuition for all students in the United States is
-estimated to cost 75 billion.</p>
-
-<p>State of Nevada - Marriage license on blockchain.</p>
-
-<p>The largest &ldquo;blockchain&rdquo; sale is valued at 103 million.   In a commercial property in Zurich.</p>
-
-<h2>Go - Intro</h2>
-
-<p>Assignment 1 - Due Mon Feb 3</p>
-
-<ol>
-<li>Hello World - walk through</li>
-<li>Echo - walk through</li>
-<li>Marshal and Unmarshal of data - walk through</li>
-<li>For loops</li>
-</ol>
+<p>This last important feature of Go is that it is really fast
+to compile.  I can use Maven and build a Java 250,000 line system - when
+I re-compile I can probably go to lunch and come back and
+it will still be working on the compile.   Go uses a modern
+compiler design and it will compile and link a 250,000 line
+progam in under 2 seconds.      This has a huge impact on
+programmer productivity.</p>
 
 </div>
 
