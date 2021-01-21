@@ -1,3 +1,4 @@
+## Lecture 2 - Why Go, Learning a Language
 
 ## Why Go?
 
