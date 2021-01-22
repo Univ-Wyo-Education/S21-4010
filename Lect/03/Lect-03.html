@@ -702,11 +702,18 @@ ol {
     display: block;
     list-style-type: decimal;
 }
+.pagebreak { page-break-before: always; }
+.half { height: 200px; }
 </style>
 
 <div class="markdown-body">
 
-<h1>More On Go</h1>
+<style>
+.pagebreak { page-break-before: always; }
+.half { height: 200px; }
+</style>
+
+<h1>More On Go / What is Special about Go</h1>
 
 <p>&ldquo;It is not the strongest of the species that survives, nor the most intelligent.
 It is the one that is the most adaptable to change.&rdquo;
@@ -715,11 +722,9 @@ It is the one that is the most adaptable to change.&rdquo;
 <h2>1st. the news</h2>
 
 <ol>
-<li>AU - Research - linear scaling (similar to blockchain) 8000 tx per sec, don&rsquo;t specify latency.</li>
-<li>Binance, the world’s largest cryptocurrency exchange by adjusted trading volume, has just made it easier for users to buy cryptocurrencies.</li>
-<li>ETH will reach 1M Tx per sec.</li>
-<li>California bill passed that defines things like &ldquo;digital signature&rdquo;.</li>
 <li>Land registry in Mexico is moving onto blockchain.</li>
+<li>FED Secretary, Not a fan of bitcoin: <a href="https://markets.businessinsider.com/currencies/news/bitcoin-price-cryptocurrency-should-be-curtailed-terrorism-concerns-yellen-2021-1-1029985692">https://markets.businessinsider.com/currencies/news/bitcoin-price-cryptocurrency-should-be-curtailed-terrorism-concerns-yellen-2021-1-1029985692</a></li>
+<li>Double Spend! <a href="https://markets.businessinsider.com/currencies/news/bitcoin-price-double-spend-flaw-critical-report-suggests-2021-1-1029990921">https://markets.businessinsider.com/currencies/news/bitcoin-price-double-spend-flaw-critical-report-suggests-2021-1-1029990921</a></li>
 </ol>
 
 <h2>2nd. Purpose of a business</h2>
@@ -729,29 +734,17 @@ It is the one that is the most adaptable to change.&rdquo;
 <p>What is &ldquo;Fiduciary Responsibility&rdquo;.  It means that you have been placed / are in a
 position of legal responsibility for managing somebody else&rsquo;s money.</p>
 
-<h2>Go</h2>
+<h2>Go - What is Special</h2>
 
-<ol>
-<li>Functions</li>
-</ol>
+<h3>Compile Speed</h3>
 
-<p>Parts of a function</p>
+<p>It is really fast.</p>
 
-<pre><code>	// Name will do a b c d.
-	func Name ( i1 Type1, i2 Type2 ) ( o1 Type1, o2 Type2 ) {
-		// Comment in body
-	}
-</code></pre>
+<h3>Garbage Collector</h3>
 
-<p>Observations
-    1. Name starts with a capital, therefore exported from package.
-    2. You can have more than 1 return value.
-    3. &ldquo;error&rdquo; is usually the last return value.
-    4. Comments on functions need to start with the name of the function.</p>
+<p>It is really fast and incremental.</p>
 
-<ol>
-<li>Maps</li>
-</ol>
+<h3>Maps</h3>
 
 <p>Go has dictionary/maps</p>
 
@@ -770,9 +763,7 @@ position of legal responsibility for managing somebody else&rsquo;s money.</p>
     3. You can test to see if you have an un-allocated map by comparing to <code>nil</code>.
     4. You can find out if a value is in a map.</p>
 
-<ol>
-<li>Slices (Arrays)</li>
-</ol>
+<h3>Slices (Arrays)</h3>
 
 <p>An Array</p>
 
@@ -804,15 +795,11 @@ position of legal responsibility for managing somebody else&rsquo;s money.</p>
 
 <p>Pitfalls!</p>
 
-<ol>
-<li>Strings</li>
-</ol>
+<h3>Strings</h3>
 
 <p>Strings are immutable!  Hot to denote a string.</p>
 
-<ol>
-<li>Maps</li>
-</ol>
+<h3>Maps</h3>
 
 <p>A map is <code>var Name map[HashKeyType]ElementType</code></p>
 
@@ -841,19 +828,52 @@ position of legal responsibility for managing somebody else&rsquo;s money.</p>
 	_, found2 := Hw[&quot;I90&quot;]
 </code></pre>
 
-<ol>
-<li>io &amp; cli</li>
-</ol>
+<h3>Go Routines</h3>
 
-<p>Output:</p>
+<p>Just call a function and have it run concurrency:</p>
 
-<pre><code>	fmt.Printf ( &quot;Format %s\n&quot;, &quot;string&quot; )
+<pre><code>	go QrDispatch()
 </code></pre>
 
-<p>CLI</p>
+<p>Or put a function inline and have it run concurrently:</p>
 
-<pre><code>	fmt.Printf ( &quot;%s\n&quot;, os.Args[] )
+<pre><code>	// ticker on channel - send once a minute
+	go func(n int) {
+		for {
+			time.Sleep(time.Duration(n) * time.Second)
+			timeout &lt;- &quot;timeout&quot;
+			n_ticks++
+		}
+	}(gCfg.TickerSeconds)
+
 </code></pre>
+
+<p>Note that the 2nd example is a &ldquo;closure&rdquo; where the value passed is then part of the function.</p>
+
+<p>Note the <code>&lt;-</code> operator is a inter-process communication operator (channel) built right into the language.</p>
+
+<p>Note the <code>time.Sleep()</code> call.  This sleep is on the go-routine, not the main code.</p>
+
+<h3>Concurrency Control</h3>
+
+<p>With concurrency comes concurrency control!  This is what JavaScript(node.js) is missing.</p>
+
+<p>Also the Go model is much more robust than other languages like Rust.</p>
+
+<p>Also this is better than languages like Python that just don&rsquo;t have any!</p>
+
+<p>Declare a synchronization lock.</p>
+
+<pre><code>import &quot;sync&quot;
+...
+var aLock sync.Mutex
+...
+
+aLock.Lock()	
+aLock.Unlock()	
+</code></pre>
+
+<p>Copyright &copy; University of Wyoming, 2021.</p>
 
 </div>
 

@@ -8,8 +8,6 @@ PY=
 
 all: ${FN}.html ${FN1}.html 
 
-
-
 %.md: %.raw.md $(PY) $(IMG)
 	m4 -P $< >$@
 
