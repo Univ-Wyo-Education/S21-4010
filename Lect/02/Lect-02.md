@@ -1,5 +1,23 @@
 ## Lecture 2 - Why Go, Learning a Language
 
+[More on Why Go - https://youtu.be/tGALot8nYXI](https://youtu.be/tGALot8nYXI)<br>
+[Learn Go - https://youtu.be/sxc-KS38WTk](https://youtu.be/sxc-KS38WTk)<br>
+[Go Main Program - https://youtu.be/tHGRdyL2kU4](https://youtu.be/tHGRdyL2kU4)<br>
+[CLI Input and File Input - https://youtu.be/Qelw-XAsTvI](https://youtu.be/Qelw-XAsTvI)<br>
+[JSON Format - https://youtu.be/Qelw-XAsTvI](https://youtu.be/Qelw-XAsTvI)<br>
+[Read JSON data - https://youtu.be/VhDXh8YvLC8](https://youtu.be/VhDXh8YvLC8)<br>
+[Modules in Go and testing - https://youtu.be/spG8u6-FiAM](https://youtu.be/spG8u6-FiAM)<br>
+
+From Amazon S3 - for download (same as youtube videos)
+
+[More on Why Go](http://uw-s20-2015.s3.amazonaws.com/4010-L02-pt0-Why-Go.mp4)<br>
+[Learn Go](http://uw-s20-2015.s3.amazonaws.com/4010-L02-pt1-learn-go.mp4)<br>
+[Go Main Program](http://uw-s20-2015.s3.amazonaws.com/4010-L02-pt2-go-main.mp4)<br>
+[CLI Input and File Input](http://uw-s20-2015.s3.amazonaws.com/4010-L02-pt3-CLI-and-File-Input.mp4)<br>
+[JSON Format](http://uw-s20-2015.s3.amazonaws.com/4010-L02-pt4-JSON-format.mp4)<br>
+[Read JSON data](http://uw-s20-2015.s3.amazonaws.com/4010-L02-pt5-Read-JSON-File.mp4)<br>
+[Modules in Go and testing](http://uw-s20-2015.s3.amazonaws.com/4010-L02-pt6-Module-and-Testing.mp4)<br>
+
 ## Why Go?
 
 Why use Go?  Why is Go an important language to know?
@@ -130,11 +148,11 @@ just fine.
 5. Package Management
 6. if else
 6. Loops
-7. How data is passed to functions
-8. Maps/Dictionaries
+9. How data is passed to functions
+9. Maps/Dictionaries
 8. Structures
 8. File IO
-8. Network IO
+9. Network IO
 9. What is special about this language.
 
 

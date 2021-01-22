@@ -702,148 +702,36 @@ ol {
     display: block;
     list-style-type: decimal;
 }
+.pagebreak { page-break-before: always; }
+.half { height: 200px; }
 </style>
 
 <div class="markdown-body">
 
-<h2>Lecture Wed Jan 30 08:54:00 MST 2019</h2>
+<h2>Lecture Wed Jan 20 18:50:26 MST 2021</h2>
+
+<p><a href="https://youtu.be/kafOqhjlh08">Syllabus and Class Overview - part 1 - https://youtu.be/kafOqhjlh08</a><br>
+<a href="https://youtu.be/vSN8L-AjMLQ">Syllabus and Class Overview - part 2 - why Go - https://youtu.be/vSN8L-AjMLQ</a><br></p>
+
+<p>From Amazon S3 - for download (same as youtube videos)</p>
+
+<p><a href="http://uw-s20-2015.s3.amazonaws.com/4010-L01-pt1-syllabus.mp4">Syllabus and Class Overview - part 1</a><br>
+<a href="http://uw-s20-2015.s3.amazonaws.com/4010-L01-pt2-syllabus-and-why-Go.mp4">Syllabus and Class Overview - part 2 - why Go</a><br></p>
 
 <h2>Overview</h2>
 
 <h3>Lecture 01 - Syllabus and Class Overview</h3>
 
 <ol>
-<li><p>A little bit of background on the instructor</p>
-
-<ol>
-<li>pschlump@uwyo.edu, or pschlump@gmail.com</li>
-<li><a href="https://github.com/Univ-Wyo-Education/S20-4010">https://github.com/Univ-Wyo-Education/S20-4010</a></li>
-<li>(for emergencies between 7:00AM and 9:00PM) 720-209-7888 (cell)</li>
-<li>This is a &ldquo;practical&rdquo; class.</li>
-<li>Class Goal - have every student in this class be able to work effectively
-in the Blockchain world.   There are students in this class
-that are from other departments.  The class has been structured to
-take this into account.</li>
-</ol></li>
-
-<li><p>Class policy - UW requires that I talk about cheating.
-stackoverflow.com and Google are your fiends in this class - give credit where
-credit is due.  warning: stackoverflow.com on ethereum/solidity
-is badly out of date becuse the technology is changing really fast.
-If you copy from the web - I expect a comment and a link (URL) to the
-source of where you got your copy.  I expect an explanation of what and
-why you are grabbing someting from the web.  I expect an analysis of
-what license the content is under, MIT, GPL2, GPL3, CC, CC-BY etc.</p></li>
-
-<li><p>Cover some material on &ldquo;git&rdquo; and how to use it.</p></li>
-
-<li><p>70% from homework, 40% from tests.  Midterm and Final.
-There will be 2 projects for the class.
-You will have to give a live, in person, demo of both of your projects
-and you <strong>must</strong> get them to work.  They are required to
-pass the class.</p></li>
-
-<li><p>Class Points Total</p>
-
-<p>Points available:</p>
-
-<table>
-<thead>
-<tr>
-<th align="right">Points</th>
-<th>Class Item</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td align="right">1400</td>
-<td>Homework total</td>
-</tr>
-
-<tr>
-<td align="right">800</td>
-<td>2 tests</td>
-</tr>
-</tbody>
-</table>
-
-<p>To get a letter grade in the class:</p>
-
-<table>
-<thead>
-<tr>
-<th>Points</th>
-<th>Semester Grade</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>1800 &hellip; 1899</td>
-<td>A</td>
-</tr>
-
-<tr>
-<td>1600 &hellip; 1799</td>
-<td>B</td>
-</tr>
-
-<tr>
-<td>1400 &hellip; 1599</td>
-<td>C</td>
-</tr>
-
-<tr>
-<td>1200 &hellip; 1399</td>
-<td>D</td>
-</tr>
-</tbody>
-</table>
-
-<p>You <strong>must</strong> demonstrate working projects to the instructor to pass the class (no matter how many points you get).
-The 2 projects in the class will be directly from the homework.  Project one is Homework Assignments 02 to 06.
-Project 2 is Homework Assignments 08 to 11.  Homework will be 100 or 200 points each.   Midterm will be 400 points.
-Final will be 400 points.  You can expect programming and writen assignments in this class.</p>
-
-<p>For anybody that just wants to take on a hard project for extra credit see the instructor.  It is hard.
-So think a letter grade for completion of an extra credit project.  Code for extra credit projects will
-be open source under a MIT license.   Also note that there are 2200 points available on a letter grading
-scale of 2000 points.   You have a built-in 200 point extra credit in the homework and tests.</p></li>
-
-<li><p>textbook: <a href="https://www.golang-book.com/public/pdf/gobook.0.pdf">An Introduction to Programming in Go, pdf for free</a>
-There are no good books on Ethereum/Soliddity.  Solidity has moved from version 4.12 to 4.27 this year.
-All of the books are out of date.  So&hellip;. I will include links in assignments that you are expected to
-read.</p></li>
-
-<li><p>Class Overview</p>
-
-<ol>
-<li>What is Blockchain - what is Bitcoin / Ethereum / Other token systems</li>
-<li>The worlds worst, most expensive database</li>
-<li>What is the &ldquo;hype&rdquo; - what is real.</li>
-<li>Economics - Coin, ICO, Stocks, Bonds, Tokens, Utility Tokens, A Security</li>
-<li>Legal Ramifications.  ICOs 506(d), Subpart (s)</li>
-<li>Programming - <sup>1</sup>&frasl;<sub>2</sub> in go, <sup>1</sup>&frasl;<sub>2</sub> in Solidity (Etherem) and Web front end (JavaScript/HTML/CSS).</li>
-<li>Some Homework</li>
-<li>Write a Paper - How will blockchain effect the economy.</li>
-<li>2 tests (Midterm and Final)</li>
-<li>Why Go</li>
-<li>Proof of work</li>
-<li>Proof of stake</li>
-<li>Enough Go to make it through this class (and be able to convincingly tell an employer that you have programmed in Go)</li>
-<li>Why Ethereum? Solidity?</li>
-<li>dApp - what is that?  What is web3?</li>
-<li>A detailed understanding of the security model behind Blockchain</li>
-<li>Some advanced stuff on security - distributed computation and public/private keys, distributed key generation.</li>
-<li>What is a &ldquo;tangle&rdquo;</li>
-<li>Why is blockchain so slow?</li>
-<li>How to explain &ldquo;blockchain&rdquo; to people - the 30 second elevator pitch.</li>
-<li>History - of accounting</li>
-</ol></li>
-
-<li><p>De-Hype Blockchain</p></li>
+<li>The Syllabus</li>
+<li>What is a Blockchain</li>
 </ol>
+
+<ul>
+<li>Means of transferring originals</li>
+<li>Growth to 2-3% of world economy</li>
+<li>Comparable in size to IT</li>
+</ul>
 
 </div>
 
