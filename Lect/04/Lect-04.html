@@ -702,62 +702,97 @@ ol {
     display: block;
     list-style-type: decimal;
 }
+.pagebreak { page-break-before: always; }
+.half { height: 200px; }
 </style>
 
 <div class="markdown-body">
 
-<h1>More On Go / Personal Fiance</h1>
+<style>
+.pagebreak { page-break-before: always; }
+.half { height: 200px; }
+</style>
 
-<h2>1st. the news</h2>
-
-<ol>
-<li>Facebook has development a high-speed blockchain payments system.  They are planning on opening a SPDI bank in Wyoming to support this.</li>
-<li>Atleast 10 major elections around the world have been run on the Blockchain.  This includes a number of provinces in Spain.</li>
-<li>Trenzor Wallets (hardware wallets) can be hacked!</li>
-</ol>
-
-<h2>2nd. Purpose of a business</h2>
+<h1>More On Go</h1>
 
 <ol>
-<li>To make a profit for the owners of the business.</li>
+<li>Janet Yellen offense stance.</li>
 </ol>
 
-<p>What is &ldquo;Fiduciary Responsibility&rdquo;.  It means that you have been placed / are in a
-position of legal responsibility for managing somebody else&rsquo;s money.</p>
+<h1>What is a Hash</h1>
+
+<p>A hash is a mapping from an input set to a unique number.
+This is so that we have a high probability of a unique number for each different input.
+The output will have a fixed length.</p>
+
+<p>There are a number of different kind of hashes.</p>
 
 <ol>
-<li>Definitions / Economics</li>
+<li>md5 a deprecated hash - it has weaknesses and should not be used.</li>
+<li>sha1 some weaknesses.</li>
+<li>sha256</li>
+<li>sha512</li>
+<li>sha3</li>
 </ol>
 
-<p>&ldquo;arbitrage&rdquo; ::= the simultaneous buying and selling of securities, currency, or commodities in different markets or in derivative forms in order to take advantage of differing prices for the same asset.</p>
+<p>hashes are used to validate passwords.  pbkdf and Ashley Madison.</p>
 
-<ol>
-<li>How Soros broke the Bank of England.</li>
-</ol>
+<p>Some hashes are specificly designed to be slow for passwords.</p>
 
-<p>Price Stable Cryptocurrences (or pegged cryptocurrencies)</p>
+<p>Some are build to be in hardware (sha1, sha256) or to not be in
+hardware (Keccak used in Etherum).</p>
 
-<h2>Reference</h2>
+<p>Bitcoin uses sha256.</p>
 
-<p><a href="https://priceonomics.com/the-trade-of-the-century-when-george-soros-broke/">Soros Broke the Bank of England</a></p>
+<p>Example:</p>
 
-<h1>Personal Finance</h1>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Output</th>
+</tr>
+</thead>
 
-<p>Two Economies in US today.  The &ldquo;high-tech&rdquo; and the &ldquo;traditional&rdquo; economy.</p>
+<tbody>
+<tr>
+<td>Hi</td>
+<td>c01a4cfa25cb895cdd0bb25181ba9c1622e93895a6de6f533a7299f70d6b0cfb</td>
+</tr>
 
-<p>(See Spreadsheet)</p>
+<tr>
+<td>Bitcoin</td>
+<td>deb10ca6fd85a5eba792ea8561da390635242f0c37c376f8eb7d7859adbffca9</td>
+</tr>
+
+<tr>
+<td>war-and-peace.txt</td>
+<td>6cbcc5ca5e590fb9ace161a5b93e4ecf280d7118104be0d63b686c004cfa70ae</td>
+</tr>
+</tbody>
+</table>
+
+<p>Hashes for our purposes are unidirectional.  You can take the same input and get the same output, but you can&rsquo;t derive the input from the output.</p>
+
+<pre><code>// HashStrings hash a set of strings and return in hex-strings form
+func HashStrings(a ...string) string {
+	h := sha256.New()
+	for _, z := range a {
+		h.Write([]byte(z))
+	}
+	return fmt.Sprintf(&quot;%x&quot;, (h.Sum(nil)))
+}
+</code></pre>
+
+<p>One of your first Assignmetns was to build a &lsquo;ksum&rsquo; that works like sha256sum or md5sum and reads a file and calculates the hash for that file.</p>
+
+<p>Once you have a hash you can prove that the original file has not changed.</p>
+
+<p>This is the basis of lots of Blockchain metadata applications.</p>
 
 <h1>Blockchain and Mining</h1>
 
 <h2>What is Mining and How is it implemented.</h2>
-
-<p>What is proof-of-work?  What is proof-of-stake?  What is a public blockchian / private blockchain?</p>
-
-<p>Diagram of blocks</p>
-
-<p>Diagram of mining</p>
-
-<p>What is the mining process</p>
 
 <ol>
 <li>More on Go</li>
@@ -856,6 +891,71 @@ created by runtime.init.4
 	/usr/local/Cellar/go/1.10.3/libexec/src/runtime/proc.go:237 +0x35
 
 </code></pre>
+
+<h3>Pseudo Code for Mining (Homework 02)</h3>
+
+<pre><code>package mine
+
+import &quot;github.com/Univ-Wyo-Education/S19-4010/a/02/block&quot;
+
+// TODO Replace above import with import below (commented out)
+/*
+import (
+	&quot;encoding/hex&quot;
+	&quot;fmt&quot;
+
+	&quot;github.com/Univ-Wyo-Education/S19-4010/a/02/block&quot;
+	&quot;github.com/Univ-Wyo-Education/S19-4010/a/02/hash&quot;
+)
+*/
+
+// MineBlock implements a proof of work mining system where the first 4 
+// digits (2 bytes) of the hex value are 0.  This is set with the difficulty
+// parameter.  So it could be more than 4 or less (Test with less).
+// Difficulty can be increaesed by requiring more digits to be 0 or by
+// requring some other pattern to apear in the resulting hash.
+func MineBlock(bk *block.BlockType, difficulty string) {
+	// Pseudo-Code:
+	//
+	// 1. Use an infinite loop to:
+	//   1. Serialize the data from the block for hashing, Call 
+	//     `block.SearilizeForSeal` to do this.
+	//   2. Calculate the hash of the data, Call `hash.HashOf` to do this.
+	//      This is the slow part.  What would happen if we replaced the
+	//      software with a hash calculator on a graphics card where you
+	//      could run 4096 - 10240 hahes at once?  What would happen if we
+	//      replaced the graphics card with an ASIC - so you had dedicated
+	//		hardware to do the hash and you could run 4 billion hashes a
+	//      second?
+	//   3. Convert the hash (it is []byte) to a hex string.  Use the
+	//      `hex.EncodeToString` standard go library function.
+	//   4. `fmt.Printf(&quot;((Mining)) Hash for Block [%s] nonce [%8d]\r&quot;,
+	//      theHashAsAString, bk.Nonce)` `\r` will overwrite the same line
+	//      instead of advancing to the next. (You may want to skip on
+	//      some windows systems)
+	//   5. See if the first 4 characters of the hash are 0's. - if so we
+	//      have met the work criteria.  In go this is
+	//     `if theHashAsAString[0:n] == difficulty (&quot;0000&quot; for example) {`. 
+	//      This is create a slice, 4 long from character 0 with length of 4,
+	//      then compare that to the string `difficulty`.
+	//    -   Set the block's &quot;Seal&quot; to the hash
+	//    -   `fmt.Printf(&quot;((Mining)) Hash for Block [%s] nonce [%8d]\n&quot;,
+	//        theHashAsAString, bk.Nonce)` `\n` will overwrite the same
+	//        *and then advance* to the next line.
+	//    -   return
+	//   5. Increment the Nonce in the block, and...
+	//   6. Back to the top of the loop for another try at finding a seal
+	//      for this block.
+	//
+	// For the genesis block, when I do this it requires 54586 trips through
+	// the loop to calculate the proof of work (PoW).
+	//
+
+	// TODO: Start coding here.
+}
+</code></pre>
+
+<p>```</p>
 
 </div>
 
