@@ -89,7 +89,6 @@ Maps do not synchronize automatically.
 So... Synchronization Primitives:
 
 ```Go
-
 package main
 
 import (
@@ -129,7 +128,6 @@ func main() {
 	time.Sleep(time.Second)
 	fmt.Println(c.Value("somekey"))
 }
-
 
 ```
 

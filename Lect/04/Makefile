@@ -3,7 +3,7 @@ PP=`pwd`
 FN=Lect-04
 DIR=../../../F20-1015
 IMG= IncomeForecast1.pdf IncomeForecast1.png Lect-04.html.pdf little-endian.png
-PY= Lect-04_00.go Lect-04_01.go h1 h2 war-and-peace.txt
+PY= Lect-04_00.go Lect-04_01.go h1 h2 war-and-peace.txt Lect-04_05.go
 
 all: gen val ${FN}.md ${FN}.html 
 
@@ -12,6 +12,7 @@ gen:
 
 val:
 	go build Lect-04_01.go
+	go build Lect-04_05.go
 
 %.md: %.raw.md $(PY) $(IMG) Makefile
 	m4 -P $< >$@
