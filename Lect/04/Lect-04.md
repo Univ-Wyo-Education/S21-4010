@@ -13,12 +13,29 @@
 
 
 
-More On Go 
+Lecture 4 - Hashing and Mining
 ====================
+
+News
+------
 
 1. Janet Yellen offense stance.
 
 
+[Hash and Merkel Trees - https://youtu.be/QgeJIpGkChw 4010-L04-pt1-Hash-Markle-Tree.mp4](https://youtu.be/QgeJIpGkChw 4010-L04-pt1-Hash-Markle-Tree.mp4)<br>
+[Hash Function - https://youtu.be/h2QImL_X7S4](https://youtu.be/h2QImL_X7S4)<br>
+[Mining - https://youtu.be/a4xNkrA_7aY](https://youtu.be/a4xNkrA_7aY)<br>
+[Application of Hasing - https://youtu.be/KsMtapQnhws](https://youtu.be/KsMtapQnhws)<br>
+[Merkle Trees Overview - https://youtu.be/Pqx0kmicwrc](https://youtu.be/Pqx0kmicwrc)<br>
+[Code Walk high - https://youtu.be/FanMRbGy46g](https://youtu.be/FanMRbGy46g)<br>
+
+From Amazon S3 - for download (same as youtube videos)
+
+[Hash Function](http://uw-s20-2015.s3.amazonaws.com/4010-L04-pt2-Hash-Function.mp4)<br>
+[Mining](http://uw-s20-2015.s3.amazonaws.com/4010-L04-pt3-Mining.mp4)<br>
+[Application of Hasing](http://uw-s20-2015.s3.amazonaws.com/4010-L04-pt4-Application-of-Hashs.mp4)<br>
+[Merkle Trees Overview](http://uw-s20-2015.s3.amazonaws.com/4010-L04-pt5-Merkle-Trees.mp4)<br>
+[Code Walk high](http://uw-s20-2015.s3.amazonaws.com/4010-L04-pt6-Hash-Code-Walkthrough.mp4)<br>
 
 What is a Hash
 ====================================================
@@ -136,16 +153,16 @@ func main() {
 First the Code
 
 ```Go
-	package main
+package main
 
-	import "fmt"
+import "fmt"
 
-	var mm map[string]int
+var mm map[string]int
 
-	func main() {
-		fmt.Println("vim-go")
-		mm["bob"] = 3
-	}
+func main() {
+	fmt.Println("vim-go")
+	mm["bob"] = 3
+}
 
 ```
 
@@ -208,7 +225,7 @@ func MineBlock(bk *block.BlockType, difficulty string) {
 	//      some windows systems)
 	//   5. See if the first 4 characters of the hash are 0's. - if so we
 	//      have met the work criteria.  In go this is
-	//     `if theHashAsAString[0:n] == difficulty ("0000" for example) {`. 
+	//     `if theHashAsAString[0:len(difficulty)] == difficulty ("0000" for example) {`. 
 	//      This is create a slice, 4 long from character 0 with length of 4,
 	//      then compare that to the string `difficulty`.
 	//    -   Set the block's "Seal" to the hash

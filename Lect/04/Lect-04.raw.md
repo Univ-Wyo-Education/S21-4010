@@ -1,11 +1,28 @@
 m4_include(../../setup.m4)
 
-More On Go 
+Lecture 4 - Hashing and Mining
 ====================
+
+News
+------
 
 1. Janet Yellen offense stance.
 
 
+[Hash and Merkel Trees - https://youtu.be/QgeJIpGkChw 4010-L04-pt1-Hash-Markle-Tree.mp4](https://youtu.be/QgeJIpGkChw 4010-L04-pt1-Hash-Markle-Tree.mp4)<br>
+[Hash Function - https://youtu.be/h2QImL_X7S4](https://youtu.be/h2QImL_X7S4)<br>
+[Mining - https://youtu.be/a4xNkrA_7aY](https://youtu.be/a4xNkrA_7aY)<br>
+[Application of Hasing - https://youtu.be/KsMtapQnhws](https://youtu.be/KsMtapQnhws)<br>
+[Merkle Trees Overview - https://youtu.be/Pqx0kmicwrc](https://youtu.be/Pqx0kmicwrc)<br>
+[Code Walk high - https://youtu.be/FanMRbGy46g](https://youtu.be/FanMRbGy46g)<br>
+
+From Amazon S3 - for download (same as youtube videos)
+
+[Hash Function](http://uw-s20-2015.s3.amazonaws.com/4010-L04-pt2-Hash-Function.mp4)<br>
+[Mining](http://uw-s20-2015.s3.amazonaws.com/4010-L04-pt3-Mining.mp4)<br>
+[Application of Hasing](http://uw-s20-2015.s3.amazonaws.com/4010-L04-pt4-Application-of-Hashs.mp4)<br>
+[Merkle Trees Overview](http://uw-s20-2015.s3.amazonaws.com/4010-L04-pt5-Merkle-Trees.mp4)<br>
+[Code Walk high](http://uw-s20-2015.s3.amazonaws.com/4010-L04-pt6-Hash-Code-Walkthrough.mp4)<br>
 
 What is a Hash
 ====================================================

@@ -1,10 +1,10 @@
-	package main
+package main
 
-	import "fmt"
+import "fmt"
 
-	var mm map[string]int
+var mm map[string]int
 
-	func main() {
-		fmt.Println("vim-go")
-		mm["bob"] = 3
-	}
+func main() {
+	fmt.Println("vim-go")
+	mm["bob"] = 3
+}

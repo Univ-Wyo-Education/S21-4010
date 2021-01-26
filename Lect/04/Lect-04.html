@@ -713,11 +713,28 @@ ol {
 .half { height: 200px; }
 </style>
 
-<h1>More On Go</h1>
+<h1>Lecture 4 - Hashing and Mining</h1>
+
+<h2>News</h2>
 
 <ol>
 <li>Janet Yellen offense stance.</li>
 </ol>
+
+<p><a href="https://youtu.be/QgeJIpGkChw 4010-L04-pt1-Hash-Markle-Tree.mp4">Hash and Merkel Trees - https://youtu.be/QgeJIpGkChw 4010-L04-pt1-Hash-Markle-Tree.mp4</a><br>
+<a href="https://youtu.be/h2QImL_X7S4">Hash Function - https://youtu.be/h2QImL_X7S4</a><br>
+<a href="https://youtu.be/a4xNkrA_7aY">Mining - https://youtu.be/a4xNkrA_7aY</a><br>
+<a href="https://youtu.be/KsMtapQnhws">Application of Hasing - https://youtu.be/KsMtapQnhws</a><br>
+<a href="https://youtu.be/Pqx0kmicwrc">Merkle Trees Overview - https://youtu.be/Pqx0kmicwrc</a><br>
+<a href="https://youtu.be/FanMRbGy46g">Code Walk high - https://youtu.be/FanMRbGy46g</a><br></p>
+
+<p>From Amazon S3 - for download (same as youtube videos)</p>
+
+<p><a href="http://uw-s20-2015.s3.amazonaws.com/4010-L04-pt2-Hash-Function.mp4">Hash Function</a><br>
+<a href="http://uw-s20-2015.s3.amazonaws.com/4010-L04-pt3-Mining.mp4">Mining</a><br>
+<a href="http://uw-s20-2015.s3.amazonaws.com/4010-L04-pt4-Application-of-Hashs.mp4">Application of Hasing</a><br>
+<a href="http://uw-s20-2015.s3.amazonaws.com/4010-L04-pt5-Merkle-Trees.mp4">Merkle Trees Overview</a><br>
+<a href="http://uw-s20-2015.s3.amazonaws.com/4010-L04-pt6-Hash-Code-Walkthrough.mp4">Code Walk high</a><br></p>
 
 <h1>What is a Hash</h1>
 
@@ -847,16 +864,16 @@ func main() {
 
 <p>First the Code</p>
 
-<pre><code class="language-Go">	package main
+<pre><code class="language-Go">package main
 
-	import &quot;fmt&quot;
+import &quot;fmt&quot;
 
-	var mm map[string]int
+var mm map[string]int
 
-	func main() {
-		fmt.Println(&quot;vim-go&quot;)
-		mm[&quot;bob&quot;] = 3
-	}
+func main() {
+	fmt.Println(&quot;vim-go&quot;)
+	mm[&quot;bob&quot;] = 3
+}
 
 </code></pre>
 
@@ -915,7 +932,7 @@ func MineBlock(bk *block.BlockType, difficulty string) {
 	//      some windows systems)
 	//   5. See if the first 4 characters of the hash are 0's. - if so we
 	//      have met the work criteria.  In go this is
-	//     `if theHashAsAString[0:n] == difficulty (&quot;0000&quot; for example) {`. 
+	//     `if theHashAsAString[0:len(difficulty)] == difficulty (&quot;0000&quot; for example) {`. 
 	//      This is create a slice, 4 long from character 0 with length of 4,
 	//      then compare that to the string `difficulty`.
 	//    -   Set the block's &quot;Seal&quot; to the hash

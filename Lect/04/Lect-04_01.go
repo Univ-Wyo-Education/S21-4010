@@ -39,7 +39,7 @@ func MineBlock(bk *block.BlockType, difficulty string) {
 	//      some windows systems)
 	//   5. See if the first 4 characters of the hash are 0's. - if so we
 	//      have met the work criteria.  In go this is
-	//     `if theHashAsAString[0:n] == difficulty ("0000" for example) {`. 
+	//     `if theHashAsAString[0:len(difficulty)] == difficulty ("0000" for example) {`. 
 	//      This is create a slice, 4 long from character 0 with length of 4,
 	//      then compare that to the string `difficulty`.
 	//    -   Set the block's "Seal" to the hash
