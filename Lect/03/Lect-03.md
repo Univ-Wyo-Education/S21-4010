@@ -16,6 +16,16 @@
 More On Go / What is Special about Go
 ====================
 
+[More on Go Pt1 - https://youtu.be/BbqIe-taEBs](https://youtu.be/BbqIe-taEBs)<br>
+[More on Go Pt2 - https://youtu.be/N8VUq8bx3Qg](https://youtu.be/N8VUq8bx3Qg)<br>
+[More on Go Pt3 - https://youtu.be/Bn8AgVH4Tuc](https://youtu.be/Bn8AgVH4Tuc)<br>
+
+From Amazon S3 - for download (same as youtube videos)
+
+[More on Go Pt1](http://uw-s20-2015.s3.amazonaws.com/4010-L03-pt1-more-on-go.mp4)<br>
+[More on Go Pt2](http://uw-s20-2015.s3.amazonaws.com/4010-L03-pt2-more-on-go.mp4)<br>
+[More on Go Pt3](http://uw-s20-2015.s3.amazonaws.com/4010-L03-pt3-more-on-go.mp4)<br>
+
 "It is not the strongest of the species that survives, nor the most intelligent.
 It is the one that is the most adaptable to change."
 	Charles Darwin
