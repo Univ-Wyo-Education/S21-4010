@@ -20,9 +20,9 @@ Merkle Trees and Start of Finance
 
 ## News
 
-2. We have a number of successfully funded companies based on Crypto Offerings.  "Pocket Full of Quarters" for example.
-3. Kenya, Nigeria, Uganda and South Africa - A year ago they were starting to use "crypto" based coins.  Today it is over 10% of all e-commerce in these conuntries.
-4. Nairobi, South Africa, Malta, Reunion have implemented crypto-friendly laws. 
+1. Kenya, Nigeria, Uganda and South Africa - Two years ago they were starting to use "crypto" based coins.  Today it is over 20% of all e-commerce in these countries.  A good deal of this is driven by 0 touch transactions.
+2. Ethereum is being used by Reddit to improve scaling and distribution.
+4. Nairobi, South Africa, Malta, Reunion have implemented crypto-friendly laws.   Today we see cashless systems and transactions appearing in these countries.
 
 ## Merkle Trees
 
