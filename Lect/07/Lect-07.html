@@ -702,17 +702,32 @@ ol {
     display: block;
     list-style-type: decimal;
 }
+.pagebreak { page-break-before: always; }
+.half { height: 200px; }
 </style>
 
 <div class="markdown-body">
+
+<style>
+.pagebreak { page-break-before: always; }
+.half { height: 200px; }
+</style>
 
 <h1>Last Part on Go</h1>
 
 <h2>Answer some questions</h2>
 
 <ol>
-<li>NTRU - in 17 stage to for NIST quantum proof encryption.</li>
-<li>What is an API?  Why are web3/dApps important?  What is the big picture?</li>
+<li>NTRU - A year ago it was one of 17 finaist - now we are down to 4.</li>
+<li>Why use a Blockchain instead of a centralized system.</li>
+</ol>
+
+<p>Some examples of using a Blockchain:</p>
+
+<ol>
+<li>Tracking people on parole.</li>
+<li>ISO 9002 Documents.</li>
+<li>Tracking / Inventory of Sidelights.</li>
 </ol>
 
 <h2>Goroutines</h2>
@@ -824,7 +839,7 @@ func Demo() {
 
 <h2>Go Channels</h2>
 
-<p>We will come back to this later.</p>
+<p>In a future lecture on Go</p>
 
 <h2>Go Weaknesses</h2>
 
@@ -832,13 +847,14 @@ func Demo() {
 
 <ol>
 <li>No objects - Use interfaces instead.  No inheritance.</li>
-<li>No generics - Use templates and code instead.</li>
-<li>No error handling - Just return errors.</li>
+<li>No generics - yet - coming in 2.0 in 4 months - Use templates and code instead.</li>
 </ol>
 
-<p>Go 2.0 is coming in 1.5 years.  Go&rsquo;s design team commitment
+<p>Go 2.0 is coming in 4 months. It
 is 100% backward compatibility - it will be able to correctly
 compile go 1.0 code without change to the language.</p>
+
+<p>Copyright &copy; University of Wyoming, 2018-2021.</p>
 
 </div>
 

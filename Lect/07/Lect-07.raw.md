@@ -1,17 +1,4 @@
-
-
-
-<style>
-.pagebreak { page-break-before: always; }
-.half { height: 200px; }
-</style>
-
-
-
-
-
-
-
+m4_include(../../setup.m4)
 
 Last Part on Go
 ======================
