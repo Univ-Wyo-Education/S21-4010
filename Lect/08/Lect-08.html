@@ -702,17 +702,22 @@ ol {
     display: block;
     list-style-type: decimal;
 }
+.pagebreak { page-break-before: always; }
+.half { height: 200px; }
 </style>
 
 <div class="markdown-body">
 
 <style>
 .pagebreak { page-break-before: always; }
+.half { height: 200px; }
 </style>
 
-<h1>Last Part on Go</h1>
+<style>
+.pagebreak { page-break-before: always; }
+</style>
 
-<h2>Transactions in Blockchain</h2>
+<h1>Transactions in Blockchain</h1>
 
 <p>Data Structure from ./bsvr/block/block.go:</p>
 
@@ -775,6 +780,8 @@ type TxOutputType struct {
   Amount      int              // Amoutn to go to accoutn
 }
 </code></pre>
+
+<p>Copyright &copy; University of Wyoming, 2018-2021.</p>
 
 </div>
 
