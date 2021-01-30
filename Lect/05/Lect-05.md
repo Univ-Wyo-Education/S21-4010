@@ -15,6 +15,14 @@
 
 # Lecture 05 - How wealth is created (Blockchain, AI/Classification)
 
+[How Wealth is Created - pt1 - https://youtu.be/G6h5yOZjqqA](https://youtu.be/G6h5yOZjqqA)<br>
+[How Wealth is Created - pt2 - https://youtu.be/TdMAv8FO4eY](https://youtu.be/TdMAv8FO4eY)<br>
+
+From Amazon S3 - for download (same as youtube videos)
+
+[How Wealth is Created - pt1](http://uw-s20-2015.s3.amazonaws.com/4010-L05-pt1-How-Wealth-Is-Created.mp4)<br>
+[How Wealth is Created - pt2](http://uw-s20-2015.s3.amazonaws.com/4010-L05-pt2-How-Wealth-Is-Created.mp4)<br>
+
 Most of you came to university to create a career - basically to make money.
 So let's talk about money!
 
