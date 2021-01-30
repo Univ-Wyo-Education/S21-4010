@@ -4,6 +4,13 @@ m4_include(../../setup.m4)
 Merkle Trees and Start of Finance
 ====================
 
+[Merkle Code Walk through; Assignment 02 - https://youtu.be/8Hl_9Wg_8WQ](https://youtu.be/8Hl_9Wg_8WQ)<br>
+[Some basic finance - https://youtu.be/kRL2dWC2Ug4](https://youtu.be/kRL2dWC2Ug4)<br>
+
+From Amazon S3 - for download (same as youtube videos)
+
+[Merkle Code Walk through; Assignment 02](http://uw-s20-2015.s3.amazonaws.com/4010-L06-pt1-Merkle-Tree-Walkthrough.mp4)<br>
+[Some basic finance](http://uw-s20-2015.s3.amazonaws.com/4010-L06-pt2-basic-finance.mp4)<br>
 
 ## News
 
