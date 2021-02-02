@@ -1,4 +1,17 @@
-m4_include(../../setup.m4)
+
+
+
+<style>
+.pagebreak { page-break-before: always; }
+.half { height: 200px; }
+</style>
+
+
+
+
+
+
+
 
 Part 1 - What is Mining? (100pts)
 =============================================================
@@ -76,7 +89,7 @@ change directory into assignment 2.
 Our starting code is in this directory.  Specifically we will want to
 compile the main program.  It is in ./main.  Cd to that directory.
 You shooed end up in:
-`~/go/src/github.com/Univ-Wyo-Education/S21-4010/Assignmetns/02`
+`~/go/src/github.com/Univ-Wyo-Education/S21-4010/a/02`
 
 ```sh
 	cd ./main
@@ -89,15 +102,8 @@ Run main to create the genesis block and the initial index.
 	./main --create-genesis
 ```
 
-On a fresh checkout the file already exits.  You will need to delete it.
-
-```sh
-	 rm data/136c53391115ab7ff717bd24e62dd0df2c270500d7194290169a83488022548e.json 
-	./main --create-genesis
-```
-
 This should create a directory with 2 files in it.  The default 
-is in the `./data` directory ( `.../Assignments/02/main/data` ).  The files are:
+is in the `./data` directory ( `.../a/02/main/data` ).  The files are:
 
 ```
 	136c53391115ab7ff717bd24e62dd0df2c270500d7194290169a83488022548e.json
@@ -111,14 +117,14 @@ The one with the long name is our genesis block. The `index.json` is an
 index that will allow us to find data blocks as we are building the this blockchain.
 
 The code is missing the chunk that will do the block mining. The stubbed out function is in
-`.../Assignmetns/02/mine/mine.go`. Your
+`.../a/02/mine/mine.go`. Your
 assignment is to implement the body of the function. You will want to verify that it works by running
 
 ```sh
 	go test
 ```
 
-in the `.../Assignmetns/02/mine` directory.  If you run that now you should get `FAIL`
+in the `.../a/02/mine` directory.  If you run that now you should get `FAIL`
 because you have not implemented it yet.
 
 Take the time to go and poke through the code.  This code is the basis
@@ -150,9 +156,9 @@ Code that I have supplied you with:
 | go Package        | Description                                                      |
 |------------------:|------------------------------------------------------------------|
 | block             | Operations on blocks like initialization and searilization.      |
-|                   | Look in the `.../Assignmetns/02/block/block.go` file.          |
+|                   | Look in the `.../a/02/block/block.go` file.          |
 | hash              | Convenience functions to work with keccak256 hash.                 |
-|                   | Look in the `.../Assignmetns/02/hash/hash.go` file.            |
+|                   | Look in the `.../a/02/hash/hash.go` file.            |
 
 `go` Library functions you will need to use:
 
@@ -216,7 +222,7 @@ My output when running the test.
 	((Mining)) Hash for Block [0000adc29a80f1f0df08c8687c013d179050f5d1b449599e4d1437e4fad23525] nonce [   46734]
 	((Mining)) Hash for Block [000013ce557332aaa68abe3b7bf1be856743a03689a802606a732e81713bb78c] nonce [    4527]
 	PASS
-	ok  	github.com/Univ-Wyo-Education/S21-4010/Assignmetns/02/mine	0.237s
+	ok  	github.com/Univ-Wyo-Education/S21-4010/a/02/mine	0.237s
 ```
 
 The grader has a somewhat more comprehensive automated test to run with this code (There is one more block
