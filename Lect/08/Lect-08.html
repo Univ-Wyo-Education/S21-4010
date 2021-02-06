@@ -717,6 +717,16 @@ ol {
 .pagebreak { page-break-before: always; }
 </style>
 
+<h1>L08 - Transactions and Blocks</h1>
+
+<p><a href="https://youtu.be/X8uBPt22AZ8">4010 L08 pt1 Transactions and Blocks - https://youtu.be/X8uBPt22AZ8</a><br>
+<a href="https://youtu.be/o0qkLigh2oE">4010 L08 pt2 Transactions and Blocks - https://youtu.be/o0qkLigh2oE</a><br></p>
+
+<p>From Amazon S3 - for download (same as youtube videos)</p>
+
+<p><a href="http://uw-s20-2015.s3.amazonaws.com/4010-L08-pt1-tranactions-and-blocks.mp4">4010 L08 pt1 Transactions and Blocks</a><br>
+<a href="http://uw-s20-2015.s3.amazonaws.com/4010-L08-pt2-tranactions-and-blocks.mp4">4010 L08 pt2 Transactions and Blocks</a><br></p>
+
 <h1>Transactions in Blockchain</h1>
 
 <p>Data Structure from ./bsvr/block/block.go:</p>
@@ -735,7 +745,7 @@ type BlockType struct {
                                                 // &quot;genesis&quot; block
   Nonce         uint64                          //
   Seal          hash.SealType                   //
-  MerkleHash    hash.MerkleHashType             // Hw 03 
+  MerkleHash    hash.MerkleHashType             // Hw 02 2nd part 
   Tx            []*transactions.TransactionType // Tx for Block
 }
 
@@ -752,8 +762,8 @@ Data Structure from ./bsvr/transactions/tx.go:</p>
   SCAddress      addr.AddressType  // ... for SmartContracts ... 
   SCOutputData   string            // ... for SmartContracts ... 
   Account        addr.AddressType  //
-  Signature      lib.SignatureType //  Used in HW 5 - Signature 
-  Message        string            //  Used in HW 5 - Message
+  Signature      lib.SignatureType //  Used in HW 4 - Signature 
+  Message        string            //  Used in HW 4 - Message
   Comment        string            //
 }
 
@@ -781,7 +791,8 @@ type TxOutputType struct {
 }
 </code></pre>
 
-<p>Copyright &copy; University of Wyoming, 2018-2021.</p>
+<p>Portions of this are code that is MIT Licensed.<br>
+Copyright &copy; University of Wyoming, 2018-2021.</p>
 
 </div>
 

@@ -4,6 +4,15 @@ m4_include(../../setup.m4)
 .pagebreak { page-break-before: always; }
 </style>
 
+# L08 - Transactions and Blocks
+
+[4010 L08 pt1 Transactions and Blocks - https://youtu.be/X8uBPt22AZ8](https://youtu.be/X8uBPt22AZ8)<br>
+[4010 L08 pt2 Transactions and Blocks - https://youtu.be/o0qkLigh2oE](https://youtu.be/o0qkLigh2oE)<br>
+
+From Amazon S3 - for download (same as youtube videos)
+
+[4010 L08 pt1 Transactions and Blocks](http://uw-s20-2015.s3.amazonaws.com/4010-L08-pt1-tranactions-and-blocks.mp4)<br>
+[4010 L08 pt2 Transactions and Blocks](http://uw-s20-2015.s3.amazonaws.com/4010-L08-pt2-tranactions-and-blocks.mp4)<br>
 
 Transactions in Blockchain
 ======================
@@ -25,7 +34,7 @@ type BlockType struct {
                                                 // "genesis" block
   Nonce         uint64                          //
   Seal          hash.SealType                   //
-  MerkleHash    hash.MerkleHashType             // Hw 03 
+  MerkleHash    hash.MerkleHashType             // Hw 02 2nd part 
   Tx            []*transactions.TransactionType // Tx for Block
 }
 
@@ -44,8 +53,8 @@ type TransactionType struct {
   SCAddress      addr.AddressType  // ... for SmartContracts ... 
   SCOutputData   string            // ... for SmartContracts ... 
   Account        addr.AddressType  //
-  Signature      lib.SignatureType //  Used in HW 5 - Signature 
-  Message        string            //  Used in HW 5 - Message
+  Signature      lib.SignatureType //  Used in HW 4 - Signature 
+  Message        string            //  Used in HW 4 - Message
   Comment        string            //
 }
 
@@ -74,5 +83,6 @@ type TxOutputType struct {
 ```
 
 
+Portions of this are code that is MIT Licensed.<br>
 Copyright (C) University of Wyoming, 2018-2021.
 
