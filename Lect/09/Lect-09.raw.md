@@ -1,18 +1,9 @@
 # Lecture 09 - ECDSA - Elliptic curve public key encryption
 
-# Videos (part 1 .. 3 )
+Just one set of lectures this week - 5 parts.
 
-[https://youtu.be/0x1NNdEC2d4 - Lect-30-4010-pt1-ECDSA.mp4](https://youtu.be/0x1NNdEC2d4)<br>
-[https://youtu.be/AZDUaOlbGLM - Lect-30-4010-pt2-add-double-mul.mp4](https://youtu.be/AZDUaOlbGLM)<br>
-[https://youtu.be/qsoh50Ls8B4 - Lect-30-4010-pt3-discreet.mp4](https://youtu.be/qsoh50Ls8B4)<br>
-[https://youtu.be/KmxHmipdeFo - Lect-30-4010-pt4.mp4](https://youtu.be/KmxHmipdeFo)<br>
+# Videos (part 1 .. 5 )
 
-From Amazon S3 - for download (same as youtube videos)
-
-[http://uw-s20-2015.s3.amazonaws.com/Lect-30-4010-pt1-ECDSA.mp4](http://uw-s20-2015.s3.amazonaws.com/Lect-30-4010-pt1-ECDSA.mp4)<br>
-[http://uw-s20-2015.s3.amazonaws.com/Lect-30-4010-pt2-add-double-mul.mp4](http://uw-s20-2015.s3.amazonaws.com/Lect-30-4010-pt2-add-double-mul.mp4)<br>
-[http://uw-s20-2015.s3.amazonaws.com/Lect-30-4010-pt3-discreet.mp4](http://uw-s20-2015.s3.amazonaws.com/Lect-30-4010-pt3-discreet.mp4)<br>
-[http://uw-s20-2015.s3.amazonaws.com/Lect-30-4010-pt4.mp4](http://uw-s20-2015.s3.amazonaws.com/Lect-30-4010-pt4.mp4)<br>
 
 
 # Some history.
@@ -54,6 +45,12 @@ The security is based on factoring of large numbers.  *Mathematicians consider f
 
 Another good source [is Cloudflare's primer on EC]https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/) - and I have taken the 2 animations
 from them. 
+
+EC is used as the system in Bitcoin, Ethereum and most other blockchains.
+
+
+
+
 
 # EC and ECDSA Encryption
 

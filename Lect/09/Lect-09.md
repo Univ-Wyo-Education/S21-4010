@@ -1,18 +1,9 @@
 # Lecture 09 - ECDSA - Elliptic curve public key encryption
 
-# Videos (part 1 .. 3 )
+Just one set of lectures this week - 5 parts.
 
-[https://youtu.be/0x1NNdEC2d4 - Lect-30-4010-pt1-ECDSA.mp4](https://youtu.be/0x1NNdEC2d4)<br>
-[https://youtu.be/AZDUaOlbGLM - Lect-30-4010-pt2-add-double-mul.mp4](https://youtu.be/AZDUaOlbGLM)<br>
-[https://youtu.be/qsoh50Ls8B4 - Lect-30-4010-pt3-discreet.mp4](https://youtu.be/qsoh50Ls8B4)<br>
-[https://youtu.be/KmxHmipdeFo - Lect-30-4010-pt4.mp4](https://youtu.be/KmxHmipdeFo)<br>
+# Videos (part 1 .. 5 )
 
-From Amazon S3 - for download (same as youtube videos)
-
-[http://uw-s20-2015.s3.amazonaws.com/Lect-30-4010-pt1-ECDSA.mp4](http://uw-s20-2015.s3.amazonaws.com/Lect-30-4010-pt1-ECDSA.mp4)<br>
-[http://uw-s20-2015.s3.amazonaws.com/Lect-30-4010-pt2-add-double-mul.mp4](http://uw-s20-2015.s3.amazonaws.com/Lect-30-4010-pt2-add-double-mul.mp4)<br>
-[http://uw-s20-2015.s3.amazonaws.com/Lect-30-4010-pt3-discreet.mp4](http://uw-s20-2015.s3.amazonaws.com/Lect-30-4010-pt3-discreet.mp4)<br>
-[http://uw-s20-2015.s3.amazonaws.com/Lect-30-4010-pt4.mp4](http://uw-s20-2015.s3.amazonaws.com/Lect-30-4010-pt4.mp4)<br>
 
 
 # Some history.
@@ -43,6 +34,23 @@ The idea is the same.   All the real data is encrypted using AES, the key exchan
 This is the basic idea of TLS 1.3, the underlying system for HTTPS.  TLS adds the additional validation that the keys are checked
 in a hierarchy with a signature where the signature can be validated to be from a certain source.  This is the "hierarchy of Trust"
 and why we trust the TLS to be from the original domain.
+
+# RSA is easy to understand.
+
+RSA even has articles [on it in the Atlantic Magazine](https://www.theatlantic.com/magazine/archive/2002/09/a-primer-on-public-key-encryption/302574/).
+
+You can get it down to a simple set of explanations with just some math.
+
+The security is based on factoring of large numbers.  *Mathematicians consider factoring to be a difficult` problem.*   I find the general understatement of 'difficult to be very funny.
+
+Another good source [is Cloudflare's primer on EC]https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/) - and I have taken the 2 animations
+from them. 
+
+EC is used as the system in Bitcoin, Ethereum and most other blockchains.
+
+
+
+
 
 # EC and ECDSA Encryption
 
@@ -122,5 +130,7 @@ Now we can use a modulo system for this:
 <hr>
 
 ![ec001.png](./ec001.png)
+
+
 
 
