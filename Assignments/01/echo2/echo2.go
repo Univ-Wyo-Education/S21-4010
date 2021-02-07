@@ -22,7 +22,7 @@ func main() {
 	flag.Parse() // Parse CLI arguments to this, --cfg <name>.json
 
 	fns := flag.Args()
-	if len(fns) != 0 {
+	if len(fns) == 0 {
 		fmt.Fprintf(os.Stderr, "Usage: ./echo2 [-cfg cfg.json] [arg1 ...]\n")
 		os.Exit(1)
 	}
@@ -34,7 +34,7 @@ func main() {
 
 	gCfg, err := ReadConfig(*Cfg)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Unable to read confguration: %s error %s\n", *Cfg, err)
+		fmt.Fprintf(os.Stderr, "Unable to read configuration: %s error %s\n", *Cfg, err)
 		os.Exit(1)
 	}
 

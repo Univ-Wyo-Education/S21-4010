@@ -2,10 +2,9 @@
 
 
 
-<style>
-.pagebreak { page-break-before: always; }
-.half { height: 200px; }
-</style>
+
+
+
 
 
 
@@ -117,7 +116,7 @@ a limited programming background I will work with you.
 
 
 
-# The 5 Interactive discussions.
+# The 5 Interactive Discussions.
 
  These are required.  They will be
 on zoom.  Choose a time of day to attend.  They will be held at 3 different

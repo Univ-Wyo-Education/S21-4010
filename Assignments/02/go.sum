@@ -1,0 +1,16 @@
+github.com/Univ-Wyo-Education/S21-4010 v0.0.0-20210131191752-c2db0ec647f5 h1:ThA1Ebhr+dwYLBzq0vSj+E4FM4naL39EUr1vfoc5Q6o=
+github.com/Univ-Wyo-Education/S21-4010 v0.0.0-20210131191752-c2db0ec647f5/go.mod h1:4CpJh8UmFz1QdtauiDxb4nEbwvD3/S4weR/vDYRwUSQ=
+github.com/mattn/go-colorable v0.1.1/go.mod h1:FuOcm+DKB9mbwrcAfNl7/TZVBZ6rcnceauSikq3lYCQ=
+github.com/mattn/go-isatty v0.0.5/go.mod h1:Iq45c/XA43vh69/j3iqttzPXn0bhXyGjM0Hdxcsrc5s=
+github.com/mgutz/ansi v0.0.0-20170206155736-9520e82c474b/go.mod h1:01TrycV0kFyexm33Z7vhZRXopbI8J3TDReVlkTgMUxE=
+github.com/pschlump/MiscLib v0.0.0-20171012162159-e4e6a3a34d5f/go.mod h1:5xTdUkCWL2ER+MgvBAgx7ShwN7ZPUY1RMqT3vnFjCdg=
+github.com/pschlump/godebug v1.0.1/go.mod h1:2Xc0mMFygPm2NYRpRUDChvUjh+91oIxDPRB1OAL8XfE=
+github.com/pschlump/json v0.0.0-20180316172947-0d2e6a308e08/go.mod h1:MyeKNxcsYS/AaCqIp6DgPdaE/4NVH49OJVCnQsRoevI=
+golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
+golang.org/x/crypto v0.0.0-20201221181555-eec23a3978ad/go.mod h1:jdWPYTVW3xRLrWPugEBEK3UY2ZEsg3UU495nc5E+M+I=
+golang.org/x/net v0.0.0-20190404232315-eb5bcb51f2a3/go.mod h1:t9HGtf8HONx5eT2rtn7q6eTqICYqUVnKs3thJo3Qplg=
+golang.org/x/sys v0.0.0-20190215142949-d0b11bdaac8a/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
+golang.org/x/sys v0.0.0-20190222072716-a9d3bda3a223/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
+golang.org/x/sys v0.0.0-20191026070338-33540a1f6037/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
+golang.org/x/term v0.0.0-20201117132131-f5c789dd3221/go.mod h1:Nr5EML6q2oocZ2LXRh80K7BxOlk5/8JxuGnuhpl+muw=
+golang.org/x/text v0.3.0/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
