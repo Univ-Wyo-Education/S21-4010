@@ -50,8 +50,10 @@ RSA even has articles [on it in the Atlantic Magazine](https://www.theatlantic.c
 
 You can get it down to a simple set of explanations with just some math.
 
-the security is based on factoring of large numbers.  *Mathematicians consider factoring to be a `difficult` problem.*   I find the general understatement of 'difficult' to be very funny.
+The security is based on factoring of large numbers.  *Mathematicians consider factoring to be a `difficult` problem.*   I find the general understatement of 'difficult' to be very funny.
 
+Another good source [is Cloudflare's primer on EC]https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/) - and I have taken the 2 animations
+from them. 
 
 # EC and ECDSA Encryption
 
@@ -131,5 +133,7 @@ Now we can use a modulo system for this:
 <hr>
 
 ![ec001.png](./ec001.png)
+
+
 
 
