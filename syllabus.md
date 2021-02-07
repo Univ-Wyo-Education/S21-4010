@@ -178,7 +178,7 @@ This is an approximate schedule.  Updates will be noted in class.
 |                          |         |                                                                            |
 |   Feb&nbsp;07,&nbsp;2021 | 4       | ECDSA & RSA encryption, Quantum Computers and NTRU.                        |
 |                          |         |                                                                            |
-|                          |         | [Assinment 2 Due - Mining(hashes) / Merkle Trees (very simple Merkle)](https://github.com/Univ-Wyo-Education/S21-4010/blob/master/Assignments/02/Hash.md) |
+|                          |         | [Assinment 2 Due - Mining(hashes) / Merkle Trees (very simple Merkle)](https://github.com/Univ-Wyo-Education/S21-4010-a02/blob/master/README.md) |
 |                          |         |                                                                            |
 |   Feb&nbsp;14,&nbsp;2021 | 5       | Digital Security.                                                          |
 |                          |         |                                                                            |
@@ -191,7 +191,7 @@ This is an approximate schedule.  Updates will be noted in class.
 |   Feb&nbsp;21,&nbsp;2021 | 6       | Standard Contracts, Simple tokens, Standard tokens, ERC-20, ERC-721,       |
 |                          |         | ERC-1203.                                                                  |
 |                          |         |                                                                            |
-|                          |         | [Assinment 3 Due - Client Server and Transactions.](https://github.com/Univ-Wyo-Education/S21-4010/blob/master/Assignments/03/Client-Server.md) |
+|                          |         | [Assinment 3 Due - Client Server and Transactions.](https://github.com/Univ-Wyo-Education/S21-4010-a03/blob/master/README.md) |
 |                          |         |                                                                            |
 |   Feb&nbsp;21,&nbsp;2021 | 6       | Finance and Terms, Accounting(history)- Double Entry Book keeping,         |
 |                          |         | Cooking the books.                                                         |
