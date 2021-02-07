@@ -1,155 +1,59 @@
 m4_include(../../setup.m4)
 
-Last Part on Go
+How startups create wealth
 ======================
 
-Answer some questions
-------------
+[4010 L07 pt1 - How Startups Create Wealth - https://youtu.be/crvoLvvV4o0](https://youtu.be/crvoLvvV4o0)<br>
+[4010 L07 pt2 - Risk in Startups - https://youtu.be/6IS2IKkpVBE](https://youtu.be/6IS2IKkpVBE)<br>
 
-1. NTRU - A year ago it was one of 17 finaist - now we are down to 4.
-3. Why use a Blockchain instead of a centralized system.
+From Amazon S3 - for download (same as youtube videos)
 
-Some examples of using a Blockchain:
+[4010 L07 pt1 - How Startups Create Wealth](http://uw-s20-2015.s3.amazonaws.com/4010-L07-pt1-how-startups-create-wealth.mp4)<br>
+[4010 L07 pt2 - Risk in Startups](http://uw-s20-2015.s3.amazonaws.com/4010-L07-pt2-startup-risk.mp4)<br>
 
-1. Tracking people on parole.
-2. ISO 9002 Documents.
-3. Tracking / Inventory of Sidelights.
+News
+=====
 
-Goroutines
-------------------------------
-
-Go routes allow you to create parallel running code.
+1. Faster download using Merkle Trees [http://news.mit.edu/2019/vault-faster-more-efficient-cryptocurrency-0124](http://news.mit.edu/2019/vault-faster-more-efficient-cryptocurrency-0124)
+2. SEC issues No-Action letter to IMVU - classifying VCoin as a "digital asset" not as an investment.
+## Wealth = Leverage times Measurement
 
 
-```
-package main
+Economics of Wealth in a Startup
+======================
 
-import (
-	"fmt"
-	"sync"
-)
+"Leverage" * "Measure ability" = Wealth
 
-var wg sync.WaitGroup
-
-func f(from string) {
-	wg.Add(1)
-	defer wg.Done()
-	for i := 0; i < 3; i++ {
-		fmt.Printf("%s: %v\n", from, i)
-	}
-}
-
-func main() {
-
-	f("direct")
-
-	go f("goroutine")
-
-	for i := 0; i < 10; i++ {
-		// fmt.Printf("AT: %s\n", godebug.LF())
-		wg.Add(1)
-		go func(msg string) {
-			// fmt.Printf("AT: %s\n", godebug.LF())
-			defer wg.Done()
-			fmt.Printf("%s\n", msg)
-		}(fmt.Sprintf(" I am %d ", i))
-	}
-	// fmt.Printf("AT: %s\n", godebug.LF())
-
-	wg.Wait()
-	fmt.Printf("All Done\n")
-}
-```
-
-
-
-
-
-Go Interfaces
-------------------------------
-
-Two uses for interfaces (Actually more than 2 but 2 primary uses).
-
-1. Variable parameter list functions.
-2. Interfaces to sets of functions.
-
-## Variable parameter list functions.
-
-```Go
-func vexample(a int, b ...interface{}) {
-	for pos, bVal := range b {
-		switch v := bVal.(type) {
-		case int:
-			fmt.Printf("It's an int, %d at %d\n", v, pos)
-		case []int:
-			fmt.Printf("It's a slice of int\n")
-		default:
-			fmt.Printf("It's a something else\n")
-		}
-	}
-}
-
-```
-
-## Interfaces to sets of functions.
-
-```Go
-type InterfaceSpecType interface {
-	DoFirstThing(p1 int, p2 int) error
-	DoSomethingElse() error
-}
-
-type ImplementationType struct {
-	AA int
-	BB int
-}
-
-var _ InterfaceSpecType = (*ImplementationType)(nil)
-
-func NewImplementationType() InterfaceSpecType {
-	return &ImplementationType{
-		AA: 1,
-		BB: 2,
-	}
-}
-
-func (xy *ImplementationType) DoFirstThing(p1 int, p2 int) error {
-	// ... do something ...
-	return nil
-}
-
-func (xy *ImplementationType) DoSomethingElse() error {
-	// ... do something ...
-	return nil
-}
-
-func Demo() {
-	var dd InterfaceSpecType
-	dd = NewImplementationType()
-	_ = dd.DoSomethingElse()
-}
-```
-
-
-Go Channels
------------------
-
-In a future lecture on Go
-
-Go Weaknesses
-------------------------------
-
-What are the limitations of using Go
-
-1. No objects - Use interfaces instead.  No inheritance.
-2. No generics - yet - coming in 2.0 in 4 months - Use templates and code instead.
-
-Go 2.0 is coming in 4 months. It
-is 100% backward compatibility - it will be able to correctly
-compile go 1.0 code without change to the language.
-
-
+1. How Startups Create Wealth
+1. What is your time worth
+	- $102,204 ($115,831 with MS in Computer Science) per year in 5 years
+	- 2x - you work twice as hard ( 80+ hrs a week )
+	- 3x - you are 3 times as productive because you "skip the BS"
+	- 3x - you work on something important - an actual technology with productivity benefits
+	- 18x as much
+	This means 18 x 100,000 = 1.8 Mill a year = for a couple of years.
+2. What are the risks
+	- Bad product market fit
+	- Can't raise capital
+	- Wrong people
+	- Business Fails
+3. Leverage is Technology
+	- Leverage is New financial instrument
+	- Leverage is Other peoples money
+	- Leverage is compounding of interest
+4. Measure ability is Smallness
+3. Fallacies 
+	- Fixed pie fleecy (I win you loose)
+	- I can't sell
+	- FOP / FOF / FOS
+	- Security Blanket
+	- That you should "avoid" risk
+2. Where is block chain in this
+	- Financial Instruments
+	- Productivity in Industry
+	- Supply Chain
+	- Financial Cleaning
+	- Shared Data
 
 Copyright (C) University of Wyoming, 2018-2021.
-
 

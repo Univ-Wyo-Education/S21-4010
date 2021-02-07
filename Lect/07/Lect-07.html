@@ -713,146 +713,77 @@ ol {
 .half { height: 200px; }
 </style>
 
-<h1>Last Part on Go</h1>
+<h1>How startups create wealth</h1>
 
-<h2>Answer some questions</h2>
+<p><a href="https://youtu.be/crvoLvvV4o0">4010 L07 pt1 - How Startups Create Wealth - https://youtu.be/crvoLvvV4o0</a><br>
+<a href="https://youtu.be/6IS2IKkpVBE">4010 L07 pt2 - Risk in Startups - https://youtu.be/6IS2IKkpVBE</a><br></p>
 
-<ol>
-<li>NTRU - A year ago it was one of 17 finaist - now we are down to 4.</li>
-<li>Why use a Blockchain instead of a centralized system.</li>
-</ol>
+<p>From Amazon S3 - for download (same as youtube videos)</p>
 
-<p>Some examples of using a Blockchain:</p>
+<p><a href="http://uw-s20-2015.s3.amazonaws.com/4010-L07-pt1-how-startups-create-wealth.mp4">4010 L07 pt1 - How Startups Create Wealth</a><br>
+<a href="http://uw-s20-2015.s3.amazonaws.com/4010-L07-pt2-startup-risk.mp4">4010 L07 pt2 - Risk in Startups</a><br></p>
 
-<ol>
-<li>Tracking people on parole.</li>
-<li>ISO 9002 Documents.</li>
-<li>Tracking / Inventory of Sidelights.</li>
-</ol>
-
-<h2>Goroutines</h2>
-
-<p>Go routes allow you to create parallel running code.</p>
-
-<pre><code>package main
-
-import (
-	&quot;fmt&quot;
-	&quot;sync&quot;
-)
-
-var wg sync.WaitGroup
-
-func f(from string) {
-	wg.Add(1)
-	defer wg.Done()
-	for i := 0; i &lt; 3; i++ {
-		fmt.Printf(&quot;%s: %v\n&quot;, from, i)
-	}
-}
-
-func main() {
-
-	f(&quot;direct&quot;)
-
-	go f(&quot;goroutine&quot;)
-
-	for i := 0; i &lt; 10; i++ {
-		// fmt.Printf(&quot;AT: %s\n&quot;, godebug.LF())
-		wg.Add(1)
-		go func(msg string) {
-			// fmt.Printf(&quot;AT: %s\n&quot;, godebug.LF())
-			defer wg.Done()
-			fmt.Printf(&quot;%s\n&quot;, msg)
-		}(fmt.Sprintf(&quot; I am %d &quot;, i))
-	}
-	// fmt.Printf(&quot;AT: %s\n&quot;, godebug.LF())
-
-	wg.Wait()
-	fmt.Printf(&quot;All Done\n&quot;)
-}
-</code></pre>
-
-<h2>Go Interfaces</h2>
-
-<p>Two uses for interfaces (Actually more than 2 but 2 primary uses).</p>
+<h1>News</h1>
 
 <ol>
-<li>Variable parameter list functions.</li>
-<li>Interfaces to sets of functions.</li>
+<li>Faster download using Merkle Trees <a href="http://news.mit.edu/2019/vault-faster-more-efficient-cryptocurrency-0124">http://news.mit.edu/2019/vault-faster-more-efficient-cryptocurrency-0124</a></li>
+
+<li><p>SEC issues No-Action letter to IMVU - classifying VCoin as a &ldquo;digital asset&rdquo; not as an investment.</p>
+
+<h2>Wealth = Leverage times Measurement</h2></li>
 </ol>
 
-<h2>Variable parameter list functions.</h2>
+<h1>Economics of Wealth in a Startup</h1>
 
-<pre><code class="language-Go">func vexample(a int, b ...interface{}) {
-	for pos, bVal := range b {
-		switch v := bVal.(type) {
-		case int:
-			fmt.Printf(&quot;It's an int, %d at %d\n&quot;, v, pos)
-		case []int:
-			fmt.Printf(&quot;It's a slice of int\n&quot;)
-		default:
-			fmt.Printf(&quot;It's a something else\n&quot;)
-		}
-	}
-}
-
-</code></pre>
-
-<h2>Interfaces to sets of functions.</h2>
-
-<pre><code class="language-Go">type InterfaceSpecType interface {
-	DoFirstThing(p1 int, p2 int) error
-	DoSomethingElse() error
-}
-
-type ImplementationType struct {
-	AA int
-	BB int
-}
-
-var _ InterfaceSpecType = (*ImplementationType)(nil)
-
-func NewImplementationType() InterfaceSpecType {
-	return &amp;ImplementationType{
-		AA: 1,
-		BB: 2,
-	}
-}
-
-func (xy *ImplementationType) DoFirstThing(p1 int, p2 int) error {
-	// ... do something ...
-	return nil
-}
-
-func (xy *ImplementationType) DoSomethingElse() error {
-	// ... do something ...
-	return nil
-}
-
-func Demo() {
-	var dd InterfaceSpecType
-	dd = NewImplementationType()
-	_ = dd.DoSomethingElse()
-}
-</code></pre>
-
-<h2>Go Channels</h2>
-
-<p>In a future lecture on Go</p>
-
-<h2>Go Weaknesses</h2>
-
-<p>What are the limitations of using Go</p>
+<p>&ldquo;Leverage&rdquo; * &ldquo;Measure ability&rdquo; = Wealth</p>
 
 <ol>
-<li>No objects - Use interfaces instead.  No inheritance.</li>
-<li>No generics - yet - coming in 2.0 in 4 months - Use templates and code instead.</li>
-</ol>
+<li>How Startups Create Wealth</li>
+<li>What is your time worth
 
-<p>Go 2.0 is coming in 4 months. It
-is 100% backward compatibility - it will be able to correctly
-compile go 1.0 code without change to the language.</p>
+<ul>
+<li>$102,204 ($115,831 with MS in Computer Science) per year in 5 years</li>
+<li>2x - you work twice as hard ( 80+ hrs a week )</li>
+<li>3x - you are 3 times as productive because you &ldquo;skip the BS&rdquo;</li>
+<li>3x - you work on something important - an actual technology with productivity benefits</li>
+<li>18x as much
+This means 18 x 100,000 = 1.8 Mill a year = for a couple of years.</li>
+</ul></li>
+<li>What are the risks
+
+<ul>
+<li>Bad product market fit</li>
+<li>Can&rsquo;t raise capital</li>
+<li>Wrong people</li>
+<li>Business Fails</li>
+</ul></li>
+<li>Leverage is Technology
+
+<ul>
+<li>Leverage is New financial instrument</li>
+<li>Leverage is Other peoples money</li>
+<li>Leverage is compounding of interest</li>
+</ul></li>
+<li>Measure ability is Smallness</li>
+<li>Fallacies
+
+<ul>
+<li>Fixed pie fleecy (I win you loose)</li>
+<li>I can&rsquo;t sell</li>
+<li>FOP / FOF / FOS</li>
+<li>Security Blanket</li>
+<li>That you should &ldquo;avoid&rdquo; risk</li>
+</ul></li>
+<li>Where is block chain in this
+
+<ul>
+<li>Financial Instruments</li>
+<li>Productivity in Industry</li>
+<li>Supply Chain</li>
+<li>Financial Cleaning</li>
+<li>Shared Data</li>
+</ul></li>
+</ol>
 
 <p>Copyright &copy; University of Wyoming, 2018-2021.</p>
 
