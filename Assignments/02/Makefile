@@ -7,17 +7,10 @@ IMG=
 PY=
 
 
-all: Hash.html build
+all: Hash.md Hash.html build
 
 build:
-	( cd main ; go build )
-
-
-#Hash.html: Hash.md
-#	markdown-cli --input=./Hash.md --output=Hash.html
-#	cat ${FR}/css/pre ${FR}/css/markdown.css ${FR}/css/post ../../md.css ${FR}/css/hpre Hash.html ${FR}/css/hpost >/tmp/Hash.html
-#	mv /tmp/Hash.html ./Hash.html
-
+	( cd main ; go build main.go )
 
 %.md: %.raw.md $(PY) $(IMG)
 	m4 -P $< >$@
