@@ -708,70 +708,126 @@ ol {
 
 <div class="markdown-body">
 
-<style>
-.pagebreak { page-break-before: always; }
-</style>
+<h1>Lecture 09 - ECDSA - Elliptic curve public key encryption</h1>
 
-<h1>News</h1>
+<h1>Videos (part 1 .. 3 )</h1>
 
-<ol>
-<li>Faster download using Merkle Trees <a href="http://news.mit.edu/2019/vault-faster-more-efficient-cryptocurrency-0124">http://news.mit.edu/2019/vault-faster-more-efficient-cryptocurrency-0124</a></li>
-<li>SEC issues No-Action letter to IMVU - classifying VCoin as a &ldquo;digital asset&rdquo; not as an investment.</li>
-</ol>
+<p><a href="https://youtu.be/0x1NNdEC2d4">https://youtu.be/0x1NNdEC2d4 - Lect-30-4010-pt1-ECDSA.mp4</a><br>
+<a href="https://youtu.be/AZDUaOlbGLM">https://youtu.be/AZDUaOlbGLM - Lect-30-4010-pt2-add-double-mul.mp4</a><br>
+<a href="https://youtu.be/qsoh50Ls8B4">https://youtu.be/qsoh50Ls8B4 - Lect-30-4010-pt3-discreet.mp4</a><br>
+<a href="https://youtu.be/KmxHmipdeFo">https://youtu.be/KmxHmipdeFo - Lect-30-4010-pt4.mp4</a><br></p>
 
-<h1>Economics of Wealth in a Startup</h1>
+<p>From Amazon S3 - for download (same as youtube videos)</p>
 
-<p>&ldquo;Leverage&rdquo; * &ldquo;Measure ability&rdquo; = Wealth</p>
+<p><a href="http://uw-s20-2015.s3.amazonaws.com/Lect-30-4010-pt1-ECDSA.mp4">http://uw-s20-2015.s3.amazonaws.com/Lect-30-4010-pt1-ECDSA.mp4</a><br>
+<a href="http://uw-s20-2015.s3.amazonaws.com/Lect-30-4010-pt2-add-double-mul.mp4">http://uw-s20-2015.s3.amazonaws.com/Lect-30-4010-pt2-add-double-mul.mp4</a><br>
+<a href="http://uw-s20-2015.s3.amazonaws.com/Lect-30-4010-pt3-discreet.mp4">http://uw-s20-2015.s3.amazonaws.com/Lect-30-4010-pt3-discreet.mp4</a><br>
+<a href="http://uw-s20-2015.s3.amazonaws.com/Lect-30-4010-pt4.mp4">http://uw-s20-2015.s3.amazonaws.com/Lect-30-4010-pt4.mp4</a><br></p>
 
-<ol>
-<li>How Startups Create Wealth</li>
-<li>What is your time worth
+<h1>Some history.</h1>
 
-<ul>
-<li>$102,204 ($115,831 with MS in Computer Science) per year in 5 years</li>
-<li>2x - you work twice as hard ( 80+ hrs a week )</li>
-<li>3x - you are 3 times as productive because you &ldquo;skip the BS&rdquo;</li>
-<li>3x - you work on something important - an actual technology with productivity benefits</li>
-<li>18x as much
-This means 18 x 100,000 = 1.8 Mill a year = for a couple of years.</li>
-</ul></li>
-<li>What are the risks
+<p>The biggest problem in cryptography before 1977 was key distribution.</p>
 
-<ul>
-<li>Bad product market fit</li>
-<li>Can&rsquo;t raise capital</li>
-<li>Wrong people</li>
-<li>Business Fails</li>
-</ul></li>
-<li>Leverage is Technology
+<p>In 1977 public key cryptography was invented.  IN 1983 it was patented.  In 1988 an adequate key was 100 decimal digits.
+Computers were a touch slower - today you need 8k to 16k digits.  That is slow.</p>
 
-<ul>
-<li>Leverage is New financial instrument</li>
-<li>Leverage is Other peoples money</li>
-<li>Leverage is compounding of interest</li>
-</ul></li>
-<li>Measure ability is Smallness</li>
-<li>Fallacies
+<p>The system really only is used to solve the key distribution problem - not actually to encrypt content.</p>
 
-<ul>
-<li>Fixed pie fleecy (I win you loose)</li>
-<li>I can&rsquo;t sell</li>
-<li>FOP / FOF / FOS</li>
-<li>Security Blanket</li>
-<li>That you should &ldquo;avoid&rdquo; risk</li>
-</ul></li>
-<li>Where is block chain in this
+<p>This is the simple form:
+A and B both have Public/Private key pairs.   B wants to communicate with A.   B uses A&rsquo;s public key to encrypt a message
+32 bytes long to send to A.  The message is a random 32 byte AES encryption key. A uses the &ldquo;private&rdquo; part of the key to decrypt  the message and get the key.
+A uses B&rsquo;s private key to send back a new message with 32 bytes of data.   The 32 bytes are a random AES key.
+B uses her own private key to decrypt the message.  Now both sizes have AES keys.  They use AES, 1000 times
+faster, to send back and forth encrypted data.</p>
 
-<ul>
-<li>Financial Instruments</li>
-<li>Productivity in Industry</li>
-<li>Supply Chain</li>
-<li>Financial Cleaning</li>
-<li>Shared Data</li>
-</ul></li>
-</ol>
+<p>A real key exchange is more complex than this - but this is the basic idea.</p>
 
-<p>Copyright &copy; University of Wyoming, 2018-2021.</p>
+<p>There are also key exchanges where the key is never transmitted.  That is better for key exchange.  It requires the use of a zero knowledge proof combined
+with a bunch of algebra and no key transmission is done at all.  Both sides end up with the same a 32 byte AES key.</p>
+
+<p>Also to make this secure you have to add a bunch of wrappers around the transmission like a Nonce and signature of validity like CBC.</p>
+
+<p>The idea is the same.   All the real data is encrypted using AES, the key exchange is done using the public/private key pairs.</p>
+
+<p>This is the basic idea of TLS 1.3, the underlying system for HTTPS.  TLS adds the additional validation that the keys are checked
+in a hierarchy with a signature where the signature can be validated to be from a certain source.  This is the &ldquo;hierarchy of Trust&rdquo;
+and why we trust the TLS to be from the original domain.</p>
+
+<h1>EC and ECDSA Encryption</h1>
+
+<p>How ECDSA works under the covers</p>
+
+<p>Eliptic Curve Function</p>
+
+<p><img src="./ec016.png" alt="ec016.png" /></p>
+
+<p>Graphed</p>
+
+<p><img src="./ec017.png" alt="ec017.png" /></p>
+
+<hr>
+
+<p>Good EC, bad EC, addition.</p>
+
+<p><img src="./ec015.png" alt="ec015.png" /></p>
+
+<p><img src="./ec014.png" alt="ec014.png" /></p>
+
+<hr>
+
+<p>Doubleling of a value.</p>
+
+<p><img src="./ec013.png" alt="ec013.png" /></p>
+
+<p><img src="./ec012.png" alt="ec012.png" /></p>
+
+<hr>
+
+<p><img src="./ec011.png" alt="ec011.png" /></p>
+
+<hr>
+
+<p><img src="./ec010.png" alt="ec010.png" /></p>
+
+<hr>
+
+<p><img src="./ec009.png" alt="ec009.png" /></p>
+
+<hr>
+
+<p>As integers we get:</p>
+
+<p><img src="./ec008.png" alt="ec008.png" /></p>
+
+<hr>
+
+<p>Now we can use a modulo system for this:</p>
+
+<p><img src="./ec007.png" alt="ec007.png" /></p>
+
+<hr>
+
+<p><img src="./ec006.png" alt="ec006.png" /></p>
+
+<hr>
+
+<p><img src="./ec005.png" alt="ec005.png" /></p>
+
+<hr>
+
+<p><img src="./ec004.png" alt="ec004.png" /></p>
+
+<hr>
+
+<p><img src="./ec003.png" alt="ec003.png" /></p>
+
+<hr>
+
+<p><img src="./ec002.png" alt="ec002.png" /></p>
+
+<hr>
+
+<p><img src="./ec001.png" alt="ec001.png" /></p>
 
 </div>
 
