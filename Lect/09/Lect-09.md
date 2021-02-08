@@ -43,7 +43,7 @@ You can get it down to a simple set of explanations with just some math.
 
 The security is based on factoring of large numbers.  *Mathematicians consider factoring to be a difficult` problem.*   I find the general understatement of 'difficult to be very funny.
 
-Another good source [is Cloudflare's primer on EC]https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/) - and I have taken the 2 animations
+Another good source [is Cloudflare's primer on EC](https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/) - and I have taken the 2 animations
 from them. 
 
 EC is used as the system in Bitcoin, Ethereum and most other blockchains.
