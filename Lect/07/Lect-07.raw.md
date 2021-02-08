@@ -3,20 +3,13 @@ m4_include(../../setup.m4)
 How startups create wealth
 ======================
 
-[4010 L07 pt1 - How Startups Create Wealth - https://youtu.be/crvoLvvV4o0](https://youtu.be/crvoLvvV4o0)<br>
+[4010 L07 pt1 - How Startups Create Wealth - https://youtu.be/WLIgMrzGTPA](https://youtu.be/WLIgMrzGTPA)<br>
 [4010 L07 pt2 - Risk in Startups - https://youtu.be/6IS2IKkpVBE](https://youtu.be/6IS2IKkpVBE)<br>
 
 From Amazon S3 - for download (same as youtube videos)
 
 [4010 L07 pt1 - How Startups Create Wealth](http://uw-s20-2015.s3.amazonaws.com/4010-L07-pt1-how-startups-create-wealth.mp4)<br>
 [4010 L07 pt2 - Risk in Startups](http://uw-s20-2015.s3.amazonaws.com/4010-L07-pt2-startup-risk.mp4)<br>
-
-News
-=====
-
-1. Faster download using Merkle Trees [http://news.mit.edu/2019/vault-faster-more-efficient-cryptocurrency-0124](http://news.mit.edu/2019/vault-faster-more-efficient-cryptocurrency-0124)
-2. SEC issues No-Action letter to IMVU - classifying VCoin as a "digital asset" not as an investment.
-## Wealth = Leverage times Measurement
 
 
 Economics of Wealth in a Startup

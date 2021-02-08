@@ -1,49 +1,136 @@
-<style>
-.pagebreak { page-break-before: always; }
-</style>
+# Lecture 09 - ECDSA - Elliptic curve public key encryption
 
-News
-=====
+Just one set of lectures this week - 5 parts.
 
-1. Faster download using Merkle Trees [http://news.mit.edu/2019/vault-faster-more-efficient-cryptocurrency-0124](http://news.mit.edu/2019/vault-faster-more-efficient-cryptocurrency-0124)
-2. SEC issues No-Action letter to IMVU - classifying VCoin as a "digital asset" not as an investment.
+# Videos (part 1 .. 5 )
 
 
-Economics of Wealth in a Startup
-======================
 
-"Leverage" * "Measure ability" = Wealth
+# Some history.
 
-1. How Startups Create Wealth
-1. What is your time worth
-	- $102,204 ($115,831 with MS in Computer Science) per year in 5 years
-	- 2x - you work twice as hard ( 80+ hrs a week )
-	- 3x - you are 3 times as productive because you "skip the BS"
-	- 3x - you work on something important - an actual technology with productivity benefits
-	- 18x as much
-	This means 18 x 100,000 = 1.8 Mill a year = for a couple of years.
-2. What are the risks
-	- Bad product market fit
-	- Can't raise capital
-	- Wrong people
-	- Business Fails
-3. Leverage is Technology
-	- Leverage is New financial instrument
-	- Leverage is Other peoples money
-	- Leverage is compounding of interest
-4. Measure ability is Smallness
-3. Fallacies 
-	- Fixed pie fleecy (I win you loose)
-	- I can't sell
-	- FOP / FOF / FOS
-	- Security Blanket
-	- That you should "avoid" risk
-2. Where is block chain in this
-	- Financial Instruments
-	- Productivity in Industry
-	- Supply Chain
-	- Financial Cleaning
-	- Shared Data
+The biggest problem in cryptography before 1977 was key distribution.
 
-Copyright (C) University of Wyoming, 2018-2021.
+In 1977 public key cryptography was invented.  IN 1983 it was patented.  In 1988 an adequate key was 100 decimal digits.
+Computers were a touch slower - today you need 8k to 16k digits.  That is slow.
+
+The system really only is used to solve the key distribution problem - not actually to encrypt content.
+
+This is the simple form:
+A and B both have Public/Private key pairs.   B wants to communicate with A.   B uses A's public key to encrypt a message
+32 bytes long to send to A.  The message is a random 32 byte AES encryption key. A uses the "private" part of the key to decrypt  the message and get the key.
+A uses B's private key to send back a new message with 32 bytes of data.   The 32 bytes are a random AES key.
+B uses her own private key to decrypt the message.  Now both sizes have AES keys.  They use AES, 1000 times
+faster, to send back and forth encrypted data.
+
+A real key exchange is more complex than this - but this is the basic idea.
+
+There are also key exchanges where the key is never transmitted.  That is better for key exchange.  It requires the use of a zero knowledge proof combined
+with a bunch of algebra and no key transmission is done at all.  Both sides end up with the same a 32 byte AES key.
+
+Also to make this secure you have to add a bunch of wrappers around the transmission like a Nonce and signature of validity like CBC.   
+
+The idea is the same.   All the real data is encrypted using AES, the key exchange is done using the public/private key pairs.
+
+This is the basic idea of TLS 1.3, the underlying system for HTTPS.  TLS adds the additional validation that the keys are checked
+in a hierarchy with a signature where the signature can be validated to be from a certain source.  This is the "hierarchy of Trust"
+and why we trust the TLS to be from the original domain.
+
+# RSA is easy to understand.
+
+RSA even has articles [on it in the Atlantic Magazine](https://www.theatlantic.com/magazine/archive/2002/09/a-primer-on-public-key-encryption/302574/).
+
+You can get it down to a simple set of explanations with just some math.
+
+The security is based on factoring of large numbers.  *Mathematicians consider factoring to be a `difficult` problem.*   I find the general understatement of 'difficult' to be very funny.
+
+Another good source [is Cloudflare's primer on EC](https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/) - and I have taken the 2 animations
+from them. 
+
+EC is used as the system in Bitcoin, Ethereum and most other blockchains.
+
+
+
+
+
+# EC and ECDSA Encryption
+
+
+How ECDSA works under the covers
+
+Eliptic Curve Function
+
+![ec016.png](./ec016.png)
+
+Graphed 
+
+![ec017.png](./ec017.png)
+
+
+
+<hr>
+
+Good EC, bad EC, addition.
+
+![ec015.png](./ec015.png)
+
+![ec014.png](./ec014.png)
+
+<hr>
+
+Doubleling of a value.
+
+![ec013.png](./ec013.png)
+
+![ec012.png](./ec012.png)
+
+<hr>
+
+![ec011.png](./ec011.png)
+
+<hr>
+
+![ec010.png](./ec010.png)
+
+<hr>
+
+![ec009.png](./ec009.png)
+
+<hr>
+
+As integers we get:
+
+![ec008.png](./ec008.png)
+
+<hr>
+
+Now we can use a modulo system for this:
+
+![ec007.png](./ec007.png)
+
+<hr>
+
+![ec006.png](./ec006.png)
+
+<hr>
+
+![ec005.png](./ec005.png)
+
+<hr>
+
+![ec004.png](./ec004.png)
+
+<hr>
+
+![ec003.png](./ec003.png)
+
+<hr>
+
+![ec002.png](./ec002.png)
+
+<hr>
+
+![ec001.png](./ec001.png)
+
+
+
 
