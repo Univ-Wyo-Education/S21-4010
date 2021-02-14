@@ -4,7 +4,19 @@ Just one set of lectures this week - 5 parts.
 
 # Videos (part 1 .. 5 )
 
+[Elliptic Curve(EC) Intro - https://youtu.be/J8WUvMcq0wA](https://youtu.be/J8WUvMcq0wA)<br>
+[EC pt1 - https://youtu.be/9lhvilCm0Js](https://youtu.be/9lhvilCm0Js)<br>
+[EC pt2 - https://youtu.be/BnYSv1ew_-4](https://youtu.be/BnYSv1ew_-4)<br>
+[EC pt3 - https://youtu.be/TyFALT9MoKw](https://youtu.be/TyFALT9MoKw)<br>
+[EC pt4 - https://youtu.be/ih2FkqsYpKA](https://youtu.be/ih2FkqsYpKA)<br>
 
+From Amazon S3 - for download (same as youtube videos)
+
+[Elliptic Curve(EC) Intro](http://uw-s20-2015.s3.amazonaws.com/4010-L09-pt0-EC-and-ECDSA-intro.mp4)<br>
+[EC pt1](http://uw-s20-2015.s3.amazonaws.com/4010-L09-pt1-ECDSA.mp4)<br>
+[EC pt2](http://uw-s20-2015.s3.amazonaws.com/4010-L09-pt2-add-double-mul.mp4)<br>
+[EC pt3](http://uw-s20-2015.s3.amazonaws.com/4010-L09-pt3-discreet.mp4)<br>
+[EC pt4](http://uw-s20-2015.s3.amazonaws.com/4010-L09-pt4-examle.mp4)<br>
 
 # Some history.
 
