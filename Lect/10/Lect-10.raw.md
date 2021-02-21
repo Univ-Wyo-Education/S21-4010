@@ -1,16 +1,4 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
+m4_include(../../setup.m4)
 
 # L10 - Transactions and Blocks - Walk through
 
