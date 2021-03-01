@@ -69,7 +69,7 @@ EC is used as the system in Bitcoin, Ethereum and most other blockchains.
 
 How ECDSA works under the covers
 
-Eliptic Curve Function
+Elliptic Curve Function
 
 ![ec016.png](./ec016.png)
 
