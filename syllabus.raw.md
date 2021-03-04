@@ -115,7 +115,7 @@ know and I will find a time.  These will be about 45 minutes long.
 
 0. Blockchain and Cryptocurrencies - Feb 3
 1. Blockchain in Supply Chain - Feb 17
-2. Real Security / Personal Security - Feb 24
+2. Real Security / Personal Security - Feb 24 -- oops --
 3. Backup and the Law - Mar 10
 4. Future of Blockchain - Mar 17
 
