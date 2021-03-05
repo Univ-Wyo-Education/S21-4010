@@ -708,6 +708,14 @@ ol {
 
 <div class="markdown-body">
 
+<p><a href="https://youtu.be/GjmV3B2Jwxs">ETC 20 Contracts Pt1 - https://youtu.be/GjmV3B2Jwxs</a><br>
+<a href="https://youtu.be/U8CD8kEWA7o">ETC 20 Contracts Pt2 - https://youtu.be/U8CD8kEWA7o</a><br></p>
+
+<p>From Amazon S3 - for download (same as youtube videos)</p>
+
+<p><a href="http://uw-s20-2015.s3.amazonaws.com/4010-L12-pt1-erc20.mp4">ETC 20 Contracts Pt1</a><br>
+<a href="http://uw-s20-2015.s3.amazonaws.com/4010-L12-pt2-erc20-contract.mp4">ETC 20 Contracts Pt2</a><br></p>
+
 <h1>Reading</h1>
 
 <p>A simple ERC-20 Contract:
@@ -729,7 +737,7 @@ ol {
 
 <h2>Standard ERC-20 Contract</h2>
 
-<h3>SimpleToken</h3>
+<h3>ExampleToken</h3>
 
 <table>
 <thead>
@@ -844,49 +852,41 @@ ol {
 <td>constructor</td>
 <td>()</td>
 <td></td>
-<td></td>
+<td><code>( initialSupply )</code></td>
 </tr>
 </tbody>
 </table>
 
-<h3>SimpleToken Ours derived from StandardToken</h3>
+<h3>ExampleToken Ours derived from ERC20</h3>
 
-<pre><code>
-pragma solidity ^0.4.24;
+<pre><code>pragma solidity &gt;=0.6.0 &lt;0.8.0;
 
-import &quot;openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol&quot;;
+import &quot;@openzeppelin/contracts/token/ERC20/ERC20.sol&quot;;
 
 /**
- * @title SimpleToken
- * @dev Very simple ERC20 Token example, where all tokens are pre-assigned to the creator.
- * Note they can later distribute these tokens as they wish using `transfer` and other
- * `StandardToken` functions.
+ * @title ExampleToken
+ * @dev Very simple ERC20 Token example, where all tokens are pre-assigned
+ * to the creator.  Note they can later distribute these tokens as they
+ * wish using `transfer` and other `ERC20` functions.
  */
-contract SimpleToken is StandardToken {
-
-	string public constant name = &quot;SimpleToken&quot;; // solium-disable-line uppercase
-	string public constant symbol = &quot;SIM&quot;; // solium-disable-line uppercase
-	uint8 public constant decimals = 0; // solium-disable-line uppercase
-
-	uint256 public constant INITIAL_SUPPLY = 10000 * (10 ** uint256(decimals));
-
-	/**
-	 * @dev Constructor that gives msg.sender all of existing tokens.
-	 */
-	constructor() public {
-		totalSupply_ = INITIAL_SUPPLY;
-		balances[msg.sender] = INITIAL_SUPPLY;
-		emit Transfer(0x0, msg.sender, INITIAL_SUPPLY);
-	}
-
+contract ExampleToken is ERC20 {
+    /**
+     * @dev Constructor that gives msg.sender all of existing tokens.
+     */
+    constructor(
+        uint256 initialSupply
+    ) public ERC20(&quot;ExampleToken&quot;, &quot;ETX&quot;) {
+        _mint(msg.sender, initialSupply);
+    }
 }
+
 </code></pre>
 
 <div class="pagebreak"></div>
 
 <h3>StandardToken</h3>
 
-<pre><code>pragma solidity ^0.4.24;
+<pre><code>pragma solidity &gt;=0.6.0 &lt;0.8.0;
 
 import &quot;./BasicToken.sol&quot;;
 import &quot;./ERC20.sol&quot;;
@@ -1016,7 +1016,7 @@ contract StandardToken is ERC20, BasicToken {
 <h3>BasicToken</h3>
 
 <pre><code>
-pragma solidity ^0.4.24;
+pragma solidity &gt;=0.6.0 &lt;0.8.0;
 
 
 import &quot;./ERC20Basic.sol&quot;;
@@ -1072,7 +1072,7 @@ contract BasicToken is ERC20Basic {
 <h3>ERC20</h3>
 
 <pre><code>
-pragma solidity ^0.4.24;
+pragma solidity &gt;=0.6.0 &lt;0.8.0;
 
 import &quot;./ERC20Basic.sol&quot;;
 

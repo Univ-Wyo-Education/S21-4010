@@ -3,7 +3,7 @@ PP=`pwd`
 FN=Lect-12
 DIR=../../../F20-1015
 IMG= 
-PY= 
+PY= ../../Eth/contracts/ExampleToken.sol
 
 all: gen val ${FN}.md ${FN}.html 
 

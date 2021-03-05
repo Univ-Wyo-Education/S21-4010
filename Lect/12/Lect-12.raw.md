@@ -1,6 +1,13 @@
 m4_include(../../setup.m4)
 
 
+[ETC 20 Contracts Pt1 - https://youtu.be/GjmV3B2Jwxs](https://youtu.be/GjmV3B2Jwxs)<br>
+[ETC 20 Contracts Pt2 - https://youtu.be/U8CD8kEWA7o](https://youtu.be/U8CD8kEWA7o)<br>
+
+From Amazon S3 - for download (same as youtube videos)
+
+[ETC 20 Contracts Pt1](http://uw-s20-2015.s3.amazonaws.com/4010-L12-pt1-erc20.mp4)<br>
+[ETC 20 Contracts Pt2](http://uw-s20-2015.s3.amazonaws.com/4010-L12-pt2-erc20-contract.mp4)<br>
 
 # Reading
 
@@ -31,7 +38,7 @@ Smart Contracts - Standard Contracts (ERC-20)
 
 ## Standard ERC-20 Contract
 
-### SimpleToken
+### ExampleToken
 
 | Method Name         | Const | $ | Params                                                               |
 |---------------------|-------|---|----------------------------------------------------------------------|
@@ -49,41 +56,13 @@ Smart Contracts - Standard Contracts (ERC-20)
 | totalSupply         | const |   | `() returns ( uint256 )`                                             |
 | transfer            | Tx    |   | `( address _to, uint256 _value ) returns ( bool )`                   |
 | transferFrom        | Tx    |   | `( address _from, address _to, uint256 _value ) returns ( bool )`    |
-| constructor         | ()    |   |                                                                      |
+| constructor         | ()    |   | `( initialSupply )`                                                  |
 
 
-### SimpleToken Ours derived from StandardToken
+### ExampleToken Ours derived from ERC20
 
 ```
-
-pragma solidity ^0.4.24;
-
-import "openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
-
-/**
- * @title SimpleToken
- * @dev Very simple ERC20 Token example, where all tokens are pre-assigned to the creator.
- * Note they can later distribute these tokens as they wish using `transfer` and other
- * `StandardToken` functions.
- */
-contract SimpleToken is StandardToken {
-
-	string public constant name = "SimpleToken"; // solium-disable-line uppercase
-	string public constant symbol = "SIM"; // solium-disable-line uppercase
-	uint8 public constant decimals = 0; // solium-disable-line uppercase
-
-	uint256 public constant INITIAL_SUPPLY = 10000 * (10 ** uint256(decimals));
-
-	/**
-	 * @dev Constructor that gives msg.sender all of existing tokens.
-	 */
-	constructor() public {
-		totalSupply_ = INITIAL_SUPPLY;
-		balances[msg.sender] = INITIAL_SUPPLY;
-		emit Transfer(0x0, msg.sender, INITIAL_SUPPLY);
-	}
-
-}
+m4_include(../../Eth/contracts/ExampleToken.sol)
 ```
 
 <div class="pagebreak"></div>
@@ -91,7 +70,7 @@ contract SimpleToken is StandardToken {
 ### StandardToken
 
 ```
-pragma solidity ^0.4.24;
+pragma solidity >=0.6.0 <0.8.0;
 
 import "./BasicToken.sol";
 import "./ERC20.sol";
@@ -224,7 +203,7 @@ contract StandardToken is ERC20, BasicToken {
 
 ```
 
-pragma solidity ^0.4.24;
+pragma solidity >=0.6.0 <0.8.0;
 
 
 import "./ERC20Basic.sol";
@@ -283,7 +262,7 @@ contract BasicToken is ERC20Basic {
 
 ```
 
-pragma solidity ^0.4.24;
+pragma solidity >=0.6.0 <0.8.0;
 
 import "./ERC20Basic.sol";
 
