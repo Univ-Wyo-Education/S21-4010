@@ -3,6 +3,18 @@ m4_include(../../setup.m4)
 
 # Lecture 11 - Accounting and some Finance
 
+[Blockchain and Finance Pt1 - https://youtu.be/XbpqZejIMQc](https://youtu.be/XbpqZejIMQc)<br>
+[Blockchain and Finance Pt2 - https://youtu.be/5QldKmHkdbI](https://youtu.be/5QldKmHkdbI)<br>
+[Blockchain and Finance Pt3 - https://youtu.be/vKdfuoEik7A](https://youtu.be/vKdfuoEik7A)<br>
+[Blockchain and Finance Pt4 - https://youtu.be/wmCvjzhrHuQ](https://youtu.be/wmCvjzhrHuQ)<br>
+
+From Amazon S3 - for download (same as youtube videos)
+
+[Blockchain and Finance Pt1](http://uw-s20-2015.s3.amazonaws.com/4010-L11-pt1.mp4)<br>
+[Blockchain and Finance Pt2](http://uw-s20-2015.s3.amazonaws.com/4010-L11-pt2.mp4)<br>
+[Blockchain and Finance Pt3](http://uw-s20-2015.s3.amazonaws.com/4010-L11-pt3.mp4)<br>
+[Blockchain and Finance Pt4](http://uw-s20-2015.s3.amazonaws.com/4010-L11-pt3.mp4)<br>
+
 ## News
 
 1. First ETF based on Bitcoin.
