@@ -23,7 +23,9 @@ in Venezuela.
 
 The US FED has done a good job.
 
-![log-inflation.png](log-inflation.png])
+![log-inflation.png](log-inflation.png)
+
+(from White Paper)
 
 You can see a similar kind of a graph when looking at commodity prices.
 Since the 1930 most commodity prices have been much more stable.

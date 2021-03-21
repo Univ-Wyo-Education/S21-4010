@@ -720,7 +720,7 @@ distributed consensus system is Googles Spanner database based on F1 and BigTabl
 <p>First wold scale database.</p>
 
 <p>Uses Atomic Clocks for Consistency.  With blockchian we get a slower system -
-F1 is millisecond consistency - but it is decentralized.</p>
+F1 is millisecond consistency - but it is not decentralized.</p>
 
 <p>Benefits to decentralized is that there is nobody &ldquo;controlling&rdquo; the system.
 With the US dollar there is the FED that manipulates the supply and the
@@ -730,7 +730,9 @@ in Venezuela.</p>
 
 <p>The US FED has done a good job.</p>
 
-<p><img src="log-inflation.png]" alt="log-inflation.png" /></p>
+<p><img src="log-inflation.png" alt="log-inflation.png" /></p>
+
+<p>(from White Paper)</p>
 
 <p>You can see a similar kind of a graph when looking at commodity prices.
 Since the 1930 most commodity prices have been much more stable.
@@ -743,6 +745,90 @@ to determine.</p>
 <p>Back to consensus&hellip;</p>
 
 <p>What is distributed consensus.</p>
+
+<h2>Byzantine Generals Problem</h2>
+
+<p>This was originally described by L. Lamport [4] in 1982.  It is the underlying problem
+and solution that is behind blockchain and cryptocurrency.</p>
+
+<p>Basically you have multiple independent systems sending messages.  Some of the
+systems can like.  You want to get to a consensus where a set of data is
+agreed upon.   This was originally developed for systems that control
+airplanes and is still heavily used in flight-controls.   Real time systems
+like cars, planes and others use this today.</p>
+
+<p>Lamport&rsquo;s &ldquo;discovery&rdquo; was that you can not assume that a system is honest.
+Systems can lie.  They can receive accurate data and then send inaccurate
+data to others.   They don&rsquo;t just fail and stay kited.   They can fail and
+produce garbage data.</p>
+
+<p>The real question is how do you assure that multiple systems or people
+that are at different locations agree on a &ldquo;world state&rdquo; before taking
+some action.</p>
+
+<p>This is based on the Paper &ldquo;Practical Byzantine Fault Tolerance&rdquo;
+by Castro [5] in 1999:</p>
+
+<ol>
+<li>Commander sends the value to every lieutenant</li>
+<li>Every lieutenant
+
+<ul>
+<li>if it receives a new value v, broadcast (prepare, v)</li>
+<li>if it receives 2f+1 (prepare, v), broadcast (commit, v)</li>
+<li>if it receives 2f+1 (commit, v), broadcast (committed, v)</li>
+<li>if it receivers f+1 (committed, v), broadcast (committed, v)</li>
+</ul></li>
+<li>Ensure agreement</li>
+<li>Ensure liveness under an loyal commander</li>
+</ol>
+
+<h2>Clock solution to Distributed Consensus</h2>
+
+<p>This is L. Lamport&rsquo;s other contribution to distributed fault tollerance.  A provable consensus system using
+accurate clocks.  I think his paper on this was in 1978.</p>
+
+<p>The commercial version of F1 [1] is &ldquo;spanner&rdquo; the worlds first global scale database.
+You can use it by using Google Compute Cloud database.  It is the database under
+gmail, Google docs, and doubleclick - the advertising platform.  This means that
+all of use it many times a day.  74% of the web has google analytics on it - feeding
+data - billions of rows a day into it.</p>
+
+<p>At the hart of this is the Google TrueTime [2] API - you can use it also.
+True time is a microsecond accurate time clock in the API that is globally accurate.
+By globally I mean that the data center in Dublin Ireland will give you the
+same results as Portland Oregon.  To do this Google used atomic clocks in
+its data centers and adjusted for the curvature of space time (General Relativity).
+It then went to substantial effort to get all of the clocks to agree.</p>
+
+<p>This is only the 2nd application of Einstein&rsquo;s General Relativity in the world.
+GPS is the 1st.</p>
+
+<p><img src="0_LRCqJBFTjL72ePqv.jpg" alt="Google Atomic Clock In TrueTime API" /></p>
+
+<p>When you change data a &ldquo;leader&rdquo; is picked.  This is the system that will make
+the change.   This is done if the changes is within a single block.   The
+leader changes the block then distributes the block to all the systems that
+have a replica of the block.</p>
+
+<p>The leader is picked based on who responds the fastest (Remember the clocks).</p>
+
+<p>If the change spans more than 1 block then a coordinator for a 2-phase commit
+is picked in the same way.   The coordinator manages the 2-phase over the
+set of single block commits.</p>
+
+<p>In all cases the process chooses reliability over speed.</p>
+
+<h2>References</h2>
+
+<ol>
+<li>Google&rsquo;s F1 Database Paper: <a href="https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41344.pdf">https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41344.pdf</a></li>
+<li>Google Spanner Database: <a href="https://levelup.gitconnected.com/how-google-spanner-assigns-commit-timestamps-the-secret-sauce-of-its-strong-consistency-8bc143614f26">https://levelup.gitconnected.com/how-google-spanner-assigns-commit-timestamps-the-secret-sauce-of-its-strong-consistency-8bc143614f26</a></li>
+<li>TrueTime System: <a href="https://medium.com/searce/internals-of-google-cloud-spanner-5927e4b83b36">https://medium.com/searce/internals-of-google-cloud-spanner-5927e4b83b36</a></li>
+<li>Byzantine Fault Tollerance: <a href="https://people.eecs.berkeley.edu/~luca/cs174/byzantine.pdf">https://people.eecs.berkeley.edu/~luca/cs174/byzantine.pdf</a></li>
+<li>Practical Byzantine Fault Tollerance: <a href="http://pmg.csail.mit.edu/papers/osdi99.pdf">http://pmg.csail.mit.edu/papers/osdi99.pdf</a></li>
+<li>Is the FED doing a good job: <a href="https://www.fte.org/wp-content/uploads/WhiteSelginLastrapesFed1.pdf">https://www.fte.org/wp-content/uploads/WhiteSelginLastrapesFed1.pdf</a></li>
+</ol>
 
 </div>
 
