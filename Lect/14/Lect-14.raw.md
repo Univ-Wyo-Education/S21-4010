@@ -1,17 +1,5 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+m4_include(../../setup.m4)
 
 # Lecture 14 - What is distributed consensus
 

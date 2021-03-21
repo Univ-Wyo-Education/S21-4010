@@ -1,15 +1,23 @@
 
-all: Lect-14.html note.2.html
+PP=`pwd`
+FN=Lect-14
+DIR=../../../F20-1015
+IMG= 
+PY= 
 
-FR=../01/
+all: gen val ${FN}.md ${FN}.html 
 
-Lect-14.html: Lect-14.md
-	markdown-cli --input=./Lect-14.md --output=Lect-14.html
-	cat ${FR}/css/pre ${FR}/css/markdown.css ${FR}/css/post ../../md.css ${FR}/css/hpre Lect-14.html ${FR}/css/hpost >/tmp/Lect-14.html
-	mv /tmp/Lect-14.html ./Lect-14.html
+gen:
 
-note.2.html: note.2.md
-	markdown-cli --input=./note.2.md --output=note.2.html
-	cat ${FR}/css/pre ${FR}/css/markdown.css ${FR}/css/post ../../md.css ${FR}/css/hpre note.2.html ${FR}/css/hpost >/tmp/note.2.html
-	mv /tmp/note.2.html ./note.2.html
+val:
+
+%.md: %.raw.md $(PY) $(IMG) Makefile
+	m4 -P $< >$@
+
+%.html: %.md
+	blackfriday-tool ./$< $@
+	echo cat ./${DIR}/md.css $@ >/tmp/$@
+	cat ./${DIR}/css/pre ./${DIR}/css/markdown.css ./${DIR}/css/post ./${DIR}/md.css ./${DIR}/css/hpre $@ ./${DIR}/css/hpost >/tmp/$@
+	mv /tmp/$@ ./$@
+	echo "file://${PP}/$@" >>open.1
 
