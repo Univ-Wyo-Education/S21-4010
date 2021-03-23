@@ -702,147 +702,384 @@ ol {
     display: block;
     list-style-type: decimal;
 }
-.pagebreak { page-break-before: always; }
-.half { height: 200px; }
 </style>
 
 <div class="markdown-body">
 
-<h1>Lecture 14 - What is distributed consensus</h1>
+<div class="pagebreak"></div>
 
-<p><a href="https://youtu.be/b4qk7t12Rew">Byzantine Generals - https://youtu.be/b4qk7t12Rew</a><br>
-<a href="https://youtu.be/94_mv19gHxs">Byzantine Fault Tolerance - https://youtu.be/94_mv19gHxs</a><br>
-<a href="https://youtu.be/GUJ7H1SGVRQ">NFTs and Insurance Pt1 - https://youtu.be/GUJ7H1SGVRQ</a><br>
-<a href="https://youtu.be/GUJ7H1SGVRQ">NFTs and Insurance Pt2 - https://youtu.be/GUJ7H1SGVRQ</a><br>
-<a href="https://youtu.be/A_ngOjUl1KE">NFTs and Insurance Pt3 - https://youtu.be/A_ngOjUl1KE</a><br></p>
+<h1>Smart Contracts - Standard Contracts (ERC-20)</h1>
 
-<p>From Amazon S3 - for download (same as youtube videos)</p>
+<h2>Standard ERC-20 Contract</h2>
 
-<p><a href="http://uw-s20-2015.s3.amazonaws.com/4010-L14-pt1-byzantine-fault-tollerance.mp4">Byzantine Generals</a><br>
-<a href="http://uw-s20-2015.s3.amazonaws.com/4010-L14-pt2-byzantine-generals.mp4">Byzantine Fault Tolerance</a><br>
-<a href="http://uw-s20-2015.s3.amazonaws.com/4010-L14-pt3-insurance-pt1.mp4">NFTs and Insurance Pt1</a><br>
-<a href="http://uw-s20-2015.s3.amazonaws.com/4010-L14-pt4-insurance-pt2.mp4">NFTs and Insurance Pt2</a><br>
-<a href="http://uw-s20-2015.s3.amazonaws.com/4010-L14-pt5-insurance-pt3.mp4">NFTs and Insurance Pt3</a><br></p>
+<h3>SimpleToken</h3>
 
-<p>All the different blockchain systems are really about Distributed Consensus.</p>
+<table>
+<thead>
+<tr>
+<th>Method Name</th>
+<th>Const</th>
+<th>$</th>
+<th>Params</th>
+</tr>
+</thead>
 
-<p>The method for getting it different depending on how you go about it.  The biggest
-distributed consensus system is Googles Spanner database based on F1 and BigTable.</p>
+<tbody>
+<tr>
+<td>Approval</td>
+<td>event</td>
+<td></td>
+<td><code>( address owner, address spender, uint256 value )</code></td>
+</tr>
 
-<p>Let&rsquo;s talk a little bit about F1.</p>
+<tr>
+<td>INITIAL_SUPPLY</td>
+<td>const</td>
+<td></td>
+<td><code>() returns ( uint256 )</code></td>
+</tr>
 
-<p>First wold scale database.</p>
+<tr>
+<td>Transfer</td>
+<td>event</td>
+<td></td>
+<td><code>( address from, address to, uint256 value )</code></td>
+</tr>
 
-<p>Uses Atomic Clocks for Consistency.  With blockchian we get a slower system -
-F1 is millisecond consistency - but it is not decentralized.</p>
+<tr>
+<td>allowance</td>
+<td>const</td>
+<td></td>
+<td><code>( address _owner, address _spender ) returns ( uint256 )</code></td>
+</tr>
 
-<p>Benefits to decentralized is that there is nobody &ldquo;controlling&rdquo; the system.
-With the US dollar there is the FED that manipulates the supply and the
-value of the dollar.   There are many bad examples of a central bank
-manipulating a currency - in the 1970&rsquo;s Argentina.  More recently
-in Venezuela.</p>
+<tr>
+<td>approve</td>
+<td>Tx</td>
+<td></td>
+<td><code>( address _spender, uint256 _value ) returns ( bool )</code></td>
+</tr>
 
-<p>The US FED has done a good job.</p>
+<tr>
+<td>balanceOf</td>
+<td>const</td>
+<td></td>
+<td><code>( address _owner ) returns ( uint256 )</code></td>
+</tr>
 
-<p><img src="log-inflation.png" alt="log-inflation.png" /></p>
+<tr>
+<td>decimals</td>
+<td>const</td>
+<td></td>
+<td><code>() returns ( uint8 )</code></td>
+</tr>
 
-<p>(from White Paper)</p>
+<tr>
+<td>decreaseApproval</td>
+<td>Tx</td>
+<td></td>
+<td><code>( address _spender, uint256 _subtractedValue ) returns ( bool )</code></td>
+</tr>
 
-<p>You can see a similar kind of a graph when looking at commodity prices.
-Since the 1930 most commodity prices have been much more stable.
-The value of the dollar has been reasonably stable.</p>
+<tr>
+<td>increaseApproval</td>
+<td>Tx</td>
+<td></td>
+<td><code>( address _spender, uint256 _addedValue ) returns ( bool )</code></td>
+</tr>
 
-<p>So&hellip; Not having a &ldquo;FED&rdquo; in a cryptocurrency means that there is nobody
-controlling the available supply and the price is left to the market
-to determine.</p>
+<tr>
+<td>name</td>
+<td>const</td>
+<td></td>
+<td><code>() returns ( string )</code></td>
+</tr>
 
-<p>Back to consensus&hellip;</p>
+<tr>
+<td>symbol</td>
+<td>const</td>
+<td></td>
+<td><code>() returns ( string )</code></td>
+</tr>
 
-<p>What is distributed consensus.</p>
+<tr>
+<td>totalSupply</td>
+<td>const</td>
+<td></td>
+<td><code>() returns ( uint256 )</code></td>
+</tr>
 
-<h2>Byzantine Generals Problem</h2>
+<tr>
+<td>transfer</td>
+<td>Tx</td>
+<td></td>
+<td><code>( address _to, uint256 _value ) returns ( bool )</code></td>
+</tr>
 
-<p>This was originally described by L. Lamport [4] in 1982.  It is the underlying problem
-and solution that is behind blockchain and cryptocurrency.</p>
+<tr>
+<td>transferFrom</td>
+<td>Tx</td>
+<td></td>
+<td><code>( address _from, address _to, uint256 _value ) returns ( bool )</code></td>
+</tr>
 
-<p>Basically you have multiple independent systems sending messages.  Some of the
-systems can like.  You want to get to a consensus where a set of data is
-agreed upon.   This was originally developed for systems that control
-airplanes and is still heavily used in flight-controls.   Real time systems
-like cars, planes and others use this today.</p>
+<tr>
+<td>constructor</td>
+<td>()</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
-<p>Lamport&rsquo;s &ldquo;discovery&rdquo; was that you can not assume that a system is honest.
-Systems can lie.  They can receive accurate data and then send inaccurate
-data to others.   They don&rsquo;t just fail and stay kited.   They can fail and
-produce garbage data.</p>
+<h3>SimpleToken Ours derived from StandardToken</h3>
 
-<p>The real question is how do you assure that multiple systems or people
-that are at different locations agree on a &ldquo;world state&rdquo; before taking
-some action.</p>
+<pre><code>
+pragma solidity &gt;=0.4.25 &lt;0.7.0;
 
-<p>This is based on the Paper &ldquo;Practical Byzantine Fault Tolerance&rdquo;
-by Castro [5] in 1999:</p>
+import &quot;openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol&quot;;
 
-<ol>
-<li>Commander sends the value to every lieutenant</li>
-<li>Every lieutenant
+/**
+ * @title SimpleToken
+ * @dev Very simple ERC20 Token example, where all tokens are pre-assigned to the creator.
+ * Note they can later distribute these tokens as they wish using `transfer` and other
+ * `StandardToken` functions.
+ */
+contract SimpleToken is StandardToken {
 
-<ul>
-<li>if it receives a new value v, broadcast (prepare, v)</li>
-<li>if it receives 2f+1 (prepare, v), broadcast (commit, v)</li>
-<li>if it receives 2f+1 (commit, v), broadcast (committed, v)</li>
-<li>if it receivers f+1 (committed, v), broadcast (committed, v)</li>
-</ul></li>
-<li>Ensure agreement</li>
-<li>Ensure liveness under an loyal commander</li>
-</ol>
+    string public constant name = &quot;SimpleToken&quot;; // solium-disable-line uppercase
+    string public constant symbol = &quot;SIM&quot;; // solium-disable-line uppercase
+    uint8 public constant decimals = 0; // solium-disable-line uppercase
 
-<h2>Clock solution to Distributed Consensus</h2>
+    uint256 public constant INITIAL_SUPPLY = 10000 * (10 ** uint256(decimals));
 
-<p>This is L. Lamport&rsquo;s other contribution to distributed fault tollerance.  A provable consensus system using
-accurate clocks.  I think his paper on this was in 1978.</p>
+    /**
+     * @dev Constructor that gives msg.sender all of existing tokens.
+     */
+    constructor() public {
+        totalSupply_ = INITIAL_SUPPLY;
+        balances[msg.sender] = INITIAL_SUPPLY;
+        emit Transfer(0x0, msg.sender, INITIAL_SUPPLY);
+    }
 
-<p>The commercial version of F1 [1] is &ldquo;spanner&rdquo; the worlds first global scale database.
-You can use it by using Google Compute Cloud database.  It is the database under
-gmail, Google docs, and doubleclick - the advertising platform.  This means that
-all of use it many times a day.  74% of the web has google analytics on it - feeding
-data - billions of rows a day into it.</p>
+}
+</code></pre>
 
-<p>At the hart of this is the Google TrueTime [2] API - you can use it also.
-True time is a microsecond accurate time clock in the API that is globally accurate.
-By globally I mean that the data center in Dublin Ireland will give you the
-same results as Portland Oregon.  To do this Google used atomic clocks in
-its data centers and adjusted for the curvature of space time (General Relativity).
-It then went to substantial effort to get all of the clocks to agree.</p>
+<div class="pagebreak"></div>
 
-<p>This is only the 2nd application of Einstein&rsquo;s General Relativity in the world.
-GPS is the 1st.</p>
+<h3>StandardToken</h3>
 
-<p><img src="0_LRCqJBFTjL72ePqv.jpg" alt="Google Atomic Clock In TrueTime API" /></p>
+<pre><code>pragma solidity &gt;=0.4.25 &lt;0.7.0;
 
-<p>When you change data a &ldquo;leader&rdquo; is picked.  This is the system that will make
-the change.   This is done if the changes is within a single block.   The
-leader changes the block then distributes the block to all the systems that
-have a replica of the block.</p>
+import &quot;./BasicToken.sol&quot;;
+import &quot;./ERC20.sol&quot;;
 
-<p>The leader is picked based on who responds the fastest (Remember the clocks).</p>
 
-<p>If the change spans more than 1 block then a coordinator for a 2-phase commit
-is picked in the same way.   The coordinator manages the 2-phase over the
-set of single block commits.</p>
+/**
+ * @title Standard ERC20 token
+ *
+ * @dev Implementation of the basic standard token.
+ * https://github.com/ethereum/EIPs/issues/20
+ * Based on code by FirstBlood: https://github.com/Firstbloodio/token/blob/master/smart_contract/FirstBloodToken.sol
+ */
+contract StandardToken is ERC20, BasicToken {
 
-<p>In all cases the process chooses reliability over speed.</p>
+  mapping (address =&gt; mapping (address =&gt; uint256)) internal allowed;
 
-<h2>References</h2>
 
-<ol>
-<li>Google&rsquo;s F1 Database Paper: <a href="https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41344.pdf">https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41344.pdf</a></li>
-<li>Google Spanner Database: <a href="https://levelup.gitconnected.com/how-google-spanner-assigns-commit-timestamps-the-secret-sauce-of-its-strong-consistency-8bc143614f26">https://levelup.gitconnected.com/how-google-spanner-assigns-commit-timestamps-the-secret-sauce-of-its-strong-consistency-8bc143614f26</a></li>
-<li>TrueTime System: <a href="https://medium.com/searce/internals-of-google-cloud-spanner-5927e4b83b36">https://medium.com/searce/internals-of-google-cloud-spanner-5927e4b83b36</a></li>
-<li>Byzantine Fault Tollerance: <a href="https://people.eecs.berkeley.edu/~luca/cs174/byzantine.pdf">https://people.eecs.berkeley.edu/~luca/cs174/byzantine.pdf</a></li>
-<li>Practical Byzantine Fault Tollerance: <a href="http://pmg.csail.mit.edu/papers/osdi99.pdf">http://pmg.csail.mit.edu/papers/osdi99.pdf</a></li>
-<li>Is the FED doing a good job: <a href="https://www.fte.org/wp-content/uploads/WhiteSelginLastrapesFed1.pdf">https://www.fte.org/wp-content/uploads/WhiteSelginLastrapesFed1.pdf</a></li>
-</ol>
+  /**
+   * @dev Transfer tokens from one address to another
+   * @param _from address The address which you want to send tokens from
+   * @param _to address The address which you want to transfer to
+   * @param _value uint256 the amount of tokens to be transferred
+   */
+  function transferFrom(
+    address _from,
+    address _to,
+    uint256 _value
+  )
+    public
+    returns (bool)
+  {
+    require(_to != address(0));
+    require(_value &lt;= balances[_from]);
+    require(_value &lt;= allowed[_from][msg.sender]);
+
+    balances[_from] = balances[_from].sub(_value);
+    balances[_to] = balances[_to].add(_value);
+    allowed[_from][msg.sender] = allowed[_from][msg.sender].sub(_value);
+    emit Transfer(_from, _to, _value);
+    return true;
+  }
+
+  /**
+   * @dev Approve the passed address to spend the specified amount of tokens on behalf of msg.sender.
+   * Beware that changing an allowance with this method brings the risk that someone may use both the old
+   * and the new allowance by unfortunate transaction ordering. One possible solution to mitigate this
+   * race condition is to first reduce the spender's allowance to 0 and set the desired value afterwards:
+   * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
+   * @param _spender The address which will spend the funds.
+   * @param _value The amount of tokens to be spent.
+   */
+  function approve(address _spender, uint256 _value) public returns (bool) {
+    allowed[msg.sender][_spender] = _value;
+    emit Approval(msg.sender, _spender, _value);
+    return true;
+  }
+
+  /**
+   * @dev Function to check the amount of tokens that an owner allowed to a spender.
+   * @param _owner address The address which owns the funds.
+   * @param _spender address The address which will spend the funds.
+   * @return A uint256 specifying the amount of tokens still available for the spender.
+   */
+  function allowance(
+    address _owner,
+    address _spender
+   )
+    public
+    view
+    returns (uint256)
+  {
+    return allowed[_owner][_spender];
+  }
+
+  /**
+   * @dev Increase the amount of tokens that an owner allowed to a spender.
+   * approve should be called when allowed[_spender] == 0. To increment
+   * allowed value is better to use this function to avoid 2 calls (and wait until
+   * the first transaction is mined)
+   * From MonolithDAO Token.sol
+   * @param _spender The address which will spend the funds.
+   * @param _addedValue The amount of tokens to increase the allowance by.
+   */
+  function increaseApproval(
+    address _spender,
+    uint256 _addedValue
+  )
+    public
+    returns (bool)
+  {
+    allowed[msg.sender][_spender] = (
+      allowed[msg.sender][_spender].add(_addedValue));
+    emit Approval(msg.sender, _spender, allowed[msg.sender][_spender]);
+    return true;
+  }
+
+  /**
+   * @dev Decrease the amount of tokens that an owner allowed to a spender.
+   * approve should be called when allowed[_spender] == 0. To decrement
+   * allowed value is better to use this function to avoid 2 calls (and wait until
+   * the first transaction is mined)
+   * From MonolithDAO Token.sol
+   * @param _spender The address which will spend the funds.
+   * @param _subtractedValue The amount of tokens to decrease the allowance by.
+   */
+  function decreaseApproval(
+    address _spender,
+    uint256 _subtractedValue
+  )
+    public
+    returns (bool)
+  {
+    uint256 oldValue = allowed[msg.sender][_spender];
+    if (_subtractedValue &gt; oldValue) {
+      allowed[msg.sender][_spender] = 0;
+    } else {
+      allowed[msg.sender][_spender] = oldValue.sub(_subtractedValue);
+    }
+    emit Approval(msg.sender, _spender, allowed[msg.sender][_spender]);
+    return true;
+  }
+
+}
+
+</code></pre>
+
+<h3>BasicToken</h3>
+
+<pre><code>
+pragma solidity &gt;=0.4.25 &lt;0.7.0;
+
+
+import &quot;./ERC20Basic.sol&quot;;
+import &quot;../../math/SafeMath.sol&quot;;
+
+
+/**
+ * @title Basic token
+ * @dev Basic version of StandardToken, with no allowances.
+ */
+contract BasicToken is ERC20Basic {
+  using SafeMath for uint256;
+
+  mapping(address =&gt; uint256) balances;
+
+  uint256 totalSupply_;
+
+  /**
+  * @dev Total number of tokens in existence
+  */
+  function totalSupply() public view returns (uint256) {
+    return totalSupply_;
+  }
+
+  /**
+  * @dev Transfer token for a specified address
+  * @param _to The address to transfer to.
+  * @param _value The amount to be transferred.
+  */
+  function transfer(address _to, uint256 _value) public returns (bool) {
+    require(_to != address(0));
+    require(_value &lt;= balances[msg.sender]);
+
+    balances[msg.sender] = balances[msg.sender].sub(_value);
+    balances[_to] = balances[_to].add(_value);
+    emit Transfer(msg.sender, _to, _value);
+    return true;
+  }
+
+  /**
+  * @dev Gets the balance of the specified address.
+  * @param _owner The address to query the the balance of.
+  * @return An uint256 representing the amount owned by the passed address.
+  */
+  function balanceOf(address _owner) public view returns (uint256) {
+    return balances[_owner];
+  }
+
+}
+
+</code></pre>
+
+<h3>ERC20</h3>
+
+<pre><code>
+pragma solidity &gt;=0.4.25 &lt;0.7.0;
+
+import &quot;./ERC20Basic.sol&quot;;
+
+
+/**
+ * @title ERC20 interface
+ * @dev see https://github.com/ethereum/EIPs/issues/20
+ */
+contract ERC20 is ERC20Basic {
+  function allowance(address owner, address spender)
+    public view returns (uint256);
+
+  function transferFrom(address from, address to, uint256 value)
+    public returns (bool);
+
+  function approve(address spender, uint256 value) public returns (bool);
+  event Approval(
+    address indexed owner,
+    address indexed spender,
+    uint256 value
+  );
+}
+
+</code></pre>
 
 </div>
 

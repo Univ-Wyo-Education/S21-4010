@@ -702,147 +702,148 @@ ol {
     display: block;
     list-style-type: decimal;
 }
-.pagebreak { page-break-before: always; }
-.half { height: 200px; }
 </style>
 
 <div class="markdown-body">
 
-<h1>Lecture 14 - What is distributed consensus</h1>
+<style>
+.pagebreak { page-break-before: always; }
+</style>
 
-<p><a href="https://youtu.be/b4qk7t12Rew">Byzantine Generals - https://youtu.be/b4qk7t12Rew</a><br>
-<a href="https://youtu.be/94_mv19gHxs">Byzantine Fault Tolerance - https://youtu.be/94_mv19gHxs</a><br>
-<a href="https://youtu.be/GUJ7H1SGVRQ">NFTs and Insurance Pt1 - https://youtu.be/GUJ7H1SGVRQ</a><br>
-<a href="https://youtu.be/GUJ7H1SGVRQ">NFTs and Insurance Pt2 - https://youtu.be/GUJ7H1SGVRQ</a><br>
-<a href="https://youtu.be/A_ngOjUl1KE">NFTs and Insurance Pt3 - https://youtu.be/A_ngOjUl1KE</a><br></p>
+<h1>Lecture 14 - Start on Solidity</h1>
 
-<p>From Amazon S3 - for download (same as youtube videos)</p>
-
-<p><a href="http://uw-s20-2015.s3.amazonaws.com/4010-L14-pt1-byzantine-fault-tollerance.mp4">Byzantine Generals</a><br>
-<a href="http://uw-s20-2015.s3.amazonaws.com/4010-L14-pt2-byzantine-generals.mp4">Byzantine Fault Tolerance</a><br>
-<a href="http://uw-s20-2015.s3.amazonaws.com/4010-L14-pt3-insurance-pt1.mp4">NFTs and Insurance Pt1</a><br>
-<a href="http://uw-s20-2015.s3.amazonaws.com/4010-L14-pt4-insurance-pt2.mp4">NFTs and Insurance Pt2</a><br>
-<a href="http://uw-s20-2015.s3.amazonaws.com/4010-L14-pt5-insurance-pt3.mp4">NFTs and Insurance Pt3</a><br></p>
-
-<p>All the different blockchain systems are really about Distributed Consensus.</p>
-
-<p>The method for getting it different depending on how you go about it.  The biggest
-distributed consensus system is Googles Spanner database based on F1 and BigTable.</p>
-
-<p>Let&rsquo;s talk a little bit about F1.</p>
-
-<p>First wold scale database.</p>
-
-<p>Uses Atomic Clocks for Consistency.  With blockchian we get a slower system -
-F1 is millisecond consistency - but it is not decentralized.</p>
-
-<p>Benefits to decentralized is that there is nobody &ldquo;controlling&rdquo; the system.
-With the US dollar there is the FED that manipulates the supply and the
-value of the dollar.   There are many bad examples of a central bank
-manipulating a currency - in the 1970&rsquo;s Argentina.  More recently
-in Venezuela.</p>
-
-<p>The US FED has done a good job.</p>
-
-<p><img src="log-inflation.png" alt="log-inflation.png" /></p>
-
-<p>(from White Paper)</p>
-
-<p>You can see a similar kind of a graph when looking at commodity prices.
-Since the 1930 most commodity prices have been much more stable.
-The value of the dollar has been reasonably stable.</p>
-
-<p>So&hellip; Not having a &ldquo;FED&rdquo; in a cryptocurrency means that there is nobody
-controlling the available supply and the price is left to the market
-to determine.</p>
-
-<p>Back to consensus&hellip;</p>
-
-<p>What is distributed consensus.</p>
-
-<h2>Byzantine Generals Problem</h2>
-
-<p>This was originally described by L. Lamport [4] in 1982.  It is the underlying problem
-and solution that is behind blockchain and cryptocurrency.</p>
-
-<p>Basically you have multiple independent systems sending messages.  Some of the
-systems can like.  You want to get to a consensus where a set of data is
-agreed upon.   This was originally developed for systems that control
-airplanes and is still heavily used in flight-controls.   Real time systems
-like cars, planes and others use this today.</p>
-
-<p>Lamport&rsquo;s &ldquo;discovery&rdquo; was that you can not assume that a system is honest.
-Systems can lie.  They can receive accurate data and then send inaccurate
-data to others.   They don&rsquo;t just fail and stay kited.   They can fail and
-produce garbage data.</p>
-
-<p>The real question is how do you assure that multiple systems or people
-that are at different locations agree on a &ldquo;world state&rdquo; before taking
-some action.</p>
-
-<p>This is based on the Paper &ldquo;Practical Byzantine Fault Tolerance&rdquo;
-by Castro [5] in 1999:</p>
+<h2>News</h2>
 
 <ol>
-<li>Commander sends the value to every lieutenant</li>
-<li>Every lieutenant
-
-<ul>
-<li>if it receives a new value v, broadcast (prepare, v)</li>
-<li>if it receives 2f+1 (prepare, v), broadcast (commit, v)</li>
-<li>if it receives 2f+1 (commit, v), broadcast (committed, v)</li>
-<li>if it receivers f+1 (committed, v), broadcast (committed, v)</li>
-</ul></li>
-<li>Ensure agreement</li>
-<li>Ensure liveness under an loyal commander</li>
+<li>14 countries are moving to a blockchain based currency.  <a href="https://qz.com/1810727/central-banks-are-researching-digital-currencies-to-replace-cash/">https://qz.com/1810727/central-banks-are-researching-digital-currencies-to-replace-cash/</a></li>
+<li>Mashreq accomplishes this by removing the existing paper-based KYC procedure and replacing it with a blockchain-centric digital one. <a href="https://cointelegraph.com/news/dubai-welcomes-global-businesses-with-first-blockchain-kyc-platform">https://cointelegraph.com/news/dubai-welcomes-global-businesses-with-first-blockchain-kyc-platform</a></li>
 </ol>
 
-<h2>Clock solution to Distributed Consensus</h2>
+<h1>Solidity</h1>
 
-<p>This is L. Lamport&rsquo;s other contribution to distributed fault tollerance.  A provable consensus system using
-accurate clocks.  I think his paper on this was in 1978.</p>
+<h2>Version of the compiler</h2>
 
-<p>The commercial version of F1 [1] is &ldquo;spanner&rdquo; the worlds first global scale database.
-You can use it by using Google Compute Cloud database.  It is the database under
-gmail, Google docs, and doubleclick - the advertising platform.  This means that
-all of use it many times a day.  74% of the web has google analytics on it - feeding
-data - billions of rows a day into it.</p>
+<pre><code>pragma solidity &gt;=0.4.25 &lt;0.7.0;
+</code></pre>
 
-<p>At the hart of this is the Google TrueTime [2] API - you can use it also.
-True time is a microsecond accurate time clock in the API that is globally accurate.
-By globally I mean that the data center in Dublin Ireland will give you the
-same results as Portland Oregon.  To do this Google used atomic clocks in
-its data centers and adjusted for the curvature of space time (General Relativity).
-It then went to substantial effort to get all of the clocks to agree.</p>
+<h2>Library we will be using</h2>
 
-<p>This is only the 2nd application of Einstein&rsquo;s General Relativity in the world.
-GPS is the 1st.</p>
+<pre><code>import &quot;openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol&quot;;
+</code></pre>
 
-<p><img src="0_LRCqJBFTjL72ePqv.jpg" alt="Google Atomic Clock In TrueTime API" /></p>
+<h2>Comments</h2>
 
-<p>When you change data a &ldquo;leader&rdquo; is picked.  This is the system that will make
-the change.   This is done if the changes is within a single block.   The
-leader changes the block then distributes the block to all the systems that
-have a replica of the block.</p>
+<pre><code>/* Some Comment */ // Single line comment
+</code></pre>
 
-<p>The leader is picked based on who responds the fastest (Remember the clocks).</p>
+<h2>Classes and Inheritance</h2>
 
-<p>If the change spans more than 1 block then a coordinator for a 2-phase commit
-is picked in the same way.   The coordinator manages the 2-phase over the
-set of single block commits.</p>
+<pre><code>contract StandardToken is ERC20, BasicToken {
+</code></pre>
 
-<p>In all cases the process chooses reliability over speed.</p>
+<h2>Constructor</h2>
 
-<h2>References</h2>
+<pre><code>	constructor() public {
+</code></pre>
 
-<ol>
-<li>Google&rsquo;s F1 Database Paper: <a href="https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41344.pdf">https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41344.pdf</a></li>
-<li>Google Spanner Database: <a href="https://levelup.gitconnected.com/how-google-spanner-assigns-commit-timestamps-the-secret-sauce-of-its-strong-consistency-8bc143614f26">https://levelup.gitconnected.com/how-google-spanner-assigns-commit-timestamps-the-secret-sauce-of-its-strong-consistency-8bc143614f26</a></li>
-<li>TrueTime System: <a href="https://medium.com/searce/internals-of-google-cloud-spanner-5927e4b83b36">https://medium.com/searce/internals-of-google-cloud-spanner-5927e4b83b36</a></li>
-<li>Byzantine Fault Tollerance: <a href="https://people.eecs.berkeley.edu/~luca/cs174/byzantine.pdf">https://people.eecs.berkeley.edu/~luca/cs174/byzantine.pdf</a></li>
-<li>Practical Byzantine Fault Tollerance: <a href="http://pmg.csail.mit.edu/papers/osdi99.pdf">http://pmg.csail.mit.edu/papers/osdi99.pdf</a></li>
-<li>Is the FED doing a good job: <a href="https://www.fte.org/wp-content/uploads/WhiteSelginLastrapesFed1.pdf">https://www.fte.org/wp-content/uploads/WhiteSelginLastrapesFed1.pdf</a></li>
-</ol>
+<h2>Declare a string</h2>
+
+<pre><code>	string public constant name = &quot;SimpleToken&quot;; // solium-disable-line uppercase
+</code></pre>
+
+<h2>Test for true statments</h2>
+
+<pre><code>    require(_to != address(0));
+</code></pre>
+
+<h2>if</h2>
+
+<pre><code>    if (_subtractedValue &gt; oldValue) {
+      allowed[msg.sender][_spender] = 0;
+    } else {
+      allowed[msg.sender][_spender] = oldValue.sub(_subtractedValue);
+    }
+</code></pre>
+
+<h2>Function</h2>
+
+<pre><code>  function transferFrom( address _from, address _to, uint256 _value
+  ) public returns (bool)
+  {
+</code></pre>
+
+<h2>Events</h2>
+
+<pre><code>  event Approval( address indexed owner, address indexed spender,
+    uint256 value );
+</code></pre>
+
+<pre><code>    emit Approval(msg.sender, _spender, _value);
+</code></pre>
+
+<p><div class="pagebreak"></div></p>
+
+<h2>Example with a Loop</h2>
+
+<pre><code>  1  pragma solidity &gt;=0.4.25 &lt;0.7.0;
+  2  
+  3  import &quot;openzeppelin-solidity/contracts/ownership/Ownable.sol&quot;;
+  4  
+  5  contract Loop is Ownable {
+  6    struct StudentStruct {
+  7      uint256 grade;        // grade is a percentage * 1000
+  8      uint256 pin;        // Unique PIN code for student to get grade
+  9    }
+ 10  
+ 11    mapping(address =&gt; StudentStruct) addressToStudent;
+ 12    address [] studentList;
+ 13  
+ 14    event LogStudentGrade(address student, uint256 studentGrade);
+ 15  
+ 16    function appendStudentGrade(address student, uint256 studentGrade,
+       uint256 pin) public onlyOwner {
+ 17      studentList.push(student);
+ 18      addressToStudent[student].grade = studentGrade;
+ 19      addressToStudent[student].pin = pin;
+ 20    }
+ 21  
+ 22    function getStudentCount() public view returns(uint) {
+ 23      return studentList.length;
+ 24    }
+ 25  
+ 26    function getNthStudentGrade(uint i)
+       public view onlyOwner returns(uint256) {
+ 27      require(i &gt;= 0);
+ 28      require(i &lt; studentList.length);
+ 29      return(addressToStudent[studentList[i]].grade);
+ 30    }
+ 31  
+ 32    function getNthStudentAddress(uint i)
+       public view onlyOwner returns(address) {
+ 33      require(i &gt;= 0);
+ 34      require(i &lt; studentList.length);
+ 35      return(studentList[i]);
+ 36    }
+</code></pre>
+
+<p><div class="pagebreak"></div></p>
+
+<pre><code> 37  
+ 38    function getAGrade(address student, uint256 pin)
+       public view returns(uint256) {
+ 39      require(msg.sender == address);
+ 40      require(pin == addressToStudent[student].pin);
+ 41      return(addressToStudent[student].grade);
+ 42    }
+ 43  
+ 44    function emitGrades () public onlyOwner {
+ 45      for (uint i=0; i&lt;studentList.length; i++) {
+ 46        emit LogStudentGrade(studentList[i],
+           addressToStudent[studentList[i]].grade);
+ 47      }
+ 48    }
+ 49  }
+</code></pre>
 
 </div>
 
