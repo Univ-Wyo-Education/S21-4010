@@ -42,4 +42,7 @@ npm audit fix
 
 ```
 
+## Files
+
+Note that ./package.json and ./truffle-config.js are checked in with the notes for this lecture.
 
