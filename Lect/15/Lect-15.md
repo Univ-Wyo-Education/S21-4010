@@ -38,6 +38,20 @@ Single Node. Truffle.
 
 Let's go and install truffle and build a simple contract.
 
+Things to install:
 
+```
+Things to install:
+
+```
+npm install --save -g ganache-cli
+npm install --save -g truffle
+npm install --save truffle-assertions
+npm install --save @openzeppelin/contracts
+npm install --save @openzeppelin/test-helpers
+npm install --save @nomiclabs/hardhat-web3 web3
+npm audit fix
+
+```
 
 
