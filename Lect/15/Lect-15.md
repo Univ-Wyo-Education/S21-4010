@@ -50,6 +50,10 @@ npm install --save truffle-assertions
 npm install --save @openzeppelin/contracts
 npm install --save @openzeppelin/test-helpers
 npm install --save @nomiclabs/hardhat-web3 web3
+npm install --save truffle-contract
+npm install --save bootstrap
+npm install --save nodemon
+npm install --save lite-server
 npm audit fix
 
 ```
