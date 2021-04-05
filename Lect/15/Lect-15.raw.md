@@ -48,5 +48,35 @@ npm audit fix
 
 ## Files
 
-Note that ./package.json and ./truffle-config.js are checked in with the notes for this lecture.
+In with the lecture:
+
+```
+2_contract.js
+EmployeeVest.sol
+package.json
+truffle-config.js
+EmployeeVest_001_getDays.js
+EmployeeVest_002_StartVest.js
+```
+
+Create the project with
+
+```
+$ truffle init assignment
+$ cd assignment
+```
+
+Then move the fiels to:
+
+
+| File Name | Path in ./assignment |
+|:----------|:-----------------------------|
+|     2_contract.js       |   ./migrations/2_contract.js   |
+|     EmployeeVest.sol       |   ./contracts/EmployeeVest.sol   |
+|     package.json       |   ./package.json   |
+|     truffle-config.js       |   ./truffle-config.js   |
+|     EmployeeVest_001_getDays.js       |   ./test/EmployeeVest_001_getDays.js   |
+|     EmployeeVest_002_StartVest.js       |   ./test/EmployeeVest_002_StartVest.js   |
+
+
 
