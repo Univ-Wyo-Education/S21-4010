@@ -29,9 +29,6 @@ Let's go and install truffle and build a simple contract.
 Things to install:
 
 ```
-Things to install:
-
-```
 npm install --save -g ganache-cli
 npm install --save -g truffle
 npm install --save truffle-assertions
