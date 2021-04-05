@@ -14,6 +14,22 @@
 
 # L15 - Ethereum Contracts
 
+[Solidity Overview - https://youtu.be/FXhz-zcH8ws](https://youtu.be/FXhz-zcH8ws)<br>
+[Install Node.js and NPM - https://youtu.be/X8n7u7XxKrs](https://youtu.be/X8n7u7XxKrs)<br>
+[Install Truffle and Files and Tools - https://youtu.be/oL_wuPsfhBA](https://youtu.be/oL_wuPsfhBA)<br>
+[Hello world Eth and Truffle - ]()<br>
+[Run a Test - https://youtu.be/G7Ambek_vWs](https://youtu.be/G7Ambek_vWs)<br>
+[Vesting Contract - https://youtu.be/QRscb_JVC9M](https://youtu.be/QRscb_JVC9M)<br>
+
+From Amazon S3 - for download (same as youtube videos)
+
+[Solidity Overview](http://uw-s20-2015.s3.amazonaws.com/4010-L15-pt1-solidity-eth-overview.mp4)<br>
+[Install Node.js and NPM](http://uw-s20-2015.s3.amazonaws.com/4010-L15-pt2-install-npm-and-node.mp4)<br>
+[Install Truffle and Files and Tools](http://uw-s20-2015.s3.amazonaws.com/4010-L15-pt3-install-truffle-and-tools.mp4)<br>
+[Hello world Eth and Truffle](http://uw-s20-2015.s3.amazonaws.com/4010-L15-pt4-hello-world-truffle-solidity.mp4)<br>
+[Run a Test](http://uw-s20-2015.s3.amazonaws.com/4010-L15-pt5-run-truffle-test-on-completed-code.mp4)<br>
+[Vesting Contract](http://uw-s20-2015.s3.amazonaws.com/4010-L15-pt6-vesting-contract-walkthrough.mp4)<br>
+
 ## Overview
 
 1. Tools we are going to work with
