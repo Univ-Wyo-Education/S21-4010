@@ -18,30 +18,7 @@ In the land of Solidity/Ethereum we can build a simple non-fungable token
 contract using the ERC-721 base and extending it.
 
 ```
-// SPDX-License-Identifier: MIT
-pragma solidity >=0.6.0 <=0.9.0;
-
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
-import "@openzeppelin/contracts/utils/Counters.sol";
-
-contract GrouceCredit is ERC721URIStorage {
-    using Counters for Counters.Counter;
-    Counters.Counter private _tokenIds;
-	address private owner;
-
-    function mintUniqueToken(address to, string memory tokenURI)
-        public returns (uint256)	
-    {
-        _tokenIds.increment();
-
-        uint256 newItemId = _tokenIds.current();
-        _mint(to, newItemId);
-        _setTokenURI(newItemId, tokenURI);
-
-        return newItemId;
-    }
-}
+m4_include(SimpleERC721.sol)
 ```
 
 You can buy, sell, trade ERC721 tokens that support the standard interface

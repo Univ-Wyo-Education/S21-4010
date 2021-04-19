@@ -5,10 +5,14 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
-contract GrouceCredit is ERC721URIStorage {
+contract SimpleERC721 is ERC721URIStorage {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 	address private owner;
+
+    constructor() ERC721("SimpleERC721", "S721")
+	{
+	}
 
     function mintUniqueToken(address to, string memory tokenURI)
         public returns (uint256)	
