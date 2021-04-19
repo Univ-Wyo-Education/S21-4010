@@ -3,7 +3,7 @@ PP=`pwd`
 FN=Lect-17
 DIR=../../../F20-1015
 IMG= 
-PY= 
+PY= SimpleERC721.sol
 
 all: gen val ${FN}.md ${FN}.html 
 
