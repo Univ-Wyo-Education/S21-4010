@@ -15,6 +15,16 @@
 
 # Lecture 17 - Non Fungible Tokens
 
+[Truffle MetaCoin Walk-through - https://youtu.be/hj2Oxo5YpFo](https://youtu.be/hj2Oxo5YpFo)<br>
+[NFTs ERC 721 contract - https://youtu.be/21GzrWBBVIk](https://youtu.be/21GzrWBBVIk)<br>
+[NFT Sales Process - 4010-L17-ERC-721-part-2-buy-sell-them.mp4](4010-L17-ERC-721-part-2-buy-sell-them.mp4)<br>
+
+From Amazon S3 - for download (same as youtube videos)
+
+[Truffle MetaCoin Walk-through](http://uw-s20-2015.s3.amazonaws.com/4010-L17-truffle-walkthrough.mp4)<br>
+[NFTs ERC 721 contract](http://uw-s20-2015.s3.amazonaws.com/4010-L17-ERC-721-part-1-the-721-contract.mp4)<br>
+[NFT Sales Process](http://uw-s20-2015.s3.amazonaws.com/https://youtu.be/xDxsHXl6XpU)<br>
+
 Non-Fungible Tokens or (NFTs) are in the news with some art tided
 to a NFT selling for $69 million.
 
