@@ -714,6 +714,19 @@ ol {
 
 <p>First put them in context.  An analogy&hellip;  Cryptocurency is to government-money, what smart-contracts are to law.</p>
 
+<h2>General Limitations on Solidity</h2>
+
+<ol>
+<li>no way to iterate over maps</li>
+<li>data stored in arrays has to be returned 1 at a time</li>
+<li>friction between 256bit ints and JavaScript</li>
+<li>multiple-inheritance object oriented is just generally bad</li>
+<li>solidity keeps changing</li>
+<li>weird data types byres32 is same storage as int256/uint256, strings are 1 byte in a uint256 etc.</li>
+<li>&ldquo;address&rdquo; type may or may not be &ldquo;payable&rdquo;</li>
+<li>lots of &ldquo;type-casting&rdquo; required.</li>
+</ol>
+
 <h2>Limitations to the code.</h2>
 
 <p>A smart contract is a piece of code that is tied to a blockchain, triggered by transactions and data passed in the transactions and which reads and writes data in that blockchain’s history.
