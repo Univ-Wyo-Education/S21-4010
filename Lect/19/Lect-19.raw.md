@@ -7,6 +7,17 @@ Smart contracts have a unique set of limitings and pitfalls.
 
 First put them in context.  An analogy...  Cryptocurency is to government-money, what smart-contracts are to law.
 
+## General Limitations on Solidity
+
+1. no way to iterate over maps
+2. data stored in arrays has to be returned 1 at a time
+3. friction between 256bit ints and JavaScript
+4. multiple-inheritance object oriented is just generally bad
+5. solidity keeps changing
+5. weird data types byres32 is same storage as int256/uint256, strings are 1 byte in a uint256 etc.
+5. "address" type may or may not be "payable"
+5. lots of "type-casting" required.
+
 ## Limitations to the code.
 
 A smart contract is a piece of code that is tied to a blockchain, triggered by transactions and data passed in the transactions and which reads and writes data in that blockchain’s history.
