@@ -13,7 +13,7 @@
 
 
 
-# Lecture 20 - Smart Contract Pitfalls
+# Lecture 19 - Smart Contract Pitfalls
 
 Smart contracts have a unique set of limitings and pitfalls.
 
@@ -344,4 +344,7 @@ contract InsLogEvent {
 
 ```
 
+
+Code is MIT Licensed.<br>
+Copyright (C) University of Wyoming, 2018-2021.
 
