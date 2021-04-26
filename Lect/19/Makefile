@@ -1,11 +1,23 @@
 
-all: Lect-19.html
+PP=`pwd`
+FN=Lect-19
+DIR=../../../F20-1015
+IMG= 
+PY= 
 
-FR=../01/
+all: gen val ${FN}.md ${FN}.html 
 
-Lect-19.html: Lect-19.md
-	markdown-cli --input=./Lect-19.md --output=Lect-19.html
-	cat ${FR}/css/pre ${FR}/css/markdown.css ${FR}/css/post ../../md.css ${FR}/css/hpre Lect-19.html ${FR}/css/hpost >/tmp/Lect-19.html
-	mv /tmp/Lect-19.html ./Lect-19.html
+gen:
 
+val:
+
+%.md: %.raw.md $(PY) $(IMG) Makefile
+	m4 -P $< >$@
+
+%.html: %.md
+	blackfriday-tool ./$< $@
+	echo cat ./${DIR}/md.css $@ >/tmp/$@
+	cat ./${DIR}/css/pre ./${DIR}/css/markdown.css ./${DIR}/css/post ./${DIR}/md.css ./${DIR}/css/hpre $@ ./${DIR}/css/hpost >/tmp/$@
+	mv /tmp/$@ ./$@
+	echo "file://${PP}/$@" >>open.1
 

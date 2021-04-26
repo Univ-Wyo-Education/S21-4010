@@ -1,164 +1,336 @@
-# Lecture 19 - security - and signatures
 
-# News
 
-1. The stimulus bill included a "digital currency".
-[https://www.forbes.com/sites/michaeldelcastillo/2020/03/25/trillion-dollar-stimulus-jumpstarts-project-to-issue-central-bank-currency-on-ethereum/#69f5d60c47bc](https://www.forbes.com/sites/michaeldelcastillo/2020/03/25/trillion-dollar-stimulus-jumpstarts-project-to-issue-central-bank-currency-on-ethereum/#69f5d60c47bc)
-2. Atari is using Ethereum to trade game assets
-[https://cointelegraph.com/news/gaming-giant-atari-to-feature-in-the-sandboxs-forthcoming-blockchain-platform](https://cointelegraph.com/news/gaming-giant-atari-to-feature-in-the-sandboxs-forthcoming-blockchain-platform)
 
-# Videos
 
-[ Lect-19-4010-pt1.mp4: https://youtu.be/bPAwT39YY9Q ](https://youtu.be/bPAwT39YY9Q) <br>
-[ Lect-19-4010-pt2.mp4: https://youtu.be/ZJ9pAP8So8o ](https://youtu.be/ZJ9pAP8So8o) <br>
-[ Lect-19-4010-pt3.mp4: https://youtu.be/txbFyoe5uXA ](https://youtu.be/txbFyoe5uXA) <br>
-[ Lect-19-4010-pt4.mp4: https://youtu.be/XK5FlYDXWc8 ](https://youtu.be/XK5FlYDXWc8) <br>
-[ Lect-19-4010-pt5.mp4: https://youtu.be/D7R-FxFyqGs ](https://youtu.be/D7R-FxFyqGs) <br>
 
-Amazon S3 - only if you need to download videos (these are the same as the YouTube
-versions - just setup so that you can download them - this is primarily intended
-for people that have a slow connection or need to view the videos offline):
 
-[Lecture 19 - quick zoom overview]([http://uw-s20-2015.s3.amazonaws.com/zoom01.mp4) <br>
-[Lecture 19 - part 1](http://uw-s20-2015.s3.amazonaws.com/Lect-19-4010-pt1.mp4) <br>
-[Lecture 19 - part 2](http://uw-s20-2015.s3.amazonaws.com/Lect-19-4010-pt2.mp4) <br>
-[Lecture 19 - part 3](http://uw-s20-2015.s3.amazonaws.com/Lect-19-4010-pt3.mp4) <br>
-[Lecture 19 - part 4](http://uw-s20-2015.s3.amazonaws.com/Lect-19-4010-pt4.mp4) <br>
-[Lecture 19 - part 5](http://uw-s20-2015.s3.amazonaws.com/Lect-19-4010-pt5.mp4) <br>
 
-# Personal Security - Why
 
-Systems that survive pay out to all the responsible parties in proportion
-to the level of responsibility.
 
-## Friction vs Access
 
-Friction to get to the information you want is security to prevent unauthorized
-people from getting to the information that you don't want them to get to.
 
-People will choose convenience over security every time.
 
-Data ownership.  Equafax and what data you have as public.
 
-Individual are not motivated to protect systems.
 
-### Passwords
 
-Top 10 List
+# Lecture 20 - Smart Contract Pitfalls
+
+Smart contracts have a unique set of limitings and pitfalls.
+
+First put them in context.  An analogy...  Cryptocurency is to government-money, what smart-contracts are to law.
+
+## Limitations to the code.
+
+A smart contract is a piece of code that is tied to a blockchain, triggered by transactions and data passed in the transactions and which reads and writes data in that blockchain’s history.
+The code behaves as if it is an embed software system.   To maintain consistency between nodes in the chain - all nodes must see the same data.
+This means that the smart contract can not go pull the price of a stock itself - if node1 sees a different value than node2 they will get different output results.
+The data must be fixed and written to the chain before the smart contact is called, or it must be a parameter in the transaction and shared across all the nodes.
+This means that everything that takes place on a blockchain must be deterministic.
+
+## Smart contracts are forever.
+
+Defects are forever.  You can't go back and change the contact and get a consistent new state for the block.
+Microsoft did a book called "Code Complete" that found that shipping code from Microsoft had 15-20 defects
+per 1000 lines of code.  Some systems like NASA's control system for the Shuttle had much fewer defects, close
+to 0 per 1000 lines of code.   The cost for developing systems like that was 100,000x as much.   So...
+For smart contracts which development system are you using?  
+
+## Available forever.  
+
+Contracts don't just go away.  Version 1 of your contract is still there when you
+really want to be on version 3.   If you want to stop people from using version one you have to have built
+into the contract a flag to say stop running.   You have to protect the flag so that only the contract
+owner or some authorized list of people can set/unset the flag.
+
+## Upgrade-ability. 
+
+Since the contract and it's address are forever - you have to plan a way to upgrade
+the contract.  There is a "Proxy" system that has been used for this but upgrades could also be
+handled by forcing users to use a new-address and a new contract.
+
+The "Proxy" model for upgrades is really nasty and complex.
+
 ```
-		123456
-		123456789
-		qwerty
-		12345678
-		111111
-		1234567890
-		1234567
-		password
-		123123
-		987654321
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.6.0 <=0.9.0;
+
+import "@openzeppelin/contracts/proxy/Proxy.sol";
+
+/**
+ * @title Proxy
+ * @dev Gives the possibility to delegate any call to a foreign implementation.
+ */
+contract ProxyToXXX is Proxy {
+
+	address private owner;
+	address private GrouceCreditImpl;
+	uint256 public version;
+
+	modifier onlyOwner() {
+		require( msg.sender == owner, "Sender not authorized.");
+		// Do not forget the "_;"! It will be replaced by the actual function
+		// body when the modifier is used.
+		_;
+	}
+
+    constructor( address _addr, uint256 _version ) Proxy() {
+		GrouceCreditImpl = _addr;
+		owner = msg.sender;
+		version = _version;
+	}
+
+	/**
+    * @dev Make `_newOwner` the new owner of this contract.
+	*/
+	function changeOwner(address _newOwner) public onlyOwner() {
+		owner = _newOwner;
+	}
+	
+	/**
+    * @dev Upgrade the underling contract to a new version. `_newAddr` is the address of
+	* the new contract. `_newVersion` is the new version number.
+	*/
+	function upgradeContract(address _newAddr, uint256 _newVersion) public onlyOwner() {
+		GrouceCreditImpl = _newAddr;
+		version = _newVersion;
+	}
+
+	/**
+    * @dev Tells the address of the implementation where every call will be delegated.
+    * @return address of the implementation to which it will be delegated
+    */
+	function _implementation() internal view override  returns (address) {
+		return ( GrouceCreditImpl );
+	}
+
+}
+
 ```
-Represent 76% of passwords in use.
 
-Top 10000 passwords are 92% of passwords in use.
-
-Hash passwords: MD5, SHA1
-
-Rainbow Tables
-
-Salt and then Hash
-
-use a hash that is appropriate: bcrypt, scrypt, or PBKDF2.
-
-1. Generated Passwords ( 1password or other similar tools ).
 ```
-#!/bin/bash
-openssl rand -base64 20
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.0;
+
+/**
+ * @dev This abstract contract provides a fallback function that delegates
+ * all calls to another contract using the EVM instruction `delegatecall`. We
+ * refer to the second contract as the _implementation_ behind the proxy,
+ * and it has to be specified by overriding the virtual {_implementation}
+ * function.
+ * 
+ * Additionally, delegation to the implementation can be triggered manually
+ * through the {_fallback} function, or to a different contract through
+ * the {_delegate} function.
+ * 
+ * The success and return data of the delegated call will be returned back
+ * to the caller of the proxy.
+ */
+abstract contract Proxy {
+  /**
+   * @dev Delegates the current call to `implementation`.
+   *
+   * This function does not return to its internall call site, it will
+   * return directly to the external caller.
+   */
+  function _delegate(address implementation) internal virtual {
+    // solhint-disable-next-line no-inline-assembly
+    assembly {
+      // Copy msg.data. We take full control of memory in this inline
+	  // assembly block because it will not return to Solidity code.
+	  // We overwrite the Solidity scratch pad at memory position 0.
+      calldatacopy(0, 0, calldatasize())
+
+      // Call the implementation.
+      // out and outsize are 0 because we don't know the size yet.
+      let result := delegatecall(gas(), implementation, 0,
+			calldatasize(), 0, 0)
+
+      // Copy the returned data.
+      returndatacopy(0, 0, returndatasize())
+
+      switch result
+      // delegatecall returns 0 on error.
+      case 0 { revert(0, returndatasize()) }
+      default { return(0, returndatasize()) }
+    }
+  }
+
+  /**
+   * @dev This is a virtual function that should be overriden
+   * so it returns the address to which the fallback function
+   * and {_fallback} should delegate.
+   */
+  function _implementation() internal view virtual returns (address);
+
+  /**
+   * @dev Delegates the current call to the address
+   * returned by `_implementation()`.
+   *
+   * This function does not return to its internall call
+   * site, it will return directly to the external caller.
+   */
+  function _fallback() internal virtual {
+    _beforeFallback();
+    _delegate(_implementation());
+  }
+
+  /**
+   * @dev Fallback function that delegates calls to the address
+   * returned by `_implementation()`. Will run if no other
+   * function in the contract matches the call data.
+   */
+  fallback () external payable virtual {
+    _fallback();
+  }
+
+  /**
+   * @dev Fallback function that delegates calls to the address
+   * returned by `_implementation()`. Will run if call data
+   * is empty.
+   */
+  receive () external payable virtual {
+    _fallback();
+  }
+
+  /**
+   * @dev Hook that is called before falling back to the
+   * implementation. Can happen as part of a manual
+   * `_fallback` call, or as part of the Solidity
+   * `fallback` or `receive` functions.
+   *
+   * If overriden should call `super._beforeFallback()`.
+   */
+  function _beforeFallback() internal virtual {
+  }
+}
+
 ```
-2. Never change passwords
-3. Write it down.
-4. Use a system that verifies that your password is not pwned.
+
+## Security is up to the contract writer.  An example
+
+```
+
+constructor() public {
+    initializeContract();
+}
+function initializeContract() public {
+    owner = msg.sender;
+}
 
 
-### Other security systems good/bad.
+```
 
-1. Auth0 - JWT
-2. Password-less login systems
-3. Biometrics
-4. Biometrics that works
-5. NFC
-6. Wireless WiFi and security
-7. IOT
-8. Back doors into systems
-9. Chipping dogs - why not people?
-10. Software is never 100% fixed.  Security everywhere.  No tootsy-pop solutions.  Hard & Crunchy on the Outside, Soft & Chewy on the Inside
+## You have to plan for the future - hard to do. 
+What happens when the author of the contract dies?
+What happens if the business goes under?
 
-### Security == Friction
+## Integer underflow has to be considered in ALL calculations!
 
-"Making Password Cracking Harder: Slow Hash Functions"
-Proof of Work: PBKDF2.
+```
 
-Risk of pandemic is really an airline - high speed transpiration system.
-
-Speed Limits: highways - approaches to airports.
-Drugs - require prescriptions.
-
-Digital information moves limitlessly. The same design philosophy that
-accelerated the flow of correspondence, news, and commerce also accelerate
-the flow of phishing, ransom-ware, and disinformation.
-
-### Free isn't free.
-
-Sherman Antitrust Act: 1989 Supreme Court Decision - that evaluation of 
-an illegitimate merger be based on price of goods produced.  
-We are now in a world where 0 price is common.
-
-So if you give away your product (e.g. Facebook) then you purchase some
-other entity (Instagram) and give it away for free then the SAA will not
-apply to you.
-
-### Who Pays?
-
-During the height of the recession, in 2009, we wasted 6.3 billion hours on the road.   The problem is that the employer is not paying for
-commute time.  They get it for "free".  Now suddenly in 2020 we are seeing everybody work from home for all the worst reasons.   Maybe
-this will change the daily commute.   Commuting is terrible for people - not just the environment - People that commute more than 1 hour
-each way have a 40% increase in divorces.
-
-Another example of free but not good for people is classes that uses PDFs for handouts - instead of printing the handouts and handing
-them out.  This save the author time and money - but costs the students.  Free to the author - not free in the real world.
-
-A lot of the BlockChain tracking is to make systems where cheating  is taking place more "fair" where everybody contributes and everybody
-is payed proportionately to the contribution.  The difficulty in designing systems like this is to make it "fair".
+// Improper usage of integers
+function withdraw(uint _amount) {
+    require(balances[msg.sender] - _amount > 0);
+    msg.sender.transfer(_amount);
+    balances[msg.sender] -= _amount;
+}
 
 
-### Real Security Solutions - public private keys and signatures
+// One corrct way
+function withdraw(uint _amount) {
+    require(balances[msg.sender] >= _amount);
+    msg.sender.transfer(_amount);
+    balances[msg.sender] -= _amount;
+}
 
-This is our homework - to sign a document and validate it on the server.
-I provided the server and part of the client (you get to make the library
-calls to do the "sign" part) and I provided a command line sign tool.
-(Hint - it has the sign code in it - look in the homework it will
-direct you to the correct file and functions)
-
-For authentication you can use a zero-knowledge proof system called
-SRP6a - search for that "Secure Remote Password SRP6a" and there are
-implementations for most languages. 
-
-Interesting side note: the Wikipedia page on this has a Python program
-that sort of works to do SRP6a.  It will work in sending stuff to
-a duplicate copy of the program and it has the correct algorithm in it.
-In one 4 line section of code it also has 5 type conversion errors
-that will cause about 1 in 16 messages to get the wrong results.
-YMMV on example code! (the code also appears in the standard for
-SRP6a!)
-
-SRP6a is used in SSH for remote logins! so most of you have used it already.
-It has been around for a long time.   The good side - the server has a
-validation number instead of your password - so - it can never leek your
-password.  Also this is a "strong" authentication system based on
-cryptography - not just pass the password over the wire authentication.
+// Anotehr
+function withdraw(uint _amount) {
+    require(_amount >= 0 && balances[msg.sender] >= 0 &&
+		balances[msg.sender] >= _amount);
+    msg.sender.transfer(_amount);
+    balances[msg.sender] -= _amount;
+}
 
 
+```
 
 
+## Contract to contact calls must be carefully handled.  (Or not used at all).
 
+What happens if the "call" in the contract leads back to the same withdraw
+call?
+
+```
+
+
+function withdraw(uint _amount) {
+    require(balances[msg.sender] >= _amount);
+    msg.sender.call.value(_amount)();			// bad
+    balances[msg.sender] -= _amount;
+}
+
+
+```
+
+
+## You need other "things" in the contract that are usually not obvious.
+
+```
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.6.0 <=0.9.0;
+
+contract InsLogEvent {
+
+	address payable owner;
+
+	event AnEvent ( address indexed account, string msg );
+
+	constructor() {
+		owner = payable(msg.sender);
+	}
+
+	modifier onlyOwner() {
+		require( msg.sender == owner, "Sender not authorized.");
+		// Do not forget the "_;"! It will be replaced by the actual function
+		// body when the modifier is used.
+		_;
+	}
+
+	// Make `_newOwner` the new owner of this contract.
+	function changeOwner(address payable _newOwner) public onlyOwner() {
+		owner = _newOwner;
+	}
+	
+	function IndexedEvent ( address _acct, string memory _msg ) public returns ( bool ) {
+		// TODO - emit event
+		emit AnEvent ( _acct, _msg );
+		return (true);
+	}
+
+	// This function is called for all messages sent to
+	// this contract, except plain Ether transfers
+	// (there is no other function except the receive function).
+	// Any call with non-empty calldata to this contract will execute
+	// the fallback function (even if Ether is sent along with the call).
+	fallback() external payable {}
+
+	// This function is called for plain Ether transfers, i.e.
+	// for every call with empty calldata.
+	receive() external payable {}
+
+	function withdraw( uint256 _amount ) public onlyOwner() {
+		owner.transfer(_amount);
+	}
+
+	// destroy the contract and reclaim the leftover funds.
+    function kill() public onlyOwner() {
+		//	Calling selfdestruct(address) sends all of the contract's current balance to address.
+        selfdestruct(payable(msg.sender));
+    }
+}
+
+
+```
 
 
